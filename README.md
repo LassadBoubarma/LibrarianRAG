@@ -2,7 +2,7 @@
 
 A small question-answering app for the Python documentation. Ask a question, get a short answer, and open the passage it came from.
 
-This is my choice for CS496 Project 2: an open-source project's documentation. Python is useful to students, the sources are public, and the answers can be checked. The corpus is 25 long reference documents from Python 3.14.0, about 209,000 words in total.
+The project uses an open-source project's documentation, one of the CS496 Project 2 ideas. Python is useful to students, the sources are public, and the answers can be checked. The corpus is 25 long reference documents from Python 3.14.0, about 209,000 words in total.
 
 ## Run it
 
