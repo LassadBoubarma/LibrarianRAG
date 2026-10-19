@@ -1,0 +1,102 @@
+functions	abs	What does abs return for a number?	The absolute value of the number.	absolute value
+functions	all	What does all return for an empty iterable?	True.	True
+functions	any	What does any return for an empty iterable?	False.	False
+functions	enumerate	What is the default starting count for enumerate?	Zero.	0
+functions	len	How do I get the number of items in a Python object?	Use len.	number of items
+functions	sorted	Does sorted return a new list?	Yes, it returns a new sorted list.	new sorted list
+stdtypes	str.lower	How can I make a copy of a string with lowercase letters?	Use str.lower.	lowercase
+stdtypes	str.strip	What does str.strip remove when chars is omitted?	Leading and trailing whitespace.	whitespace
+stdtypes	str.replace	Does str.replace change the original string?	No, it returns a copy with replacements.	copy
+stdtypes	dict.get	Does dict.get raise KeyError for a missing key?	No, it returns the default value.	KeyError
+stdtypes	sequence.copy	Does list.copy make a shallow or deep copy?	A shallow copy.	shallow copy
+stdtypes	frozenset.add	How do I add one element to a set?	Use set.add.	Add element
+pathlib	pathlib.Path.read_text	What does Path.read_text return?	The decoded contents of the file as a string.	decoded contents
+pathlib	pathlib.Path.write_text	Does Path.write_text overwrite an existing file?	Yes, an existing file is overwritten.	overwritten
+pathlib	pathlib.Path.exists	How do I check whether a path points to an existing file or directory?	Use Path.exists.	existing file
+pathlib	pathlib.Path.mkdir	What does parents=True do in Path.mkdir?	It creates missing parent directories.	parents
+pathlib	pathlib.PurePath.suffix	How do I get the file extension from a pathlib path?	Use the suffix property.	file extension
+pathlib	pathlib.PurePath.name	What does PurePath.name represent?	The final path component, excluding the drive and root.	final path component
+collections	collections.Counter	What is collections.Counter used for?	Counting hashable objects.	counting hashable objects
+collections	collections.deque	What is a deque?	A list-like container with fast appends and pops on either end.	appends
+collections	collections.defaultdict	What makes defaultdict different from dict?	It calls a factory function to supply missing values.	factory
+collections	collections.Counter.most_common	How can I get the most common elements from a Counter?	Use most_common.	most common
+json	json.dumps	What does json.dumps return?	A JSON formatted string.	str
+json	json.loads	What does json.loads do?	It deserializes a JSON document to a Python object.	Deserialize
+json	json.dump	How can I write a Python object as JSON into a file-like object?	Use json.dump.	file-like
+json	json.JSONDecodeError	Which exception reports an invalid JSON document?	JSONDecodeError.	ValueError
+csv	csv.reader	What does each row returned by csv.reader contain?	A list of strings.	list of strings
+csv	csv.writer	Which function creates an object for writing CSV rows?	Use csv.writer.	writer object
+csv	csv.DictReader	What does csv.DictReader map row values into?	A dictionary.	dict
+csv	csv.DictWriter	What does csv.DictWriter map dictionaries into?	Output rows.	output rows
+datetime	timedelta-objects	What does a timedelta represent?	A duration or difference between two dates or times.	duration
+datetime	datetime.date.today	How do I get the current local date?	Use date.today.	current local date
+datetime	datetime.date.isoformat	What format does date.isoformat use?	YYYY-MM-DD.	YYYY-MM-DD
+datetime	datetime.datetime.strptime	How can I parse a date string using a specified format?	Use datetime.strptime.	format
+re	re.search	Does re.search look through the whole string for a match?	Yes, it scans for the first matching location.	Scan through
+re	re.match	Does re.match start at the beginning of the string?	Yes, it matches at the beginning.	beginning
+re	re.fullmatch	How do I require a regex to match the entire string?	Use re.fullmatch.	whole string
+re	re.findall	What does re.findall return?	All non-overlapping matches as a list.	non-overlapping
+re	re.sub	How can I replace regex matches in a string?	Use re.sub.	replacing
+re	re.escape	How do I escape special characters for a literal regex pattern?	Use re.escape.	special characters
+itertools	itertools.chain	How can I iterate over several iterables as one sequence?	Use itertools.chain.	first iterable
+itertools	itertools.cycle	How can I repeat the elements of an iterable indefinitely?	Use itertools.cycle.	Repeats indefinitely
+itertools	itertools.product	What does itertools.product compute?	The Cartesian product of the input iterables.	Cartesian product
+itertools	itertools.islice	How do I take a slice from an iterator?	Use itertools.islice.	selected elements
+functools	functools.lru_cache	What does lru_cache save?	Recent function calls and their results.	recent calls
+functools	functools.cache	Is functools.cache bounded in size?	No, it is an unbounded function cache.	unbounded
+functools	functools.partial	What does functools.partial do with arguments?	It freezes some arguments of a function.	freezes
+functools	functools.wraps	What is functools.wraps used for?	Updating a wrapper function to look like the wrapped function.	wrapper function
+os	os.getcwd	How do I get the current working directory as a string?	Use os.getcwd.	current working directory
+os	os.listdir	Does os.listdir include the special entries dot and double-dot?	No, it excludes dot and double-dot.	special entries
+os	os.remove	What happens if os.remove is called on a directory?	It raises OSError.	directory
+os	os.getenv	How can I read an environment variable with a default value?	Use os.getenv.	default
+shutil	shutil.copyfile	Does shutil.copyfile copy metadata?	No, it copies contents without metadata.	metadata
+shutil	shutil.copy2	Which shutil copy function attempts to preserve metadata?	Use shutil.copy2.	metadata
+shutil	shutil.rmtree	How can I delete an entire directory tree?	Use shutil.rmtree.	directory tree
+shutil	shutil.which	How do I find the path to an executable command?	Use shutil.which.	executable
+math	math.ceil	What does math.ceil return?	The smallest integer greater than or equal to x.	smallest integer
+math	math.floor	What does math.floor return?	The largest integer less than or equal to x.	largest integer
+math	math.sqrt	How do I calculate a square root with math?	Use math.sqrt.	square root
+math	math.factorial	Does math.factorial accept negative integers?	No, its argument must be a nonnegative integer.	nonnegative
+statistics	statistics.mean	What does statistics.mean calculate?	The arithmetic mean of the data.	arithmetic mean
+statistics	statistics.median	How does median handle an even number of data points?	It averages the two middle values.	averag
+statistics	statistics.mode	What does statistics.mode return?	The most common data point.	most common
+statistics	statistics.stdev	Does statistics.stdev calculate sample or population standard deviation?	Sample standard deviation.	sample standard deviation
+random	random.choice	What happens if random.choice receives an empty sequence?	It raises IndexError.	IndexError
+random	random.sample	Does random.sample sample with replacement?	No, it samples without replacement.	without replacement
+random	random.randint	Are both endpoints included in random.randint(a, b)?	Yes, both a and b are included.	a <= N <= b
+random	random.shuffle	Does random.shuffle modify the original sequence?	Yes, it shuffles the sequence in place.	in place
+string	string.ascii_lowercase	What characters are in string.ascii_lowercase?	The lowercase ASCII letters a through z.	abcdefghijklmnopqrstuvwxyz
+string	string.digits	What characters are in string.digits?	The digits 0 through 9.	0123456789
+string	string.ascii_letters	What does string.ascii_letters combine?	ASCII lowercase and uppercase letters.	concatenation
+string	string.hexdigits	What characters are in string.hexdigits?	The hexadecimal digits 0123456789abcdefABCDEF.	0123456789abcdefABCDEF
+argparse	argparse.ArgumentParser.parse_args	What does ArgumentParser.parse_args return?	A namespace containing parsed arguments.	namespace
+argparse	argparse.ArgumentParser.add_argument	How do I define a command-line argument with argparse?	Use ArgumentParser.add_argument.	command-line argument
+logging	logging.Logger.debug	Which logger method logs a message at DEBUG level?	Use Logger.debug.	DEBUG
+logging	logging.Logger.warning	Which logger method logs a message at WARNING level?	Use Logger.warning.	WARNING
+logging	logging.Logger.error	Which logger method logs a message at ERROR level?	Use Logger.error.	ERROR
+logging	logging.Logger.exception	Does Logger.exception include exception information?	Yes, exception information is added to the message.	Exception
+unittest	unittest.TestCase.assertEqual	How can I check that two values are equal in unittest?	Use assertEqual.	equal
+unittest	unittest.TestCase.assertTrue	What does assertTrue test?	Whether an expression is true.	true
+unittest	unittest.TestCase.assertRaises	How do I test that code raises an expected exception?	Use assertRaises.	exception
+unittest	unittest.TestCase.setUp	When does unittest call setUp?	Before each test method.	before
+typing	typing.Any	What kind of type is typing.Any?	A special type indicating an unconstrained type.	unconstrained
+typing	typing.Optional	What does Optional[X] mean?	X or None.	None
+typing	typing.Literal	What does a Literal annotation constrain?	A value to the provided literal values.	literal
+typing	typing.Final	What does Final indicate about reassignment?	The name cannot be reassigned.	reassigned
+dataclasses	dataclasses.asdict	What does dataclasses.asdict return?	A dictionary of a dataclass instance's fields.	dict
+dataclasses	dataclasses.astuple	What does dataclasses.astuple return?	A tuple of a dataclass instance's fields.	tuple
+dataclasses	dataclasses.is_dataclass	How do I check if an object is a dataclass or dataclass instance?	Use is_dataclass.	True
+dataclasses	dataclasses.replace	Does dataclasses.replace create a new object?	Yes, it creates a new object with the changed fields.	new object
+sqlite3	sqlite3.connect	Which function opens a connection to a SQLite database?	Use sqlite3.connect.	connection
+sqlite3	sqlite3.Cursor.fetchone	What does fetchone return when no rows remain?	None.	None
+sqlite3	sqlite3.Cursor.fetchall	What does fetchall return when no rows remain?	An empty list.	empty list
+sqlite3	sqlite3.Connection.commit	How do I commit a pending SQLite transaction?	Use Connection.commit.	Commit
+heapq	heapq.heappush	How do I add an item while preserving the heap invariant?	Use heapq.heappush.	heap invariant
+heapq	heapq.heappop	What does heappop remove from a min-heap?	The smallest item.	smallest item
+heapq	heapq.heapify	How fast does heapify transform a list into a heap?	Linear time.	linear time
+heapq	heapq.nlargest	How can I get the n largest elements from an iterable?	Use heapq.nlargest.	largest elements
+bisect	bisect.bisect_left	Does bisect_left insert before or after equal entries?	Before existing equal entries.	before
+bisect	bisect.bisect_right	Does bisect_right return a position after equal entries?	Yes, it returns a position after existing equal entries.	after
+bisect	bisect.insort_left	How can I insert an item into a sorted list before equal entries?	Use bisect.insort_left.	sorted order
+bisect	bisect.insort_right	How can I insert an item into a sorted list after equal entries?	Use bisect.insort_right.	maintain sort order
