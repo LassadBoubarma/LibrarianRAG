@@ -34,7 +34,7 @@ The last question should return “I don't know.”
 
 `Documents -> chunks -> keyword + vector search -> reranker -> answer with source`
 
-BM25 finds matching words. MiniLM finds similar meaning. A cross-encoder ranks the best candidates again. Qwen 2.5 3B reads the top five passages and answers. The server copies the cited passage from the index, so the model does not write its own evidence. Repeated questions use a small memory cache.
+BM25 finds matching words. MiniLM finds similar meaning. A cross-encoder ranks the best candidates again. Qwen 2.5 7B reads the top five passages and answers. The server copies the cited passage from the index, so the model does not write its own evidence. Repeated questions use a small memory cache.
 
 The code is ordinary Python functions and two small classes. There is no LangChain or database server. [explain.md](explain.md) walks through the files and gives a short demo plan.
 

@@ -18,7 +18,9 @@ Ollama must be running for generation and benchmarking. The first model load is 
 
 Fill the empty grading columns in `results/human_review.csv` with 0 or 1. Correctness means the answer actually answers the question. Faithfulness means every claim follows from the cited text. Citation support means the cited passage justifies the claim, not merely that the URL opens. Keep abstentions on answerable questions in the denominator for correctness. Do not grade a refusal as a supported factual answer.
 
-The assignment mentions a Project 1 harness. No P1 harness was supplied, so these scripts run independently. `questions.jsonl` and the generated answer records can be used as inputs to that harness later.
+Project 1 integration: run `python run.py -m eval.p1_judge` after generation. This downloads a pinned checkout of [the Project 1 grader](https://github.com/BLACK2202/sql-explanation-grader) and imports its actual `harness/llm.py` function. Install the judge with `ollama pull qwen2.5:7b` first. The RAG prompt replaces the SQL rubric. Results retain the P1 score, reason and judge-cost fields, plus separate correctness, faithfulness and citation judgments. The checkpoint hash includes the answers, prompt, judge model and P1 commit, so a changed run cannot silently reuse old grades.
+
+The default generator and judge both use Qwen 2.5 7B. Shared model biases can inflate these scores. Review a sample manually or use another judge with `--judge-model` before relying on the grades. The adapter preserves raw verdicts and applies known refusal labels directly when the model contradicts them.
 
 `benchmark.py` reports three workloads separately: no cache, empty cache, and repeated questions already in the cache. The repeat test is a deliberate 100% hit scenario, not an estimate of real traffic. It also compares answer text. It does not claim a measured human accuracy change.
 

@@ -26,7 +26,7 @@ The document filter is applied before ranking. There is no question rewriting: a
 
 ## Answer
 
-Ollama runs Qwen 2.5 3B locally. It is asked for a short answer and one source number using a JSON schema. The server checks that the source number exists and copies that whole passage from the index as evidence. The model never supplies the displayed quote. Low retrieval scores (below -3), a refusal or an invalid source return “I don't know based on these documents.” The cutoff is a heuristic, not a calibrated probability.
+Ollama runs Qwen 2.5 7B locally. A development trial with the smaller 3B model produced unnecessary refusals and confused similar APIs, so the final version uses 7B. It is asked for a short answer and one source number using a JSON schema. The server checks that the source number exists and copies that whole passage from the index as evidence. The model never supplies the displayed quote. Low retrieval scores (below -3), a refusal or an invalid source return “I don't know based on these documents.” The cutoff is a heuristic, not a calibrated probability.
 
 Copying a real passage cannot prove that a paraphrase follows from it. Human faithfulness review is therefore a separate task. The app renders text using `textContent`, so model output is not interpreted as HTML. It never executes suggested Python code.
 
@@ -44,3 +44,11 @@ An in-memory LRU cache stores up to 128 answers. The key includes the exact trim
 - The corpus is a fixed release, not the latest online Python docs.
 - The evaluation mostly asks short API questions. It does not represent all beginner questions.
 - Source spans name one accepted passage. An equally valid passage elsewhere can be counted as a miss.
+
+## References
+
+- [Python 3.14.0 reference](https://docs.python.org/release/3.14.0/library/index.html)
+- [MiniLM embedding model](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
+- [MiniLM reranker](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2)
+- [Ollama chat API](https://docs.ollama.com/api/chat)
+- [Project 1 evaluation harness](https://github.com/BLACK2202/sql-explanation-grader)

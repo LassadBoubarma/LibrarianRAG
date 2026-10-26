@@ -6,6 +6,8 @@ import subprocess
 import sys
 import venv
 
+from settings import CHAT_MODEL
+
 ROOT = Path(__file__).resolve().parent
 
 
@@ -22,7 +24,9 @@ def main():
     if not (ROOT / "data/documents.jsonl").exists():
         subprocess.run([str(python), "corpus.py"], check=True)
     subprocess.run([str(python), "build_index.py"], check=True)
-    subprocess.run(["ollama", "pull", os.getenv("CHAT_MODEL", "qwen2.5:3b")], check=True)
+    installed = subprocess.run(["ollama", "show", CHAT_MODEL], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    if installed.returncode != 0:
+        subprocess.run(["ollama", "pull", CHAT_MODEL], check=True)
     subprocess.run([str(python), "-c", "from search import Search; Search()"], check=True)
     print("Ready. Run: python run.py")
 
