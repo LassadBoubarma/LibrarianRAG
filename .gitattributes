@@ -1,0 +1,2 @@
+# Keep the downloaded snapshot byte-for-byte so its manifest hash is portable.
+data/documents.jsonl -text

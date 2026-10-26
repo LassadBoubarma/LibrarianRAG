@@ -1,0 +1,119 @@
+{
+  "summary": {
+    "questions": 5,
+    "judge_model": "qwen2.5:7b",
+    "p1_commit": "23473e6998e69718b32ec7c8963d0cfa86a23fdb",
+    "errors": 0,
+    "model_judged_correctness": 0.6,
+    "model_judged_faithfulness_answered": 0.6666666666666666,
+    "model_judged_citation_support_answered": 0.6666666666666666,
+    "note": "Model judgments, not human labels. Review the individual reasons and quotes."
+  },
+  "rows": [
+    {
+      "id": "q005",
+      "input": "How do I get the number of items in a Python object?",
+      "output": "I don't know based on these documents.",
+      "score": 0,
+      "reason": "The answer is a refusal, which is appropriate given that the question is answerable and the passage provides the correct information. However, the refusal does not cite any evidence, so faithful and citation_supports_claim cannot be true.",
+      "verdict": {
+        "grade": "good",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is answerable and the passage provides the correct information. However, the refusal does not cite any evidence, so faithful and citation_supports_claim cannot be true."
+      },
+      "judge_cost": {
+        "latency": 9.2,
+        "usd": 0.0,
+        "in_tok": 356,
+        "out_tok": 82
+      },
+      "error": null
+    },
+    {
+      "id": "q010",
+      "input": "Does dict.get raise KeyError for a missing key?",
+      "output": "I don't know based on these documents.",
+      "score": 1,
+      "reason": "The answer is a refusal, which is appropriate given that no relevant information was provided in the cited passage. However, the refusal does not cite any evidence, so faithful and citation_supports_claim are false.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that no relevant information was provided in the cited passage. However, the refusal does not cite any evidence, so faithful and citation_supports_claim are false."
+      },
+      "judge_cost": {
+        "latency": 1.42,
+        "usd": 0.0,
+        "in_tok": 344,
+        "out_tok": 78
+      },
+      "error": null
+    },
+    {
+      "id": "q015",
+      "input": "How do I check whether a path points to an existing file or directory?",
+      "output": "Use Path.exists() to check if the path points to an existing file or directory. [1]",
+      "score": 1,
+      "reason": "The answer correctly states that `Path.exists()` is used to check if a path points to an existing file or directory, and the provided citation supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that `Path.exists()` is used to check if a path points to an existing file or directory, and the provided citation supports this claim."
+      },
+      "judge_cost": {
+        "latency": 1.41,
+        "usd": 0.0,
+        "in_tok": 523,
+        "out_tok": 69
+      },
+      "error": null
+    },
+    {
+      "id": "q020",
+      "input": "What is a deque?",
+      "output": "deque is a generalization of stacks and queues [1]",
+      "score": 0,
+      "reason": "The actual answer does not provide a definition of a deque, which is required by the question. The reference passage provides a definition and additional details, but the answer only mentions that deques are a generalization of stacks and queues, which is not sufficient to answer the question.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The actual answer does not provide a definition of a deque, which is required by the question. The reference passage provides a definition and additional details, but the answer only mentions that deques are a generalization of stacks and queues, which is not sufficient to answer the question."
+      },
+      "judge_cost": {
+        "latency": 1.85,
+        "usd": 0.0,
+        "in_tok": 649,
+        "out_tok": 92
+      },
+      "error": null
+    },
+    {
+      "id": "q025",
+      "input": "How can I write a Python object as JSON into a file-like object?",
+      "output": "Use json.dump to serialize and write a Python object to a file-like object. [1]",
+      "score": 1,
+      "reason": "The answer correctly states that json.dump should be used to write a Python object to a file-like object, and this is supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that json.dump should be used to write a Python object to a file-like object, and this is supported by the reference passage."
+      },
+      "judge_cost": {
+        "latency": 1.37,
+        "usd": 0.0,
+        "in_tok": 515,
+        "out_tok": 67
+      },
+      "error": null
+    }
+  ]
+}
