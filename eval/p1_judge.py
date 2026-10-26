@@ -55,6 +55,8 @@ if __name__ == "__main__":
     if checkpoint.exists():
         completed = {r["id"]: r for r in map(json.loads, checkpoint.read_text(encoding="utf-8").splitlines()) if r.get("error") is None}
     rows = json.loads(source)["rows"]
+    if len(rows) != 112 or len({r["id"] for r in rows}) != 112:
+        raise ValueError("Expected 112 distinct answers for the full-set grading run")
     RESULTS.mkdir(parents=True, exist_ok=True)
     with checkpoint.open("a", encoding="utf-8") as file:
         for row in rows:
@@ -87,11 +89,14 @@ if __name__ == "__main__":
     ordered = [completed[r["id"]] for r in rows]
     answerable = [completed[r["id"]] for r in rows if r["answerable"]]
     answered = [completed[r["id"]] for r in rows if not r["result"]["abstained"]]
+    errors = sum(r.get("error") is not None for r in ordered)
     summary = {"questions": len(rows), "judge_model": args.judge_model, "p1_commit": P1_COMMIT,
-               "errors": sum(r.get("error") is not None for r in ordered),
-               "model_judged_correctness": sum(r["score"] for r in ordered) / len(rows),
-               "model_judged_correctness_answerable": sum(r["score"] for r in answerable) / len(answerable) if answerable else None,
-               "model_judged_faithfulness_answered": sum(r.get("verdict", {}).get("faithful", False) for r in answered) / len(answered) if answered else None,
-               "model_judged_citation_support_answered": sum(r.get("verdict", {}).get("citation_supports_claim", False) for r in answered) / len(answered) if answered else None,
+               "errors": errors,
+               "model_judged_correctness": sum(r["score"] for r in ordered) / len(rows) if not errors else None,
+               "model_judged_correctness_answerable": sum(r["score"] for r in answerable) / len(answerable) if answerable and not errors else None,
+               "model_judged_faithfulness_answered": sum(r.get("verdict", {}).get("faithful", False) for r in answered) / len(answered) if answered and not errors else None,
+               "model_judged_citation_support_answered": sum(r.get("verdict", {}).get("citation_supports_claim", False) for r in answered) / len(answered) if answered and not errors else None,
                "note": "Model judgments, not human labels. Review the individual reasons and quotes."}
-    save("p1_judge.json", {"summary": summary, "rows": ordered})
+    save("p1_judge.json", {"generation_sha256": hashlib.sha256(source).hexdigest(), "summary": summary, "rows": ordered})
+    if errors:
+        raise SystemExit("Some grader calls failed. Rerun to resume; incomplete rates are not reported.")

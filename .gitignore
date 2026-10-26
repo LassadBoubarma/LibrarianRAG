@@ -8,3 +8,4 @@ work/
 data/raw/
 data/feedback.jsonl
 eval/results/judge-*.jsonl
+eval/results/benchmark_progress.json

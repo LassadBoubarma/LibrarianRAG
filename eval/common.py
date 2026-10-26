@@ -13,7 +13,7 @@ RESULTS = ROOT / "eval" / "results"
 def metadata():
     paths = [ROOT / name for name in ["answer.py", "search.py", "settings.py", "index/config.json", "data/questions.jsonl"]]
     return {"model": CHAT_MODEL, "python": platform.python_version(), "platform": platform.system(),
-            "implementation_sha256": hashlib.sha256(b"".join(p.read_bytes() for p in paths)).hexdigest()}
+            "implementation_sha256": hashlib.sha256("".join(p.read_text(encoding="utf-8") for p in paths).encode()).hexdigest()}
 
 
 def questions(split="all"):
@@ -34,5 +34,5 @@ def percentiles(values):
 
 def save(name, data):
     RESULTS.mkdir(parents=True, exist_ok=True)
-    (RESULTS / name).write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    (RESULTS / name).write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8", newline="\n")
     print(f"Saved eval/results/{name}", flush=True)
