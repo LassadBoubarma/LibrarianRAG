@@ -2,16 +2,28 @@
 import json
 import re
 from collections import OrderedDict
-from copy import deepcopy
 from time import perf_counter
 
 import requests
 
 from settings import CHAT_MODEL, OLLAMA_URL, UNKNOWN
 
+REFUSAL_RE = re.compile(r"\b(?:don.t know|do not know|cannot answer|not enough information)\b", re.I)
+IDENTIFIERS_RE = re.compile(r"\b[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)+\b")
+SPACES_DOT_RE = re.compile(r"\s*\.\s*")
+CITATION_MARKER_RE = re.compile(r"\[\d+\]")
+
 
 def normalize(text):
     return " ".join(text.split()).lower()
+
+
+def _copy_result(result):
+    """Fast shallow/nested copy for cached results without deepcopy overhead."""
+    copied = dict(result)
+    if "sources" in copied:
+        copied["sources"] = [dict(s) for s in copied["sources"]]
+    return copied
 
 
 def generate(question, chunks):
@@ -47,17 +59,17 @@ def generate(question, chunks):
             raise ValueError("Missing source")
         text = result["answer"].strip()
         chunk = chunks[source - 1]
-        if not text or re.search(r"\b(?:don.t know|do not know|cannot answer|not enough information)\b", text, re.I):
+        if not text or REFUSAL_RE.search(text):
             raise ValueError("No answer")
         # A named API must occur in the chosen evidence. This catches some wrong
         # citations, but still does not prove the answer's interpretation is right.
-        identifiers = re.findall(r"\b[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)+\b", question)
-        evidence = re.sub(r"\s*\.\s*", ".", chunk["section"] + " " + chunk["text"]).lower()
+        identifiers = IDENTIFIERS_RE.findall(question)
+        evidence = SPACES_DOT_RE.sub(".", chunk["section"] + " " + chunk["text"]).lower()
         if identifiers and not any(name.lower() in evidence for name in identifiers):
             raise ValueError("Cited passage does not mention the named API")
         # Copy evidence from the index, rather than asking the model to reproduce it.
         # A real passage still does not guarantee that the answer interprets it correctly.
-        text = re.sub(r"\[\d+\]", "", text).strip()
+        text = CITATION_MARKER_RE.sub("", text).strip()
         return {"answer": text + " [1]", "sources": [{**chunk, "quote": chunk["text"]}],
                 "abstained": False, "reason": "answered", **usage}
     except (KeyError, ValueError, TypeError, AttributeError):
@@ -77,7 +89,7 @@ class Librarian:
         key = (question.strip(), document, CHAT_MODEL)
         if use_cache and key in self.cache:
             self.cache.move_to_end(key)
-            result = deepcopy(self.cache[key])
+            result = _copy_result(self.cache[key])
             result.update(cache_hit=True, latency_ms=(perf_counter() - started) * 1000,
                           search_ms=0, input_tokens=0, output_tokens=0)
             return result
@@ -85,7 +97,7 @@ class Librarian:
         result = generate(question, chunks)
         result.update(cache_hit=False, search_ms=search_ms, latency_ms=(perf_counter() - started) * 1000)
         if use_cache:
-            self.cache[key] = deepcopy(result)
+            self.cache[key] = _copy_result(result)
             if len(self.cache) > self.cache_size:
                 self.cache.popitem(last=False)
         return result

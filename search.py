@@ -11,9 +11,12 @@ from sentence_transformers import CrossEncoder, SentenceTransformer
 
 from settings import DATA, EMBED_MODEL, INDEX, RERANK_MODEL
 
+TOKEN_RE = re.compile(r"[a-z0-9_]+")
+RRF_WEIGHTS = [1.0 / (60 + rank + 1) for rank in range(30)]
+
 
 def tokens(text):
-    return re.findall(r"[a-z0-9_]+", text.lower())
+    return TOKEN_RE.findall(text.lower())
 
 
 class Search:
@@ -30,34 +33,51 @@ class Search:
         self.reranker = CrossEncoder(RERANK_MODEL, device="cpu", max_length=512)
         self.bm25 = BM25Okapi([tokens(c["section"] + " " + c["text"]) for c in self.chunks])
         self.documents = sorted({c["document"] for c in self.chunks})
+        # Precomputed index mappings and candidate strings to eliminate redundant allocations
+        self.all_ids = np.arange(len(self.chunks), dtype=int)
+        self.doc_ids = {}
+        for i, c in enumerate(self.chunks):
+            self.doc_ids.setdefault(c["document"], []).append(i)
+        self.doc_ids = {doc: np.array(indices, dtype=int) for doc, indices in self.doc_ids.items()}
+        self.chunk_texts = [c["section"] + "\n" + c["text"] for c in self.chunks]
 
     def retrieve(self, question, mode="rerank", k=5, document=None):
         if mode not in {"keyword", "vector", "hybrid", "rerank"}:
             raise ValueError("Unknown retrieval mode")
         started = perf_counter()
-        ids = np.array([i for i, c in enumerate(self.chunks) if not document or c["document"] == document], dtype=int)
-        if len(ids) == 0:
-            return [], (perf_counter() - started) * 1000
+        if document:
+            ids = self.doc_ids.get(document)
+            if ids is None or len(ids) == 0:
+                return [], (perf_counter() - started) * 1000
+        else:
+            ids = self.all_ids
+
         ranks = []
         if mode != "vector":
             scores = self.bm25.get_scores(tokens(question))
-            ranks.append(ids[np.argsort(-scores[ids], kind="stable")[:30]])
+            sub_scores = scores if document is None else scores[ids]
+            top_idx = np.argsort(-sub_scores, kind="stable")[:30]
+            ranks.append(top_idx if document is None else ids[top_idx])
         if mode != "keyword":
             query = self.embedder.encode(question, normalize_embeddings=True)
             scores = self.vectors @ query
-            ranks.append(ids[np.argsort(-scores[ids], kind="stable")[:30]])
+            sub_scores = scores if document is None else scores[ids]
+            top_idx = np.argsort(-sub_scores, kind="stable")[:30]
+            ranks.append(top_idx if document is None else ids[top_idx])
         if mode in {"keyword", "vector"}:
             selected = list(ranks[0][:k])
         else:
             combined = {}
             for ranking in ranks:
                 for rank, i in enumerate(ranking):
-                    combined[int(i)] = combined.get(int(i), 0) + 1 / (60 + rank + 1)
+                    idx = int(i)
+                    combined[idx] = combined.get(idx, 0.0) + RRF_WEIGHTS[rank]
             selected = sorted(combined, key=combined.get, reverse=True)[:20]
         if mode == "rerank":
-            scores = self.reranker.predict([(question, self.chunks[i]["section"] + "\n" + self.chunks[i]["text"]) for i in selected])
-            pairs = sorted(zip(selected, scores), key=lambda item: float(item[1]), reverse=True)[:k]
-            found = [{**self.chunks[i], "score": float(score)} for i, score in pairs]
+            pairs = [(question, self.chunk_texts[i]) for i in selected]
+            scores = self.reranker.predict(pairs, show_progress_bar=False)
+            ranked_pairs = sorted(zip(selected, scores), key=lambda item: float(item[1]), reverse=True)[:k]
+            found = [{**self.chunks[i], "score": float(score)} for i, score in ranked_pairs]
         else:
             found = [{**self.chunks[i], "score": None} for i in selected[:k]]
         return found, (perf_counter() - started) * 1000

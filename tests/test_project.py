@@ -69,6 +69,20 @@ class ProjectTests(unittest.TestCase):
         client = create_app(librarian).test_client()
         self.assertEqual(client.post("/ask", json={"question": "How?"}).status_code, 503)
 
+    def test_api_serves_cache_hits_without_locking(self):
+        search = Mock()
+        search.documents = ["pathlib"]
+        librarian = Librarian(search)
+        cached_result = {"answer": "Use Path.read_text. [1]", "sources": [self.chunk],
+                         "abstained": False, "reason": "answered", "input_tokens": 0, "output_tokens": 0}
+        librarian.cache[("How?", None, "qwen2.5:7b")] = cached_result
+
+        client = create_app(librarian).test_client()
+        res = client.post("/ask", json={"question": "How?"})
+        self.assertEqual(res.status_code, 200)
+        self.assertTrue(res.get_json()["cache_hit"])
+        search.retrieve.assert_not_called()
+
     def test_definition_aliases_keep_primary_anchor(self):
         html = '<div class="body"><h1>Example</h1><section id="s"><h2>Section</h2><dl><dt id="first">first()</dt><dt id="alias">alias()</dt><dd><p>Same explanation.</p></dd></dl></section></div>'
         records = extract(html, "example")

@@ -52,6 +52,18 @@ class OfflineTests(unittest.TestCase):
         self.assertEqual(post.call_count, 1)
         self.assertEqual(first["answer"], repeat["answer"])
 
+    def test_cache_result_isolation(self):
+        search = Mock()
+        search.retrieve.return_value = ([self.chunk], 4.0)
+        librarian = Librarian(search)
+        with patch("answer.requests.post", return_value=self.response("Use Path.read_text().")):
+            first = librarian.ask("How do I call Path.read_text?")
+            first["answer"] = "Mutated"
+            first["sources"][0]["quote"] = "Mutated quote"
+            repeat = librarian.ask("How do I call Path.read_text?")
+        self.assertNotEqual(repeat["answer"], "Mutated")
+        self.assertNotEqual(repeat["sources"][0]["quote"], "Mutated quote")
+
 
 if __name__ == "__main__":
     unittest.main()
