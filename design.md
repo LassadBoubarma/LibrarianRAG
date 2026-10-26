@@ -30,6 +30,8 @@ Ollama runs Qwen 2.5 7B locally. A development trial with the smaller 3B model p
 
 Copying a real passage cannot prove that a paraphrase follows from it. Human faithfulness review is therefore a separate task. The app renders text using `textContent`, so model output is not interpreted as HTML. It never executes suggested Python code.
 
+If the question names a dotted API such as `os.listdir`, the chosen evidence must mention at least one of the named APIs. Extraction spacing such as `Path. read_text` is normalized for this check. This catches some irrelevant citations but can also refuse a useful passage that uses a shorter name.
+
 ## Cache and service
 
 An in-memory LRU cache stores up to 128 answers. The key includes the exact trimmed question, document filter and model name. Restart after changing the index or model. There is one active model request at a time; other requests receive a useful 503 response. This keeps memory use predictable on a laptop, but it is not a high-traffic design.
