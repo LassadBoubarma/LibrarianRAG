@@ -48,7 +48,7 @@ accuracy_comparison = (
     f"{pct(cache_accuracy['baseline_correctness_answerable'])} before and "
     f"{pct(cache_accuracy['cached_correctness_answerable'])} after caching "
     f"({cache_accuracy['change_percentage_points']:+.2f} percentage points). "
-    f"{cache_accuracy['new_judge_calls']} changed outputs were regraded; "
+    f"{cache_accuracy['new_judge_calls']} changed {'output was' if cache_accuracy['new_judge_calls'] == 1 else 'outputs were'} regraded; "
     f"{cache_accuracy['reused_grades']} grades were reused because answer and evidence matched exactly."
 )
 
@@ -120,7 +120,7 @@ sections = [
     ("2. Pipeline design", [
         "Offline: extract sections and source anchors, split into 180-token chunks, embed with all-MiniLM-L6-v2, and save JSON plus a NumPy matrix. There are 3,297 chunks. A flat index fits in memory and avoids a database service.",
         "Online: BM25 and vector search each return 30 candidates. Reciprocal rank fusion combines them. A MiniLM cross-encoder reranks the best 20, and Qwen 2.5 7B answers from the best five. A document filter is applied before ranking. Questions are not rewritten.",
-        "The model chooses a source number. The app copies the cited passage from the index and links to the original documentation. Missing sources, explicit refusals and low relevance scores return an unknown response. A copied passage may still be interpreted incorrectly.",
+        "The model chooses a source number. The app copies the cited passage from the index and links to the original documentation. Missing sources, explicit refusals and low relevance scores return an unknown response. If the question names a dotted API, that name must occur in the selected evidence. This can refuse valid aliases. A copied passage may still be interpreted incorrectly.",
         "Chunk-size trial on 20 development questions: 120/24 gave 85% recall@5; 180/0 and 180/36 both gave 90%. The smaller 180/0 index was selected. Long code blocks can still cross chunk boundaries.",
     ]),
     ("3. Retrieval results", [

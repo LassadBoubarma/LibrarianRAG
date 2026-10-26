@@ -51,24 +51,24 @@ Measured locally on 26 October 2026: Ryzen 5 5600X, 16 GB RAM, RTX 3060. Search 
 
 | Measure | Result |
 | --- | --- |
-| Model-judged correctness (102 answerable) | 87.3% |
-| Model-judged correctness (all 112) | 88.4% |
-| Model-judged faithfulness (answered only) | 93.9% |
-| Model-judged citation support (answered only) | 92.9% |
-| Answer coverage (102 answerable) | 97.1% |
+| Model-judged correctness (102 answerable) | 84.3% |
+| Model-judged correctness (all 112) | 85.7% |
+| Model-judged faithfulness (answered only) | 92.6% |
+| Model-judged citation support (answered only) | 92.6% |
+| Answer coverage (102 answerable) | 92.2% |
 | Correct refusal (10 out-of-scope) | 100.0% |
-| Gold-passage citation rate (102 answerable) | 79.4% |
-| Answer token F1 (word-overlap proxy) | 0.532 |
+| Gold-passage citation rate (102 answerable) | 78.4% |
+| Answer token F1 (word-overlap proxy) | 0.495 |
 
 The P1 adapter uses Qwen 2.5 7B as a judge. The generator and judge use the same model, which can bias these scores. These are model judgments, not human grades. Copied passages exist by construction; that alone is not proof of faithfulness. All 112 questions are included in the descriptive results, including the 20 development questions. Raw answers and individual judge reasons are in [eval/results](eval/results).
 
 | Workload | p50 ms | p95 ms | Cache hits / 112 | Model tokens |
 | --- | --- | --- | --- | --- |
-| No cache | 3317.391 | 3810.670 | 0 | 79272 |
-| Cache, first use | 3228.638 | 3676.689 | 0 | 79271 |
-| Cache, repeated | 0.023 | 0.038 | 112 | 0 |
+| No cache | 3442.338 | 3836.704 | 0 | 79419 |
+| Cache, first use | 3139.002 | 3466.898 | 0 | 79405 |
+| Cache, repeated | 0.030 | 0.034 | 112 | 0 |
 
-Repeated questions reduced p95 by 99.9990% in a 100% cache-hit workload. Answers matched the first-use responses 100.0% of the time and the separate no-cache run 94.6% of the time. On the 102 answerable questions, model-judged correctness was 87.3% before and 87.3% after caching (+0.00 percentage points). 7 changed outputs were regraded; 105 grades were reused because answer and evidence matched exactly. This does not promise the same speedup for new questions. See [optimisation.md](optimisation.md).
+Repeated questions reduced p95 by 99.9991% in a 100% cache-hit workload. Answers matched the first-use responses 100.0% of the time and the separate no-cache run 99.1% of the time. On the 102 answerable questions, model-judged correctness was 84.3% before and 84.3% after caching (+0.00 percentage points). 1 changed output was regraded; 111 grades were reused because answer and evidence matched exactly. This does not promise the same speedup for new questions. See [optimisation.md](optimisation.md).
 
 ## Evaluation
 

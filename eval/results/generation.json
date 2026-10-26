@@ -4,50 +4,50 @@
     "model": "qwen2.5:7b",
     "python": "3.11.9",
     "platform": "Windows",
-    "implementation_sha256": "a7998924109127e85d758ba69e97a4bf32da8b3f24694958042556bd1cc4d909"
+    "implementation_sha256": "529de28a10401b890502facc5ed37790379becee25a9db4692584a7c8faef853"
   },
   "summary": {
     "questions": 112,
     "answerable_questions": 102,
-    "answer_token_f1": 0.5318385136158297,
-    "gold_citation_rate_all_answerable": 0.7941176470588235,
+    "answer_token_f1": 0.49496421377958016,
+    "gold_citation_rate_all_answerable": 0.7843137254901961,
     "exact_quote_rate_answered": 1.0,
     "abstention_accuracy_unanswerable": 1.0,
-    "answer_coverage": 0.9705882352941176,
+    "answer_coverage": 0.9215686274509803,
     "human_correctness": null,
     "human_faithfulness": null,
     "note": "Token F1 and quote existence are automatic proxies, not human correctness or faithfulness.",
-    "p50_ms": 3317.391,
-    "p95_ms": 3810.67
+    "p50_ms": 3442.338,
+    "p95_ms": 3836.704
   },
   "by_split": {
-    "dev": {
-      "questions": 20,
-      "answerable_questions": 20,
-      "answer_token_f1": 0.44429679969153646,
-      "gold_citation_rate_all_answerable": 0.75,
-      "exact_quote_rate_answered": 1.0,
-      "abstention_accuracy_unanswerable": null,
-      "answer_coverage": 0.9,
-      "human_correctness": null,
-      "human_faithfulness": null,
-      "note": "Token F1 and quote existence are automatic proxies, not human correctness or faithfulness.",
-      "p50_ms": 3328.502,
-      "p95_ms": 3933.903
-    },
     "test": {
       "questions": 92,
       "answerable_questions": 82,
-      "answer_token_f1": 0.5531901511583402,
-      "gold_citation_rate_all_answerable": 0.8048780487804879,
+      "answer_token_f1": 0.5101249365781972,
+      "gold_citation_rate_all_answerable": 0.7804878048780488,
       "exact_quote_rate_answered": 1.0,
       "abstention_accuracy_unanswerable": 1.0,
-      "answer_coverage": 0.9878048780487805,
+      "answer_coverage": 0.9390243902439024,
       "human_correctness": null,
       "human_faithfulness": null,
       "note": "Token F1 and quote existence are automatic proxies, not human correctness or faithfulness.",
-      "p50_ms": 3317.391,
-      "p95_ms": 3790.323
+      "p50_ms": 3433.639,
+      "p95_ms": 3805.941
+    },
+    "dev": {
+      "questions": 20,
+      "answerable_questions": 20,
+      "answer_token_f1": 0.43280525030525024,
+      "gold_citation_rate_all_answerable": 0.8,
+      "exact_quote_rate_answered": 1.0,
+      "abstention_accuracy_unanswerable": null,
+      "answer_coverage": 0.85,
+      "human_correctness": null,
+      "human_faithfulness": null,
+      "note": "Token F1 and quote existence are automatic proxies, not human correctness or faithfulness.",
+      "p50_ms": 3481.139,
+      "p95_ms": 3858.272
     }
   },
   "rows": [
@@ -84,11 +84,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 884,
+        "input_tokens": 886,
         "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 594.6201000042493,
-        "latency_ms": 3296.2684000085574
+        "search_ms": 627.895500001614,
+        "latency_ms": 3506.0155000101076
       },
       "token_f1": 0.8333333333333334,
       "gold_citation": true,
@@ -127,11 +127,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 670,
+        "input_tokens": 672,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 576.3680000090972,
-        "latency_ms": 3111.5350000036415
+        "search_ms": 600.8371999923838,
+        "latency_ms": 3358.278200001223
       },
       "token_f1": 1.0,
       "gold_citation": true,
@@ -170,11 +170,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 670,
+        "input_tokens": 672,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 602.4097999907099,
-        "latency_ms": 3145.725099995616
+        "search_ms": 583.1582999962848,
+        "latency_ms": 3242.6375999930315
       },
       "token_f1": 1.0,
       "gold_citation": true,
@@ -213,11 +213,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 767,
+        "input_tokens": 769,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 621.7828999942867,
-        "latency_ms": 3221.278800003347
+        "search_ms": 575.6073999946238,
+        "latency_ms": 3257.3849000036716
       },
       "token_f1": 0.0,
       "gold_citation": true,
@@ -235,7 +235,7 @@
       "answerable": true,
       "split": "dev",
       "result": {
-        "answer": "Use the len(object) function. [1]",
+        "answer": "len(object, /) [1]",
         "sources": [
           {
             "id": "functions#len:0",
@@ -256,13 +256,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 732,
-        "output_tokens": 18,
+        "input_tokens": 734,
+        "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 559.3360000057146,
-        "latency_ms": 2954.291500005638
+        "search_ms": 594.5333000126993,
+        "latency_ms": 3380.919000002905
       },
-      "token_f1": 0.5714285714285714,
+      "token_f1": 0.5,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -299,11 +299,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 805,
+        "input_tokens": 807,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 566.7163999896729,
-        "latency_ms": 3154.703400010476
+        "search_ms": 540.1225999958115,
+        "latency_ms": 3350.9563999978127
       },
       "token_f1": 0.25,
       "gold_citation": true,
@@ -342,11 +342,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 552,
+        "input_tokens": 554,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 530.3200999915134,
-        "latency_ms": 3046.3873999979114
+        "search_ms": 529.0141000004951,
+        "latency_ms": 3183.5100000025705
       },
       "token_f1": 0.8,
       "gold_citation": true,
@@ -385,11 +385,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 821,
+        "input_tokens": 823,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 603.2603000057861,
-        "latency_ms": 3189.442599992617
+        "search_ms": 581.277700010105,
+        "latency_ms": 3311.614499994903
       },
       "token_f1": 0.4,
       "gold_citation": true,
@@ -428,11 +428,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 508,
+        "input_tokens": 510,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 571.8784000055166,
-        "latency_ms": 3014.5805000065593
+        "search_ms": 523.8347999984398,
+        "latency_ms": 3195.3367999958573
       },
       "token_f1": 0.25,
       "gold_citation": true,
@@ -450,36 +450,19 @@
       "answerable": true,
       "split": "dev",
       "result": {
-        "answer": "No [1]",
-        "sources": [
-          {
-            "id": "collections#collections.defaultdict.__missing__:0",
-            "document": "collections",
-            "title": "collections — Container datatypes",
-            "section": "__missing__ ( key )",
-            "url": "https://docs.python.org/release/3.14.0/library/collections.html#collections.defaultdict.__missing__",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "If the default_factory attribute is None , this raises a KeyError exception with the key as argument.\n\nIf default_factory is not None , it is called without arguments to provide a default value for the given key , this value is inserted in the dictionary for the key , and returned.\n\nIf calling default_factory raises an exception this exception is propagated unchanged.\n\nThis method is called by the __getitem__() method of the dict class when the requested key is not found; whatever it returns or raises is then returned or raised by __getitem__() .\n\nNote that __missing__() is not called for any operations besides __getitem__() . This means that get() will, like normal dictionaries, return None as a default rather than using default_factory .",
-            "source_id": "collections#collections.defaultdict.__missing__",
-            "start": 0,
-            "end": 749,
-            "score": 6.819638252258301,
-            "quote": "If the default_factory attribute is None , this raises a KeyError exception with the key as argument.\n\nIf default_factory is not None , it is called without arguments to provide a default value for the given key , this value is inserted in the dictionary for the key , and returned.\n\nIf calling default_factory raises an exception this exception is propagated unchanged.\n\nThis method is called by the __getitem__() method of the dict class when the requested key is not found; whatever it returns or raises is then returned or raised by __getitem__() .\n\nNote that __missing__() is not called for any operations besides __getitem__() . This means that get() will, like normal dictionaries, return None as a default rather than using default_factory ."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 836,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 838,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 564.434900006745,
-        "latency_ms": 2858.3921999961603
+        "search_ms": 620.3799999930197,
+        "latency_ms": 3385.246799996821
       },
-      "token_f1": 0.2857142857142857,
+      "token_f1": 0.0,
       "gold_citation": false,
-      "quote_valid": true
+      "quote_valid": false
     },
     {
       "id": "q011",
@@ -493,36 +476,19 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "shallow [1]",
-        "sources": [
-          {
-            "id": "stdtypes#sequence.copy:0",
-            "document": "stdtypes",
-            "title": "Built-in Types",
-            "section": "sequence. copy ( )",
-            "url": "https://docs.python.org/release/3.14.0/library/stdtypes.html#sequence.copy",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "Added in version 3.3.\n\nCreate a shallow copy of sequence . This is equivalent to writing sequence[:] .\n\nHint\n\nThe copy() method is not part of the MutableSequence ABC , but most concrete mutable sequence types provide it.",
-            "source_id": "stdtypes#sequence.copy",
-            "start": 0,
-            "end": 221,
-            "score": 3.3013839721679688,
-            "quote": "Added in version 3.3.\n\nCreate a shallow copy of sequence . This is equivalent to writing sequence[:] .\n\nHint\n\nThe copy() method is not part of the MutableSequence ABC , but most concrete mutable sequence types provide it."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 412,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 414,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 549.9988999945344,
-        "latency_ms": 2967.5903000024846
+        "search_ms": 645.2108999947086,
+        "latency_ms": 3236.708800002816
       },
-      "token_f1": 0.5,
-      "gold_citation": true,
-      "quote_valid": true
+      "token_f1": 0.0,
+      "gold_citation": false,
+      "quote_valid": false
     },
     {
       "id": "q012",
@@ -536,7 +502,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "Use the add function. [1]",
+        "answer": "add ( elem , / ) [1]",
         "sources": [
           {
             "id": "stdtypes#frozenset.add:0",
@@ -557,13 +523,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 714,
-        "output_tokens": 16,
+        "input_tokens": 716,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 691.4136999985203,
-        "latency_ms": 3358.3724000054644
+        "search_ms": 787.6536999974633,
+        "latency_ms": 3593.149899999844
       },
-      "token_f1": 0.5714285714285714,
+      "token_f1": 0.4,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -600,11 +566,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 782,
+        "input_tokens": 784,
         "output_tokens": 24,
         "cache_hit": false,
-        "search_ms": 611.8656000035116,
-        "latency_ms": 3319.507199994405
+        "search_ms": 698.0201999976998,
+        "latency_ms": 3547.430099992198
       },
       "token_f1": 0.8571428571428571,
       "gold_citation": true,
@@ -643,11 +609,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 690,
+        "input_tokens": 692,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 620.1361000130419,
-        "latency_ms": 3194.989900002838
+        "search_ms": 690.6336999963969,
+        "latency_ms": 3418.3757999999216
       },
       "token_f1": 0.2857142857142857,
       "gold_citation": true,
@@ -686,11 +652,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 568,
+        "input_tokens": 570,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 626.853600013419,
-        "latency_ms": 2959.7942999971565
+        "search_ms": 655.5515000072774,
+        "latency_ms": 3326.7346000066027
       },
       "token_f1": 0.8,
       "gold_citation": true,
@@ -729,11 +695,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 821,
+        "input_tokens": 823,
         "output_tokens": 51,
         "cache_hit": false,
-        "search_ms": 571.2174000072991,
-        "latency_ms": 3755.5276999919442
+        "search_ms": 675.9037000010721,
+        "latency_ms": 4102.2331999993185
       },
       "token_f1": 0.05405405405405406,
       "gold_citation": true,
@@ -751,7 +717,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "Use PurePath.suffixes [1]",
+        "answer": "Path.suffixes [1]",
         "sources": [
           {
             "id": "pathlib#pathlib.PurePath.suffixes:0",
@@ -772,13 +738,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 927,
-        "output_tokens": 18,
+        "input_tokens": 929,
+        "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 565.7130000035977,
-        "latency_ms": 3353.986000001896
+        "search_ms": 645.8854000084102,
+        "latency_ms": 3476.89089999767
       },
-      "token_f1": 0.2857142857142857,
+      "token_f1": 0.0,
       "gold_citation": false,
       "quote_valid": true
     },
@@ -815,11 +781,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 581,
+        "input_tokens": 583,
         "output_tokens": 28,
         "cache_hit": false,
-        "search_ms": 553.4112000023015,
-        "latency_ms": 3321.0314999887487
+        "search_ms": 545.3503000026103,
+        "latency_ms": 3420.337000003201
       },
       "token_f1": 0.782608695652174,
       "gold_citation": true,
@@ -837,7 +803,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "collections.Counter is used for counting hashable objects. [1]",
+        "answer": "a collection where elements are stored as dictionary keys and their counts are stored as dictionary values. [1]",
         "sources": [
           {
             "id": "collections#collections.Counter:0",
@@ -858,13 +824,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 769,
-        "output_tokens": 21,
+        "input_tokens": 771,
+        "output_tokens": 29,
         "cache_hit": false,
-        "search_ms": 532.6848999975482,
-        "latency_ms": 3244.6303000033367
+        "search_ms": 614.5991999947,
+        "latency_ms": 3632.65839999076
       },
-      "token_f1": 0.5454545454545454,
+      "token_f1": 0.0,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -901,11 +867,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 688,
+        "input_tokens": 690,
         "output_tokens": 49,
         "cache_hit": false,
-        "search_ms": 588.4713999985252,
-        "latency_ms": 3462.061399986851
+        "search_ms": 563.1104999920353,
+        "latency_ms": 3848.225800000364
       },
       "token_f1": 0.2857142857142857,
       "gold_citation": true,
@@ -923,7 +889,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "defaultdict overrides one method and adds one writable instance variable, providing a default value for missing keys. [1]",
+        "answer": "defaultdict is a subclass of the built-in dict class and overrides one method and adds one writable instance variable. [1]",
         "sources": [
           {
             "id": "collections#collections.defaultdict:0",
@@ -944,13 +910,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 829,
-        "output_tokens": 31,
+        "input_tokens": 831,
+        "output_tokens": 33,
         "cache_hit": false,
-        "search_ms": 468.3428999996977,
-        "latency_ms": 3439.7363999887602
+        "search_ms": 568.4765000041807,
+        "latency_ms": 3770.6545000110054
       },
-      "token_f1": 0.15384615384615385,
+      "token_f1": 0.06896551724137931,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -966,7 +932,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "use the most_common() method [1]",
+        "answer": "most_common [1]",
         "sources": [
           {
             "id": "collections#collections.Counter.most_common:0",
@@ -987,11 +953,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 892,
-        "output_tokens": 18,
+        "input_tokens": 894,
+        "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 626.2281000090297,
-        "latency_ms": 3321.5480000071693
+        "search_ms": 698.9965999964625,
+        "latency_ms": 3515.233199999784
       },
       "token_f1": 0.6666666666666666,
       "gold_citation": true,
@@ -1030,11 +996,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 681,
+        "input_tokens": 683,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 635.4785999865271,
-        "latency_ms": 3268.7002000020584
+        "search_ms": 746.9073999964166,
+        "latency_ms": 3523.9440000004834
       },
       "token_f1": 0.75,
       "gold_citation": true,
@@ -1073,11 +1039,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 819,
+        "input_tokens": 821,
         "output_tokens": 31,
         "cache_hit": false,
-        "search_ms": 645.2461000008043,
-        "latency_ms": 3462.082300000475
+        "search_ms": 707.2803000046406,
+        "latency_ms": 3827.277400007006
       },
       "token_f1": 0.56,
       "gold_citation": true,
@@ -1095,7 +1061,7 @@
       "answerable": true,
       "split": "dev",
       "result": {
-        "answer": "json.dump(obj, fp, *args, **kwargs) [1]",
+        "answer": "json.dump [1]",
         "sources": [
           {
             "id": "json#json.dump:0",
@@ -1116,13 +1082,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 936,
-        "output_tokens": 23,
+        "input_tokens": 938,
+        "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 614.0269000025,
-        "latency_ms": 3422.878800003673
+        "search_ms": 745.7393999939086,
+        "latency_ms": 3554.365800009691
       },
-      "token_f1": 0.4444444444444444,
+      "token_f1": 0.8,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -1159,11 +1125,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 845,
+        "input_tokens": 847,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 619.5385000028182,
-        "latency_ms": 3234.8322000034386
+        "search_ms": 734.6984000032535,
+        "latency_ms": 3602.7988999994704
       },
       "token_f1": 1.0,
       "gold_citation": false,
@@ -1202,11 +1168,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 833,
+        "input_tokens": 835,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 601.1781999986852,
-        "latency_ms": 3311.724099999992
+        "search_ms": 816.5884999907576,
+        "latency_ms": 3653.891299996758
       },
       "token_f1": 1.0,
       "gold_citation": true,
@@ -1245,11 +1211,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 783,
+        "input_tokens": 785,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 650.1846999890404,
-        "latency_ms": 3252.680000005057
+        "search_ms": 774.0691999933915,
+        "latency_ms": 3516.7958000092767
       },
       "token_f1": 0.8,
       "gold_citation": true,
@@ -1288,11 +1254,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 903,
+        "input_tokens": 905,
         "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 666.7749000043841,
-        "latency_ms": 3468.9507999864873
+        "search_ms": 745.4380999988643,
+        "latency_ms": 3710.637600001064
       },
       "token_f1": 0.2,
       "gold_citation": true,
@@ -1331,11 +1297,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 855,
+        "input_tokens": 857,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 725.8711999893421,
-        "latency_ms": 3375.576100006583
+        "search_ms": 722.2635000071023,
+        "latency_ms": 3556.306400001631
       },
       "token_f1": 1.0,
       "gold_citation": true,
@@ -1374,11 +1340,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 714,
+        "input_tokens": 716,
         "output_tokens": 23,
         "cache_hit": false,
-        "search_ms": 654.6510000043781,
-        "latency_ms": 3378.570700006094
+        "search_ms": 773.8043999997899,
+        "latency_ms": 3658.5944999969797
       },
       "token_f1": 0.631578947368421,
       "gold_citation": true,
@@ -1417,11 +1383,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 685,
+        "input_tokens": 687,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 598.5027999995509,
-        "latency_ms": 3120.5420999904163
+        "search_ms": 690.5855999939376,
+        "latency_ms": 3420.856199998525
       },
       "token_f1": 0.8,
       "gold_citation": true,
@@ -1460,11 +1426,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 679,
+        "input_tokens": 681,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 542.0100999908755,
-        "latency_ms": 3153.0406000092626
+        "search_ms": 689.414399996167,
+        "latency_ms": 3431.941300004837
       },
       "token_f1": 1.0,
       "gold_citation": true,
@@ -1482,7 +1448,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "Use date.strptime(date_string, format) or datetime.strptime(date_string, format). [1]",
+        "answer": "use date.strptime or datetime.strptime [1]",
         "sources": [
           {
             "id": "datetime#datetime.date.strptime:0",
@@ -1503,13 +1469,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 842,
-        "output_tokens": 28,
+        "input_tokens": 844,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 607.3676999949384,
-        "latency_ms": 3449.374900010298
+        "search_ms": 720.6664999976056,
+        "latency_ms": 3640.3140000038547
       },
-      "token_f1": 0.46153846153846156,
+      "token_f1": 0.6666666666666666,
       "gold_citation": false,
       "quote_valid": true
     },
@@ -1546,11 +1512,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 911,
+        "input_tokens": 913,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 562.7457999944454,
-        "latency_ms": 3212.7756999980193
+        "search_ms": 785.3381999884732,
+        "latency_ms": 3612.2395000129472
       },
       "token_f1": 0.2222222222222222,
       "gold_citation": true,
@@ -1589,11 +1555,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 887,
+        "input_tokens": 889,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 564.6170999971218,
-        "latency_ms": 3220.787099999143
+        "search_ms": 669.5537000050535,
+        "latency_ms": 3430.7590999960667
       },
       "token_f1": 0.2857142857142857,
       "gold_citation": true,
@@ -1611,7 +1577,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "use re.fullmatch() [1]",
+        "answer": "re.fullmatch() [1]",
         "sources": [
           {
             "id": "re#search-vs-match:0",
@@ -1632,13 +1598,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 709,
-        "output_tokens": 16,
+        "input_tokens": 711,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 569.0154999902006,
-        "latency_ms": 3201.047700000345
+        "search_ms": 692.348899989156,
+        "latency_ms": 3475.1083000010112
       },
-      "token_f1": 1.0,
+      "token_f1": 0.8,
       "gold_citation": false,
       "quote_valid": true
     },
@@ -1675,11 +1641,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 770,
+        "input_tokens": 772,
         "output_tokens": 29,
         "cache_hit": false,
-        "search_ms": 593.9538000093307,
-        "latency_ms": 3613.103499999852
+        "search_ms": 663.1309000076726,
+        "latency_ms": 3694.8757999925874
       },
       "token_f1": 0.6363636363636364,
       "gold_citation": true,
@@ -1701,11 +1667,11 @@
         "sources": [],
         "abstained": true,
         "reason": "invalid_or_missing_evidence",
-        "input_tokens": 771,
+        "input_tokens": 773,
         "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 661.5439000015613,
-        "latency_ms": 3404.843299998902
+        "search_ms": 734.0359999943757,
+        "latency_ms": 3647.0146999927238
       },
       "token_f1": 0.0,
       "gold_citation": false,
@@ -1744,11 +1710,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 900,
+        "input_tokens": 902,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 649.0677000110736,
-        "latency_ms": 3384.3931000010343
+        "search_ms": 646.4916999975685,
+        "latency_ms": 3500.925400003325
       },
       "token_f1": 0.8571428571428571,
       "gold_citation": true,
@@ -1766,7 +1732,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "use zip [1]",
+        "answer": "zip [1]",
         "sources": [
           {
             "id": "functions#zip:0",
@@ -1787,13 +1753,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 875,
-        "output_tokens": 14,
+        "input_tokens": 877,
+        "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 594.3451999919489,
-        "latency_ms": 3305.4654999868944
+        "search_ms": 702.6587000000291,
+        "latency_ms": 3469.1414999979315
       },
-      "token_f1": 0.4,
+      "token_f1": 0.0,
       "gold_citation": false,
       "quote_valid": true
     },
@@ -1809,7 +1775,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "itertools.cycle(iterable) [1]",
+        "answer": "itertools.cycle [1]",
         "sources": [
           {
             "id": "itertools#itertools.cycle:0",
@@ -1830,13 +1796,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 945,
-        "output_tokens": 17,
+        "input_tokens": 947,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 630.358399997931,
-        "latency_ms": 3350.0045999971917
+        "search_ms": 676.7740000068443,
+        "latency_ms": 3556.9133999961196
       },
-      "token_f1": 0.6666666666666666,
+      "token_f1": 0.8,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -1873,11 +1839,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1052,
+        "input_tokens": 1054,
         "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 594.2051999882096,
-        "latency_ms": 3426.4423999993596
+        "search_ms": 631.1107000074117,
+        "latency_ms": 3619.0535000059754
       },
       "token_f1": 0.9230769230769231,
       "gold_citation": true,
@@ -1916,11 +1882,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 875,
+        "input_tokens": 877,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 576.7920000071172,
-        "latency_ms": 3264.1120000043884
+        "search_ms": 590.271599998232,
+        "latency_ms": 3398.7106999993557
       },
       "token_f1": 1.0,
       "gold_citation": false,
@@ -1959,11 +1925,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1069,
+        "input_tokens": 1071,
         "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 673.3746999962023,
-        "latency_ms": 3524.4015000062063
+        "search_ms": 641.3671000045724,
+        "latency_ms": 3602.0791999908397
       },
       "token_f1": 0.3076923076923077,
       "gold_citation": true,
@@ -2002,11 +1968,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 861,
+        "input_tokens": 863,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 632.7765000023646,
-        "latency_ms": 3471.1779999925056
+        "search_ms": 714.7152999968966,
+        "latency_ms": 3524.0858999895863
       },
       "token_f1": 0.25,
       "gold_citation": true,
@@ -2045,11 +2011,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 788,
+        "input_tokens": 790,
         "output_tokens": 38,
         "cache_hit": false,
-        "search_ms": 595.5175999988569,
-        "latency_ms": 3806.9509000051767
+        "search_ms": 600.6701999867801,
+        "latency_ms": 3788.4837000019616
       },
       "token_f1": 0.12903225806451613,
       "gold_citation": true,
@@ -2088,11 +2054,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 824,
+        "input_tokens": 826,
         "output_tokens": 31,
         "cache_hit": false,
-        "search_ms": 640.2392999880249,
-        "latency_ms": 3723.0509000073653
+        "search_ms": 595.523999989382,
+        "latency_ms": 3728.5150999960024
       },
       "token_f1": 0.2962962962962963,
       "gold_citation": true,
@@ -2131,11 +2097,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 451,
+        "input_tokens": 453,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 650.8960999926785,
-        "latency_ms": 3302.173500007484
+        "search_ms": 633.8791999878595,
+        "latency_ms": 3267.8325999877416
       },
       "token_f1": 0.8,
       "gold_citation": true,
@@ -2174,11 +2140,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 687,
+        "input_tokens": 689,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 647.436999992351,
-        "latency_ms": 3311.207100006868
+        "search_ms": 617.5452000024961,
+        "latency_ms": 3297.068300002138
       },
       "token_f1": 0.25,
       "gold_citation": true,
@@ -2217,11 +2183,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 778,
+        "input_tokens": 780,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 681.4653000037652,
-        "latency_ms": 3470.191500004148
+        "search_ms": 700.2713999972912,
+        "latency_ms": 3498.845699999947
       },
       "token_f1": 0.2857142857142857,
       "gold_citation": true,
@@ -2239,7 +2205,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "os.getenv(key, default=None) [1]",
+        "answer": "os.getenv(key, default = None) [1]",
         "sources": [
           {
             "id": "os#os.getenv:0",
@@ -2260,11 +2226,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 736,
-        "output_tokens": 18,
+        "input_tokens": 738,
+        "output_tokens": 19,
         "cache_hit": false,
-        "search_ms": 633.3475999999791,
-        "latency_ms": 3427.58689999755
+        "search_ms": 654.4025000039255,
+        "latency_ms": 3493.1940999958897
       },
       "token_f1": 0.5,
       "gold_citation": true,
@@ -2303,11 +2269,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 949,
+        "input_tokens": 951,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 666.5684999898076,
-        "latency_ms": 3538.055400000303
+        "search_ms": 743.3758999977726,
+        "latency_ms": 3562.0901999936905
       },
       "token_f1": 0.2857142857142857,
       "gold_citation": true,
@@ -2346,11 +2312,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 984,
+        "input_tokens": 986,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 681.4144999952987,
-        "latency_ms": 3539.869899992482
+        "search_ms": 681.1497999879066,
+        "latency_ms": 3475.04520000075
       },
       "token_f1": 0.5,
       "gold_citation": true,
@@ -2368,7 +2334,7 @@
       "answerable": true,
       "split": "dev",
       "result": {
-        "answer": "use shutil.rmtree() [1]",
+        "answer": "shutil.rmtree [1]",
         "sources": [
           {
             "id": "shutil#shutil.rmtree:0",
@@ -2389,13 +2355,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 895,
+        "input_tokens": 897,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 833.3928000065498,
-        "latency_ms": 3600.52480000013
+        "search_ms": 738.5693999967771,
+        "latency_ms": 3565.4987000016263
       },
-      "token_f1": 1.0,
+      "token_f1": 0.8,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -2411,7 +2377,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "use shutil.which(cmd, mode=os.F_OK | os.X_OK, path=None) [1]",
+        "answer": "shutil.which(cmd, mode=os.F_OK | os.X_OK, path=None) [1]",
         "sources": [
           {
             "id": "shutil#shutil.which:0",
@@ -2432,13 +2398,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 923,
+        "input_tokens": 925,
         "output_tokens": 28,
         "cache_hit": false,
-        "search_ms": 719.925700002932,
-        "latency_ms": 3742.7184999978635
+        "search_ms": 791.3242000067839,
+        "latency_ms": 3868.486999999732
       },
-      "token_f1": 0.42857142857142855,
+      "token_f1": 0.3076923076923077,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -2475,11 +2441,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 310,
+        "input_tokens": 312,
         "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 489.9262999970233,
-        "latency_ms": 3204.7518999897875
+        "search_ms": 606.5631999954348,
+        "latency_ms": 3274.061599993729
       },
       "token_f1": 1.0,
       "gold_citation": true,
@@ -2518,11 +2484,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 574,
+        "input_tokens": 576,
         "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 442.7776999946218,
-        "latency_ms": 3224.393600001349
+        "search_ms": 646.1375999933807,
+        "latency_ms": 3426.979100011522
       },
       "token_f1": 1.0,
       "gold_citation": true,
@@ -2540,7 +2506,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "Use math.sqrt(x) [1]",
+        "answer": "math.sqrt(x) [1]",
         "sources": [
           {
             "id": "math#math.sqrt:0",
@@ -2561,13 +2527,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 717,
-        "output_tokens": 16,
+        "input_tokens": 719,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 528.4575999976369,
-        "latency_ms": 3276.480700005777
+        "search_ms": 646.6418000054546,
+        "latency_ms": 3366.9140999991214
       },
-      "token_f1": 0.8571428571428571,
+      "token_f1": 0.6666666666666666,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -2587,11 +2553,11 @@
         "sources": [],
         "abstained": true,
         "reason": "invalid_or_missing_evidence",
-        "input_tokens": 509,
+        "input_tokens": 511,
         "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 592.7495999931125,
-        "latency_ms": 3293.2666999986395
+        "search_ms": 586.625500000082,
+        "latency_ms": 3323.995400001877
       },
       "token_f1": 0.0,
       "gold_citation": false,
@@ -2609,7 +2575,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "statistics.mean calculates the sample arithmetic mean of data. [1]",
+        "answer": "the sample arithmetic mean of data [1]",
         "sources": [
           {
             "id": "statistics#statistics.mean:0",
@@ -2630,13 +2596,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1021,
-        "output_tokens": 21,
+        "input_tokens": 1023,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 512.3059000034118,
-        "latency_ms": 3521.725900005549
+        "search_ms": 557.380899990676,
+        "latency_ms": 3435.3364999988116
       },
-      "token_f1": 0.6666666666666666,
+      "token_f1": 0.8333333333333334,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -2652,7 +2618,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "When the number of data points is even, the median is interpolated by taking the average of the two middle values. [1]",
+        "answer": "the median is interpolated by taking the average of the two middle values [1]",
         "sources": [
           {
             "id": "statistics#statistics.median:0",
@@ -2673,13 +2639,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1033,
-        "output_tokens": 34,
+        "input_tokens": 1035,
+        "output_tokens": 25,
         "cache_hit": false,
-        "search_ms": 552.1201999945333,
-        "latency_ms": 3776.7180999944685
+        "search_ms": 585.072299989406,
+        "latency_ms": 3662.0090000069467
       },
-      "token_f1": 0.2962962962962963,
+      "token_f1": 0.42105263157894735,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -2716,11 +2682,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 863,
+        "input_tokens": 865,
         "output_tokens": 23,
         "cache_hit": false,
-        "search_ms": 554.2399000114528,
-        "latency_ms": 3564.6677000040654
+        "search_ms": 575.186300004134,
+        "latency_ms": 3528.0094999907305
       },
       "token_f1": 0.625,
       "gold_citation": true,
@@ -2759,11 +2725,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 470,
+        "input_tokens": 472,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 602.1341000014218,
-        "latency_ms": 3307.799200003501
+        "search_ms": 590.8342000038829,
+        "latency_ms": 3273.0916000000434
       },
       "token_f1": 0.5,
       "gold_citation": true,
@@ -2802,11 +2768,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 819,
+        "input_tokens": 821,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 589.1501999867614,
-        "latency_ms": 3345.796399997198
+        "search_ms": 594.2555000074208,
+        "latency_ms": 3372.344899995369
       },
       "token_f1": 0.8,
       "gold_citation": true,
@@ -2845,11 +2811,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1083,
+        "input_tokens": 1085,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 567.9595999972662,
-        "latency_ms": 3515.0953000120353
+        "search_ms": 677.19550000038,
+        "latency_ms": 3521.572000012384
       },
       "token_f1": 0.3333333333333333,
       "gold_citation": true,
@@ -2867,36 +2833,19 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "a <= N <= b [1]",
-        "sources": [
-          {
-            "id": "random#cmdoption-random-i:0",
-            "document": "random",
-            "title": "random — Generate pseudo-random numbers",
-            "section": "-i <N>",
-            "url": "https://docs.python.org/release/3.14.0/library/random.html#cmdoption-random-i",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "Print a random integer between 1 and N inclusive, using randint() .",
-            "source_id": "random#cmdoption-random-i",
-            "start": 0,
-            "end": 67,
-            "score": 0.37315741181373596,
-            "quote": "Print a random integer between 1 and N inclusive, using randint() ."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 545,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 547,
         "output_tokens": 17,
         "cache_hit": false,
-        "search_ms": 610.732300003292,
-        "latency_ms": 3326.027700008126
+        "search_ms": 585.6903999956558,
+        "latency_ms": 3237.930500006769
       },
-      "token_f1": 0.4,
+      "token_f1": 0.0,
       "gold_citation": false,
-      "quote_valid": true
+      "quote_valid": false
     },
     {
       "id": "q068",
@@ -2931,11 +2880,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 801,
+        "input_tokens": 803,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 568.1798000005074,
-        "latency_ms": 3315.2745999977924
+        "search_ms": 567.204999999376,
+        "latency_ms": 3295.427799996105
       },
       "token_f1": 0.25,
       "gold_citation": true,
@@ -2953,7 +2902,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "The lowercase letters 'abcdefghijklmnopqrstuvwxyz' [1]",
+        "answer": "The lowercase letters 'abcdefghijklmnopqrstuvwxyz'. [1]",
         "sources": [
           {
             "id": "string#string.ascii_lowercase:0",
@@ -2974,11 +2923,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 451,
-        "output_tokens": 17,
+        "input_tokens": 453,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 595.4125999996904,
-        "latency_ms": 3121.9852000067476
+        "search_ms": 441.5393999952357,
+        "latency_ms": 3082.8527999983635
       },
       "token_f1": 0.5454545454545454,
       "gold_citation": true,
@@ -3000,11 +2949,11 @@
         "sources": [],
         "abstained": true,
         "reason": "invalid_or_missing_evidence",
-        "input_tokens": 536,
-        "output_tokens": 13,
+        "input_tokens": 538,
+        "output_tokens": 30,
         "cache_hit": false,
-        "search_ms": 546.3873000117019,
-        "latency_ms": 3008.428900007857
+        "search_ms": 475.8838999987347,
+        "latency_ms": 3397.0413000060944
       },
       "token_f1": 0.0,
       "gold_citation": false,
@@ -3022,36 +2971,19 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "string.ascii_letters combines string.ascii_lowercase and string.ascii_uppercase. [1]",
-        "sources": [
-          {
-            "id": "string#string.printable:0",
-            "document": "string",
-            "title": "string — Common string operations",
-            "section": "string. printable",
-            "url": "https://docs.python.org/release/3.14.0/library/string.html#string.printable",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "String of ASCII characters which are considered printable by Python. This is a combination of digits , ascii_letters , punctuation , and whitespace .\n\nNote\n\nBy design, string.printable.isprintable() returns False . In particular, string.printable is not printable in the POSIX sense (see LC_CTYPE ).",
-            "source_id": "string#string.printable",
-            "start": 0,
-            "end": 299,
-            "score": 4.781126976013184,
-            "quote": "String of ASCII characters which are considered printable by Python. This is a combination of digits , ascii_letters , punctuation , and whitespace .\n\nNote\n\nBy design, string.printable.isprintable() returns False . In particular, string.printable is not printable in the POSIX sense (see LC_CTYPE )."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 561,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 563,
         "output_tokens": 24,
         "cache_hit": false,
-        "search_ms": 579.9209999968298,
-        "latency_ms": 3312.8463000030024
+        "search_ms": 560.2862999949139,
+        "latency_ms": 3325.3452999924775
       },
-      "token_f1": 0.15384615384615385,
+      "token_f1": 0.0,
       "gold_citation": false,
-      "quote_valid": true
+      "quote_valid": false
     },
     {
       "id": "q072",
@@ -3086,11 +3018,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 431,
+        "input_tokens": 433,
         "output_tokens": 29,
         "cache_hit": false,
-        "search_ms": 673.1131999986246,
-        "latency_ms": 3486.7862000101013
+        "search_ms": 554.4317000021692,
+        "latency_ms": 3407.606599997962
       },
       "token_f1": 0.5714285714285714,
       "gold_citation": true,
@@ -3129,11 +3061,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 777,
+        "input_tokens": 779,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 723.2111999910558,
-        "latency_ms": 3330.7067999994615
+        "search_ms": 656.616699998267,
+        "latency_ms": 3341.9615000020713
       },
       "token_f1": 0.2857142857142857,
       "gold_citation": true,
@@ -3151,7 +3083,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "parser.add_argument('filename') [1]",
+        "answer": "parser.add_argument() [1]",
         "sources": [
           {
             "id": "argparse#module-argparse:360",
@@ -3172,13 +3104,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 866,
-        "output_tokens": 18,
+        "input_tokens": 868,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 804.5106000063242,
-        "latency_ms": 3508.8490000052843
+        "search_ms": 755.8974999992643,
+        "latency_ms": 3599.5922000001883
       },
-      "token_f1": 0.3333333333333333,
+      "token_f1": 0.4,
       "gold_citation": false,
       "quote_valid": true
     },
@@ -3215,11 +3147,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 352,
+        "input_tokens": 354,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 634.2911000101594,
-        "latency_ms": 3054.783600004157
+        "search_ms": 570.6686000048649,
+        "latency_ms": 3158.981100001256
       },
       "token_f1": 0.0,
       "gold_citation": false,
@@ -3258,11 +3190,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 428,
+        "input_tokens": 430,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 568.6767000006512,
-        "latency_ms": 3028.7314000015613
+        "search_ms": 568.6279000074137,
+        "latency_ms": 3230.9410000016214
       },
       "token_f1": 0.4,
       "gold_citation": false,
@@ -3301,11 +3233,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 384,
+        "input_tokens": 386,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 553.2723000069382,
-        "latency_ms": 2948.427700001048
+        "search_ms": 567.5287000049138,
+        "latency_ms": 3180.5747999896994
       },
       "token_f1": 0.4,
       "gold_citation": false,
@@ -3323,36 +3255,19 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "Yes [1]",
-        "sources": [
-          {
-            "id": "logging#logging.Logger.exception:0",
-            "document": "logging",
-            "title": "logging — Logging facility for Python",
-            "section": "exception ( msg , * args , ** kwargs )",
-            "url": "https://docs.python.org/release/3.14.0/library/logging.html#logging.Logger.exception",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "Logs a message with level ERROR on this logger. The arguments are interpreted as for debug() . Exception info is added to the logging message. This method should only be called from an exception handler.",
-            "source_id": "logging#logging.Logger.exception",
-            "start": 0,
-            "end": 203,
-            "score": 7.416144371032715,
-            "quote": "Logs a message with level ERROR on this logger. The arguments are interpreted as for debug() . Exception info is added to the logging message. This method should only be called from an exception handler."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 701,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 703,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 606.4504000096349,
-        "latency_ms": 3154.7609999979613
+        "search_ms": 546.2360999954399,
+        "latency_ms": 3317.139299993869
       },
-      "token_f1": 0.2222222222222222,
-      "gold_citation": true,
-      "quote_valid": true
+      "token_f1": 0.0,
+      "gold_citation": false,
+      "quote_valid": false
     },
     {
       "id": "q079",
@@ -3366,7 +3281,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "use assertEqual() [1]",
+        "answer": "assertEqual [1]",
         "sources": [
           {
             "id": "unittest#unittest.TestCase.assertEqual:0",
@@ -3387,13 +3302,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 735,
-        "output_tokens": 15,
+        "input_tokens": 737,
+        "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 599.07270000258,
-        "latency_ms": 3207.496800008812
+        "search_ms": 515.7508999982383,
+        "latency_ms": 3314.2336000018986
       },
-      "token_f1": 1.0,
+      "token_f1": 0.6666666666666666,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -3409,7 +3324,7 @@
       "answerable": true,
       "split": "dev",
       "result": {
-        "answer": "assertTrue tests that expr is true (or false). [1]",
+        "answer": "Test that expr is true (or false). [1]",
         "sources": [
           {
             "id": "unittest#unittest.TestCase.assertTrue:0",
@@ -3430,13 +3345,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 816,
-        "output_tokens": 22,
+        "input_tokens": 818,
+        "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 556.5780999895651,
-        "latency_ms": 3309.0070000034757
+        "search_ms": 569.7635999968043,
+        "latency_ms": 3528.9114999904996
       },
-      "token_f1": 0.3076923076923077,
+      "token_f1": 0.3333333333333333,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -3473,11 +3388,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 684,
+        "input_tokens": 686,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 663.8572999945609,
-        "latency_ms": 3222.9805999959353
+        "search_ms": 704.6839999966323,
+        "latency_ms": 3427.816499999608
       },
       "token_f1": 1.0,
       "gold_citation": true,
@@ -3516,11 +3431,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 778,
+        "input_tokens": 780,
         "output_tokens": 22,
         "cache_hit": false,
-        "search_ms": 675.4419999924721,
-        "latency_ms": 3406.7710999952396
+        "search_ms": 622.9691999906208,
+        "latency_ms": 3485.471099993447
       },
       "token_f1": 0.46153846153846156,
       "gold_citation": false,
@@ -3538,7 +3453,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "A special type indicating an unconstrained type. [1]",
+        "answer": "Special type [1]",
         "sources": [
           {
             "id": "typing#typing.Any:0",
@@ -3559,13 +3474,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 786,
-        "output_tokens": 20,
+        "input_tokens": 788,
+        "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 635.5528999993112,
-        "latency_ms": 3313.451599999098
+        "search_ms": 644.8024999990594,
+        "latency_ms": 3449.338999998872
       },
-      "token_f1": 1.0,
+      "token_f1": 0.4444444444444444,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -3602,11 +3517,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 856,
+        "input_tokens": 858,
         "output_tokens": 29,
         "cache_hit": false,
-        "search_ms": 626.8410000047879,
-        "latency_ms": 3472.183899997617
+        "search_ms": 656.7795000009937,
+        "latency_ms": 3786.0012000019196
       },
       "token_f1": 0.42857142857142855,
       "gold_citation": true,
@@ -3624,7 +3539,7 @@
       "answerable": true,
       "split": "dev",
       "result": {
-        "answer": "a value to one of the provided literals [1]",
+        "answer": "a specific value or set of values [1]",
         "sources": [
           {
             "id": "typing#typing.Literal:0",
@@ -3645,13 +3560,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 943,
-        "output_tokens": 20,
+        "input_tokens": 945,
+        "output_tokens": 19,
         "cache_hit": false,
-        "search_ms": 523.938199999975,
-        "latency_ms": 3294.4742000108818
+        "search_ms": 647.3094999964815,
+        "latency_ms": 3593.71299999475
       },
-      "token_f1": 0.6666666666666666,
+      "token_f1": 0.42857142857142855,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -3688,11 +3603,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 800,
+        "input_tokens": 802,
         "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 676.6062999959104,
-        "latency_ms": 3472.1472000092035
+        "search_ms": 774.5875000109663,
+        "latency_ms": 3598.359099996742
       },
       "token_f1": 0.46153846153846156,
       "gold_citation": true,
@@ -3731,11 +3646,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 676,
+        "input_tokens": 678,
         "output_tokens": 24,
         "cache_hit": false,
-        "search_ms": 634.1945999884047,
-        "latency_ms": 3509.6462999936193
+        "search_ms": 624.0133999963291,
+        "latency_ms": 3635.7614000007743
       },
       "token_f1": 0.4444444444444444,
       "gold_citation": true,
@@ -3753,7 +3668,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "Converts the dataclass obj to a tuple of its field values. [1]",
+        "answer": "Converts the dataclass obj to a tuple (by using the factory function tuple_factory). Each dataclass is converted to a tuple of its field values. [1]",
         "sources": [
           {
             "id": "dataclasses#dataclasses.astuple:0",
@@ -3774,13 +3689,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 700,
-        "output_tokens": 25,
+        "input_tokens": 702,
+        "output_tokens": 42,
         "cache_hit": false,
-        "search_ms": 1146.0093000059715,
-        "latency_ms": 4098.238799997489
+        "search_ms": 907.6712999958545,
+        "latency_ms": 4197.955900002853
       },
-      "token_f1": 0.42105263157894735,
+      "token_f1": 0.3125,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -3796,7 +3711,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "use dataclasses.is_dataclass(obj) or is_dataclass_instance(obj) [1]",
+        "answer": "dataclasses.is_dataclass(obj) [1]",
         "sources": [
           {
             "id": "dataclasses#dataclasses.is_dataclass:0",
@@ -3817,13 +3732,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 812,
-        "output_tokens": 26,
+        "input_tokens": 814,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 1144.2607000062708,
-        "latency_ms": 4211.075600003824
+        "search_ms": 987.0208000065759,
+        "latency_ms": 3862.5977999909082
       },
-      "token_f1": 0.4444444444444444,
+      "token_f1": 0.4,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -3839,7 +3754,7 @@
       "answerable": true,
       "split": "dev",
       "result": {
-        "answer": "Creates a new object [1]",
+        "answer": "Creates a new object of the same type as obj [1]",
         "sources": [
           {
             "id": "dataclasses#dataclasses.replace:0",
@@ -3860,13 +3775,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 936,
-        "output_tokens": 16,
+        "input_tokens": 938,
+        "output_tokens": 22,
         "cache_hit": false,
-        "search_ms": 1101.3292000134243,
-        "latency_ms": 3966.022199994768
+        "search_ms": 953.4859999985201,
+        "latency_ms": 4049.147300000186
       },
-      "token_f1": 0.5714285714285714,
+      "token_f1": 0.5,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -3903,11 +3818,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 865,
+        "input_tokens": 867,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 970.575799990911,
-        "latency_ms": 3815.214999995078
+        "search_ms": 843.2872999983374,
+        "latency_ms": 3605.257500006701
       },
       "token_f1": 0.8,
       "gold_citation": true,
@@ -3946,11 +3861,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 560,
+        "input_tokens": 562,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 770.7688000082271,
-        "latency_ms": 3419.608199998038
+        "search_ms": 629.5265999942785,
+        "latency_ms": 3229.7627000079956
       },
       "token_f1": 1.0,
       "gold_citation": true,
@@ -3989,11 +3904,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 580,
+        "input_tokens": 582,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 777.3234000051161,
-        "latency_ms": 3442.4055999988923
+        "search_ms": 599.8289999988629,
+        "latency_ms": 3240.8198000048287
       },
       "token_f1": 1.0,
       "gold_citation": true,
@@ -4032,11 +3947,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 844,
+        "input_tokens": 846,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 692.0773000019835,
-        "latency_ms": 3508.222599994042
+        "search_ms": 556.1663999978919,
+        "latency_ms": 3300.470200003474
       },
       "token_f1": 0.5,
       "gold_citation": true,
@@ -4054,35 +3969,35 @@
       "answerable": true,
       "split": "dev",
       "result": {
-        "answer": "Use heapq.heappush(heap, item) for min-heaps or heapq.heappush_max(heap, item) for max-heaps. [1]",
+        "answer": "heapq.heappush(heap, item) [1]",
         "sources": [
           {
-            "id": "heapq#heapq.heappush_max:0",
+            "id": "heapq#heapq.heappush:0",
             "document": "heapq",
             "title": "heapq — Heap queue algorithm",
-            "section": "heapq. heappush_max ( heap , item )",
-            "url": "https://docs.python.org/release/3.14.0/library/heapq.html#heapq.heappush_max",
+            "section": "heapq. heappush ( heap , item )",
+            "url": "https://docs.python.org/release/3.14.0/library/heapq.html#heapq.heappush",
             "version": "3.14.0",
             "author": "Python documentation contributors",
             "release_date": "2025-10-07",
-            "text": "Push the value item onto the max-heap heap , maintaining the max-heap invariant.\n\nAdded in version 3.14.",
-            "source_id": "heapq#heapq.heappush_max",
+            "text": "Push the value item onto the heap , maintaining the min-heap invariant.",
+            "source_id": "heapq#heapq.heappush",
             "start": 0,
-            "end": 104,
-            "score": 5.629172325134277,
-            "quote": "Push the value item onto the max-heap heap , maintaining the max-heap invariant.\n\nAdded in version 3.14."
+            "end": 71,
+            "score": 5.194815635681152,
+            "quote": "Push the value item onto the heap , maintaining the min-heap invariant."
           }
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 517,
-        "output_tokens": 39,
+        "input_tokens": 519,
+        "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 763.3041999943089,
-        "latency_ms": 3932.21210000047
+        "search_ms": 599.1314000129933,
+        "latency_ms": 3360.8448000013595
       },
-      "token_f1": 0.3157894736842105,
-      "gold_citation": false,
+      "token_f1": 0.5714285714285714,
+      "gold_citation": true,
       "quote_valid": true
     },
     {
@@ -4118,11 +4033,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 517,
+        "input_tokens": 519,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 688.7966000067536,
-        "latency_ms": 3307.9575000010664
+        "search_ms": 572.7069999993546,
+        "latency_ms": 3219.2967000009958
       },
       "token_f1": 1.0,
       "gold_citation": true,
@@ -4161,11 +4076,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 711,
+        "input_tokens": 713,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 795.3539000009187,
-        "latency_ms": 3555.049599992344
+        "search_ms": 668.8700999948196,
+        "latency_ms": 3351.940900000045
       },
       "token_f1": 0.8,
       "gold_citation": false,
@@ -4183,7 +4098,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "heapq.nlargest(n, iterable, key=None) [1]",
+        "answer": "heapq.nlargest [1]",
         "sources": [
           {
             "id": "heapq#heapq.nlargest:0",
@@ -4204,13 +4119,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 815,
-        "output_tokens": 23,
+        "input_tokens": 817,
+        "output_tokens": 17,
         "cache_hit": false,
-        "search_ms": 769.7950000001583,
-        "latency_ms": 3732.749100003275
+        "search_ms": 577.5626999966335,
+        "latency_ms": 3455.541599993012
       },
-      "token_f1": 0.4444444444444444,
+      "token_f1": 0.8,
       "gold_citation": true,
       "quote_valid": true
     },
@@ -4247,11 +4162,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 954,
+        "input_tokens": 956,
         "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 775.9495000063907,
-        "latency_ms": 3749.660400004359
+        "search_ms": 621.0512999969069,
+        "latency_ms": 3512.915300001623
       },
       "token_f1": 0.2222222222222222,
       "gold_citation": true,
@@ -4290,11 +4205,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 914,
+        "input_tokens": 916,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 751.8428000039421,
-        "latency_ms": 3567.6548999908846
+        "search_ms": 586.9745999953011,
+        "latency_ms": 3461.352900005295
       },
       "token_f1": 0.2,
       "gold_citation": true,
@@ -4312,7 +4227,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "Use bisect_left to find the insertion point and then use list.insert() [1]",
+        "answer": "bisect_left [1]",
         "sources": [
           {
             "id": "bisect#bisect.bisect_left:0",
@@ -4333,13 +4248,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1075,
-        "output_tokens": 26,
+        "input_tokens": 1077,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 815.4989000031492,
-        "latency_ms": 4040.9687999926973
+        "search_ms": 596.0382000048412,
+        "latency_ms": 3504.6973999997135
       },
-      "token_f1": 0.13333333333333333,
+      "token_f1": 0.0,
       "gold_citation": false,
       "quote_valid": true
     },
@@ -4355,7 +4270,7 @@
       "answerable": true,
       "split": "test",
       "result": {
-        "answer": "Use bisect_left to find the insertion point and then use list.insert() [1]",
+        "answer": "bisect_left [1]",
         "sources": [
           {
             "id": "bisect#bisect.bisect_left:0",
@@ -4376,13 +4291,13 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1075,
-        "output_tokens": 26,
+        "input_tokens": 1077,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 760.0084000005154,
-        "latency_ms": 3409.280399995623
+        "search_ms": 590.5132000043523,
+        "latency_ms": 3033.9410999877146
       },
-      "token_f1": 0.13333333333333333,
+      "token_f1": 0.0,
       "gold_citation": false,
       "quote_valid": true
     },
@@ -4402,8 +4317,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 818.1673999933992,
-        "latency_ms": 818.198900000425
+        "search_ms": 643.155999990995,
+        "latency_ms": 643.1721999979345
       },
       "token_f1": 1.0,
       "gold_citation": false,
@@ -4425,8 +4340,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 770.8253999880981,
-        "latency_ms": 770.8617999887792
+        "search_ms": 549.0449999924749,
+        "latency_ms": 549.0633000008529
       },
       "token_f1": 1.0,
       "gold_citation": false,
@@ -4448,8 +4363,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 713.621900009457,
-        "latency_ms": 713.6504000081914
+        "search_ms": 517.9824000078952,
+        "latency_ms": 517.9994999925839
       },
       "token_f1": 1.0,
       "gold_citation": false,
@@ -4471,8 +4386,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 901.5369999979157,
-        "latency_ms": 901.5672999958042
+        "search_ms": 631.0560999991139,
+        "latency_ms": 631.0731999983545
       },
       "token_f1": 1.0,
       "gold_citation": false,
@@ -4494,8 +4409,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 698.2830000051763,
-        "latency_ms": 698.3245000010356
+        "search_ms": 510.3300000046147,
+        "latency_ms": 510.3473000053782
       },
       "token_f1": 1.0,
       "gold_citation": false,
@@ -4517,8 +4432,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 759.7130000067409,
-        "latency_ms": 759.7444999992149
+        "search_ms": 549.0361000120174,
+        "latency_ms": 549.0584999934072
       },
       "token_f1": 1.0,
       "gold_citation": false,
@@ -4540,8 +4455,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 744.2229000007501,
-        "latency_ms": 744.2430000082823
+        "search_ms": 541.8318000010913,
+        "latency_ms": 541.8492000026163
       },
       "token_f1": 1.0,
       "gold_citation": false,
@@ -4563,8 +4478,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 670.6673000007868,
-        "latency_ms": 670.6817000085721
+        "search_ms": 516.0713999939617,
+        "latency_ms": 516.0886000085156
       },
       "token_f1": 1.0,
       "gold_citation": false,
@@ -4586,8 +4501,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 682.9235000041081,
-        "latency_ms": 682.9415999964112
+        "search_ms": 509.57569999445695,
+        "latency_ms": 509.5922000036808
       },
       "token_f1": 1.0,
       "gold_citation": false,
@@ -4609,8 +4524,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 669.212199994945,
-        "latency_ms": 669.2426999943564
+        "search_ms": 522.3210999974981,
+        "latency_ms": 522.3383999982616
       },
       "token_f1": 1.0,
       "gold_citation": false,

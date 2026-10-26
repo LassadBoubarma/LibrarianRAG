@@ -10,11 +10,11 @@ Same 112 questions, same order and model, one request at a time. Model warmup is
 
 | Workload | p50 ms | p95 ms | Cache hits / 112 | Model tokens |
 | --- | --- | --- | --- | --- |
-| No cache | 3317.391 | 3810.670 | 0 | 79272 |
-| Cache, first use | 3228.638 | 3676.689 | 0 | 79271 |
-| Cache, repeated | 0.023 | 0.038 | 112 | 0 |
+| No cache | 3442.338 | 3836.704 | 0 | 79419 |
+| Cache, first use | 3139.002 | 3466.898 | 0 | 79405 |
+| Cache, repeated | 0.030 | 0.034 | 112 | 0 |
 
-Repeated-workload p95 reduction: **99.9990%**. Exact answer agreement with the empty-cache pass: **100.0%**. Agreement with the independent no-cache pass: **94.6%**. On the 102 answerable questions, model-judged correctness was 87.3% before and 87.3% after caching (+0.00 percentage points). 7 changed outputs were regraded; 105 grades were reused because answer and evidence matched exactly. These are model judgments, not a human accuracy study. Full records are in `eval/results/cache_accuracy.json`.
+Repeated-workload p95 reduction: **99.9991%**. Exact answer agreement with the empty-cache pass: **100.0%**. Agreement with the independent no-cache pass: **99.1%**. On the 102 answerable questions, model-judged correctness was 84.3% before and 84.3% after caching (+0.00 percentage points). 1 changed output was regraded; 111 grades were reused because answer and evidence matched exactly. These are model judgments, not a human accuracy study. Full records are in `eval/results/cache_accuracy.json`.
 
 The 50% latency target is demonstrated for repeated questions already in the cache. It is not established for a real traffic mix. First-use requests still run retrieval and generation. The benchmark does not include internet transit time or concurrent load.
 

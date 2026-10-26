@@ -14,7 +14,7 @@ Offline: extract sections and source anchors, split into 180-token chunks, embed
 
 Online: BM25 and vector search each return 30 candidates. Reciprocal rank fusion combines them. A MiniLM cross-encoder reranks the best 20, and Qwen 2.5 7B answers from the best five. A document filter is applied before ranking. Questions are not rewritten.
 
-The model chooses a source number. The app copies the cited passage from the index and links to the original documentation. Missing sources, explicit refusals and low relevance scores return an unknown response. A copied passage may still be interpreted incorrectly.
+The model chooses a source number. The app copies the cited passage from the index and links to the original documentation. Missing sources, explicit refusals and low relevance scores return an unknown response. If the question names a dotted API, that name must occur in the selected evidence. This can refuse valid aliases. A copied passage may still be interpreted incorrectly.
 
 Chunk-size trial on 20 development questions: 120/24 gave 85% recall@5; 180/0 and 180/36 both gave 90%. The smaller 180/0 index was selected. Long code blocks can still cross chunk boundaries.
 
@@ -35,14 +35,14 @@ These are descriptive engineering results, not a sealed holdout. Twenty question
 
 | Measure | Result |
 | --- | --- |
-| Model-judged correctness (102 answerable) | 87.3% |
-| Model-judged correctness (all 112) | 88.4% |
-| Model-judged faithfulness (answered only) | 93.9% |
-| Model-judged citation support (answered only) | 92.9% |
-| Answer coverage (102 answerable) | 97.1% |
+| Model-judged correctness (102 answerable) | 84.3% |
+| Model-judged correctness (all 112) | 85.7% |
+| Model-judged faithfulness (answered only) | 92.6% |
+| Model-judged citation support (answered only) | 92.6% |
+| Answer coverage (102 answerable) | 92.2% |
 | Correct refusal (10 out-of-scope) | 100.0% |
-| Gold-passage citation rate (102 answerable) | 79.4% |
-| Answer token F1 (word-overlap proxy) | 0.532 |
+| Gold-passage citation rate (102 answerable) | 78.4% |
+| Answer token F1 (word-overlap proxy) | 0.495 |
 
 The adapter imports the actual call_json function from BLACK2202/sql-explanation-grader at commit 23473e6. It replaces the SQL rubric with question correctness, support from cited passages and citation relevance. Qwen 2.5 7B judges the saved answers. Raw verdicts and reasons are retained. Known refusal labels override contradictory model judgments.
 
@@ -52,13 +52,13 @@ Model grades are not human labels. Generator and judge use the same model, so sh
 
 | Workload | p50 ms | p95 ms | Cache hits / 112 | Model tokens |
 | --- | --- | --- | --- | --- |
-| No cache | 3317.391 | 3810.670 | 0 | 79272 |
-| Cache, first use | 3228.638 | 3676.689 | 0 | 79271 |
-| Cache, repeated | 0.023 | 0.038 | 112 | 0 |
+| No cache | 3442.338 | 3836.704 | 0 | 79419 |
+| Cache, first use | 3139.002 | 3466.898 | 0 | 79405 |
+| Cache, repeated | 0.030 | 0.034 | 112 | 0 |
 
-The 128-entry cache reduced repeated-workload p95 by 99.9990%. Exact cached/first-use answer agreement was 100.0%; agreement with the separate no-cache run was 94.6%. Identical stored answers preserve their grading. The 50% target is demonstrated for a 100% repeat workload, not for unseen questions or an unknown real hit rate.
+The 128-entry cache reduced repeated-workload p95 by 99.9991%. Exact cached/first-use answer agreement was 100.0%; agreement with the separate no-cache run was 99.1%. Identical stored answers preserve their grading. The 50% target is demonstrated for a 100% repeat workload, not for unseen questions or an unknown real hit rate.
 
-On the 102 answerable questions, model-judged correctness was 87.3% before and 87.3% after caching (+0.00 percentage points). 7 changed outputs were regraded; 105 grades were reused because answer and evidence matched exactly.
+On the 102 answerable questions, model-judged correctness was 84.3% before and 84.3% after caching (+0.00 percentage points). 1 changed output was regraded; 111 grades were reused because answer and evidence matched exactly.
 
 External inference API charges are $0 because inference is local. Hosting, hardware and electricity still cost money. Fixed monthly hosting cost per request is H/N. At 100x traffic it is H/(100N) only if capacity suffices. An assumed $20/month at 1,000 requests is $0.02/request; at 100,000 it is $0.0002/request before capacity upgrades. These are illustrative assumptions, not provider prices.
 
@@ -66,6 +66,6 @@ External inference API charges are $0 because inference is local. Hosting, hardw
 
 Known failures include flattened tables, split code blocks, missed cross-references, nearby APIs outranking the right API, unnecessary refusals and a model misreading real evidence. The postmortem records parsing errors, quote-generation failures and a contradictory judge result found during implementation.
 
-The app was checked in a browser and has nine automated checks. It runs locally; a public deployment URL has not been provisioned. Deployment instructions are included. Instructor approval, real classmate feedback and human review remain outstanding and are not represented as complete.
+The app was checked in a browser and has 14 automated checks. It runs locally; a public deployment URL has not been provisioned. Deployment instructions are included. Instructor approval, real classmate feedback and human review remain outstanding and are not represented as complete.
 
 The code and draft documentation were prepared with coding-assistant support. The project owner needs to review the implementation and understand it before presenting. explain.md provides a file-by-file reading order and demonstration plan.

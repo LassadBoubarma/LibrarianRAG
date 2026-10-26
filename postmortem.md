@@ -26,4 +26,6 @@ Repeated questions can avoid all model work. New questions cannot. The optimisat
 
 ## What is left
 
+Merging the desktop and web copies also exposed a file-format problem: Git changed Windows line endings, so the existing corpus hash no longer matched. The document text was unchanged. We verified that difference, made saved JSON consistent across checkouts, and marked PDFs as binary so Git cannot change their bytes.
+
 Get approval for the corpus, ask classmates to test the service, review the drafted questions and judge labels, and deploy on an actual host. Use their failures to improve the small system before adding more libraries or features. The code and draft documentation were prepared with coding-assistant support; the project owner still needs to review and understand them before presenting.

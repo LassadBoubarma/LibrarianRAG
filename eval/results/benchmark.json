@@ -4,36 +4,36 @@
     "model": "qwen2.5:7b",
     "python": "3.11.9",
     "platform": "Windows",
-    "implementation_sha256": "a7998924109127e85d758ba69e97a4bf32da8b3f24694958042556bd1cc4d909"
+    "implementation_sha256": "529de28a10401b890502facc5ed37790379becee25a9db4692584a7c8faef853"
   },
   "questions": 112,
   "results": {
     "baseline_no_cache": {
-      "p50_ms": 3317.391,
-      "p95_ms": 3810.67,
+      "p50_ms": 3442.338,
+      "p95_ms": 3836.704,
       "cache_hits": 0,
-      "input_tokens": 77314,
-      "output_tokens": 1958
+      "input_tokens": 77518,
+      "output_tokens": 1901
     },
     "cache_first_use": {
-      "p50_ms": 3228.638,
-      "p95_ms": 3676.689,
+      "p50_ms": 3139.002,
+      "p95_ms": 3466.898,
       "cache_hits": 0,
-      "input_tokens": 77314,
-      "output_tokens": 1957
+      "input_tokens": 77518,
+      "output_tokens": 1887
     },
     "cache_repeated": {
-      "p50_ms": 0.023,
-      "p95_ms": 0.038,
+      "p50_ms": 0.03,
+      "p95_ms": 0.034,
       "cache_hits": 112,
       "input_tokens": 0,
       "output_tokens": 0
     },
-    "same_answer_rate_vs_baseline": 0.9464285714285714,
+    "same_answer_rate_vs_baseline": 0.9910714285714286,
     "same_answer_rate_vs_first_use": 1.0,
-    "p95_reduction_percent_repeated_only": 99.99900280003254
+    "p95_reduction_percent_repeated_only": 99.99911382269782
   },
-  "note": "Repeated workload is 100% cache hits. First-use requests remain model calls.",
+  "note": "Repeated requests are 100% hits; no claim about real-world hit rates or 100x capacity.",
   "outputs": {
     "baseline_no_cache": [
       {
@@ -58,11 +58,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 884,
+        "input_tokens": 886,
         "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 594.6201000042493,
-        "latency_ms": 3296.2684000085574
+        "search_ms": 627.895500001614,
+        "latency_ms": 3506.0155000101076
       },
       {
         "answer": "True [1]",
@@ -86,11 +86,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 670,
+        "input_tokens": 672,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 576.3680000090972,
-        "latency_ms": 3111.5350000036415
+        "search_ms": 600.8371999923838,
+        "latency_ms": 3358.278200001223
       },
       {
         "answer": "False [1]",
@@ -114,11 +114,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 670,
+        "input_tokens": 672,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 602.4097999907099,
-        "latency_ms": 3145.725099995616
+        "search_ms": 583.1582999962848,
+        "latency_ms": 3242.6375999930315
       },
       {
         "answer": "0 [1]",
@@ -142,14 +142,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 767,
+        "input_tokens": 769,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 621.7828999942867,
-        "latency_ms": 3221.278800003347
+        "search_ms": 575.6073999946238,
+        "latency_ms": 3257.3849000036716
       },
       {
-        "answer": "Use the len(object) function. [1]",
+        "answer": "len(object, /) [1]",
         "sources": [
           {
             "id": "functions#len:0",
@@ -170,11 +170,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 732,
-        "output_tokens": 18,
+        "input_tokens": 734,
+        "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 559.3360000057146,
-        "latency_ms": 2954.291500005638
+        "search_ms": 594.5333000126993,
+        "latency_ms": 3380.919000002905
       },
       {
         "answer": "Yes [1]",
@@ -198,11 +198,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 805,
+        "input_tokens": 807,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 566.7163999896729,
-        "latency_ms": 3154.703400010476
+        "search_ms": 540.1225999958115,
+        "latency_ms": 3350.9563999978127
       },
       {
         "answer": "str.lower() [1]",
@@ -226,11 +226,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 552,
+        "input_tokens": 554,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 530.3200999915134,
-        "latency_ms": 3046.3873999979114
+        "search_ms": 529.0141000004951,
+        "latency_ms": 3183.5100000025705
       },
       {
         "answer": "whitespace [1]",
@@ -254,11 +254,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 821,
+        "input_tokens": 823,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 603.2603000057861,
-        "latency_ms": 3189.442599992617
+        "search_ms": 581.277700010105,
+        "latency_ms": 3311.614499994903
       },
       {
         "answer": "No [1]",
@@ -282,70 +282,36 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 508,
+        "input_tokens": 510,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 571.8784000055166,
-        "latency_ms": 3014.5805000065593
+        "search_ms": 523.8347999984398,
+        "latency_ms": 3195.3367999958573
       },
       {
-        "answer": "No [1]",
-        "sources": [
-          {
-            "id": "collections#collections.defaultdict.__missing__:0",
-            "document": "collections",
-            "title": "collections — Container datatypes",
-            "section": "__missing__ ( key )",
-            "url": "https://docs.python.org/release/3.14.0/library/collections.html#collections.defaultdict.__missing__",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "If the default_factory attribute is None , this raises a KeyError exception with the key as argument.\n\nIf default_factory is not None , it is called without arguments to provide a default value for the given key , this value is inserted in the dictionary for the key , and returned.\n\nIf calling default_factory raises an exception this exception is propagated unchanged.\n\nThis method is called by the __getitem__() method of the dict class when the requested key is not found; whatever it returns or raises is then returned or raised by __getitem__() .\n\nNote that __missing__() is not called for any operations besides __getitem__() . This means that get() will, like normal dictionaries, return None as a default rather than using default_factory .",
-            "source_id": "collections#collections.defaultdict.__missing__",
-            "start": 0,
-            "end": 749,
-            "score": 6.819638252258301,
-            "quote": "If the default_factory attribute is None , this raises a KeyError exception with the key as argument.\n\nIf default_factory is not None , it is called without arguments to provide a default value for the given key , this value is inserted in the dictionary for the key , and returned.\n\nIf calling default_factory raises an exception this exception is propagated unchanged.\n\nThis method is called by the __getitem__() method of the dict class when the requested key is not found; whatever it returns or raises is then returned or raised by __getitem__() .\n\nNote that __missing__() is not called for any operations besides __getitem__() . This means that get() will, like normal dictionaries, return None as a default rather than using default_factory ."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 836,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 838,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 564.434900006745,
-        "latency_ms": 2858.3921999961603
+        "search_ms": 620.3799999930197,
+        "latency_ms": 3385.246799996821
       },
       {
-        "answer": "shallow [1]",
-        "sources": [
-          {
-            "id": "stdtypes#sequence.copy:0",
-            "document": "stdtypes",
-            "title": "Built-in Types",
-            "section": "sequence. copy ( )",
-            "url": "https://docs.python.org/release/3.14.0/library/stdtypes.html#sequence.copy",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "Added in version 3.3.\n\nCreate a shallow copy of sequence . This is equivalent to writing sequence[:] .\n\nHint\n\nThe copy() method is not part of the MutableSequence ABC , but most concrete mutable sequence types provide it.",
-            "source_id": "stdtypes#sequence.copy",
-            "start": 0,
-            "end": 221,
-            "score": 3.3013839721679688,
-            "quote": "Added in version 3.3.\n\nCreate a shallow copy of sequence . This is equivalent to writing sequence[:] .\n\nHint\n\nThe copy() method is not part of the MutableSequence ABC , but most concrete mutable sequence types provide it."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 412,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 414,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 549.9988999945344,
-        "latency_ms": 2967.5903000024846
+        "search_ms": 645.2108999947086,
+        "latency_ms": 3236.708800002816
       },
       {
-        "answer": "Use the add function. [1]",
+        "answer": "add ( elem , / ) [1]",
         "sources": [
           {
             "id": "stdtypes#frozenset.add:0",
@@ -366,11 +332,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 714,
-        "output_tokens": 16,
+        "input_tokens": 716,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 691.4136999985203,
-        "latency_ms": 3358.3724000054644
+        "search_ms": 787.6536999974633,
+        "latency_ms": 3593.149899999844
       },
       {
         "answer": "Return the decoded contents of the pointed-to file as a string [1]",
@@ -394,11 +360,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 782,
+        "input_tokens": 784,
         "output_tokens": 24,
         "cache_hit": false,
-        "search_ms": 611.8656000035116,
-        "latency_ms": 3319.507199994405
+        "search_ms": 698.0201999976998,
+        "latency_ms": 3547.430099992198
       },
       {
         "answer": "Yes [1]",
@@ -422,11 +388,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 690,
+        "input_tokens": 692,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 620.1361000130419,
-        "latency_ms": 3194.989900002838
+        "search_ms": 690.6336999963969,
+        "latency_ms": 3418.3757999999216
       },
       {
         "answer": "Path.exists() [1]",
@@ -450,11 +416,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 568,
+        "input_tokens": 570,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 626.853600013419,
-        "latency_ms": 2959.7942999971565
+        "search_ms": 655.5515000072774,
+        "latency_ms": 3326.7346000066027
       },
       {
         "answer": "If parents is true, any missing parents of this path are created as needed; they are created with the default permissions without taking mode into account (mimicking the POSIX mkdir -p command). [1]",
@@ -478,14 +444,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 821,
+        "input_tokens": 823,
         "output_tokens": 51,
         "cache_hit": false,
-        "search_ms": 571.2174000072991,
-        "latency_ms": 3755.5276999919442
+        "search_ms": 675.9037000010721,
+        "latency_ms": 4102.2331999993185
       },
       {
-        "answer": "Use PurePath.suffixes [1]",
+        "answer": "Path.suffixes [1]",
         "sources": [
           {
             "id": "pathlib#pathlib.PurePath.suffixes:0",
@@ -506,11 +472,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 927,
-        "output_tokens": 18,
+        "input_tokens": 929,
+        "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 565.7130000035977,
-        "latency_ms": 3353.986000001896
+        "search_ms": 645.8854000084102,
+        "latency_ms": 3476.89089999767
       },
       {
         "answer": "A string representing the final path component, excluding the drive and root, if any: [1]",
@@ -534,14 +500,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 581,
+        "input_tokens": 583,
         "output_tokens": 28,
         "cache_hit": false,
-        "search_ms": 553.4112000023015,
-        "latency_ms": 3321.0314999887487
+        "search_ms": 545.3503000026103,
+        "latency_ms": 3420.337000003201
       },
       {
-        "answer": "collections.Counter is used for counting hashable objects. [1]",
+        "answer": "a collection where elements are stored as dictionary keys and their counts are stored as dictionary values. [1]",
         "sources": [
           {
             "id": "collections#collections.Counter:0",
@@ -562,11 +528,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 769,
-        "output_tokens": 21,
+        "input_tokens": 771,
+        "output_tokens": 29,
         "cache_hit": false,
-        "search_ms": 532.6848999975482,
-        "latency_ms": 3244.6303000033367
+        "search_ms": 614.5991999947,
+        "latency_ms": 3632.65839999076
       },
       {
         "answer": "A deque, or double-ended queue, is a generalization of stacks and queues that supports thread-safe, memory efficient appends and pops from either side with approximately O(1) performance. [1]",
@@ -590,14 +556,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 688,
+        "input_tokens": 690,
         "output_tokens": 49,
         "cache_hit": false,
-        "search_ms": 588.4713999985252,
-        "latency_ms": 3462.061399986851
+        "search_ms": 563.1104999920353,
+        "latency_ms": 3848.225800000364
       },
       {
-        "answer": "defaultdict overrides one method and adds one writable instance variable, providing a default value for missing keys. [1]",
+        "answer": "defaultdict is a subclass of the built-in dict class and overrides one method and adds one writable instance variable. [1]",
         "sources": [
           {
             "id": "collections#collections.defaultdict:0",
@@ -618,14 +584,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 829,
-        "output_tokens": 31,
+        "input_tokens": 831,
+        "output_tokens": 33,
         "cache_hit": false,
-        "search_ms": 468.3428999996977,
-        "latency_ms": 3439.7363999887602
+        "search_ms": 568.4765000041807,
+        "latency_ms": 3770.6545000110054
       },
       {
-        "answer": "use the most_common() method [1]",
+        "answer": "most_common [1]",
         "sources": [
           {
             "id": "collections#collections.Counter.most_common:0",
@@ -646,11 +612,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 892,
-        "output_tokens": 18,
+        "input_tokens": 894,
+        "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 626.2281000090297,
-        "latency_ms": 3321.5480000071693
+        "search_ms": 698.9965999964625,
+        "latency_ms": 3515.233199999784
       },
       {
         "answer": "a JSON formatted str [1]",
@@ -674,11 +640,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 681,
+        "input_tokens": 683,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 635.4785999865271,
-        "latency_ms": 3268.7002000020584
+        "search_ms": 746.9073999964166,
+        "latency_ms": 3523.9440000004834
       },
       {
         "answer": "deserialize s (a str, bytes or bytearray instance containing a JSON document) to a Python object [1]",
@@ -702,14 +668,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 819,
+        "input_tokens": 821,
         "output_tokens": 31,
         "cache_hit": false,
-        "search_ms": 645.2461000008043,
-        "latency_ms": 3462.082300000475
+        "search_ms": 707.2803000046406,
+        "latency_ms": 3827.277400007006
       },
       {
-        "answer": "json.dump(obj, fp, *args, **kwargs) [1]",
+        "answer": "json.dump [1]",
         "sources": [
           {
             "id": "json#json.dump:0",
@@ -730,11 +696,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 936,
-        "output_tokens": 23,
+        "input_tokens": 938,
+        "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 614.0269000025,
-        "latency_ms": 3422.878800003673
+        "search_ms": 745.7393999939086,
+        "latency_ms": 3554.365800009691
       },
       {
         "answer": "JSONDecodeError [1]",
@@ -758,11 +724,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 845,
+        "input_tokens": 847,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 619.5385000028182,
-        "latency_ms": 3234.8322000034386
+        "search_ms": 734.6984000032535,
+        "latency_ms": 3602.7988999994704
       },
       {
         "answer": "a list of strings [1]",
@@ -786,11 +752,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 833,
+        "input_tokens": 835,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 601.1781999986852,
-        "latency_ms": 3311.724099999992
+        "search_ms": 816.5884999907576,
+        "latency_ms": 3653.891299996758
       },
       {
         "answer": "csv.writer [1]",
@@ -814,11 +780,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 783,
+        "input_tokens": 785,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 650.1846999890404,
-        "latency_ms": 3252.680000005057
+        "search_ms": 774.0691999933915,
+        "latency_ms": 3516.7958000092767
       },
       {
         "answer": "csv.DictReader maps row values into a dict [1]",
@@ -842,11 +808,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 903,
+        "input_tokens": 905,
         "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 666.7749000043841,
-        "latency_ms": 3468.9507999864873
+        "search_ms": 745.4380999988643,
+        "latency_ms": 3710.637600001064
       },
       {
         "answer": "output rows [1]",
@@ -870,11 +836,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 855,
+        "input_tokens": 857,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 725.8711999893421,
-        "latency_ms": 3375.576100006583
+        "search_ms": 722.2635000071023,
+        "latency_ms": 3556.306400001631
       },
       {
         "answer": "A duration, the difference between two datetime or date instances. [1]",
@@ -898,11 +864,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 714,
+        "input_tokens": 716,
         "output_tokens": 23,
         "cache_hit": false,
-        "search_ms": 654.6510000043781,
-        "latency_ms": 3378.570700006094
+        "search_ms": 773.8043999997899,
+        "latency_ms": 3658.5944999969797
       },
       {
         "answer": "date.today() [1]",
@@ -926,11 +892,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 685,
+        "input_tokens": 687,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 598.5027999995509,
-        "latency_ms": 3120.5420999904163
+        "search_ms": 690.5855999939376,
+        "latency_ms": 3420.856199998525
       },
       {
         "answer": "YYYY-MM-DD [1]",
@@ -954,14 +920,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 679,
+        "input_tokens": 681,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 542.0100999908755,
-        "latency_ms": 3153.0406000092626
+        "search_ms": 689.414399996167,
+        "latency_ms": 3431.941300004837
       },
       {
-        "answer": "Use date.strptime(date_string, format) or datetime.strptime(date_string, format). [1]",
+        "answer": "use date.strptime or datetime.strptime [1]",
         "sources": [
           {
             "id": "datetime#datetime.date.strptime:0",
@@ -982,11 +948,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 842,
-        "output_tokens": 28,
+        "input_tokens": 844,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 607.3676999949384,
-        "latency_ms": 3449.374900010298
+        "search_ms": 720.6664999976056,
+        "latency_ms": 3640.3140000038547
       },
       {
         "answer": "Yes [1]",
@@ -1010,11 +976,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 911,
+        "input_tokens": 913,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 562.7457999944454,
-        "latency_ms": 3212.7756999980193
+        "search_ms": 785.3381999884732,
+        "latency_ms": 3612.2395000129472
       },
       {
         "answer": "Yes [1]",
@@ -1038,14 +1004,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 887,
+        "input_tokens": 889,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 564.6170999971218,
-        "latency_ms": 3220.787099999143
+        "search_ms": 669.5537000050535,
+        "latency_ms": 3430.7590999960667
       },
       {
-        "answer": "use re.fullmatch() [1]",
+        "answer": "re.fullmatch() [1]",
         "sources": [
           {
             "id": "re#search-vs-match:0",
@@ -1066,11 +1032,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 709,
-        "output_tokens": 16,
+        "input_tokens": 711,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 569.0154999902006,
-        "latency_ms": 3201.047700000345
+        "search_ms": 692.348899989156,
+        "latency_ms": 3475.1083000010112
       },
       {
         "answer": "all non-overlapping matches of pattern in string, as a list of strings or tuples. [1]",
@@ -1094,22 +1060,22 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 770,
+        "input_tokens": 772,
         "output_tokens": 29,
         "cache_hit": false,
-        "search_ms": 593.9538000093307,
-        "latency_ms": 3613.103499999852
+        "search_ms": 663.1309000076726,
+        "latency_ms": 3694.8757999925874
       },
       {
         "answer": "I don't know based on these documents.",
         "sources": [],
         "abstained": true,
         "reason": "invalid_or_missing_evidence",
-        "input_tokens": 771,
+        "input_tokens": 773,
         "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 661.5439000015613,
-        "latency_ms": 3404.843299998902
+        "search_ms": 734.0359999943757,
+        "latency_ms": 3647.0146999927238
       },
       {
         "answer": "use re.escape(pattern) [1]",
@@ -1133,14 +1099,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 900,
+        "input_tokens": 902,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 649.0677000110736,
-        "latency_ms": 3384.3931000010343
+        "search_ms": 646.4916999975685,
+        "latency_ms": 3500.925400003325
       },
       {
-        "answer": "use zip [1]",
+        "answer": "zip [1]",
         "sources": [
           {
             "id": "functions#zip:0",
@@ -1161,14 +1127,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 875,
-        "output_tokens": 14,
+        "input_tokens": 877,
+        "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 594.3451999919489,
-        "latency_ms": 3305.4654999868944
+        "search_ms": 702.6587000000291,
+        "latency_ms": 3469.1414999979315
       },
       {
-        "answer": "itertools.cycle(iterable) [1]",
+        "answer": "itertools.cycle [1]",
         "sources": [
           {
             "id": "itertools#itertools.cycle:0",
@@ -1189,11 +1155,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 945,
-        "output_tokens": 17,
+        "input_tokens": 947,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 630.358399997931,
-        "latency_ms": 3350.0045999971917
+        "search_ms": 676.7740000068443,
+        "latency_ms": 3556.9133999961196
       },
       {
         "answer": "Cartesian product of the input iterables. [1]",
@@ -1217,11 +1183,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1052,
+        "input_tokens": 1054,
         "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 594.2051999882096,
-        "latency_ms": 3426.4423999993596
+        "search_ms": 631.1107000074117,
+        "latency_ms": 3619.0535000059754
       },
       {
         "answer": "use itertools.islice() [1]",
@@ -1245,11 +1211,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 875,
+        "input_tokens": 877,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 576.7920000071172,
-        "latency_ms": 3264.1120000043884
+        "search_ms": 590.271599998232,
+        "latency_ms": 3398.7106999993557
       },
       {
         "answer": "up to the maxsize most recent calls [1]",
@@ -1273,11 +1239,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1069,
+        "input_tokens": 1071,
         "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 673.3746999962023,
-        "latency_ms": 3524.4015000062063
+        "search_ms": 641.3671000045724,
+        "latency_ms": 3602.0791999908397
       },
       {
         "answer": "No [1]",
@@ -1301,11 +1267,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 861,
+        "input_tokens": 863,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 632.7765000023646,
-        "latency_ms": 3471.1779999925056
+        "search_ms": 714.7152999968966,
+        "latency_ms": 3524.0858999895863
       },
       {
         "answer": "functools.partial returns a new partial object which when called will behave like func called with the positional arguments args and keyword arguments keywords. [1]",
@@ -1329,11 +1295,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 788,
+        "input_tokens": 790,
         "output_tokens": 38,
         "cache_hit": false,
-        "search_ms": 595.5175999988569,
-        "latency_ms": 3806.9509000051767
+        "search_ms": 600.6701999867801,
+        "latency_ms": 3788.4837000019616
       },
       {
         "answer": "This is a convenience function for invoking update_wrapper() as a function decorator when defining a wrapper function. [1]",
@@ -1357,11 +1323,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 824,
+        "input_tokens": 826,
         "output_tokens": 31,
         "cache_hit": false,
-        "search_ms": 640.2392999880249,
-        "latency_ms": 3723.0509000073653
+        "search_ms": 595.523999989382,
+        "latency_ms": 3728.5150999960024
       },
       {
         "answer": "os.getcwd() [1]",
@@ -1385,11 +1351,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 451,
+        "input_tokens": 453,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 650.8960999926785,
-        "latency_ms": 3302.173500007484
+        "search_ms": 633.8791999878595,
+        "latency_ms": 3267.8325999877416
       },
       {
         "answer": "No [1]",
@@ -1413,11 +1379,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 687,
+        "input_tokens": 689,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 647.436999992351,
-        "latency_ms": 3311.207100006868
+        "search_ms": 617.5452000024961,
+        "latency_ms": 3297.068300002138
       },
       {
         "answer": "an OSError is raised [1]",
@@ -1441,14 +1407,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 778,
+        "input_tokens": 780,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 681.4653000037652,
-        "latency_ms": 3470.191500004148
+        "search_ms": 700.2713999972912,
+        "latency_ms": 3498.845699999947
       },
       {
-        "answer": "os.getenv(key, default=None) [1]",
+        "answer": "os.getenv(key, default = None) [1]",
         "sources": [
           {
             "id": "os#os.getenv:0",
@@ -1469,11 +1435,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 736,
-        "output_tokens": 18,
+        "input_tokens": 738,
+        "output_tokens": 19,
         "cache_hit": false,
-        "search_ms": 633.3475999999791,
-        "latency_ms": 3427.58689999755
+        "search_ms": 654.4025000039255,
+        "latency_ms": 3493.1940999958897
       },
       {
         "answer": "No [1]",
@@ -1497,11 +1463,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 949,
+        "input_tokens": 951,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 666.5684999898076,
-        "latency_ms": 3538.055400000303
+        "search_ms": 743.3758999977726,
+        "latency_ms": 3562.0901999936905
       },
       {
         "answer": "copy2 [1]",
@@ -1525,14 +1491,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 984,
+        "input_tokens": 986,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 681.4144999952987,
-        "latency_ms": 3539.869899992482
+        "search_ms": 681.1497999879066,
+        "latency_ms": 3475.04520000075
       },
       {
-        "answer": "use shutil.rmtree() [1]",
+        "answer": "shutil.rmtree [1]",
         "sources": [
           {
             "id": "shutil#shutil.rmtree:0",
@@ -1553,14 +1519,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 895,
+        "input_tokens": 897,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 833.3928000065498,
-        "latency_ms": 3600.52480000013
+        "search_ms": 738.5693999967771,
+        "latency_ms": 3565.4987000016263
       },
       {
-        "answer": "use shutil.which(cmd, mode=os.F_OK | os.X_OK, path=None) [1]",
+        "answer": "shutil.which(cmd, mode=os.F_OK | os.X_OK, path=None) [1]",
         "sources": [
           {
             "id": "shutil#shutil.which:0",
@@ -1581,11 +1547,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 923,
+        "input_tokens": 925,
         "output_tokens": 28,
         "cache_hit": false,
-        "search_ms": 719.925700002932,
-        "latency_ms": 3742.7184999978635
+        "search_ms": 791.3242000067839,
+        "latency_ms": 3868.486999999732
       },
       {
         "answer": "the smallest integer greater than or equal to x [1]",
@@ -1609,11 +1575,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 310,
+        "input_tokens": 312,
         "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 489.9262999970233,
-        "latency_ms": 3204.7518999897875
+        "search_ms": 606.5631999954348,
+        "latency_ms": 3274.061599993729
       },
       {
         "answer": "the largest integer less than or equal to x [1]",
@@ -1637,14 +1603,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 574,
+        "input_tokens": 576,
         "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 442.7776999946218,
-        "latency_ms": 3224.393600001349
+        "search_ms": 646.1375999933807,
+        "latency_ms": 3426.979100011522
       },
       {
-        "answer": "Use math.sqrt(x) [1]",
+        "answer": "math.sqrt(x) [1]",
         "sources": [
           {
             "id": "math#math.sqrt:0",
@@ -1665,25 +1631,25 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 717,
-        "output_tokens": 16,
+        "input_tokens": 719,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 528.4575999976369,
-        "latency_ms": 3276.480700005777
+        "search_ms": 646.6418000054546,
+        "latency_ms": 3366.9140999991214
       },
       {
         "answer": "I don't know based on these documents.",
         "sources": [],
         "abstained": true,
         "reason": "invalid_or_missing_evidence",
-        "input_tokens": 509,
+        "input_tokens": 511,
         "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 592.7495999931125,
-        "latency_ms": 3293.2666999986395
+        "search_ms": 586.625500000082,
+        "latency_ms": 3323.995400001877
       },
       {
-        "answer": "statistics.mean calculates the sample arithmetic mean of data. [1]",
+        "answer": "the sample arithmetic mean of data [1]",
         "sources": [
           {
             "id": "statistics#statistics.mean:0",
@@ -1704,14 +1670,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1021,
-        "output_tokens": 21,
+        "input_tokens": 1023,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 512.3059000034118,
-        "latency_ms": 3521.725900005549
+        "search_ms": 557.380899990676,
+        "latency_ms": 3435.3364999988116
       },
       {
-        "answer": "When the number of data points is even, the median is interpolated by taking the average of the two middle values. [1]",
+        "answer": "the median is interpolated by taking the average of the two middle values [1]",
         "sources": [
           {
             "id": "statistics#statistics.median:0",
@@ -1732,11 +1698,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1033,
-        "output_tokens": 34,
+        "input_tokens": 1035,
+        "output_tokens": 25,
         "cache_hit": false,
-        "search_ms": 552.1201999945333,
-        "latency_ms": 3776.7180999944685
+        "search_ms": 585.072299989406,
+        "latency_ms": 3662.0090000069467
       },
       {
         "answer": "the single most common data point from discrete or nominal data [1]",
@@ -1760,11 +1726,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 863,
+        "input_tokens": 865,
         "output_tokens": 23,
         "cache_hit": false,
-        "search_ms": 554.2399000114528,
-        "latency_ms": 3564.6677000040654
+        "search_ms": 575.186300004134,
+        "latency_ms": 3528.0094999907305
       },
       {
         "answer": "sample [1]",
@@ -1788,11 +1754,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 470,
+        "input_tokens": 472,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 602.1341000014218,
-        "latency_ms": 3307.799200003501
+        "search_ms": 590.8342000038829,
+        "latency_ms": 3273.0916000000434
       },
       {
         "answer": "raises IndexError [1]",
@@ -1816,11 +1782,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 819,
+        "input_tokens": 821,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 589.1501999867614,
-        "latency_ms": 3345.796399997198
+        "search_ms": 594.2555000074208,
+        "latency_ms": 3372.344899995369
       },
       {
         "answer": "No [1]",
@@ -1844,39 +1810,22 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1083,
+        "input_tokens": 1085,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 567.9595999972662,
-        "latency_ms": 3515.0953000120353
+        "search_ms": 677.19550000038,
+        "latency_ms": 3521.572000012384
       },
       {
-        "answer": "a <= N <= b [1]",
-        "sources": [
-          {
-            "id": "random#cmdoption-random-i:0",
-            "document": "random",
-            "title": "random — Generate pseudo-random numbers",
-            "section": "-i <N>",
-            "url": "https://docs.python.org/release/3.14.0/library/random.html#cmdoption-random-i",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "Print a random integer between 1 and N inclusive, using randint() .",
-            "source_id": "random#cmdoption-random-i",
-            "start": 0,
-            "end": 67,
-            "score": 0.37315741181373596,
-            "quote": "Print a random integer between 1 and N inclusive, using randint() ."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 545,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 547,
         "output_tokens": 17,
         "cache_hit": false,
-        "search_ms": 610.732300003292,
-        "latency_ms": 3326.027700008126
+        "search_ms": 585.6903999956558,
+        "latency_ms": 3237.930500006769
       },
       {
         "answer": "Yes [1]",
@@ -1900,14 +1849,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 801,
+        "input_tokens": 803,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 568.1798000005074,
-        "latency_ms": 3315.2745999977924
+        "search_ms": 567.204999999376,
+        "latency_ms": 3295.427799996105
       },
       {
-        "answer": "The lowercase letters 'abcdefghijklmnopqrstuvwxyz' [1]",
+        "answer": "The lowercase letters 'abcdefghijklmnopqrstuvwxyz'. [1]",
         "sources": [
           {
             "id": "string#string.ascii_lowercase:0",
@@ -1928,50 +1877,33 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 451,
-        "output_tokens": 17,
+        "input_tokens": 453,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 595.4125999996904,
-        "latency_ms": 3121.9852000067476
+        "search_ms": 441.5393999952357,
+        "latency_ms": 3082.8527999983635
       },
       {
         "answer": "I don't know based on these documents.",
         "sources": [],
         "abstained": true,
         "reason": "invalid_or_missing_evidence",
-        "input_tokens": 536,
-        "output_tokens": 13,
+        "input_tokens": 538,
+        "output_tokens": 30,
         "cache_hit": false,
-        "search_ms": 546.3873000117019,
-        "latency_ms": 3008.428900007857
+        "search_ms": 475.8838999987347,
+        "latency_ms": 3397.0413000060944
       },
       {
-        "answer": "string.ascii_letters combines string.ascii_lowercase and string.ascii_uppercase. [1]",
-        "sources": [
-          {
-            "id": "string#string.printable:0",
-            "document": "string",
-            "title": "string — Common string operations",
-            "section": "string. printable",
-            "url": "https://docs.python.org/release/3.14.0/library/string.html#string.printable",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "String of ASCII characters which are considered printable by Python. This is a combination of digits , ascii_letters , punctuation , and whitespace .\n\nNote\n\nBy design, string.printable.isprintable() returns False . In particular, string.printable is not printable in the POSIX sense (see LC_CTYPE ).",
-            "source_id": "string#string.printable",
-            "start": 0,
-            "end": 299,
-            "score": 4.781126976013184,
-            "quote": "String of ASCII characters which are considered printable by Python. This is a combination of digits , ascii_letters , punctuation , and whitespace .\n\nNote\n\nBy design, string.printable.isprintable() returns False . In particular, string.printable is not printable in the POSIX sense (see LC_CTYPE )."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 561,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 563,
         "output_tokens": 24,
         "cache_hit": false,
-        "search_ms": 579.9209999968298,
-        "latency_ms": 3312.8463000030024
+        "search_ms": 560.2862999949139,
+        "latency_ms": 3325.3452999924775
       },
       {
         "answer": "The string '0123456789abcdefABCDEF'. [1]",
@@ -1995,11 +1927,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 431,
+        "input_tokens": 433,
         "output_tokens": 29,
         "cache_hit": false,
-        "search_ms": 673.1131999986246,
-        "latency_ms": 3486.7862000101013
+        "search_ms": 554.4317000021692,
+        "latency_ms": 3407.606599997962
       },
       {
         "answer": "Namespace object [1]",
@@ -2023,14 +1955,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 777,
+        "input_tokens": 779,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 723.2111999910558,
-        "latency_ms": 3330.7067999994615
+        "search_ms": 656.616699998267,
+        "latency_ms": 3341.9615000020713
       },
       {
-        "answer": "parser.add_argument('filename') [1]",
+        "answer": "parser.add_argument() [1]",
         "sources": [
           {
             "id": "argparse#module-argparse:360",
@@ -2051,11 +1983,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 866,
-        "output_tokens": 18,
+        "input_tokens": 868,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 804.5106000063242,
-        "latency_ms": 3508.8490000052843
+        "search_ms": 755.8974999992643,
+        "latency_ms": 3599.5922000001883
       },
       {
         "answer": "log [1]",
@@ -2079,11 +2011,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 352,
+        "input_tokens": 354,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 634.2911000101594,
-        "latency_ms": 3054.783600004157
+        "search_ms": 570.6686000048649,
+        "latency_ms": 3158.981100001256
       },
       {
         "answer": "logging.warning [1]",
@@ -2107,11 +2039,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 428,
+        "input_tokens": 430,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 568.6767000006512,
-        "latency_ms": 3028.7314000015613
+        "search_ms": 568.6279000074137,
+        "latency_ms": 3230.9410000016214
       },
       {
         "answer": "logging.error [1]",
@@ -2135,42 +2067,25 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 384,
+        "input_tokens": 386,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 553.2723000069382,
-        "latency_ms": 2948.427700001048
+        "search_ms": 567.5287000049138,
+        "latency_ms": 3180.5747999896994
       },
       {
-        "answer": "Yes [1]",
-        "sources": [
-          {
-            "id": "logging#logging.Logger.exception:0",
-            "document": "logging",
-            "title": "logging — Logging facility for Python",
-            "section": "exception ( msg , * args , ** kwargs )",
-            "url": "https://docs.python.org/release/3.14.0/library/logging.html#logging.Logger.exception",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "Logs a message with level ERROR on this logger. The arguments are interpreted as for debug() . Exception info is added to the logging message. This method should only be called from an exception handler.",
-            "source_id": "logging#logging.Logger.exception",
-            "start": 0,
-            "end": 203,
-            "score": 7.416144371032715,
-            "quote": "Logs a message with level ERROR on this logger. The arguments are interpreted as for debug() . Exception info is added to the logging message. This method should only be called from an exception handler."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 701,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 703,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 606.4504000096349,
-        "latency_ms": 3154.7609999979613
+        "search_ms": 546.2360999954399,
+        "latency_ms": 3317.139299993869
       },
       {
-        "answer": "use assertEqual() [1]",
+        "answer": "assertEqual [1]",
         "sources": [
           {
             "id": "unittest#unittest.TestCase.assertEqual:0",
@@ -2191,14 +2106,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 735,
-        "output_tokens": 15,
+        "input_tokens": 737,
+        "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 599.07270000258,
-        "latency_ms": 3207.496800008812
+        "search_ms": 515.7508999982383,
+        "latency_ms": 3314.2336000018986
       },
       {
-        "answer": "assertTrue tests that expr is true (or false). [1]",
+        "answer": "Test that expr is true (or false). [1]",
         "sources": [
           {
             "id": "unittest#unittest.TestCase.assertTrue:0",
@@ -2219,11 +2134,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 816,
-        "output_tokens": 22,
+        "input_tokens": 818,
+        "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 556.5780999895651,
-        "latency_ms": 3309.0070000034757
+        "search_ms": 569.7635999968043,
+        "latency_ms": 3528.9114999904996
       },
       {
         "answer": "use assertRaises [1]",
@@ -2247,11 +2162,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 684,
+        "input_tokens": 686,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 663.8572999945609,
-        "latency_ms": 3222.9805999959353
+        "search_ms": 704.6839999966323,
+        "latency_ms": 3427.816499999608
       },
       {
         "answer": "unittest calls setUp() immediately before calling the test method. [1]",
@@ -2275,14 +2190,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 778,
+        "input_tokens": 780,
         "output_tokens": 22,
         "cache_hit": false,
-        "search_ms": 675.4419999924721,
-        "latency_ms": 3406.7710999952396
+        "search_ms": 622.9691999906208,
+        "latency_ms": 3485.471099993447
       },
       {
-        "answer": "A special type indicating an unconstrained type. [1]",
+        "answer": "Special type [1]",
         "sources": [
           {
             "id": "typing#typing.Any:0",
@@ -2303,11 +2218,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 786,
-        "output_tokens": 20,
+        "input_tokens": 788,
+        "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 635.5528999993112,
-        "latency_ms": 3313.451599999098
+        "search_ms": 644.8024999990594,
+        "latency_ms": 3449.338999998872
       },
       {
         "answer": "Optional[X] is equivalent to X | None (or Union[X, None] ). [1]",
@@ -2331,14 +2246,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 856,
+        "input_tokens": 858,
         "output_tokens": 29,
         "cache_hit": false,
-        "search_ms": 626.8410000047879,
-        "latency_ms": 3472.183899997617
+        "search_ms": 656.7795000009937,
+        "latency_ms": 3786.0012000019196
       },
       {
-        "answer": "a value to one of the provided literals [1]",
+        "answer": "a specific value or set of values [1]",
         "sources": [
           {
             "id": "typing#typing.Literal:0",
@@ -2359,11 +2274,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 943,
-        "output_tokens": 20,
+        "input_tokens": 945,
+        "output_tokens": 19,
         "cache_hit": false,
-        "search_ms": 523.938199999975,
-        "latency_ms": 3294.4742000108818
+        "search_ms": 647.3094999964815,
+        "latency_ms": 3593.71299999475
       },
       {
         "answer": "Final names cannot be reassigned in any scope. [1]",
@@ -2387,11 +2302,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 800,
+        "input_tokens": 802,
         "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 676.6062999959104,
-        "latency_ms": 3472.1472000092035
+        "search_ms": 774.5875000109663,
+        "latency_ms": 3598.359099996742
       },
       {
         "answer": "a dict of the dataclass fields as name: value pairs [1]",
@@ -2415,14 +2330,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 676,
+        "input_tokens": 678,
         "output_tokens": 24,
         "cache_hit": false,
-        "search_ms": 634.1945999884047,
-        "latency_ms": 3509.6462999936193
+        "search_ms": 624.0133999963291,
+        "latency_ms": 3635.7614000007743
       },
       {
-        "answer": "Converts the dataclass obj to a tuple of its field values. [1]",
+        "answer": "Converts the dataclass obj to a tuple (by using the factory function tuple_factory). Each dataclass is converted to a tuple of its field values. [1]",
         "sources": [
           {
             "id": "dataclasses#dataclasses.astuple:0",
@@ -2443,14 +2358,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 700,
-        "output_tokens": 25,
+        "input_tokens": 702,
+        "output_tokens": 42,
         "cache_hit": false,
-        "search_ms": 1146.0093000059715,
-        "latency_ms": 4098.238799997489
+        "search_ms": 907.6712999958545,
+        "latency_ms": 4197.955900002853
       },
       {
-        "answer": "use dataclasses.is_dataclass(obj) or is_dataclass_instance(obj) [1]",
+        "answer": "dataclasses.is_dataclass(obj) [1]",
         "sources": [
           {
             "id": "dataclasses#dataclasses.is_dataclass:0",
@@ -2471,14 +2386,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 812,
-        "output_tokens": 26,
+        "input_tokens": 814,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 1144.2607000062708,
-        "latency_ms": 4211.075600003824
+        "search_ms": 987.0208000065759,
+        "latency_ms": 3862.5977999909082
       },
       {
-        "answer": "Creates a new object [1]",
+        "answer": "Creates a new object of the same type as obj [1]",
         "sources": [
           {
             "id": "dataclasses#dataclasses.replace:0",
@@ -2499,11 +2414,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 936,
-        "output_tokens": 16,
+        "input_tokens": 938,
+        "output_tokens": 22,
         "cache_hit": false,
-        "search_ms": 1101.3292000134243,
-        "latency_ms": 3966.022199994768
+        "search_ms": 953.4859999985201,
+        "latency_ms": 4049.147300000186
       },
       {
         "answer": "sqlite3.connect [1]",
@@ -2527,11 +2442,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 865,
+        "input_tokens": 867,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 970.575799990911,
-        "latency_ms": 3815.214999995078
+        "search_ms": 843.2872999983374,
+        "latency_ms": 3605.257500006701
       },
       {
         "answer": "None [1]",
@@ -2555,11 +2470,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 560,
+        "input_tokens": 562,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 770.7688000082271,
-        "latency_ms": 3419.608199998038
+        "search_ms": 629.5265999942785,
+        "latency_ms": 3229.7627000079956
       },
       {
         "answer": "an empty list [1]",
@@ -2583,11 +2498,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 580,
+        "input_tokens": 582,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 777.3234000051161,
-        "latency_ms": 3442.4055999988923
+        "search_ms": 599.8289999988629,
+        "latency_ms": 3240.8198000048287
       },
       {
         "answer": "commit() [1]",
@@ -2611,39 +2526,39 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 844,
+        "input_tokens": 846,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 692.0773000019835,
-        "latency_ms": 3508.222599994042
+        "search_ms": 556.1663999978919,
+        "latency_ms": 3300.470200003474
       },
       {
-        "answer": "Use heapq.heappush(heap, item) for min-heaps or heapq.heappush_max(heap, item) for max-heaps. [1]",
+        "answer": "heapq.heappush(heap, item) [1]",
         "sources": [
           {
-            "id": "heapq#heapq.heappush_max:0",
+            "id": "heapq#heapq.heappush:0",
             "document": "heapq",
             "title": "heapq — Heap queue algorithm",
-            "section": "heapq. heappush_max ( heap , item )",
-            "url": "https://docs.python.org/release/3.14.0/library/heapq.html#heapq.heappush_max",
+            "section": "heapq. heappush ( heap , item )",
+            "url": "https://docs.python.org/release/3.14.0/library/heapq.html#heapq.heappush",
             "version": "3.14.0",
             "author": "Python documentation contributors",
             "release_date": "2025-10-07",
-            "text": "Push the value item onto the max-heap heap , maintaining the max-heap invariant.\n\nAdded in version 3.14.",
-            "source_id": "heapq#heapq.heappush_max",
+            "text": "Push the value item onto the heap , maintaining the min-heap invariant.",
+            "source_id": "heapq#heapq.heappush",
             "start": 0,
-            "end": 104,
-            "score": 5.629172325134277,
-            "quote": "Push the value item onto the max-heap heap , maintaining the max-heap invariant.\n\nAdded in version 3.14."
+            "end": 71,
+            "score": 5.194815635681152,
+            "quote": "Push the value item onto the heap , maintaining the min-heap invariant."
           }
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 517,
-        "output_tokens": 39,
+        "input_tokens": 519,
+        "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 763.3041999943089,
-        "latency_ms": 3932.21210000047
+        "search_ms": 599.1314000129933,
+        "latency_ms": 3360.8448000013595
       },
       {
         "answer": "the smallest item [1]",
@@ -2667,11 +2582,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 517,
+        "input_tokens": 519,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 688.7966000067536,
-        "latency_ms": 3307.9575000010664
+        "search_ms": 572.7069999993546,
+        "latency_ms": 3219.2967000009958
       },
       {
         "answer": "in linear time [1]",
@@ -2695,14 +2610,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 711,
+        "input_tokens": 713,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 795.3539000009187,
-        "latency_ms": 3555.049599992344
+        "search_ms": 668.8700999948196,
+        "latency_ms": 3351.940900000045
       },
       {
-        "answer": "heapq.nlargest(n, iterable, key=None) [1]",
+        "answer": "heapq.nlargest [1]",
         "sources": [
           {
             "id": "heapq#heapq.nlargest:0",
@@ -2723,11 +2638,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 815,
-        "output_tokens": 23,
+        "input_tokens": 817,
+        "output_tokens": 17,
         "cache_hit": false,
-        "search_ms": 769.7950000001583,
-        "latency_ms": 3732.749100003275
+        "search_ms": 577.5626999966335,
+        "latency_ms": 3455.541599993012
       },
       {
         "answer": "before (to the left of) [1]",
@@ -2751,11 +2666,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 954,
+        "input_tokens": 956,
         "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 775.9495000063907,
-        "latency_ms": 3749.660400004359
+        "search_ms": 621.0512999969069,
+        "latency_ms": 3512.915300001623
       },
       {
         "answer": "Yes [1]",
@@ -2779,14 +2694,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 914,
+        "input_tokens": 916,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 751.8428000039421,
-        "latency_ms": 3567.6548999908846
+        "search_ms": 586.9745999953011,
+        "latency_ms": 3461.352900005295
       },
       {
-        "answer": "Use bisect_left to find the insertion point and then use list.insert() [1]",
+        "answer": "bisect_left [1]",
         "sources": [
           {
             "id": "bisect#bisect.bisect_left:0",
@@ -2807,14 +2722,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1075,
-        "output_tokens": 26,
+        "input_tokens": 1077,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 815.4989000031492,
-        "latency_ms": 4040.9687999926973
+        "search_ms": 596.0382000048412,
+        "latency_ms": 3504.6973999997135
       },
       {
-        "answer": "Use bisect_left to find the insertion point and then use list.insert() [1]",
+        "answer": "bisect_left [1]",
         "sources": [
           {
             "id": "bisect#bisect.bisect_left:0",
@@ -2835,11 +2750,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1075,
-        "output_tokens": 26,
+        "input_tokens": 1077,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 760.0084000005154,
-        "latency_ms": 3409.280399995623
+        "search_ms": 590.5132000043523,
+        "latency_ms": 3033.9410999877146
       },
       {
         "answer": "I don't know based on these documents.",
@@ -2849,8 +2764,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 818.1673999933992,
-        "latency_ms": 818.198900000425
+        "search_ms": 643.155999990995,
+        "latency_ms": 643.1721999979345
       },
       {
         "answer": "I don't know based on these documents.",
@@ -2860,8 +2775,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 770.8253999880981,
-        "latency_ms": 770.8617999887792
+        "search_ms": 549.0449999924749,
+        "latency_ms": 549.0633000008529
       },
       {
         "answer": "I don't know based on these documents.",
@@ -2871,8 +2786,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 713.621900009457,
-        "latency_ms": 713.6504000081914
+        "search_ms": 517.9824000078952,
+        "latency_ms": 517.9994999925839
       },
       {
         "answer": "I don't know based on these documents.",
@@ -2882,8 +2797,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 901.5369999979157,
-        "latency_ms": 901.5672999958042
+        "search_ms": 631.0560999991139,
+        "latency_ms": 631.0731999983545
       },
       {
         "answer": "I don't know based on these documents.",
@@ -2893,8 +2808,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 698.2830000051763,
-        "latency_ms": 698.3245000010356
+        "search_ms": 510.3300000046147,
+        "latency_ms": 510.3473000053782
       },
       {
         "answer": "I don't know based on these documents.",
@@ -2904,8 +2819,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 759.7130000067409,
-        "latency_ms": 759.7444999992149
+        "search_ms": 549.0361000120174,
+        "latency_ms": 549.0584999934072
       },
       {
         "answer": "I don't know based on these documents.",
@@ -2915,8 +2830,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 744.2229000007501,
-        "latency_ms": 744.2430000082823
+        "search_ms": 541.8318000010913,
+        "latency_ms": 541.8492000026163
       },
       {
         "answer": "I don't know based on these documents.",
@@ -2926,8 +2841,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 670.6673000007868,
-        "latency_ms": 670.6817000085721
+        "search_ms": 516.0713999939617,
+        "latency_ms": 516.0886000085156
       },
       {
         "answer": "I don't know based on these documents.",
@@ -2937,8 +2852,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 682.9235000041081,
-        "latency_ms": 682.9415999964112
+        "search_ms": 509.57569999445695,
+        "latency_ms": 509.5922000036808
       },
       {
         "answer": "I don't know based on these documents.",
@@ -2948,8 +2863,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 669.212199994945,
-        "latency_ms": 669.2426999943564
+        "search_ms": 522.3210999974981,
+        "latency_ms": 522.3383999982616
       }
     ],
     "cache_first_use": [
@@ -2975,11 +2890,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 884,
+        "input_tokens": 886,
         "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 871.7598999937763,
-        "latency_ms": 3361.4947000023676
+        "search_ms": 640.6065999908606,
+        "latency_ms": 3148.1572999909986
       },
       {
         "answer": "True [1]",
@@ -3003,11 +2918,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 670,
+        "input_tokens": 672,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 766.8837999954121,
-        "latency_ms": 3191.5548000106355
+        "search_ms": 646.8765999889001,
+        "latency_ms": 3101.3785999966785
       },
       {
         "answer": "False [1]",
@@ -3031,11 +2946,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 670,
+        "input_tokens": 672,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 737.0003999967594,
-        "latency_ms": 3113.8982999982545
+        "search_ms": 639.305599994259,
+        "latency_ms": 3041.8742000038037
       },
       {
         "answer": "0 [1]",
@@ -3059,14 +2974,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 767,
+        "input_tokens": 769,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 778.8365000014892,
-        "latency_ms": 3181.8706000049133
+        "search_ms": 629.0421000012429,
+        "latency_ms": 3125.613099997281
       },
       {
-        "answer": "Use the len(object) function. [1]",
+        "answer": "len(object, /) [1]",
         "sources": [
           {
             "id": "functions#len:0",
@@ -3087,11 +3002,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 732,
-        "output_tokens": 18,
+        "input_tokens": 734,
+        "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 750.905299995793,
-        "latency_ms": 3243.170999994618
+        "search_ms": 653.5050999955274,
+        "latency_ms": 3179.2152999987593
       },
       {
         "answer": "Yes [1]",
@@ -3115,11 +3030,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 805,
+        "input_tokens": 807,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 738.6958999995841,
-        "latency_ms": 3154.11609999137
+        "search_ms": 605.5813999992097,
+        "latency_ms": 3046.6467999940505
       },
       {
         "answer": "str.lower() [1]",
@@ -3143,11 +3058,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 552,
+        "input_tokens": 554,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 695.993899993482,
-        "latency_ms": 3114.013899990823
+        "search_ms": 606.8213999969885,
+        "latency_ms": 3002.5969999987865
       },
       {
         "answer": "whitespace [1]",
@@ -3171,11 +3086,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 821,
+        "input_tokens": 823,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 729.4614999991609,
-        "latency_ms": 3145.9765000035986
+        "search_ms": 642.2014999989187,
+        "latency_ms": 3101.345900009619
       },
       {
         "answer": "No [1]",
@@ -3199,70 +3114,36 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 508,
+        "input_tokens": 510,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 692.5430999981472,
-        "latency_ms": 3062.7138999989256
+        "search_ms": 625.2616999991005,
+        "latency_ms": 3038.7880000052974
       },
       {
-        "answer": "No [1]",
-        "sources": [
-          {
-            "id": "collections#collections.defaultdict.__missing__:0",
-            "document": "collections",
-            "title": "collections — Container datatypes",
-            "section": "__missing__ ( key )",
-            "url": "https://docs.python.org/release/3.14.0/library/collections.html#collections.defaultdict.__missing__",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "If the default_factory attribute is None , this raises a KeyError exception with the key as argument.\n\nIf default_factory is not None , it is called without arguments to provide a default value for the given key , this value is inserted in the dictionary for the key , and returned.\n\nIf calling default_factory raises an exception this exception is propagated unchanged.\n\nThis method is called by the __getitem__() method of the dict class when the requested key is not found; whatever it returns or raises is then returned or raised by __getitem__() .\n\nNote that __missing__() is not called for any operations besides __getitem__() . This means that get() will, like normal dictionaries, return None as a default rather than using default_factory .",
-            "source_id": "collections#collections.defaultdict.__missing__",
-            "start": 0,
-            "end": 749,
-            "score": 6.819638252258301,
-            "quote": "If the default_factory attribute is None , this raises a KeyError exception with the key as argument.\n\nIf default_factory is not None , it is called without arguments to provide a default value for the given key , this value is inserted in the dictionary for the key , and returned.\n\nIf calling default_factory raises an exception this exception is propagated unchanged.\n\nThis method is called by the __getitem__() method of the dict class when the requested key is not found; whatever it returns or raises is then returned or raised by __getitem__() .\n\nNote that __missing__() is not called for any operations besides __getitem__() . This means that get() will, like normal dictionaries, return None as a default rather than using default_factory ."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 836,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 838,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 719.4774999952642,
-        "latency_ms": 3056.5593000064837
+        "search_ms": 586.0459999967134,
+        "latency_ms": 3033.9761000068393
       },
       {
-        "answer": "shallow [1]",
-        "sources": [
-          {
-            "id": "stdtypes#sequence.copy:0",
-            "document": "stdtypes",
-            "title": "Built-in Types",
-            "section": "sequence. copy ( )",
-            "url": "https://docs.python.org/release/3.14.0/library/stdtypes.html#sequence.copy",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "Added in version 3.3.\n\nCreate a shallow copy of sequence . This is equivalent to writing sequence[:] .\n\nHint\n\nThe copy() method is not part of the MutableSequence ABC , but most concrete mutable sequence types provide it.",
-            "source_id": "stdtypes#sequence.copy",
-            "start": 0,
-            "end": 221,
-            "score": 3.3013839721679688,
-            "quote": "Added in version 3.3.\n\nCreate a shallow copy of sequence . This is equivalent to writing sequence[:] .\n\nHint\n\nThe copy() method is not part of the MutableSequence ABC , but most concrete mutable sequence types provide it."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 412,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 414,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 525.344399997266,
-        "latency_ms": 3044.3608999921707
+        "search_ms": 596.6320000006817,
+        "latency_ms": 3170.3670999995666
       },
       {
-        "answer": "Use the add function. [1]",
+        "answer": "add ( elem , / ) [1]",
         "sources": [
           {
             "id": "stdtypes#frozenset.add:0",
@@ -3283,11 +3164,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 714,
-        "output_tokens": 16,
+        "input_tokens": 716,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 807.129900000291,
-        "latency_ms": 3172.8147999965586
+        "search_ms": 864.5575999980792,
+        "latency_ms": 3376.970600002096
       },
       {
         "answer": "Return the decoded contents of the pointed-to file as a string [1]",
@@ -3311,11 +3192,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 782,
+        "input_tokens": 784,
         "output_tokens": 24,
         "cache_hit": false,
-        "search_ms": 681.8884999956936,
-        "latency_ms": 3444.13610000629
+        "search_ms": 663.7826999940444,
+        "latency_ms": 3547.423099997104
       },
       {
         "answer": "Yes [1]",
@@ -3339,11 +3220,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 690,
+        "input_tokens": 692,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 774.7311999992235,
-        "latency_ms": 3096.152099999017
+        "search_ms": 710.6823000067379,
+        "latency_ms": 3186.9913000118686
       },
       {
         "answer": "Path.exists() [1]",
@@ -3367,11 +3248,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 568,
+        "input_tokens": 570,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 782.8730000037467,
-        "latency_ms": 3141.297800000757
+        "search_ms": 693.5329999978421,
+        "latency_ms": 3112.39830001432
       },
       {
         "answer": "If parents is true, any missing parents of this path are created as needed; they are created with the default permissions without taking mode into account (mimicking the POSIX mkdir -p command). [1]",
@@ -3395,14 +3276,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 821,
+        "input_tokens": 823,
         "output_tokens": 51,
         "cache_hit": false,
-        "search_ms": 738.6053000082029,
-        "latency_ms": 3963.03299999272
+        "search_ms": 668.0939999932889,
+        "latency_ms": 3769.4694999954663
       },
       {
-        "answer": "Use PurePath.suffixes [1]",
+        "answer": "Path.suffixes [1]",
         "sources": [
           {
             "id": "pathlib#pathlib.PurePath.suffixes:0",
@@ -3423,11 +3304,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 927,
-        "output_tokens": 18,
+        "input_tokens": 929,
+        "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 860.9090999962064,
-        "latency_ms": 3362.8538999910234
+        "search_ms": 686.2677000026451,
+        "latency_ms": 3303.354899995611
       },
       {
         "answer": "A string representing the final path component, excluding the drive and root, if any: [1]",
@@ -3451,14 +3332,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 581,
+        "input_tokens": 583,
         "output_tokens": 28,
         "cache_hit": false,
-        "search_ms": 703.2586999994237,
-        "latency_ms": 3499.8599999962607
+        "search_ms": 618.1905999983428,
+        "latency_ms": 3305.0164000014775
       },
       {
-        "answer": "collections.Counter is used for counting hashable objects. [1]",
+        "answer": "a collection where elements are stored as dictionary keys and their counts are stored as dictionary values. [1]",
         "sources": [
           {
             "id": "collections#collections.Counter:0",
@@ -3479,11 +3360,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 769,
-        "output_tokens": 21,
+        "input_tokens": 771,
+        "output_tokens": 29,
         "cache_hit": false,
-        "search_ms": 916.7199000075925,
-        "latency_ms": 3566.732100007357
+        "search_ms": 695.7121000014013,
+        "latency_ms": 3480.2376000006916
       },
       {
         "answer": "A deque, or double-ended queue, is a generalization of stacks and queues that supports thread-safe, memory efficient appends and pops from either side with approximately O(1) performance. [1]",
@@ -3507,14 +3388,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 688,
+        "input_tokens": 690,
         "output_tokens": 49,
         "cache_hit": false,
-        "search_ms": 931.7409000068437,
-        "latency_ms": 4233.043200001703
+        "search_ms": 586.1038000002736,
+        "latency_ms": 3759.4496000092477
       },
       {
-        "answer": "defaultdict overrides one method and adds one writable instance variable, providing a default value for missing keys. [1]",
+        "answer": "defaultdict is a subclass of the built-in dict class and overrides one method and adds one writable instance variable. [1]",
         "sources": [
           {
             "id": "collections#collections.defaultdict:0",
@@ -3535,14 +3416,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 829,
-        "output_tokens": 31,
+        "input_tokens": 831,
+        "output_tokens": 33,
         "cache_hit": false,
-        "search_ms": 912.1156000037445,
-        "latency_ms": 3730.7462000026135
+        "search_ms": 555.1131000102032,
+        "latency_ms": 3525.6993000075454
       },
       {
-        "answer": "use the most_common() method [1]",
+        "answer": "most_common [1]",
         "sources": [
           {
             "id": "collections#collections.Counter.most_common:0",
@@ -3563,11 +3444,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 892,
-        "output_tokens": 18,
+        "input_tokens": 894,
+        "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 741.2869999971008,
-        "latency_ms": 3229.3442000081996
+        "search_ms": 611.6664000001037,
+        "latency_ms": 3074.336099991342
       },
       {
         "answer": "a JSON formatted str [1]",
@@ -3591,11 +3472,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 681,
+        "input_tokens": 683,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 873.5248000011779,
-        "latency_ms": 3338.518100004876
+        "search_ms": 702.9231000051368,
+        "latency_ms": 3160.036499990383
       },
       {
         "answer": "deserialize s (a str, bytes or bytearray instance containing a JSON document) to a Python object [1]",
@@ -3619,14 +3500,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 819,
+        "input_tokens": 821,
         "output_tokens": 31,
         "cache_hit": false,
-        "search_ms": 850.4651999974158,
-        "latency_ms": 3643.4364000015194
+        "search_ms": 736.7768999974942,
+        "latency_ms": 3455.984100000933
       },
       {
-        "answer": "json.dump(obj, fp, *args, **kwargs) [1]",
+        "answer": "json.dump [1]",
         "sources": [
           {
             "id": "json#json.dump:0",
@@ -3647,11 +3528,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 936,
-        "output_tokens": 23,
+        "input_tokens": 938,
+        "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 770.8940000011353,
-        "latency_ms": 3414.8558000015328
+        "search_ms": 676.5266000002157,
+        "latency_ms": 3178.514500003075
       },
       {
         "answer": "JSONDecodeError [1]",
@@ -3675,11 +3556,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 845,
+        "input_tokens": 847,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 758.5781999950996,
-        "latency_ms": 3235.872399993241
+        "search_ms": 620.8069999993313,
+        "latency_ms": 3111.3207999878796
       },
       {
         "answer": "a list of strings [1]",
@@ -3703,11 +3584,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 833,
+        "input_tokens": 835,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 818.3315000060247,
-        "latency_ms": 3289.556999996421
+        "search_ms": 663.6520000029122,
+        "latency_ms": 3187.465200011502
       },
       {
         "answer": "csv.writer [1]",
@@ -3731,11 +3612,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 783,
+        "input_tokens": 785,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 781.2230999988969,
-        "latency_ms": 3226.23110000859
+        "search_ms": 654.2022999929031,
+        "latency_ms": 3138.816599996062
       },
       {
         "answer": "csv.DictReader maps row values into a dict [1]",
@@ -3759,11 +3640,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 903,
+        "input_tokens": 905,
         "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 820.731000014348,
-        "latency_ms": 3435.9295000031125
+        "search_ms": 647.6822999975411,
+        "latency_ms": 3260.7471000083024
       },
       {
         "answer": "output rows [1]",
@@ -3787,11 +3668,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 855,
+        "input_tokens": 857,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 830.6260999961523,
-        "latency_ms": 3174.0709000005154
+        "search_ms": 679.8921000008704,
+        "latency_ms": 3149.708600001759
       },
       {
         "answer": "A duration, the difference between two datetime or date instances. [1]",
@@ -3815,11 +3696,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 714,
+        "input_tokens": 716,
         "output_tokens": 23,
         "cache_hit": false,
-        "search_ms": 636.4864000061061,
-        "latency_ms": 3326.281100002234
+        "search_ms": 694.5789000019431,
+        "latency_ms": 3316.716200002702
       },
       {
         "answer": "date.today() [1]",
@@ -3843,11 +3724,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 685,
+        "input_tokens": 687,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 747.2209999978077,
-        "latency_ms": 3171.219200012274
+        "search_ms": 590.6033000064781,
+        "latency_ms": 3066.347699990729
       },
       {
         "answer": "YYYY-MM-DD [1]",
@@ -3871,14 +3752,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 679,
+        "input_tokens": 681,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 729.3708000070183,
-        "latency_ms": 3156.9299999973737
+        "search_ms": 573.8140000030398,
+        "latency_ms": 3037.140800006455
       },
       {
-        "answer": "Use the strptime method from the date or datetime class. [1]",
+        "answer": "use date.strptime or datetime.strptime [1]",
         "sources": [
           {
             "id": "datetime#datetime.date.strptime:0",
@@ -3899,11 +3780,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 842,
-        "output_tokens": 23,
+        "input_tokens": 844,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 714.3189000053098,
-        "latency_ms": 3344.491299998481
+        "search_ms": 615.9719999996014,
+        "latency_ms": 3183.7374000024283
       },
       {
         "answer": "Yes [1]",
@@ -3927,11 +3808,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 911,
+        "input_tokens": 913,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 690.8659000037005,
-        "latency_ms": 3098.2760999904713
+        "search_ms": 621.8529000034323,
+        "latency_ms": 3077.3028999974485
       },
       {
         "answer": "Yes [1]",
@@ -3955,14 +3836,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 887,
+        "input_tokens": 889,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 758.398500009207,
-        "latency_ms": 3203.8431000109995
+        "search_ms": 608.9702000026591,
+        "latency_ms": 3065.1246000052197
       },
       {
-        "answer": "use re.fullmatch() [1]",
+        "answer": "re.fullmatch() [1]",
         "sources": [
           {
             "id": "re#search-vs-match:0",
@@ -3983,11 +3864,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 709,
-        "output_tokens": 16,
+        "input_tokens": 711,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 743.6873999977252,
-        "latency_ms": 3227.564499989967
+        "search_ms": 592.4375000031432,
+        "latency_ms": 3021.559500004514
       },
       {
         "answer": "all non-overlapping matches of pattern in string, as a list of strings or tuples. [1]",
@@ -4011,22 +3892,22 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 770,
+        "input_tokens": 772,
         "output_tokens": 29,
         "cache_hit": false,
-        "search_ms": 716.6914999979781,
-        "latency_ms": 3480.9014999918872
+        "search_ms": 555.2100999921095,
+        "latency_ms": 3220.1112000038847
       },
       {
         "answer": "I don't know based on these documents.",
         "sources": [],
         "abstained": true,
         "reason": "invalid_or_missing_evidence",
-        "input_tokens": 771,
+        "input_tokens": 773,
         "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 734.5931000018027,
-        "latency_ms": 3322.0220999937737
+        "search_ms": 567.6147000049241,
+        "latency_ms": 3157.6874000020325
       },
       {
         "answer": "use re.escape(pattern) [1]",
@@ -4050,14 +3931,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 900,
+        "input_tokens": 902,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 694.7401999932481,
-        "latency_ms": 3132.3189999966417
+        "search_ms": 559.7481000004336,
+        "latency_ms": 3094.7890000097686
       },
       {
-        "answer": "use zip [1]",
+        "answer": "zip [1]",
         "sources": [
           {
             "id": "functions#zip:0",
@@ -4078,14 +3959,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 875,
-        "output_tokens": 14,
+        "input_tokens": 877,
+        "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 738.668999998481,
-        "latency_ms": 3177.5312000099802
+        "search_ms": 584.3106000102125,
+        "latency_ms": 3145.016599999508
       },
       {
-        "answer": "itertools.cycle(iterable) [1]",
+        "answer": "itertools.cycle [1]",
         "sources": [
           {
             "id": "itertools#itertools.cycle:0",
@@ -4106,11 +3987,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 945,
-        "output_tokens": 17,
+        "input_tokens": 947,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 706.0976000066148,
-        "latency_ms": 3193.293199990876
+        "search_ms": 581.3843999931123,
+        "latency_ms": 3131.266999989748
       },
       {
         "answer": "Cartesian product of the input iterables. [1]",
@@ -4134,11 +4015,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1052,
+        "input_tokens": 1054,
         "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 742.8400000062538,
-        "latency_ms": 3317.9703999921912
+        "search_ms": 617.8370999987237,
+        "latency_ms": 3133.17719999759
       },
       {
         "answer": "use itertools.islice() [1]",
@@ -4162,11 +4043,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 875,
+        "input_tokens": 877,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 719.4775999960257,
-        "latency_ms": 3214.118799995049
+        "search_ms": 593.1770000024699,
+        "latency_ms": 3092.1464999992168
       },
       {
         "answer": "up to the maxsize most recent calls [1]",
@@ -4190,11 +4071,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1069,
+        "input_tokens": 1071,
         "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 701.860500004841,
-        "latency_ms": 3277.920799999265
+        "search_ms": 610.5622000031872,
+        "latency_ms": 3209.1956000076607
       },
       {
         "answer": "No [1]",
@@ -4218,14 +4099,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 861,
+        "input_tokens": 863,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 795.9083000023384,
-        "latency_ms": 3210.4366999992635
+        "search_ms": 671.2178000016138,
+        "latency_ms": 3126.064900003257
       },
       {
-        "answer": "functools.partial returns a new partial object which when called will behave like func called with the positional arguments args and keyword arguments keywords. [1]",
+        "answer": "Return a new partial object which when called will behave like func called with the positional arguments args and keyword arguments keywords. [1]",
         "sources": [
           {
             "id": "functools#functools.partial:0",
@@ -4246,14 +4127,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 788,
-        "output_tokens": 38,
+        "input_tokens": 790,
+        "output_tokens": 34,
         "cache_hit": false,
-        "search_ms": 769.57720000064,
-        "latency_ms": 3753.5848999978043
+        "search_ms": 630.0718999991659,
+        "latency_ms": 3438.6584000021685
       },
       {
-        "answer": "functools.wraps is used for defining a wrapper function that preserves the metadata of the original function. [1]",
+        "answer": "This is a convenience function for invoking update_wrapper() as a function decorator when defining a wrapper function. [1]",
         "sources": [
           {
             "id": "functools#functools.wraps:0",
@@ -4274,11 +4155,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 824,
-        "output_tokens": 32,
+        "input_tokens": 826,
+        "output_tokens": 31,
         "cache_hit": false,
-        "search_ms": 761.0809000034351,
-        "latency_ms": 3597.348499999498
+        "search_ms": 605.2481999940937,
+        "latency_ms": 3361.0811000107788
       },
       {
         "answer": "os.getcwd() [1]",
@@ -4302,11 +4183,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 451,
+        "input_tokens": 453,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 820.2998000051593,
-        "latency_ms": 3225.914000009652
+        "search_ms": 661.1978000000818,
+        "latency_ms": 3289.6036000020104
       },
       {
         "answer": "No [1]",
@@ -4330,11 +4211,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 687,
+        "input_tokens": 689,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 763.259500003187,
-        "latency_ms": 3132.504399996833
+        "search_ms": 680.9103000123287,
+        "latency_ms": 3091.674700001022
       },
       {
         "answer": "an OSError is raised [1]",
@@ -4358,14 +4239,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 778,
+        "input_tokens": 780,
         "output_tokens": 16,
         "cache_hit": false,
-        "search_ms": 825.3025999874808,
-        "latency_ms": 3270.859600001131
+        "search_ms": 712.7391999965766,
+        "latency_ms": 3224.284500000067
       },
       {
-        "answer": "os.getenv(key, default=None) [1]",
+        "answer": "os.getenv(key, default = None) [1]",
         "sources": [
           {
             "id": "os#os.getenv:0",
@@ -4386,11 +4267,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 736,
-        "output_tokens": 18,
+        "input_tokens": 738,
+        "output_tokens": 19,
         "cache_hit": false,
-        "search_ms": 738.3567999931984,
-        "latency_ms": 3253.124000009848
+        "search_ms": 613.4291000053054,
+        "latency_ms": 3187.4976999970386
       },
       {
         "answer": "No [1]",
@@ -4414,11 +4295,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 949,
+        "input_tokens": 951,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 823.8949999940814,
-        "latency_ms": 3227.9312999889953
+        "search_ms": 684.7000999987358,
+        "latency_ms": 3152.592900005402
       },
       {
         "answer": "copy2 [1]",
@@ -4442,14 +4323,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 984,
+        "input_tokens": 986,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 852.2847000131151,
-        "latency_ms": 3273.2270999986213
+        "search_ms": 708.7544999958482,
+        "latency_ms": 3198.9147000131197
       },
       {
-        "answer": "use shutil.rmtree() [1]",
+        "answer": "shutil.rmtree [1]",
         "sources": [
           {
             "id": "shutil#shutil.rmtree:0",
@@ -4470,14 +4351,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 895,
+        "input_tokens": 897,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 823.8299999939045,
-        "latency_ms": 3272.8360000037355
+        "search_ms": 716.4740000007441,
+        "latency_ms": 3228.615899992292
       },
       {
-        "answer": "use shutil.which(cmd, mode=os.F_OK | os.X_OK, path=None) [1]",
+        "answer": "shutil.which(cmd, mode=os.F_OK | os.X_OK, path=None) [1]",
         "sources": [
           {
             "id": "shutil#shutil.which:0",
@@ -4498,11 +4379,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 923,
+        "input_tokens": 925,
         "output_tokens": 28,
         "cache_hit": false,
-        "search_ms": 952.7419999940321,
-        "latency_ms": 3691.373100009514
+        "search_ms": 719.6122000023024,
+        "latency_ms": 3421.5373000042746
       },
       {
         "answer": "the smallest integer greater than or equal to x [1]",
@@ -4526,11 +4407,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 310,
+        "input_tokens": 312,
         "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 634.2185999965295,
-        "latency_ms": 3164.9456000013743
+        "search_ms": 615.3418000030797,
+        "latency_ms": 3228.8939999998547
       },
       {
         "answer": "the largest integer less than or equal to x [1]",
@@ -4554,14 +4435,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 574,
+        "input_tokens": 576,
         "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 706.8358999968041,
-        "latency_ms": 3272.9782000096748
+        "search_ms": 580.3729000035673,
+        "latency_ms": 3139.187299995683
       },
       {
-        "answer": "Use math.sqrt(x) [1]",
+        "answer": "math.sqrt(x) [1]",
         "sources": [
           {
             "id": "math#math.sqrt:0",
@@ -4582,25 +4463,25 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 717,
-        "output_tokens": 16,
+        "input_tokens": 719,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 691.2956000014674,
-        "latency_ms": 3141.576800000621
+        "search_ms": 620.3517999965698,
+        "latency_ms": 3086.124800000107
       },
       {
         "answer": "I don't know based on these documents.",
         "sources": [],
         "abstained": true,
         "reason": "invalid_or_missing_evidence",
-        "input_tokens": 509,
+        "input_tokens": 511,
         "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 706.8205000105081,
-        "latency_ms": 3259.2025000049034
+        "search_ms": 640.5846999987261,
+        "latency_ms": 3171.6574000020046
       },
       {
-        "answer": "statistics.mean calculates the sample arithmetic mean of data. [1]",
+        "answer": "the sample arithmetic mean of data [1]",
         "sources": [
           {
             "id": "statistics#statistics.mean:0",
@@ -4621,14 +4502,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1021,
-        "output_tokens": 21,
+        "input_tokens": 1023,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 733.5384999896633,
-        "latency_ms": 3308.0890999990515
+        "search_ms": 564.3618000030983,
+        "latency_ms": 3117.8871000010986
       },
       {
-        "answer": "The median is interpolated by taking the average of the two middle values. [1]",
+        "answer": "the median is interpolated by taking the average of the two middle values [1]",
         "sources": [
           {
             "id": "statistics#statistics.median:0",
@@ -4649,11 +4530,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1033,
+        "input_tokens": 1035,
         "output_tokens": 25,
         "cache_hit": false,
-        "search_ms": 721.286499989219,
-        "latency_ms": 3415.715800001635
+        "search_ms": 697.1839000034379,
+        "latency_ms": 3385.0413000036497
       },
       {
         "answer": "the single most common data point from discrete or nominal data [1]",
@@ -4677,11 +4558,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 863,
+        "input_tokens": 865,
         "output_tokens": 23,
         "cache_hit": false,
-        "search_ms": 723.6804999993183,
-        "latency_ms": 3367.127299992717
+        "search_ms": 688.2674999942537,
+        "latency_ms": 3409.1831000114325
       },
       {
         "answer": "sample [1]",
@@ -4705,11 +4586,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 470,
+        "input_tokens": 472,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 733.8075999869034,
-        "latency_ms": 3130.6840000033844
+        "search_ms": 693.4097999910591,
+        "latency_ms": 3121.585699991556
       },
       {
         "answer": "raises IndexError [1]",
@@ -4733,11 +4614,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 819,
+        "input_tokens": 821,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 740.612699999474,
-        "latency_ms": 3169.6856999915326
+        "search_ms": 663.2255000004079,
+        "latency_ms": 3115.32559999614
       },
       {
         "answer": "No [1]",
@@ -4761,39 +4642,22 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1083,
+        "input_tokens": 1085,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 714.8584999958985,
-        "latency_ms": 3164.1553999943426
+        "search_ms": 632.7388000063365,
+        "latency_ms": 3073.3122999954503
       },
       {
-        "answer": "a <= N <= b [1]",
-        "sources": [
-          {
-            "id": "random#random.uniform:0",
-            "document": "random",
-            "title": "random — Generate pseudo-random numbers",
-            "section": "random. uniform ( a , b )",
-            "url": "https://docs.python.org/release/3.14.0/library/random.html#random.uniform",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "Return a random floating-point number N such that a <= N <= b for a <= b and b <= N <= a for b < a .\n\nThe end-point value b may or may not be included in the range depending on floating-point rounding in the expression a + (b-a) * random() .",
-            "source_id": "random#random.uniform",
-            "start": 0,
-            "end": 241,
-            "score": 5.014840126037598,
-            "quote": "Return a random floating-point number N such that a <= N <= b for a <= b and b <= N <= a for b < a .\n\nThe end-point value b may or may not be included in the range depending on floating-point rounding in the expression a + (b-a) * random() ."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 545,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 547,
         "output_tokens": 17,
         "cache_hit": false,
-        "search_ms": 791.715600003954,
-        "latency_ms": 3296.822499993141
+        "search_ms": 647.1598999924026,
+        "latency_ms": 3162.046699988423
       },
       {
         "answer": "Yes [1]",
@@ -4817,14 +4681,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 801,
+        "input_tokens": 803,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 688.9937999949325,
-        "latency_ms": 3091.5731000131927
+        "search_ms": 619.9559000087902,
+        "latency_ms": 3014.0513999940595
       },
       {
-        "answer": "The lowercase letters 'abcdefghijklmnopqrstuvwxyz' [1]",
+        "answer": "The lowercase letters 'abcdefghijklmnopqrstuvwxyz'. [1]",
         "sources": [
           {
             "id": "string#string.ascii_lowercase:0",
@@ -4845,50 +4709,33 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 451,
-        "output_tokens": 17,
+        "input_tokens": 453,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 671.5953000093577,
-        "latency_ms": 3346.330400003353
+        "search_ms": 588.4389999991981,
+        "latency_ms": 3226.3246000075014
       },
       {
         "answer": "I don't know based on these documents.",
         "sources": [],
         "abstained": true,
         "reason": "invalid_or_missing_evidence",
-        "input_tokens": 536,
-        "output_tokens": 13,
+        "input_tokens": 538,
+        "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 670.0204999942798,
-        "latency_ms": 3078.5824000049615
+        "search_ms": 537.5333999982104,
+        "latency_ms": 3073.359199988772
       },
       {
-        "answer": "string.ascii_letters combines string.ascii_lowercase and string.ascii_uppercase. [1]",
-        "sources": [
-          {
-            "id": "string#string.printable:0",
-            "document": "string",
-            "title": "string — Common string operations",
-            "section": "string. printable",
-            "url": "https://docs.python.org/release/3.14.0/library/string.html#string.printable",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "String of ASCII characters which are considered printable by Python. This is a combination of digits , ascii_letters , punctuation , and whitespace .\n\nNote\n\nBy design, string.printable.isprintable() returns False . In particular, string.printable is not printable in the POSIX sense (see LC_CTYPE ).",
-            "source_id": "string#string.printable",
-            "start": 0,
-            "end": 299,
-            "score": 4.781126976013184,
-            "quote": "String of ASCII characters which are considered printable by Python. This is a combination of digits , ascii_letters , punctuation , and whitespace .\n\nNote\n\nBy design, string.printable.isprintable() returns False . In particular, string.printable is not printable in the POSIX sense (see LC_CTYPE )."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 561,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 563,
         "output_tokens": 24,
         "cache_hit": false,
-        "search_ms": 746.9655000022613,
-        "latency_ms": 3369.7962000005646
+        "search_ms": 609.4841000012821,
+        "latency_ms": 3243.019600005937
       },
       {
         "answer": "The string '0123456789abcdefABCDEF'. [1]",
@@ -4912,11 +4759,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 431,
+        "input_tokens": 433,
         "output_tokens": 29,
         "cache_hit": false,
-        "search_ms": 693.9883000013651,
-        "latency_ms": 3553.428100000019
+        "search_ms": 596.7796000040835,
+        "latency_ms": 3439.0604000072926
       },
       {
         "answer": "Namespace object [1]",
@@ -4940,17 +4787,17 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 777,
+        "input_tokens": 779,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 920.9510000073351,
-        "latency_ms": 3326.1744000046747
+        "search_ms": 725.8218000060879,
+        "latency_ms": 3185.2046999993036
       },
       {
-        "answer": "The ArgumentParser.add_argument() method attaches individual argument specifications to the parser. [1]",
+        "answer": "parser.add_argument() [1]",
         "sources": [
           {
-            "id": "argparse#module-argparse:180",
+            "id": "argparse#module-argparse:360",
             "document": "argparse",
             "title": "argparse — Parser for command-line options, arguments and subcommands",
             "section": "argparse — Parser for command-line options, arguments and subcommands",
@@ -4958,21 +4805,21 @@
             "version": "3.14.0",
             "author": "Python documentation contributors",
             "release_date": "2025-10-07",
-            "text": "interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of sys.argv . The argparse module also automatically generates help and usage messages. The module will also issue errors when users give the program invalid arguments.\n\nThe argparse module’s support for command-line interfaces is built around an instance of argparse.ArgumentParser . It is a container for argument specifications and has options that apply to the parser as whole:\n\nparser = argparse.ArgumentParser(\n                    prog='ProgramName',\n                    description='What the program does',\n                    epilog='Text at the bottom of help')\n\n\nThe ArgumentParser.add_argument() method attaches individual argument specifications to the parser. It supports positional arguments, options that accept",
+            "text": "values, and on/off flags:\n\nparser.add_argument('filename')           # positional argument\nparser.add_argument('-c', '--count')      # option that takes a value\nparser.add_argument('-v', '--verbose',\n                    action='store_true')  # on/off flag\n\n\nThe ArgumentParser.parse_args() method runs the parser and places the extracted data in a argparse.Namespace object:\n\nargs = parser.parse_args()\nprint(args.filename, args.count, args.verbose)\n\n\nNote\n\nIf you’re looking for a guide about how to upgrade optparse code to argparse , see Upgrading Optparse Code .",
             "source_id": "argparse#module-argparse",
-            "start": 905,
-            "end": 1743,
-            "score": 6.507752895355225,
-            "quote": "interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of sys.argv . The argparse module also automatically generates help and usage messages. The module will also issue errors when users give the program invalid arguments.\n\nThe argparse module’s support for command-line interfaces is built around an instance of argparse.ArgumentParser . It is a container for argument specifications and has options that apply to the parser as whole:\n\nparser = argparse.ArgumentParser(\n                    prog='ProgramName',\n                    description='What the program does',\n                    epilog='Text at the bottom of help')\n\n\nThe ArgumentParser.add_argument() method attaches individual argument specifications to the parser. It supports positional arguments, options that accept"
+            "start": 1744,
+            "end": 2310,
+            "score": 5.367931365966797,
+            "quote": "values, and on/off flags:\n\nparser.add_argument('filename')           # positional argument\nparser.add_argument('-c', '--count')      # option that takes a value\nparser.add_argument('-v', '--verbose',\n                    action='store_true')  # on/off flag\n\n\nThe ArgumentParser.parse_args() method runs the parser and places the extracted data in a argparse.Namespace object:\n\nargs = parser.parse_args()\nprint(args.filename, args.count, args.verbose)\n\n\nNote\n\nIf you’re looking for a guide about how to upgrade optparse code to argparse , see Upgrading Optparse Code ."
           }
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 866,
-        "output_tokens": 26,
+        "input_tokens": 868,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 921.6123999940464,
-        "latency_ms": 3598.64430000016
+        "search_ms": 784.3315999925835,
+        "latency_ms": 3250.5440000095405
       },
       {
         "answer": "log [1]",
@@ -4996,11 +4843,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 352,
+        "input_tokens": 354,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 704.3522000021767,
-        "latency_ms": 3230.459599988535
+        "search_ms": 545.2719000022626,
+        "latency_ms": 3054.9609000008786
       },
       {
         "answer": "logging.warning [1]",
@@ -5024,11 +4871,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 428,
+        "input_tokens": 430,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 699.2107999976724,
-        "latency_ms": 3085.96279998892
+        "search_ms": 600.705899996683,
+        "latency_ms": 3056.446500006132
       },
       {
         "answer": "logging.error [1]",
@@ -5052,42 +4899,25 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 384,
+        "input_tokens": 386,
         "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 707.9158999986248,
-        "latency_ms": 3057.668499997817
+        "search_ms": 563.9439999940805,
+        "latency_ms": 3018.318899994483
       },
       {
-        "answer": "Yes [1]",
-        "sources": [
-          {
-            "id": "logging#logging.Logger.exception:0",
-            "document": "logging",
-            "title": "logging — Logging facility for Python",
-            "section": "exception ( msg , * args , ** kwargs )",
-            "url": "https://docs.python.org/release/3.14.0/library/logging.html#logging.Logger.exception",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "Logs a message with level ERROR on this logger. The arguments are interpreted as for debug() . Exception info is added to the logging message. This method should only be called from an exception handler.",
-            "source_id": "logging#logging.Logger.exception",
-            "start": 0,
-            "end": 203,
-            "score": 7.416144371032715,
-            "quote": "Logs a message with level ERROR on this logger. The arguments are interpreted as for debug() . Exception info is added to the logging message. This method should only be called from an exception handler."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
-        "input_tokens": 701,
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
+        "input_tokens": 703,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 709.6801999869058,
-        "latency_ms": 3092.8120000025956
+        "search_ms": 578.9899000083096,
+        "latency_ms": 2999.1761000128463
       },
       {
-        "answer": "assertEqual(first, second, msg=None) [1]",
+        "answer": "assertEqual [1]",
         "sources": [
           {
             "id": "unittest#unittest.TestCase.assertEqual:0",
@@ -5108,11 +4938,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 735,
-        "output_tokens": 20,
+        "input_tokens": 737,
+        "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 672.0225000026403,
-        "latency_ms": 3209.6594000031473
+        "search_ms": 543.853900002432,
+        "latency_ms": 2971.3789999950677
       },
       {
         "answer": "Test that expr is true (or false). [1]",
@@ -5136,11 +4966,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 816,
+        "input_tokens": 818,
         "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 686.9562999927439,
-        "latency_ms": 3250.7741000008537
+        "search_ms": 553.4914000018034,
+        "latency_ms": 3109.9966000037966
       },
       {
         "answer": "use assertRaises [1]",
@@ -5164,11 +4994,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 684,
+        "input_tokens": 686,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 727.6937999995425,
-        "latency_ms": 3154.407699999865
+        "search_ms": 603.4395000024233,
+        "latency_ms": 3071.2644000013825
       },
       {
         "answer": "unittest calls setUp() immediately before calling the test method. [1]",
@@ -5192,14 +5022,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 778,
+        "input_tokens": 780,
         "output_tokens": 22,
         "cache_hit": false,
-        "search_ms": 693.4308000054443,
-        "latency_ms": 3269.3871000083163
+        "search_ms": 595.2159999869764,
+        "latency_ms": 3257.2653999959584
       },
       {
-        "answer": "A special type indicating an unconstrained type. [1]",
+        "answer": "Special type [1]",
         "sources": [
           {
             "id": "typing#typing.Any:0",
@@ -5220,11 +5050,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 786,
-        "output_tokens": 20,
+        "input_tokens": 788,
+        "output_tokens": 14,
         "cache_hit": false,
-        "search_ms": 781.7112000047928,
-        "latency_ms": 3311.109000002034
+        "search_ms": 653.3791999972891,
+        "latency_ms": 3184.105099993758
       },
       {
         "answer": "Optional[X] is equivalent to X | None (or Union[X, None] ). [1]",
@@ -5248,14 +5078,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 856,
+        "input_tokens": 858,
         "output_tokens": 29,
         "cache_hit": false,
-        "search_ms": 820.8528999966802,
-        "latency_ms": 3612.672500006738
+        "search_ms": 668.578000011621,
+        "latency_ms": 3386.8063999980222
       },
       {
-        "answer": "a value to one of the provided literals [1]",
+        "answer": "a specific value or set of values [1]",
         "sources": [
           {
             "id": "typing#typing.Literal:0",
@@ -5276,11 +5106,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 943,
-        "output_tokens": 20,
+        "input_tokens": 945,
+        "output_tokens": 19,
         "cache_hit": false,
-        "search_ms": 700.8731000096304,
-        "latency_ms": 3249.080599998706
+        "search_ms": 557.3691999888979,
+        "latency_ms": 3267.91090000188
       },
       {
         "answer": "Final names cannot be reassigned in any scope. [1]",
@@ -5304,11 +5134,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 800,
+        "input_tokens": 802,
         "output_tokens": 21,
         "cache_hit": false,
-        "search_ms": 887.3081000056118,
-        "latency_ms": 3436.2075999961235
+        "search_ms": 801.0557999950834,
+        "latency_ms": 3378.4837999992305
       },
       {
         "answer": "a dict of the dataclass fields as name: value pairs [1]",
@@ -5332,14 +5162,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 676,
+        "input_tokens": 678,
         "output_tokens": 24,
         "cache_hit": false,
-        "search_ms": 771.7706999974325,
-        "latency_ms": 3393.451700001606
+        "search_ms": 617.2769999975571,
+        "latency_ms": 3230.2822999918135
       },
       {
-        "answer": "Converts the dataclass obj to a tuple of its field values. [1]",
+        "answer": "Converts the dataclass obj to a tuple (by using the factory function tuple_factory). Each dataclass is converted to a tuple of its field values. [1]",
         "sources": [
           {
             "id": "dataclasses#dataclasses.astuple:0",
@@ -5360,14 +5190,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 700,
-        "output_tokens": 25,
+        "input_tokens": 702,
+        "output_tokens": 42,
         "cache_hit": false,
-        "search_ms": 1041.6286999970907,
-        "latency_ms": 3664.674300001934
+        "search_ms": 807.3869999934686,
+        "latency_ms": 3694.6229000022868
       },
       {
-        "answer": "use dataclasses.is_dataclass(obj) or is_dataclass_instance(obj) [1]",
+        "answer": "dataclasses.is_dataclass(obj) [1]",
         "sources": [
           {
             "id": "dataclasses#dataclasses.is_dataclass:0",
@@ -5388,14 +5218,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 812,
-        "output_tokens": 26,
+        "input_tokens": 814,
+        "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 1038.1071000010706,
-        "latency_ms": 3702.086200006306
+        "search_ms": 866.1959000019124,
+        "latency_ms": 3451.0089000104927
       },
       {
-        "answer": "Creates a new object [1]",
+        "answer": "Creates a new object of the same type as obj [1]",
         "sources": [
           {
             "id": "dataclasses#dataclasses.replace:0",
@@ -5416,11 +5246,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 936,
-        "output_tokens": 16,
+        "input_tokens": 938,
+        "output_tokens": 22,
         "cache_hit": false,
-        "search_ms": 1007.2160999989137,
-        "latency_ms": 3438.637999992352
+        "search_ms": 814.0601000050083,
+        "latency_ms": 3393.8064000103623
       },
       {
         "answer": "sqlite3.connect [1]",
@@ -5444,11 +5274,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 865,
+        "input_tokens": 867,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 945.9022999944864,
-        "latency_ms": 3392.202200004249
+        "search_ms": 739.1923999966821,
+        "latency_ms": 3255.8637999900384
       },
       {
         "answer": "None [1]",
@@ -5472,11 +5302,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 560,
+        "input_tokens": 562,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 742.8263000037987,
-        "latency_ms": 3099.632700002985
+        "search_ms": 611.3120999943931,
+        "latency_ms": 3009.9309000070207
       },
       {
         "answer": "an empty list [1]",
@@ -5500,11 +5330,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 580,
+        "input_tokens": 582,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 747.309900005348,
-        "latency_ms": 3163.603000008152
+        "search_ms": 617.0080000010785,
+        "latency_ms": 3028.1453000061447
       },
       {
         "answer": "commit() [1]",
@@ -5528,39 +5358,39 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 844,
+        "input_tokens": 846,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 690.6574000022374,
-        "latency_ms": 3097.7486000047065
+        "search_ms": 561.8465000006836,
+        "latency_ms": 3072.1369000093546
       },
       {
-        "answer": "Use heapq.heappush(heap, item) for min-heaps or heapq.heappush_max(heap, item) for max-heaps. [1]",
+        "answer": "heapq.heappush(heap, item) [1]",
         "sources": [
           {
-            "id": "heapq#heapq.heappush_max:0",
+            "id": "heapq#heapq.heappush:0",
             "document": "heapq",
             "title": "heapq — Heap queue algorithm",
-            "section": "heapq. heappush_max ( heap , item )",
-            "url": "https://docs.python.org/release/3.14.0/library/heapq.html#heapq.heappush_max",
+            "section": "heapq. heappush ( heap , item )",
+            "url": "https://docs.python.org/release/3.14.0/library/heapq.html#heapq.heappush",
             "version": "3.14.0",
             "author": "Python documentation contributors",
             "release_date": "2025-10-07",
-            "text": "Push the value item onto the max-heap heap , maintaining the max-heap invariant.\n\nAdded in version 3.14.",
-            "source_id": "heapq#heapq.heappush_max",
+            "text": "Push the value item onto the heap , maintaining the min-heap invariant.",
+            "source_id": "heapq#heapq.heappush",
             "start": 0,
-            "end": 104,
-            "score": 5.629172325134277,
-            "quote": "Push the value item onto the max-heap heap , maintaining the max-heap invariant.\n\nAdded in version 3.14."
+            "end": 71,
+            "score": 5.194815635681152,
+            "quote": "Push the value item onto the heap , maintaining the min-heap invariant."
           }
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 517,
-        "output_tokens": 39,
+        "input_tokens": 519,
+        "output_tokens": 20,
         "cache_hit": false,
-        "search_ms": 698.3456000016304,
-        "latency_ms": 3633.5621000034735
+        "search_ms": 592.4690000101691,
+        "latency_ms": 3154.583099996671
       },
       {
         "answer": "the smallest item [1]",
@@ -5584,11 +5414,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 517,
+        "input_tokens": 519,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 681.6380000091158,
-        "latency_ms": 3089.001100001042
+        "search_ms": 525.6558999972185,
+        "latency_ms": 3027.6797999977134
       },
       {
         "answer": "in linear time [1]",
@@ -5612,14 +5442,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 711,
+        "input_tokens": 713,
         "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 731.6320999962045,
-        "latency_ms": 3141.4981999987504
+        "search_ms": 606.5225000056671,
+        "latency_ms": 3079.639600007795
       },
       {
-        "answer": "heapq.nlargest(n, iterable, key=None) [1]",
+        "answer": "heapq.nlargest [1]",
         "sources": [
           {
             "id": "heapq#heapq.nlargest:0",
@@ -5640,11 +5470,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 815,
-        "output_tokens": 23,
+        "input_tokens": 817,
+        "output_tokens": 17,
         "cache_hit": false,
-        "search_ms": 750.5207000067458,
-        "latency_ms": 3340.28550000221
+        "search_ms": 577.3788999940734,
+        "latency_ms": 3050.3412000107346
       },
       {
         "answer": "before (to the left of) [1]",
@@ -5668,11 +5498,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 954,
+        "input_tokens": 956,
         "output_tokens": 18,
         "cache_hit": false,
-        "search_ms": 734.1047000081744,
-        "latency_ms": 3221.842699989793
+        "search_ms": 615.8945000061067,
+        "latency_ms": 3163.3954999997513
       },
       {
         "answer": "Yes [1]",
@@ -5696,14 +5526,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 914,
+        "input_tokens": 916,
         "output_tokens": 13,
         "cache_hit": false,
-        "search_ms": 711.878500005696,
-        "latency_ms": 3111.866499995813
+        "search_ms": 594.582800011267,
+        "latency_ms": 3075.183199995081
       },
       {
-        "answer": "Use bisect_left to find the insertion point and then use list.insert() [1]",
+        "answer": "bisect_left [1]",
         "sources": [
           {
             "id": "bisect#bisect.bisect_left:0",
@@ -5724,14 +5554,14 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1075,
-        "output_tokens": 26,
+        "input_tokens": 1077,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 787.352400002419,
-        "latency_ms": 3484.4767000031425
+        "search_ms": 633.7106999999378,
+        "latency_ms": 3096.050499996636
       },
       {
-        "answer": "Use bisect_left to find the insertion point and then use list.insert() [1]",
+        "answer": "bisect_left [1]",
         "sources": [
           {
             "id": "bisect#bisect.bisect_left:0",
@@ -5752,11 +5582,11 @@
         ],
         "abstained": false,
         "reason": "answered",
-        "input_tokens": 1075,
-        "output_tokens": 26,
+        "input_tokens": 1077,
+        "output_tokens": 15,
         "cache_hit": false,
-        "search_ms": 773.8301000063075,
-        "latency_ms": 3448.920700000599
+        "search_ms": 636.6466000035871,
+        "latency_ms": 3103.018699999666
       },
       {
         "answer": "I don't know based on these documents.",
@@ -5766,8 +5596,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 804.8475999967195,
-        "latency_ms": 804.8710000002757
+        "search_ms": 648.5813000035705,
+        "latency_ms": 648.6003000027267
       },
       {
         "answer": "I don't know based on these documents.",
@@ -5777,8 +5607,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 711.313899999368,
-        "latency_ms": 711.3409000012325
+        "search_ms": 541.6571999958251,
+        "latency_ms": 541.6746999981115
       },
       {
         "answer": "I don't know based on these documents.",
@@ -5788,8 +5618,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 676.7514999955893,
-        "latency_ms": 676.7798999935621
+        "search_ms": 532.7217000012752,
+        "latency_ms": 532.7384999982314
       },
       {
         "answer": "I don't know based on these documents.",
@@ -5799,8 +5629,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 833.4743000013987,
-        "latency_ms": 833.4984999964945
+        "search_ms": 719.7233999904711,
+        "latency_ms": 719.7404000035021
       },
       {
         "answer": "I don't know based on these documents.",
@@ -5810,8 +5640,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 682.6858999993419,
-        "latency_ms": 682.7027000108501
+        "search_ms": 534.8174999962794,
+        "latency_ms": 534.8360999923898
       },
       {
         "answer": "I don't know based on these documents.",
@@ -5821,8 +5651,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 780.0922999886097,
-        "latency_ms": 780.1176000066334
+        "search_ms": 553.3469999936642,
+        "latency_ms": 553.3668999996735
       },
       {
         "answer": "I don't know based on these documents.",
@@ -5832,8 +5662,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 712.8961000125855,
-        "latency_ms": 712.927699991269
+        "search_ms": 597.8814999980386,
+        "latency_ms": 597.8997000056552
       },
       {
         "answer": "I don't know based on these documents.",
@@ -5843,8 +5673,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 673.8761000015074,
-        "latency_ms": 673.8957000052324
+        "search_ms": 528.7587000057101,
+        "latency_ms": 528.7766999972519
       },
       {
         "answer": "I don't know based on these documents.",
@@ -5854,8 +5684,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 666.3897999969777,
-        "latency_ms": 666.4095999876736
+        "search_ms": 550.0895000004675,
+        "latency_ms": 550.1099999964936
       },
       {
         "answer": "I don't know based on these documents.",
@@ -5865,8 +5695,8 @@
         "output_tokens": 0,
         "reason": "low_relevance",
         "cache_hit": false,
-        "search_ms": 666.3148999941768,
-        "latency_ms": 666.3640999904601
+        "search_ms": 503.6594999983208,
+        "latency_ms": 503.6782000097446
       }
     ],
     "cache_repeated": [
@@ -5896,7 +5726,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.0371999922208488
+        "latency_ms": 0.01999999221879989
       },
       {
         "answer": "True [1]",
@@ -5924,7 +5754,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.023599990527145565
+        "latency_ms": 0.02479999966453761
       },
       {
         "answer": "False [1]",
@@ -5952,7 +5782,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02819999644998461
+        "latency_ms": 0.026900001103058457
       },
       {
         "answer": "0 [1]",
@@ -5980,10 +5810,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02649999805726111
+        "latency_ms": 0.03260000084992498
       },
       {
-        "answer": "Use the len(object) function. [1]",
+        "answer": "len(object, /) [1]",
         "sources": [
           {
             "id": "functions#len:0",
@@ -6008,7 +5838,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02409999433439225
+        "latency_ms": 0.034900003811344504
       },
       {
         "answer": "Yes [1]",
@@ -6036,7 +5866,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.030099996365606785
+        "latency_ms": 0.02579999272711575
       },
       {
         "answer": "str.lower() [1]",
@@ -6064,7 +5894,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.03580001066438854
+        "latency_ms": 0.035299992305226624
       },
       {
         "answer": "whitespace [1]",
@@ -6092,7 +5922,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.035299992305226624
+        "latency_ms": 0.028000009479001164
       },
       {
         "answer": "No [1]",
@@ -6120,66 +5950,32 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02300000051036477
+        "latency_ms": 0.0312999909510836
       },
       {
-        "answer": "No [1]",
-        "sources": [
-          {
-            "id": "collections#collections.defaultdict.__missing__:0",
-            "document": "collections",
-            "title": "collections — Container datatypes",
-            "section": "__missing__ ( key )",
-            "url": "https://docs.python.org/release/3.14.0/library/collections.html#collections.defaultdict.__missing__",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "If the default_factory attribute is None , this raises a KeyError exception with the key as argument.\n\nIf default_factory is not None , it is called without arguments to provide a default value for the given key , this value is inserted in the dictionary for the key , and returned.\n\nIf calling default_factory raises an exception this exception is propagated unchanged.\n\nThis method is called by the __getitem__() method of the dict class when the requested key is not found; whatever it returns or raises is then returned or raised by __getitem__() .\n\nNote that __missing__() is not called for any operations besides __getitem__() . This means that get() will, like normal dictionaries, return None as a default rather than using default_factory .",
-            "source_id": "collections#collections.defaultdict.__missing__",
-            "start": 0,
-            "end": 749,
-            "score": 6.819638252258301,
-            "quote": "If the default_factory attribute is None , this raises a KeyError exception with the key as argument.\n\nIf default_factory is not None , it is called without arguments to provide a default value for the given key , this value is inserted in the dictionary for the key , and returned.\n\nIf calling default_factory raises an exception this exception is propagated unchanged.\n\nThis method is called by the __getitem__() method of the dict class when the requested key is not found; whatever it returns or raises is then returned or raised by __getitem__() .\n\nNote that __missing__() is not called for any operations besides __getitem__() . This means that get() will, like normal dictionaries, return None as a default rather than using default_factory ."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
         "input_tokens": 0,
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022200008970685303
+        "latency_ms": 0.017400001524947584
       },
       {
-        "answer": "shallow [1]",
-        "sources": [
-          {
-            "id": "stdtypes#sequence.copy:0",
-            "document": "stdtypes",
-            "title": "Built-in Types",
-            "section": "sequence. copy ( )",
-            "url": "https://docs.python.org/release/3.14.0/library/stdtypes.html#sequence.copy",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "Added in version 3.3.\n\nCreate a shallow copy of sequence . This is equivalent to writing sequence[:] .\n\nHint\n\nThe copy() method is not part of the MutableSequence ABC , but most concrete mutable sequence types provide it.",
-            "source_id": "stdtypes#sequence.copy",
-            "start": 0,
-            "end": 221,
-            "score": 3.3013839721679688,
-            "quote": "Added in version 3.3.\n\nCreate a shallow copy of sequence . This is equivalent to writing sequence[:] .\n\nHint\n\nThe copy() method is not part of the MutableSequence ABC , but most concrete mutable sequence types provide it."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
         "input_tokens": 0,
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.031099989428184927
+        "latency_ms": 0.01990000600926578
       },
       {
-        "answer": "Use the add function. [1]",
+        "answer": "add ( elem , / ) [1]",
         "sources": [
           {
             "id": "stdtypes#frozenset.add:0",
@@ -6204,7 +6000,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.026299996534362435
+        "latency_ms": 0.028299997211433947
       },
       {
         "answer": "Return the decoded contents of the pointed-to file as a string [1]",
@@ -6232,7 +6028,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.025300003471784294
+        "latency_ms": 0.0329999893438071
       },
       {
         "answer": "Yes [1]",
@@ -6260,7 +6056,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02239999594166875
+        "latency_ms": 0.031100003980100155
       },
       {
         "answer": "Path.exists() [1]",
@@ -6288,7 +6084,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02239999594166875
+        "latency_ms": 0.030499999411404133
       },
       {
         "answer": "If parents is true, any missing parents of this path are created as needed; they are created with the default permissions without taking mode into account (mimicking the POSIX mkdir -p command). [1]",
@@ -6316,10 +6112,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.023200002033263445
+        "latency_ms": 0.03470000228844583
       },
       {
-        "answer": "Use PurePath.suffixes [1]",
+        "answer": "Path.suffixes [1]",
         "sources": [
           {
             "id": "pathlib#pathlib.PurePath.suffixes:0",
@@ -6344,7 +6140,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022200008970685303
+        "latency_ms": 0.03809999907389283
       },
       {
         "answer": "A string representing the final path component, excluding the drive and root, if any: [1]",
@@ -6372,10 +6168,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.023900007363408804
+        "latency_ms": 0.030099996365606785
       },
       {
-        "answer": "collections.Counter is used for counting hashable objects. [1]",
+        "answer": "a collection where elements are stored as dictionary keys and their counts are stored as dictionary values. [1]",
         "sources": [
           {
             "id": "collections#collections.Counter:0",
@@ -6400,7 +6196,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.024299995857290924
+        "latency_ms": 0.028399997972883284
       },
       {
         "answer": "A deque, or double-ended queue, is a generalization of stacks and queues that supports thread-safe, memory efficient appends and pops from either side with approximately O(1) performance. [1]",
@@ -6428,10 +6224,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022599997464567423
+        "latency_ms": 0.030499999411404133
       },
       {
-        "answer": "defaultdict overrides one method and adds one writable instance variable, providing a default value for missing keys. [1]",
+        "answer": "defaultdict is a subclass of the built-in dict class and overrides one method and adds one writable instance variable. [1]",
         "sources": [
           {
             "id": "collections#collections.defaultdict:0",
@@ -6456,10 +6252,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.021200001356191933
+        "latency_ms": 0.03029999788850546
       },
       {
-        "answer": "use the most_common() method [1]",
+        "answer": "most_common [1]",
         "sources": [
           {
             "id": "collections#collections.Counter.most_common:0",
@@ -6484,7 +6280,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022499996703118086
+        "latency_ms": 0.02889998722821474
       },
       {
         "answer": "a JSON formatted str [1]",
@@ -6512,7 +6308,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022599997464567423
+        "latency_ms": 0.03160000778734684
       },
       {
         "answer": "deserialize s (a str, bytes or bytearray instance containing a JSON document) to a Python object [1]",
@@ -6540,10 +6336,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.020800012862309813
+        "latency_ms": 0.0295999925583601
       },
       {
-        "answer": "json.dump(obj, fp, *args, **kwargs) [1]",
+        "answer": "json.dump [1]",
         "sources": [
           {
             "id": "json#json.dump:0",
@@ -6568,7 +6364,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.021100000594742596
+        "latency_ms": 0.03189999551977962
       },
       {
         "answer": "JSONDecodeError [1]",
@@ -6596,7 +6392,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02099999983329326
+        "latency_ms": 0.028700000257231295
       },
       {
         "answer": "a list of strings [1]",
@@ -6624,7 +6420,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02130000211764127
+        "latency_ms": 0.030000010156072676
       },
       {
         "answer": "csv.writer [1]",
@@ -6652,7 +6448,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.021100000594742596
+        "latency_ms": 0.02989999484270811
       },
       {
         "answer": "csv.DictReader maps row values into a dict [1]",
@@ -6680,7 +6476,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.039699996705166996
+        "latency_ms": 0.029199989512562752
       },
       {
         "answer": "output rows [1]",
@@ -6708,7 +6504,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.05040000542066991
+        "latency_ms": 0.02990000939462334
       },
       {
         "answer": "A duration, the difference between two datetime or date instances. [1]",
@@ -6736,7 +6532,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.03160000778734684
+        "latency_ms": 0.034500000765547156
       },
       {
         "answer": "date.today() [1]",
@@ -6764,7 +6560,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.030899987905286252
+        "latency_ms": 0.0278999941656366
       },
       {
         "answer": "YYYY-MM-DD [1]",
@@ -6792,10 +6588,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.027300004148855805
+        "latency_ms": 0.02780000795610249
       },
       {
-        "answer": "Use the strptime method from the date or datetime class. [1]",
+        "answer": "use date.strptime or datetime.strptime [1]",
         "sources": [
           {
             "id": "datetime#datetime.date.strptime:0",
@@ -6820,7 +6616,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022299995180219412
+        "latency_ms": 0.0278999941656366
       },
       {
         "answer": "Yes [1]",
@@ -6848,7 +6644,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.0261999957729131
+        "latency_ms": 0.030099996365606785
       },
       {
         "answer": "Yes [1]",
@@ -6876,10 +6672,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.021800005924887955
+        "latency_ms": 0.02819999644998461
       },
       {
-        "answer": "use re.fullmatch() [1]",
+        "answer": "re.fullmatch() [1]",
         "sources": [
           {
             "id": "re#search-vs-match:0",
@@ -6904,7 +6700,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.03440000000409782
+        "latency_ms": 0.027599991881288588
       },
       {
         "answer": "all non-overlapping matches of pattern in string, as a list of strings or tuples. [1]",
@@ -6932,7 +6728,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.027300004148855805
+        "latency_ms": 0.028700000257231295
       },
       {
         "answer": "I don't know based on these documents.",
@@ -6943,7 +6739,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.011399999493733048
+        "latency_ms": 0.0168999977177009
       },
       {
         "answer": "use re.escape(pattern) [1]",
@@ -6971,10 +6767,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.032800002372823656
+        "latency_ms": 0.030000010156072676
       },
       {
-        "answer": "use zip [1]",
+        "answer": "zip [1]",
         "sources": [
           {
             "id": "functions#zip:0",
@@ -6999,10 +6795,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.023500004317611456
+        "latency_ms": 0.031000003218650818
       },
       {
-        "answer": "itertools.cycle(iterable) [1]",
+        "answer": "itertools.cycle [1]",
         "sources": [
           {
             "id": "itertools#itertools.cycle:0",
@@ -7027,7 +6823,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02269999822601676
+        "latency_ms": 0.0337999954354018
       },
       {
         "answer": "Cartesian product of the input iterables. [1]",
@@ -7055,7 +6851,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.023899992811493576
+        "latency_ms": 0.03160000778734684
       },
       {
         "answer": "use itertools.islice() [1]",
@@ -7083,7 +6879,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.03460000152699649
+        "latency_ms": 0.03189999551977962
       },
       {
         "answer": "up to the maxsize most recent calls [1]",
@@ -7111,7 +6907,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.03239999932702631
+        "latency_ms": 0.029999995604157448
       },
       {
         "answer": "No [1]",
@@ -7139,10 +6935,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.023900007363408804
+        "latency_ms": 0.029000002541579306
       },
       {
-        "answer": "functools.partial returns a new partial object which when called will behave like func called with the positional arguments args and keyword arguments keywords. [1]",
+        "answer": "Return a new partial object which when called will behave like func called with the positional arguments args and keyword arguments keywords. [1]",
         "sources": [
           {
             "id": "functools#functools.partial:0",
@@ -7167,10 +6963,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02340000355616212
+        "latency_ms": 0.03749999450519681
       },
       {
-        "answer": "functools.wraps is used for defining a wrapper function that preserves the metadata of the original function. [1]",
+        "answer": "This is a convenience function for invoking update_wrapper() as a function decorator when defining a wrapper function. [1]",
         "sources": [
           {
             "id": "functools#functools.wraps:0",
@@ -7195,7 +6991,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022700012777931988
+        "latency_ms": 0.03189999551977962
       },
       {
         "answer": "os.getcwd() [1]",
@@ -7223,7 +7019,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.03679998917505145
+        "latency_ms": 0.03029999788850546
       },
       {
         "answer": "No [1]",
@@ -7251,7 +7047,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02540000423323363
+        "latency_ms": 0.029100003303028643
       },
       {
         "answer": "an OSError is raised [1]",
@@ -7279,10 +7075,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.021400002879090607
+        "latency_ms": 0.03090000245720148
       },
       {
-        "answer": "os.getenv(key, default=None) [1]",
+        "answer": "os.getenv(key, default = None) [1]",
         "sources": [
           {
             "id": "os#os.getenv:0",
@@ -7307,7 +7103,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.020100007532164454
+        "latency_ms": 0.0312999909510836
       },
       {
         "answer": "No [1]",
@@ -7335,7 +7131,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02059999678749591
+        "latency_ms": 0.03300000389572233
       },
       {
         "answer": "copy2 [1]",
@@ -7363,10 +7159,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.026699999580159783
+        "latency_ms": 0.029999995604157448
       },
       {
-        "answer": "use shutil.rmtree() [1]",
+        "answer": "shutil.rmtree [1]",
         "sources": [
           {
             "id": "shutil#shutil.rmtree:0",
@@ -7391,10 +7187,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.0261999957729131
+        "latency_ms": 0.03410001227166504
       },
       {
-        "answer": "use shutil.which(cmd, mode=os.F_OK | os.X_OK, path=None) [1]",
+        "answer": "shutil.which(cmd, mode=os.F_OK | os.X_OK, path=None) [1]",
         "sources": [
           {
             "id": "shutil#shutil.which:0",
@@ -7419,7 +7215,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.032500000088475645
+        "latency_ms": 0.031199990189634264
       },
       {
         "answer": "the smallest integer greater than or equal to x [1]",
@@ -7447,7 +7243,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022599997464567423
+        "latency_ms": 0.030000010156072676
       },
       {
         "answer": "the largest integer less than or equal to x [1]",
@@ -7475,10 +7271,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.04400000034365803
+        "latency_ms": 0.03130000550299883
       },
       {
-        "answer": "Use math.sqrt(x) [1]",
+        "answer": "math.sqrt(x) [1]",
         "sources": [
           {
             "id": "math#math.sqrt:0",
@@ -7503,7 +7299,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.038700003642588854
+        "latency_ms": 0.0315000070258975
       },
       {
         "answer": "I don't know based on these documents.",
@@ -7514,10 +7310,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02169999061152339
+        "latency_ms": 0.018399994587525725
       },
       {
-        "answer": "statistics.mean calculates the sample arithmetic mean of data. [1]",
+        "answer": "the sample arithmetic mean of data [1]",
         "sources": [
           {
             "id": "statistics#statistics.mean:0",
@@ -7542,10 +7338,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.03999999898951501
+        "latency_ms": 0.02920000406447798
       },
       {
-        "answer": "The median is interpolated by taking the average of the two middle values. [1]",
+        "answer": "the median is interpolated by taking the average of the two middle values [1]",
         "sources": [
           {
             "id": "statistics#statistics.median:0",
@@ -7570,7 +7366,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.040400002035312355
+        "latency_ms": 0.030700000934302807
       },
       {
         "answer": "the single most common data point from discrete or nominal data [1]",
@@ -7598,7 +7394,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.033200005418621004
+        "latency_ms": 0.03409999771974981
       },
       {
         "answer": "sample [1]",
@@ -7626,7 +7422,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02469999890308827
+        "latency_ms": 0.031799994758330286
       },
       {
         "answer": "raises IndexError [1]",
@@ -7654,7 +7450,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02479999966453761
+        "latency_ms": 0.0295999925583601
       },
       {
         "answer": "No [1]",
@@ -7682,35 +7478,18 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02370000584051013
+        "latency_ms": 0.03359999391250312
       },
       {
-        "answer": "a <= N <= b [1]",
-        "sources": [
-          {
-            "id": "random#random.uniform:0",
-            "document": "random",
-            "title": "random — Generate pseudo-random numbers",
-            "section": "random. uniform ( a , b )",
-            "url": "https://docs.python.org/release/3.14.0/library/random.html#random.uniform",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "Return a random floating-point number N such that a <= N <= b for a <= b and b <= N <= a for b < a .\n\nThe end-point value b may or may not be included in the range depending on floating-point rounding in the expression a + (b-a) * random() .",
-            "source_id": "random#random.uniform",
-            "start": 0,
-            "end": 241,
-            "score": 5.014840126037598,
-            "quote": "Return a random floating-point number N such that a <= N <= b for a <= b and b <= N <= a for b < a .\n\nThe end-point value b may or may not be included in the range depending on floating-point rounding in the expression a + (b-a) * random() ."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
         "input_tokens": 0,
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02130000211764127
+        "latency_ms": 0.02059999678749591
       },
       {
         "answer": "Yes [1]",
@@ -7738,10 +7517,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.021200001356191933
+        "latency_ms": 0.0320999970426783
       },
       {
-        "answer": "The lowercase letters 'abcdefghijklmnopqrstuvwxyz' [1]",
+        "answer": "The lowercase letters 'abcdefghijklmnopqrstuvwxyz'. [1]",
         "sources": [
           {
             "id": "string#string.ascii_lowercase:0",
@@ -7766,7 +7545,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.021200001356191933
+        "latency_ms": 0.03130000550299883
       },
       {
         "answer": "I don't know based on these documents.",
@@ -7777,35 +7556,18 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.008999995770864189
+        "latency_ms": 0.01959998917300254
       },
       {
-        "answer": "string.ascii_letters combines string.ascii_lowercase and string.ascii_uppercase. [1]",
-        "sources": [
-          {
-            "id": "string#string.printable:0",
-            "document": "string",
-            "title": "string — Common string operations",
-            "section": "string. printable",
-            "url": "https://docs.python.org/release/3.14.0/library/string.html#string.printable",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "String of ASCII characters which are considered printable by Python. This is a combination of digits , ascii_letters , punctuation , and whitespace .\n\nNote\n\nBy design, string.printable.isprintable() returns False . In particular, string.printable is not printable in the POSIX sense (see LC_CTYPE ).",
-            "source_id": "string#string.printable",
-            "start": 0,
-            "end": 299,
-            "score": 4.781126976013184,
-            "quote": "String of ASCII characters which are considered printable by Python. This is a combination of digits , ascii_letters , punctuation , and whitespace .\n\nNote\n\nBy design, string.printable.isprintable() returns False . In particular, string.printable is not printable in the POSIX sense (see LC_CTYPE )."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
         "input_tokens": 0,
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.0202999945031479
+        "latency_ms": 0.020100007532164454
       },
       {
         "answer": "The string '0123456789abcdefABCDEF'. [1]",
@@ -7833,7 +7595,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022400010493583977
+        "latency_ms": 0.03029999788850546
       },
       {
         "answer": "Namespace object [1]",
@@ -7861,13 +7623,13 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.03429999924264848
+        "latency_ms": 0.031099989428184927
       },
       {
-        "answer": "The ArgumentParser.add_argument() method attaches individual argument specifications to the parser. [1]",
+        "answer": "parser.add_argument() [1]",
         "sources": [
           {
-            "id": "argparse#module-argparse:180",
+            "id": "argparse#module-argparse:360",
             "document": "argparse",
             "title": "argparse — Parser for command-line options, arguments and subcommands",
             "section": "argparse — Parser for command-line options, arguments and subcommands",
@@ -7875,12 +7637,12 @@
             "version": "3.14.0",
             "author": "Python documentation contributors",
             "release_date": "2025-10-07",
-            "text": "interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of sys.argv . The argparse module also automatically generates help and usage messages. The module will also issue errors when users give the program invalid arguments.\n\nThe argparse module’s support for command-line interfaces is built around an instance of argparse.ArgumentParser . It is a container for argument specifications and has options that apply to the parser as whole:\n\nparser = argparse.ArgumentParser(\n                    prog='ProgramName',\n                    description='What the program does',\n                    epilog='Text at the bottom of help')\n\n\nThe ArgumentParser.add_argument() method attaches individual argument specifications to the parser. It supports positional arguments, options that accept",
+            "text": "values, and on/off flags:\n\nparser.add_argument('filename')           # positional argument\nparser.add_argument('-c', '--count')      # option that takes a value\nparser.add_argument('-v', '--verbose',\n                    action='store_true')  # on/off flag\n\n\nThe ArgumentParser.parse_args() method runs the parser and places the extracted data in a argparse.Namespace object:\n\nargs = parser.parse_args()\nprint(args.filename, args.count, args.verbose)\n\n\nNote\n\nIf you’re looking for a guide about how to upgrade optparse code to argparse , see Upgrading Optparse Code .",
             "source_id": "argparse#module-argparse",
-            "start": 905,
-            "end": 1743,
-            "score": 6.507752895355225,
-            "quote": "interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of sys.argv . The argparse module also automatically generates help and usage messages. The module will also issue errors when users give the program invalid arguments.\n\nThe argparse module’s support for command-line interfaces is built around an instance of argparse.ArgumentParser . It is a container for argument specifications and has options that apply to the parser as whole:\n\nparser = argparse.ArgumentParser(\n                    prog='ProgramName',\n                    description='What the program does',\n                    epilog='Text at the bottom of help')\n\n\nThe ArgumentParser.add_argument() method attaches individual argument specifications to the parser. It supports positional arguments, options that accept"
+            "start": 1744,
+            "end": 2310,
+            "score": 5.367931365966797,
+            "quote": "values, and on/off flags:\n\nparser.add_argument('filename')           # positional argument\nparser.add_argument('-c', '--count')      # option that takes a value\nparser.add_argument('-v', '--verbose',\n                    action='store_true')  # on/off flag\n\n\nThe ArgumentParser.parse_args() method runs the parser and places the extracted data in a argparse.Namespace object:\n\nargs = parser.parse_args()\nprint(args.filename, args.count, args.verbose)\n\n\nNote\n\nIf you’re looking for a guide about how to upgrade optparse code to argparse , see Upgrading Optparse Code ."
           }
         ],
         "abstained": false,
@@ -7889,7 +7651,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.025500004994682968
+        "latency_ms": 0.03339999238960445
       },
       {
         "answer": "log [1]",
@@ -7917,7 +7679,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.023499989765696228
+        "latency_ms": 0.03239999932702631
       },
       {
         "answer": "logging.warning [1]",
@@ -7945,7 +7707,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022799998987466097
+        "latency_ms": 0.03060000017285347
       },
       {
         "answer": "logging.error [1]",
@@ -7973,38 +7735,21 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.020899999071843922
+        "latency_ms": 0.03090000245720148
       },
       {
-        "answer": "Yes [1]",
-        "sources": [
-          {
-            "id": "logging#logging.Logger.exception:0",
-            "document": "logging",
-            "title": "logging — Logging facility for Python",
-            "section": "exception ( msg , * args , ** kwargs )",
-            "url": "https://docs.python.org/release/3.14.0/library/logging.html#logging.Logger.exception",
-            "version": "3.14.0",
-            "author": "Python documentation contributors",
-            "release_date": "2025-10-07",
-            "text": "Logs a message with level ERROR on this logger. The arguments are interpreted as for debug() . Exception info is added to the logging message. This method should only be called from an exception handler.",
-            "source_id": "logging#logging.Logger.exception",
-            "start": 0,
-            "end": 203,
-            "score": 7.416144371032715,
-            "quote": "Logs a message with level ERROR on this logger. The arguments are interpreted as for debug() . Exception info is added to the logging message. This method should only be called from an exception handler."
-          }
-        ],
-        "abstained": false,
-        "reason": "answered",
+        "answer": "I don't know based on these documents.",
+        "sources": [],
+        "abstained": true,
+        "reason": "invalid_or_missing_evidence",
         "input_tokens": 0,
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.021800005924887955
+        "latency_ms": 0.024100008886307478
       },
       {
-        "answer": "assertEqual(first, second, msg=None) [1]",
+        "answer": "assertEqual [1]",
         "sources": [
           {
             "id": "unittest#unittest.TestCase.assertEqual:0",
@@ -8029,7 +7774,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.021899992134422064
+        "latency_ms": 0.03260000084992498
       },
       {
         "answer": "Test that expr is true (or false). [1]",
@@ -8057,7 +7802,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.021200001356191933
+        "latency_ms": 0.029700007871724665
       },
       {
         "answer": "use assertRaises [1]",
@@ -8085,7 +7830,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02169999061152339
+        "latency_ms": 0.031199990189634264
       },
       {
         "answer": "unittest calls setUp() immediately before calling the test method. [1]",
@@ -8113,10 +7858,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022099993657320738
+        "latency_ms": 0.03340000694151968
       },
       {
-        "answer": "A special type indicating an unconstrained type. [1]",
+        "answer": "Special type [1]",
         "sources": [
           {
             "id": "typing#typing.Any:0",
@@ -8141,7 +7886,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02340000355616212
+        "latency_ms": 0.03130000550299883
       },
       {
         "answer": "Optional[X] is equivalent to X | None (or Union[X, None] ). [1]",
@@ -8169,10 +7914,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02370000584051013
+        "latency_ms": 0.028399997972883284
       },
       {
-        "answer": "a value to one of the provided literals [1]",
+        "answer": "a specific value or set of values [1]",
         "sources": [
           {
             "id": "typing#typing.Literal:0",
@@ -8197,7 +7942,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022799998987466097
+        "latency_ms": 0.03300000389572233
       },
       {
         "answer": "Final names cannot be reassigned in any scope. [1]",
@@ -8225,7 +7970,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022299995180219412
+        "latency_ms": 0.03130000550299883
       },
       {
         "answer": "a dict of the dataclass fields as name: value pairs [1]",
@@ -8253,10 +7998,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.020100007532164454
+        "latency_ms": 0.03060000017285347
       },
       {
-        "answer": "Converts the dataclass obj to a tuple of its field values. [1]",
+        "answer": "Converts the dataclass obj to a tuple (by using the factory function tuple_factory). Each dataclass is converted to a tuple of its field values. [1]",
         "sources": [
           {
             "id": "dataclasses#dataclasses.astuple:0",
@@ -8281,10 +8026,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.021800005924887955
+        "latency_ms": 0.029700007871724665
       },
       {
-        "answer": "use dataclasses.is_dataclass(obj) or is_dataclass_instance(obj) [1]",
+        "answer": "dataclasses.is_dataclass(obj) [1]",
         "sources": [
           {
             "id": "dataclasses#dataclasses.is_dataclass:0",
@@ -8309,10 +8054,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.021900006686337292
+        "latency_ms": 0.033500007702969015
       },
       {
-        "answer": "Creates a new object [1]",
+        "answer": "Creates a new object of the same type as obj [1]",
         "sources": [
           {
             "id": "dataclasses#dataclasses.replace:0",
@@ -8337,7 +8082,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02130000211764127
+        "latency_ms": 0.033899996196851134
       },
       {
         "answer": "sqlite3.connect [1]",
@@ -8365,7 +8110,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022400010493583977
+        "latency_ms": 0.030099996365606785
       },
       {
         "answer": "None [1]",
@@ -8393,7 +8138,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.023200002033263445
+        "latency_ms": 0.030300012440420687
       },
       {
         "answer": "an empty list [1]",
@@ -8421,7 +8166,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022099993657320738
+        "latency_ms": 0.03300000389572233
       },
       {
         "answer": "commit() [1]",
@@ -8449,26 +8194,26 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.023100001271814108
+        "latency_ms": 0.030100010917522013
       },
       {
-        "answer": "Use heapq.heappush(heap, item) for min-heaps or heapq.heappush_max(heap, item) for max-heaps. [1]",
+        "answer": "heapq.heappush(heap, item) [1]",
         "sources": [
           {
-            "id": "heapq#heapq.heappush_max:0",
+            "id": "heapq#heapq.heappush:0",
             "document": "heapq",
             "title": "heapq — Heap queue algorithm",
-            "section": "heapq. heappush_max ( heap , item )",
-            "url": "https://docs.python.org/release/3.14.0/library/heapq.html#heapq.heappush_max",
+            "section": "heapq. heappush ( heap , item )",
+            "url": "https://docs.python.org/release/3.14.0/library/heapq.html#heapq.heappush",
             "version": "3.14.0",
             "author": "Python documentation contributors",
             "release_date": "2025-10-07",
-            "text": "Push the value item onto the max-heap heap , maintaining the max-heap invariant.\n\nAdded in version 3.14.",
-            "source_id": "heapq#heapq.heappush_max",
+            "text": "Push the value item onto the heap , maintaining the min-heap invariant.",
+            "source_id": "heapq#heapq.heappush",
             "start": 0,
-            "end": 104,
-            "score": 5.629172325134277,
-            "quote": "Push the value item onto the max-heap heap , maintaining the max-heap invariant.\n\nAdded in version 3.14."
+            "end": 71,
+            "score": 5.194815635681152,
+            "quote": "Push the value item onto the heap , maintaining the min-heap invariant."
           }
         ],
         "abstained": false,
@@ -8477,7 +8222,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022199994418770075
+        "latency_ms": 0.03159999323543161
       },
       {
         "answer": "the smallest item [1]",
@@ -8505,7 +8250,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.023100001271814108
+        "latency_ms": 0.0320999970426783
       },
       {
         "answer": "in linear time [1]",
@@ -8533,10 +8278,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.022899999748915434
+        "latency_ms": 0.03399999695830047
       },
       {
-        "answer": "heapq.nlargest(n, iterable, key=None) [1]",
+        "answer": "heapq.nlargest [1]",
         "sources": [
           {
             "id": "heapq#heapq.nlargest:0",
@@ -8561,7 +8306,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.02260001201648265
+        "latency_ms": 0.033199990866705775
       },
       {
         "answer": "before (to the left of) [1]",
@@ -8589,7 +8334,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.01990000600926578
+        "latency_ms": 0.033800009987317026
       },
       {
         "answer": "Yes [1]",
@@ -8617,10 +8362,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.01679999695625156
+        "latency_ms": 0.0320999970426783
       },
       {
-        "answer": "Use bisect_left to find the insertion point and then use list.insert() [1]",
+        "answer": "bisect_left [1]",
         "sources": [
           {
             "id": "bisect#bisect.bisect_left:0",
@@ -8645,10 +8390,10 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.019099999917671084
+        "latency_ms": 0.029399991035461426
       },
       {
-        "answer": "Use bisect_left to find the insertion point and then use list.insert() [1]",
+        "answer": "bisect_left [1]",
         "sources": [
           {
             "id": "bisect#bisect.bisect_left:0",
@@ -8673,7 +8418,7 @@
         "output_tokens": 0,
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.018699996871873736
+        "latency_ms": 0.033200005418621004
       },
       {
         "answer": "I don't know based on these documents.",
@@ -8684,7 +8429,7 @@
         "reason": "low_relevance",
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.01060000795405358
+        "latency_ms": 0.02060001133941114
       },
       {
         "answer": "I don't know based on these documents.",
@@ -8695,7 +8440,7 @@
         "reason": "low_relevance",
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.010400006431154907
+        "latency_ms": 0.02370000584051013
       },
       {
         "answer": "I don't know based on these documents.",
@@ -8706,7 +8451,7 @@
         "reason": "low_relevance",
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.016699996194802225
+        "latency_ms": 0.021500003640539944
       },
       {
         "answer": "I don't know based on these documents.",
@@ -8717,7 +8462,7 @@
         "reason": "low_relevance",
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.01340000017080456
+        "latency_ms": 0.020799998310394585
       },
       {
         "answer": "I don't know based on these documents.",
@@ -8728,7 +8473,7 @@
         "reason": "low_relevance",
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.011299998732283711
+        "latency_ms": 0.020499996026046574
       },
       {
         "answer": "I don't know based on these documents.",
@@ -8739,7 +8484,7 @@
         "reason": "low_relevance",
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.010800009476952255
+        "latency_ms": 0.019500002963468432
       },
       {
         "answer": "I don't know based on these documents.",
@@ -8750,7 +8495,7 @@
         "reason": "low_relevance",
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.010000003385357559
+        "latency_ms": 0.020399995264597237
       },
       {
         "answer": "I don't know based on these documents.",
@@ -8761,7 +8506,7 @@
         "reason": "low_relevance",
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.010000003385357559
+        "latency_ms": 0.020099992980249226
       },
       {
         "answer": "I don't know based on these documents.",
@@ -8772,7 +8517,7 @@
         "reason": "low_relevance",
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.009800001862458885
+        "latency_ms": 0.017700003809295595
       },
       {
         "answer": "I don't know based on these documents.",
@@ -8783,7 +8528,7 @@
         "reason": "low_relevance",
         "cache_hit": true,
         "search_ms": 0,
-        "latency_ms": 0.009199997293762863
+        "latency_ms": 0.020699997548945248
       }
     ]
   }

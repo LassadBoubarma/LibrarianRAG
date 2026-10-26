@@ -1,15 +1,20 @@
 {
   "date": "2026-10-26",
-  "clean_checkout_runtime_commit": "834ef7c",
+  "clean_checkout_runtime_commit": "e1981ab05aa62823b49b175b676a149fd108ca49",
   "setup_command": "py -3.11 setup_project.py",
   "setup_passed": true,
   "unit_test_command": "python -m unittest discover -s tests -v",
-  "unit_tests_passed": 9,
+  "unit_tests_passed": 14,
   "pip_check_passed": true,
   "http_health_passed": true,
   "browser_answer_and_citation_passed": true,
   "http_repeat_cache_passed": true,
   "http_unknown_question_refusal_passed": true,
   "public_deployment": false,
+  "github_actions": {
+    "conclusion": "success",
+    "source_commit": "e1981ab05aa62823b49b175b676a149fd108ca49",
+    "url": "https://github.com/LassadBoubarma/LibrarianRAG/actions/runs/40304210855"
+  },
   "note": "A fresh local Git checkout and separate virtual environment were used. Local model files were already present. Public hosting and real user feedback have not been supplied."
 }

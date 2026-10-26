@@ -3,12 +3,12 @@
     "questions": 112,
     "answerable_questions": 102,
     "judge_model": "qwen2.5:7b",
-    "baseline_correctness_answerable": 0.8725490196078431,
-    "cached_correctness_answerable": 0.8725490196078431,
+    "baseline_correctness_answerable": 0.8431372549019608,
+    "cached_correctness_answerable": 0.8431372549019608,
     "change_percentage_points": 0.0,
     "meets_max_two_point_loss": true,
-    "reused_grades": 105,
-    "new_judge_calls": 7,
+    "reused_grades": 111,
+    "new_judge_calls": 1,
     "note": "Model judgments. A grade is reused only when answer, refusal status and cited evidence match exactly."
   },
   "rows": [
@@ -24,9 +24,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that the absolute value of a number is returned, and this is directly supported by the reference passage."
+        "reason": "The answer correctly states that abs returns the absolute value of a number, which is consistent with the reference passage. The faithful and citation_supports_claim flags are true because the answer is directly supported by the cited passage."
       },
-      "reason": "The answer correctly states that the absolute value of a number is returned, and this is directly supported by the reference passage."
+      "reason": "The answer correctly states that abs returns the absolute value of a number, which is consistent with the reference passage. The faithful and citation_supports_claim flags are true because the answer is directly supported by the cited passage."
     },
     {
       "id": "q002",
@@ -40,9 +40,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer 'True' is correct and directly follows from the reference passage, which states that all() returns True for an empty iterable."
+        "reason": "The answer 'True' is correct and directly follows from the reference passage, which states that all() returns True for an empty iterable. The cited passage supports this claim."
       },
-      "reason": "The answer 'True' is correct and directly follows from the reference passage, which states that all() returns True for an empty iterable."
+      "reason": "The answer 'True' is correct and directly follows from the reference passage, which states that all() returns True for an empty iterable. The cited passage supports this claim."
     },
     {
       "id": "q003",
@@ -82,15 +82,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "Use the len(object) function. [1]",
+      "cached_answer": "len(object, /) [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that the len() function is used to get the number of items in a Python object, and this is supported by the reference passage."
+        "reason": "The answer 'len(object, /)' is correct and faithful to the reference passage, which states that the len function returns the length of an object. The citation supports the claim by providing the exact function signature."
       },
-      "reason": "The answer correctly states that the len() function is used to get the number of items in a Python object, and this is supported by the reference passage."
+      "reason": "The answer 'len(object, /)' is correct and faithful to the reference passage, which states that the len function returns the length of an object. The citation supports the claim by providing the exact function signature."
     },
     {
       "id": "q006",
@@ -120,9 +120,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that `str.lower()` is used to convert a string to lowercase, and the reference passage supports this claim."
+        "reason": "The answer 'str.lower()' correctly provides the method to convert a string to lowercase, and the reference passage supports this claim."
       },
-      "reason": "The answer correctly states that `str.lower()` is used to convert a string to lowercase, and the reference passage supports this claim."
+      "reason": "The answer 'str.lower()' correctly provides the method to convert a string to lowercase, and the reference passage supports this claim."
     },
     {
       "id": "q008",
@@ -159,50 +159,50 @@
     {
       "id": "q010",
       "answerable": true,
-      "baseline_score": 1,
-      "cached_score": 1,
+      "baseline_score": 0,
+      "cached_score": 0,
       "grade_reused": true,
-      "cached_answer": "No [1]",
+      "cached_answer": "I don't know based on these documents.",
       "verdict": {
-        "grade": "good",
-        "correct": true,
-        "faithful": true,
-        "citation_supports_claim": true,
-        "reason": "The answer correctly states that dict.get does not raise KeyError for a missing key, and this is supported by the reference passage which states that get() returns None as a default rather than raising KeyError."
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that no relevant information was found in the provided passage. However, the refusal does not cite any evidence, so faithful and citation_supports_claim are false."
       },
-      "reason": "The answer correctly states that dict.get does not raise KeyError for a missing key, and this is supported by the reference passage which states that get() returns None as a default rather than raising KeyError."
+      "reason": "The answer is a refusal, which is appropriate given that no relevant information was found in the provided passage. However, the refusal does not cite any evidence, so faithful and citation_supports_claim are false."
     },
     {
       "id": "q011",
       "answerable": true,
+      "baseline_score": 0,
+      "cached_score": 0,
+      "grade_reused": true,
+      "cached_answer": "I don't know based on these documents.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the provided passage does not discuss shallow or deep copies. However, faithful and citation_supports_claim are false because there is no cited evidence to support the refusal."
+      },
+      "reason": "The answer is a refusal, which is appropriate given that the provided passage does not discuss shallow or deep copies. However, faithful and citation_supports_claim are false because there is no cited evidence to support the refusal."
+    },
+    {
+      "id": "q012",
+      "answerable": true,
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "shallow [1]",
+      "cached_answer": "add ( elem , / ) [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that list.copy() makes a shallow copy, which is consistent with the provided citation."
+        "reason": "The answer 'add ( elem , / )' is a correct and faithful representation of the method to add an element to a set, and it is supported by the reference passage."
       },
-      "reason": "The answer correctly states that list.copy() makes a shallow copy, which is consistent with the provided citation."
-    },
-    {
-      "id": "q012",
-      "answerable": true,
-      "baseline_score": 0,
-      "cached_score": 0,
-      "grade_reused": true,
-      "cached_answer": "Use the add function. [1]",
-      "verdict": {
-        "grade": "bad",
-        "correct": false,
-        "faithful": true,
-        "citation_supports_claim": true,
-        "reason": "The actual answer uses 'the add function' instead of the correct method name 'set.add'."
-      },
-      "reason": "The actual answer uses 'the add function' instead of the correct method name 'set.add'."
+      "reason": "The answer 'add ( elem , / )' is a correct and faithful representation of the method to add an element to a set, and it is supported by the reference passage."
     },
     {
       "id": "q013",
@@ -216,9 +216,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The actual answer matches the expected answer and the reference passage. The citation directly supports the claim."
+        "reason": "The actual answer accurately states what Path.read_text returns, and this is directly supported by the reference passage."
       },
-      "reason": "The actual answer matches the expected answer and the reference passage. The citation directly supports the claim."
+      "reason": "The actual answer accurately states what Path.read_text returns, and this is directly supported by the reference passage."
     },
     {
       "id": "q014",
@@ -264,9 +264,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer accurately reflects the reference passage and the cited quotes, and there are no unsupported claims or missing details."
+        "reason": "The answer accurately describes the behavior of the `parents=True` parameter in `Path.mkdir` and is faithful to the provided citation."
       },
-      "reason": "The answer accurately reflects the reference passage and the cited quotes, and there are no unsupported claims or missing details."
+      "reason": "The answer accurately describes the behavior of the `parents=True` parameter in `Path.mkdir` and is faithful to the provided citation."
     },
     {
       "id": "q017",
@@ -274,15 +274,15 @@
       "baseline_score": 0,
       "cached_score": 0,
       "grade_reused": true,
-      "cached_answer": "Use PurePath.suffixes [1]",
+      "cached_answer": "Path.suffixes [1]",
       "verdict": {
         "grade": "bad",
         "correct": false,
         "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The answer suggests using `suffixes` instead of `suffix`, which is incorrect. The reference passage and the cited quote both indicate that `suffix` is the correct property to use for getting the file extension. Additionally, the answer introduces `PurePath.suffixes` which is not mentioned in the reference passage and is not the correct property to use."
+        "reason": "The answer suggests using `Path.suffixes`, which returns a list of suffixes, not just the last one. The question asks for the file extension, which typically refers to the last suffix. The reference passage and the cited quotes do not support using `Path.suffixes` for getting the file extension."
       },
-      "reason": "The answer suggests using `suffixes` instead of `suffix`, which is incorrect. The reference passage and the cited quote both indicate that `suffix` is the correct property to use for getting the file extension. Additionally, the answer introduces `PurePath.suffixes` which is not mentioned in the reference passage and is not the correct property to use."
+      "reason": "The answer suggests using `Path.suffixes`, which returns a list of suffixes, not just the last one. The question asks for the file extension, which typically refers to the last suffix. The reference passage and the cited quotes do not support using `Path.suffixes` for getting the file extension."
     },
     {
       "id": "q018",
@@ -296,25 +296,25 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer accurately describes what PurePath.name represents, and this is directly supported by the reference passage."
+        "reason": "The actual answer accurately describes what PurePath.name represents, and this is directly supported by the reference passage."
       },
-      "reason": "The answer accurately describes what PurePath.name represents, and this is directly supported by the reference passage."
+      "reason": "The actual answer accurately describes what PurePath.name represents, and this is directly supported by the reference passage."
     },
     {
       "id": "q019",
       "answerable": true,
-      "baseline_score": 1,
-      "cached_score": 1,
+      "baseline_score": 0,
+      "cached_score": 0,
       "grade_reused": true,
-      "cached_answer": "collections.Counter is used for counting hashable objects. [1]",
+      "cached_answer": "a collection where elements are stored as dictionary keys and their counts are stored as dictionary values. [1]",
       "verdict": {
-        "grade": "good",
-        "correct": true,
+        "grade": "bad",
+        "correct": false,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states the purpose of collections.Counter as counting hashable objects, which is directly supported by the reference passage."
+        "reason": "The actual answer does not directly state the purpose of `collections.Counter`, which is to count hashable objects. While the reference passage provides details about how `Counter` works, it does not explicitly state its primary use case."
       },
-      "reason": "The answer correctly states the purpose of collections.Counter as counting hashable objects, which is directly supported by the reference passage."
+      "reason": "The actual answer does not directly state the purpose of `collections.Counter`, which is to count hashable objects. While the reference passage provides details about how `Counter` works, it does not explicitly state its primary use case."
     },
     {
       "id": "q020",
@@ -328,9 +328,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The actual answer accurately describes a deque as a double-ended queue that supports fast appends and pops from either end, which is consistent with the reference passage. The quote from the reference passage directly supports this claim."
+        "reason": "The actual answer accurately describes a deque as a double-ended queue that supports fast appends and pops from either end, which is consistent with the reference passage. The answer is faithful to the cited passage and the citation supports the claim."
       },
-      "reason": "The actual answer accurately describes a deque as a double-ended queue that supports fast appends and pops from either end, which is consistent with the reference passage. The quote from the reference passage directly supports this claim."
+      "reason": "The actual answer accurately describes a deque as a double-ended queue that supports fast appends and pops from either end, which is consistent with the reference passage. The answer is faithful to the cited passage and the citation supports the claim."
     },
     {
       "id": "q021",
@@ -338,15 +338,15 @@
       "baseline_score": 0,
       "cached_score": 0,
       "grade_reused": true,
-      "cached_answer": "defaultdict overrides one method and adds one writable instance variable, providing a default value for missing keys. [1]",
+      "cached_answer": "defaultdict is a subclass of the built-in dict class and overrides one method and adds one writable instance variable. [1]",
       "verdict": {
         "grade": "bad",
         "correct": false,
-        "faithful": true,
-        "citation_supports_claim": true,
-        "reason": "The answer does not directly address the question about the differences between defaultdict and dict. While it provides accurate information about defaultdict, it does not explain the key difference that defaultdict calls a factory function to supply missing values, which is the core distinction from a regular dict."
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The actual answer does not address the question about the difference between defaultdict and dict. The reference passage explains that defaultdict overrides one method and adds one writable instance variable, but this is not the key difference. The expected answer, 'It calls a factory function to supply missing values,' is more accurate and directly addresses the question."
       },
-      "reason": "The answer does not directly address the question about the differences between defaultdict and dict. While it provides accurate information about defaultdict, it does not explain the key difference that defaultdict calls a factory function to supply missing values, which is the core distinction from a regular dict."
+      "reason": "The actual answer does not address the question about the difference between defaultdict and dict. The reference passage explains that defaultdict overrides one method and adds one writable instance variable, but this is not the key difference. The expected answer, 'It calls a factory function to supply missing values,' is more accurate and directly addresses the question."
     },
     {
       "id": "q022",
@@ -354,15 +354,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "use the most_common() method [1]",
+      "cached_answer": "most_common [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that the `most_common()` method should be used to get the most common elements from a Counter. The cited passage supports this claim and provides an example."
+        "reason": "The answer 'most_common' correctly identifies the method to get the most common elements from a Counter, and the citation supports this claim."
       },
-      "reason": "The answer correctly states that the `most_common()` method should be used to get the most common elements from a Counter. The cited passage supports this claim and provides an example."
+      "reason": "The answer 'most_common' correctly identifies the method to get the most common elements from a Counter, and the citation supports this claim."
     },
     {
       "id": "q023",
@@ -402,15 +402,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "json.dump(obj, fp, *args, **kwargs) [1]",
+      "cached_answer": "json.dump [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer 'json.dump(obj, fp, *args, **kwargs)' correctly identifies the method to write a Python object as JSON to a file-like object, and this is directly supported by the reference passage."
+        "reason": "The answer 'json.dump' correctly identifies the method to write a Python object as JSON to a file-like object, and this is directly supported by the reference passage."
       },
-      "reason": "The answer 'json.dump(obj, fp, *args, **kwargs)' correctly identifies the method to write a Python object as JSON to a file-like object, and this is directly supported by the reference passage."
+      "reason": "The answer 'json.dump' correctly identifies the method to write a Python object as JSON to a file-like object, and this is directly supported by the reference passage."
     },
     {
       "id": "q026",
@@ -424,9 +424,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly identifies JSONDecodeError as the exception for invalid JSON documents, and this is directly supported by the cited passage."
+        "reason": "The answer 'JSONDecodeError' is correct and directly supported by the cited passage."
       },
-      "reason": "The answer correctly identifies JSONDecodeError as the exception for invalid JSON documents, and this is directly supported by the cited passage."
+      "reason": "The answer 'JSONDecodeError' is correct and directly supported by the cited passage."
     },
     {
       "id": "q027",
@@ -472,9 +472,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that csv.DictReader maps row values into a dict, which is consistent with the reference passage."
+        "reason": "The answer correctly states that csv.DictReader maps row values into a dict, which is consistent with the reference passage. The passage supports this claim by describing the behavior of DictReader in mapping row values to a dictionary."
       },
-      "reason": "The answer correctly states that csv.DictReader maps row values into a dict, which is consistent with the reference passage."
+      "reason": "The answer correctly states that csv.DictReader maps row values into a dict, which is consistent with the reference passage. The passage supports this claim by describing the behavior of DictReader in mapping row values to a dictionary."
     },
     {
       "id": "q030",
@@ -504,9 +504,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The actual answer accurately describes what a timedelta represents, and this is directly supported by the reference passage. The additional details provided in the cited quotes are not necessary to answer the question and do not affect the correctness of the answer."
+        "reason": "The actual answer accurately describes what a timedelta represents, and this is directly supported by the reference passage. The additional details in the citation are not necessary for the answer, but they do not contradict the answer."
       },
-      "reason": "The actual answer accurately describes what a timedelta represents, and this is directly supported by the reference passage. The additional details provided in the cited quotes are not necessary to answer the question and do not affect the correctness of the answer."
+      "reason": "The actual answer accurately describes what a timedelta represents, and this is directly supported by the reference passage. The additional details in the citation are not necessary for the answer, but they do not contradict the answer."
     },
     {
       "id": "q032",
@@ -536,25 +536,25 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer directly matches the format specified in the reference passage and citation, and the answer is faithful to the provided information."
+        "reason": "The answer directly matches the expected answer and is faithful to the reference passage, which states the format as YYYY-MM-DD."
       },
-      "reason": "The answer directly matches the format specified in the reference passage and citation, and the answer is faithful to the provided information."
+      "reason": "The answer directly matches the expected answer and is faithful to the reference passage, which states the format as YYYY-MM-DD."
     },
     {
       "id": "q034",
       "answerable": true,
       "baseline_score": 1,
       "cached_score": 1,
-      "grade_reused": false,
-      "cached_answer": "Use the strptime method from the date or datetime class. [1]",
+      "grade_reused": true,
+      "cached_answer": "use date.strptime or datetime.strptime [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that the `strptime` method should be used, and this is supported by the reference passage which describes the `strptime` method and its usage."
+        "reason": "The answer correctly states that `datetime.strptime` should be used to parse a date string using a specified format. The cited passage supports this claim by providing the equivalent code and additional details."
       },
-      "reason": "The answer correctly states that the `strptime` method should be used, and this is supported by the reference passage which describes the `strptime` method and its usage."
+      "reason": "The answer correctly states that `datetime.strptime` should be used to parse a date string using a specified format. The cited passage supports this claim by providing the equivalent code and additional details."
     },
     {
       "id": "q035",
@@ -568,9 +568,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer 'Yes' accurately reflects the reference passage, which states that re.search scans through the string for the first matching location. The actual answer is concise and directly addresses the question without unnecessary details."
+        "reason": "The answer correctly states that re.search scans for the first matching location, which is consistent with the reference passage. The actual answer is concise and directly addresses the question."
       },
-      "reason": "The answer 'Yes' accurately reflects the reference passage, which states that re.search scans through the string for the first matching location. The actual answer is concise and directly addresses the question without unnecessary details."
+      "reason": "The answer correctly states that re.search scans for the first matching location, which is consistent with the reference passage. The actual answer is concise and directly addresses the question."
     },
     {
       "id": "q036",
@@ -584,9 +584,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states 'Yes' and is faithful to the reference passage, which states that re.match() matches at the beginning of the string."
+        "reason": "The answer is correct and faithful to the reference passage, which states that re.match() matches at the beginning of the string."
       },
-      "reason": "The answer correctly states 'Yes' and is faithful to the reference passage, which states that re.match() matches at the beginning of the string."
+      "reason": "The answer is correct and faithful to the reference passage, which states that re.match() matches at the beginning of the string."
     },
     {
       "id": "q037",
@@ -594,15 +594,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "use re.fullmatch() [1]",
+      "cached_answer": "re.fullmatch() [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that `re.fullmatch()` should be used to require a regex to match the entire string. The provided citation supports this claim."
+        "reason": "The answer correctly states that `re.fullmatch()` should be used to require a regex to match the entire string, and this is supported by the cited passage."
       },
-      "reason": "The answer correctly states that `re.fullmatch()` should be used to require a regex to match the entire string. The provided citation supports this claim."
+      "reason": "The answer correctly states that `re.fullmatch()` should be used to require a regex to match the entire string, and this is supported by the cited passage."
     },
     {
       "id": "q038",
@@ -616,9 +616,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The actual answer accurately states that re.findall returns all non-overlapping matches as a list of strings or tuples, which is consistent with the reference passage. The additional detail about empty matches is not necessary but does not affect the correctness."
+        "reason": "The actual answer accurately states that re.findall returns all non-overlapping matches as a list of strings or tuples, which is consistent with the reference passage. The additional detail about empty matches is not explicitly mentioned in the reference passage but is a reasonable inference from the context. The cited passage supports the claim."
       },
-      "reason": "The actual answer accurately states that re.findall returns all non-overlapping matches as a list of strings or tuples, which is consistent with the reference passage. The additional detail about empty matches is not necessary but does not affect the correctness."
+      "reason": "The actual answer accurately states that re.findall returns all non-overlapping matches as a list of strings or tuples, which is consistent with the reference passage. The additional detail about empty matches is not explicitly mentioned in the reference passage but is a reasonable inference from the context. The cited passage supports the claim."
     },
     {
       "id": "q039",
@@ -632,9 +632,9 @@
         "correct": false,
         "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The answer is a refusal, which is appropriate given that the question is answerable and the passage provides the correct information. However, the refusal does not cite any evidence from the passage, hence faithful and citation_supports_claim are false."
+        "reason": "The answer is a refusal, which is appropriate given that the passage does not directly address the question. However, the refusal does not cite any evidence, making it impossible to verify the claim."
       },
-      "reason": "The answer is a refusal, which is appropriate given that the question is answerable and the passage provides the correct information. However, the refusal does not cite any evidence from the passage, hence faithful and citation_supports_claim are false."
+      "reason": "The answer is a refusal, which is appropriate given that the passage does not directly address the question. However, the refusal does not cite any evidence, making it impossible to verify the claim."
     },
     {
       "id": "q040",
@@ -648,9 +648,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states the method to escape special characters, and the citation supports this claim with examples."
+        "reason": "The answer correctly states the method to escape special characters, and the provided citation supports this claim with examples."
       },
-      "reason": "The answer correctly states the method to escape special characters, and the citation supports this claim with examples."
+      "reason": "The answer correctly states the method to escape special characters, and the provided citation supports this claim with examples."
     },
     {
       "id": "q041",
@@ -658,15 +658,15 @@
       "baseline_score": 0,
       "cached_score": 0,
       "grade_reused": true,
-      "cached_answer": "use zip [1]",
+      "cached_answer": "zip [1]",
       "verdict": {
         "grade": "bad",
         "correct": false,
         "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The actual answer suggests using `zip`, which does not directly answer the question of how to iterate over several iterables as one sequence. The reference passage discusses `zip` but does not support the claim that it is the correct solution for the given question."
+        "reason": "The actual answer 'zip [1]' is incorrect and does not provide the correct solution. The reference passage discusses `zip` but does not mention `itertools.chain`. The answer should be 'Use zip.'"
       },
-      "reason": "The actual answer suggests using `zip`, which does not directly answer the question of how to iterate over several iterables as one sequence. The reference passage discusses `zip` but does not support the claim that it is the correct solution for the given question."
+      "reason": "The actual answer 'zip [1]' is incorrect and does not provide the correct solution. The reference passage discusses `zip` but does not mention `itertools.chain`. The answer should be 'Use zip.'"
     },
     {
       "id": "q042",
@@ -674,15 +674,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "itertools.cycle(iterable) [1]",
+      "cached_answer": "itertools.cycle [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states the function to use (itertools.cycle) and is faithful to the reference passage, which describes the functionality of itertools.cycle."
+        "reason": "The answer correctly identifies `itertools.cycle` as the method to repeat elements of an iterable indefinitely, and the provided reference passage supports this claim."
       },
-      "reason": "The answer correctly states the function to use (itertools.cycle) and is faithful to the reference passage, which describes the functionality of itertools.cycle."
+      "reason": "The answer correctly identifies `itertools.cycle` as the method to repeat elements of an iterable indefinitely, and the provided reference passage supports this claim."
     },
     {
       "id": "q043",
@@ -696,9 +696,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that itertools.product computes the Cartesian product of the input iterables, which is directly supported by the reference passage."
+        "reason": "The actual answer correctly states that itertools.product computes the Cartesian product of the input iterables, which is directly supported by the reference passage."
       },
-      "reason": "The answer correctly states that itertools.product computes the Cartesian product of the input iterables, which is directly supported by the reference passage."
+      "reason": "The actual answer correctly states that itertools.product computes the Cartesian product of the input iterables, which is directly supported by the reference passage."
     },
     {
       "id": "q044",
@@ -712,9 +712,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly suggests using `itertools.islice` to take a slice from an iterator, and this is supported by the provided reference passage."
+        "reason": "The answer correctly suggests using `itertools.islice` to take a slice from an iterator, and the provided reference passage supports this claim."
       },
-      "reason": "The answer correctly suggests using `itertools.islice` to take a slice from an iterator, and this is supported by the provided reference passage."
+      "reason": "The answer correctly suggests using `itertools.islice` to take a slice from an iterator, and the provided reference passage supports this claim."
     },
     {
       "id": "q045",
@@ -728,9 +728,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that lru_cache saves up to the maxsize most recent calls, which is directly supported by the reference passage."
+        "reason": "The answer correctly states that lru_cache saves up to the maxsize most recent calls, which is accurate according to the reference passage. The actual answer is faithful to the citation and does not include unsupported details."
       },
-      "reason": "The answer correctly states that lru_cache saves up to the maxsize most recent calls, which is directly supported by the reference passage."
+      "reason": "The answer correctly states that lru_cache saves up to the maxsize most recent calls, which is accurate according to the reference passage. The actual answer is faithful to the citation and does not include unsupported details."
     },
     {
       "id": "q046",
@@ -744,41 +744,41 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that functools.cache is unbounded, which is supported by the reference passage stating it is an 'unbounded function cache'."
+        "reason": "The answer correctly states that functools.cache is unbounded, which is consistent with the provided reference passage stating it is an 'unbounded function cache'. The answer is faithful to the cited passage and the citation supports the claim."
       },
-      "reason": "The answer correctly states that functools.cache is unbounded, which is supported by the reference passage stating it is an 'unbounded function cache'."
+      "reason": "The answer correctly states that functools.cache is unbounded, which is consistent with the provided reference passage stating it is an 'unbounded function cache'. The answer is faithful to the cited passage and the citation supports the claim."
     },
     {
       "id": "q047",
       "answerable": true,
       "baseline_score": 0,
       "cached_score": 0,
-      "grade_reused": true,
-      "cached_answer": "functools.partial returns a new partial object which when called will behave like func called with the positional arguments args and keyword arguments keywords. [1]",
+      "grade_reused": false,
+      "cached_answer": "Return a new partial object which when called will behave like func called with the positional arguments args and keyword arguments keywords. [1]",
       "verdict": {
         "grade": "bad",
         "correct": false,
         "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The actual answer does not directly address the question about what functools.partial does with arguments. Instead, it provides a detailed definition of how functools.partial works. The reference passage and cited quotes mention that functools.partial 'freezes' some portion of a function's arguments, but the answer does not explicitly state this. Additionally, the answer is not faithful to the reference passage as it does not mention the freezing of arguments."
+        "reason": "The actual answer does not directly address the question about what functools.partial does with arguments. Instead, it provides a definition of how to use the partial function. The reference passage states that partial() 'freezes' some portion of a function's arguments, which is not accurately reflected in the given answer. The cited evidence does not support the claim made in the actual answer."
       },
-      "reason": "The actual answer does not directly address the question about what functools.partial does with arguments. Instead, it provides a detailed definition of how functools.partial works. The reference passage and cited quotes mention that functools.partial 'freezes' some portion of a function's arguments, but the answer does not explicitly state this. Additionally, the answer is not faithful to the reference passage as it does not mention the freezing of arguments."
+      "reason": "The actual answer does not directly address the question about what functools.partial does with arguments. Instead, it provides a definition of how to use the partial function. The reference passage states that partial() 'freezes' some portion of a function's arguments, which is not accurately reflected in the given answer. The cited evidence does not support the claim made in the actual answer."
     },
     {
       "id": "q048",
       "answerable": true,
       "baseline_score": 1,
       "cached_score": 1,
-      "grade_reused": false,
-      "cached_answer": "functools.wraps is used for defining a wrapper function that preserves the metadata of the original function. [1]",
+      "grade_reused": true,
+      "cached_answer": "This is a convenience function for invoking update_wrapper() as a function decorator when defining a wrapper function. [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states the purpose of functools.wraps and is faithful to the reference passage, which explains that it is a convenience function for invoking update_wrapper() as a decorator to preserve the metadata of the original function."
+        "reason": "The actual answer accurately describes the purpose of functools.wraps and matches the expected answer. The provided citation supports the claim."
       },
-      "reason": "The answer correctly states the purpose of functools.wraps and is faithful to the reference passage, which explains that it is a convenience function for invoking update_wrapper() as a decorator to preserve the metadata of the original function."
+      "reason": "The actual answer accurately describes the purpose of functools.wraps and matches the expected answer. The provided citation supports the claim."
     },
     {
       "id": "q049",
@@ -808,9 +808,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that os.listdir excludes the special entries '.' and '..' as per the reference passage."
+        "reason": "The answer correctly states that os.listdir excludes the special entries '.' and '..' as per the reference passage. The cited passage explicitly states this fact."
       },
-      "reason": "The answer correctly states that os.listdir excludes the special entries '.' and '..' as per the reference passage."
+      "reason": "The answer correctly states that os.listdir excludes the special entries '.' and '..' as per the reference passage. The cited passage explicitly states this fact."
     },
     {
       "id": "q051",
@@ -834,15 +834,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "os.getenv(key, default=None) [1]",
+      "cached_answer": "os.getenv(key, default = None) [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly uses the os.getenv function and is faithful to the reference passage, which states that it returns the value of the environment variable key as a string if it exists, or default if it doesn't."
+        "reason": "The answer correctly uses `os.getenv` to read an environment variable with a default value, and the provided citation supports this claim."
       },
-      "reason": "The answer correctly uses the os.getenv function and is faithful to the reference passage, which states that it returns the value of the environment variable key as a string if it exists, or default if it doesn't."
+      "reason": "The answer correctly uses `os.getenv` to read an environment variable with a default value, and the provided citation supports this claim."
     },
     {
       "id": "q053",
@@ -882,15 +882,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "use shutil.rmtree() [1]",
+      "cached_answer": "shutil.rmtree [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that `shutil.rmtree()` is used to delete an entire directory tree, which is directly supported by the reference passage."
+        "reason": "The answer 'shutil.rmtree' is correct and directly answers the question. The reference passage supports this by describing the functionality of the function, and the actual answer matches the expected answer."
       },
-      "reason": "The answer correctly states that `shutil.rmtree()` is used to delete an entire directory tree, which is directly supported by the reference passage."
+      "reason": "The answer 'shutil.rmtree' is correct and directly answers the question. The reference passage supports this by describing the functionality of the function, and the actual answer matches the expected answer."
     },
     {
       "id": "q056",
@@ -898,15 +898,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "use shutil.which(cmd, mode=os.F_OK | os.X_OK, path=None) [1]",
+      "cached_answer": "shutil.which(cmd, mode=os.F_OK | os.X_OK, path=None) [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states the function to use (shutil.which) and includes the required syntax. The citation supports the claim by providing the full function call with parameters."
+        "reason": "The answer correctly states that `shutil.which` is used to find the path to an executable command, and the provided citation supports this claim."
       },
-      "reason": "The answer correctly states the function to use (shutil.which) and includes the required syntax. The citation supports the claim by providing the full function call with parameters."
+      "reason": "The answer correctly states that `shutil.which` is used to find the path to an executable command, and the provided citation supports this claim."
     },
     {
       "id": "q057",
@@ -920,9 +920,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states the meaning of math.ceil and is faithful to the reference passage. The citation supports the claim."
+        "reason": "The actual answer accurately states the meaning of math.ceil, and this is directly supported by the reference passage."
       },
-      "reason": "The answer correctly states the meaning of math.ceil and is faithful to the reference passage. The citation supports the claim."
+      "reason": "The actual answer accurately states the meaning of math.ceil, and this is directly supported by the reference passage."
     },
     {
       "id": "q058",
@@ -936,9 +936,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer directly states the correct definition of what `math.floor` returns, which is supported by the reference passage."
+        "reason": "The answer directly states the correct definition of math.floor, which is faithful to the reference passage and supported by the cited quote."
       },
-      "reason": "The answer directly states the correct definition of what `math.floor` returns, which is supported by the reference passage."
+      "reason": "The answer directly states the correct definition of math.floor, which is faithful to the reference passage and supported by the cited quote."
     },
     {
       "id": "q059",
@@ -946,15 +946,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "Use math.sqrt(x) [1]",
+      "cached_answer": "math.sqrt(x) [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states how to calculate a square root using the math.sqrt function, and the cited passage supports this claim."
+        "reason": "The answer correctly states the method to calculate a square root using math.sqrt, and the cited passage supports this claim."
       },
-      "reason": "The answer correctly states how to calculate a square root using the math.sqrt function, and the cited passage supports this claim."
+      "reason": "The answer correctly states the method to calculate a square root using math.sqrt, and the cited passage supports this claim."
     },
     {
       "id": "q060",
@@ -968,9 +968,9 @@
         "correct": false,
         "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The answer is a refusal, which is appropriate given that no relevant information was provided in the reference passage. However, the refusal does not cite any evidence, so faithful and citation_supports_claim are false."
+        "reason": "The answer is a refusal, which is appropriate given that the passage does not provide enough information to answer the question. However, the refusal does not cite any evidence, making it impossible to verify the claim."
       },
-      "reason": "The answer is a refusal, which is appropriate given that no relevant information was provided in the reference passage. However, the refusal does not cite any evidence, so faithful and citation_supports_claim are false."
+      "reason": "The answer is a refusal, which is appropriate given that the passage does not provide enough information to answer the question. However, the refusal does not cite any evidence, making it impossible to verify the claim."
     },
     {
       "id": "q061",
@@ -978,31 +978,31 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "statistics.mean calculates the sample arithmetic mean of data. [1]",
+      "cached_answer": "the sample arithmetic mean of data [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that statistics.mean calculates the sample arithmetic mean of the data, which is consistent with the reference passage. The citation supports this claim with the definition provided."
+        "reason": "The answer correctly states that statistics.mean calculates the sample arithmetic mean of the data, which is consistent with the reference passage. The cited passage supports this claim."
       },
-      "reason": "The answer correctly states that statistics.mean calculates the sample arithmetic mean of the data, which is consistent with the reference passage. The citation supports this claim with the definition provided."
+      "reason": "The answer correctly states that statistics.mean calculates the sample arithmetic mean of the data, which is consistent with the reference passage. The cited passage supports this claim."
     },
     {
       "id": "q062",
       "answerable": true,
       "baseline_score": 1,
       "cached_score": 1,
-      "grade_reused": false,
-      "cached_answer": "The median is interpolated by taking the average of the two middle values. [1]",
+      "grade_reused": true,
+      "cached_answer": "the median is interpolated by taking the average of the two middle values [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that the median is interpolated by taking the average of the two middle values, which is consistent with the reference passage. The answer is faithful to the cited evidence and does not include unsupported claims."
+        "reason": "The answer correctly states that the median is interpolated by taking the average of the two middle values, which is consistent with the reference passage and the cited quotes."
       },
-      "reason": "The answer correctly states that the median is interpolated by taking the average of the two middle values, which is consistent with the reference passage. The answer is faithful to the cited evidence and does not include unsupported claims."
+      "reason": "The answer correctly states that the median is interpolated by taking the average of the two middle values, which is consistent with the reference passage and the cited quotes."
     },
     {
       "id": "q063",
@@ -1016,9 +1016,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The actual answer accurately states that the mode returns the single most common data point from discrete or nominal data, which is consistent with the reference passage."
+        "reason": "The answer accurately states that the mode returns the single most common data point from discrete or nominal data, which is consistent with the reference passage."
       },
-      "reason": "The actual answer accurately states that the mode returns the single most common data point from discrete or nominal data, which is consistent with the reference passage."
+      "reason": "The answer accurately states that the mode returns the single most common data point from discrete or nominal data, which is consistent with the reference passage."
     },
     {
       "id": "q064",
@@ -1071,18 +1071,18 @@
     {
       "id": "q067",
       "answerable": true,
-      "baseline_score": 1,
-      "cached_score": 1,
-      "grade_reused": false,
-      "cached_answer": "a <= N <= b [1]",
+      "baseline_score": 0,
+      "cached_score": 0,
+      "grade_reused": true,
+      "cached_answer": "I don't know based on these documents.",
       "verdict": {
         "grade": "bad",
-        "correct": true,
+        "correct": false,
         "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The reference passage explicitly states that the end-point value b may or may not be included, which contradicts the actual answer. The actual answer incorrectly implies that both endpoints are always included."
+        "reason": "The answer is a refusal, which is appropriate given that no relevant quotes were provided. However, faithful and citation_supports_claim are false because the abstention does not follow from the lack of relevant information in the provided passages."
       },
-      "reason": "The reference passage explicitly states that the end-point value b may or may not be included, which contradicts the actual answer. The actual answer incorrectly implies that both endpoints are always included."
+      "reason": "The answer is a refusal, which is appropriate given that no relevant quotes were provided. However, faithful and citation_supports_claim are false because the abstention does not follow from the lack of relevant information in the provided passages."
     },
     {
       "id": "q068",
@@ -1106,15 +1106,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "The lowercase letters 'abcdefghijklmnopqrstuvwxyz' [1]",
+      "cached_answer": "The lowercase letters 'abcdefghijklmnopqrstuvwxyz'. [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states the characters in string.ascii_lowercase and is faithful to the reference passage."
+        "reason": "The answer correctly states the characters in string.ascii_lowercase and is faithful to the reference passage. The citation supports the claim."
       },
-      "reason": "The answer correctly states the characters in string.ascii_lowercase and is faithful to the reference passage."
+      "reason": "The answer correctly states the characters in string.ascii_lowercase and is faithful to the reference passage. The citation supports the claim."
     },
     {
       "id": "q070",
@@ -1128,9 +1128,9 @@
         "correct": false,
         "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The answer is a refusal, which is appropriate given that the passage does not explicitly state the characters in string.digits. However, faithful and citation_supports_claim are false because the answer does not cite any evidence and the cited passage does not provide the necessary information."
+        "reason": "The answer is a refusal, which is appropriate given that the passage does not explicitly state the characters in string.digits. However, the refusal does not cite any evidence, making it impossible to verify the claim."
       },
-      "reason": "The answer is a refusal, which is appropriate given that the passage does not explicitly state the characters in string.digits. However, faithful and citation_supports_claim are false because the answer does not cite any evidence and the cited passage does not provide the necessary information."
+      "reason": "The answer is a refusal, which is appropriate given that the passage does not explicitly state the characters in string.digits. However, the refusal does not cite any evidence, making it impossible to verify the claim."
     },
     {
       "id": "q071",
@@ -1138,15 +1138,15 @@
       "baseline_score": 0,
       "cached_score": 0,
       "grade_reused": true,
-      "cached_answer": "string.ascii_letters combines string.ascii_lowercase and string.ascii_uppercase. [1]",
+      "cached_answer": "I don't know based on these documents.",
       "verdict": {
         "grade": "bad",
         "correct": false,
-        "faithful": true,
+        "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The actual answer incorrectly states that string.ascii_letters combines string.ascii_lowercase and string.ascii_uppercase, which is not the case according to the reference passage. The reference passage states that string.ascii_letters is the concatenation of ascii_lowercase and ascii_uppercase, not a combination with string.printable."
+        "reason": "The answer is a refusal, which is appropriate given that the passage does not provide the specific combination. However, faithful and citation_supports_claim are false because the answer is not based on the provided citation."
       },
-      "reason": "The actual answer incorrectly states that string.ascii_letters combines string.ascii_lowercase and string.ascii_uppercase, which is not the case according to the reference passage. The reference passage states that string.ascii_letters is the concatenation of ascii_lowercase and ascii_uppercase, not a combination with string.printable."
+      "reason": "The answer is a refusal, which is appropriate given that the passage does not provide the specific combination. However, faithful and citation_supports_claim are false because the answer is not based on the provided citation."
     },
     {
       "id": "q072",
@@ -1160,9 +1160,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states the characters in string.hexdigits, and the cited passage directly supports this claim."
+        "reason": "The answer correctly states the characters in string.hexdigits and is faithful to the cited passage. The citation supports the claim."
       },
-      "reason": "The answer correctly states the characters in string.hexdigits, and the cited passage directly supports this claim."
+      "reason": "The answer correctly states the characters in string.hexdigits and is faithful to the cited passage. The citation supports the claim."
     },
     {
       "id": "q073",
@@ -1185,16 +1185,16 @@
       "answerable": true,
       "baseline_score": 1,
       "cached_score": 1,
-      "grade_reused": false,
-      "cached_answer": "The ArgumentParser.add_argument() method attaches individual argument specifications to the parser. [1]",
+      "grade_reused": true,
+      "cached_answer": "parser.add_argument() [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that `ArgumentParser.add_argument` is used to define command-line arguments, and this is directly supported by the reference passage."
+        "reason": "The answer correctly states that `add_argument` is used to define a command-line argument with argparse, and this is supported by the reference passage."
       },
-      "reason": "The answer correctly states that `ArgumentParser.add_argument` is used to define command-line arguments, and this is directly supported by the reference passage."
+      "reason": "The answer correctly states that `add_argument` is used to define a command-line argument with argparse, and this is supported by the reference passage."
     },
     {
       "id": "q075",
@@ -1224,9 +1224,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer 'logging.warning' correctly identifies the method for logging a message at the WARNING level, and the cited passage supports this by stating that the warning method logs a message with level WARNING."
+        "reason": "The answer 'logging.warning' is correct and faithful to the reference passage, which states that the warning method logs a message at the WARNING level. The citation supports this claim."
       },
-      "reason": "The answer 'logging.warning' correctly identifies the method for logging a message at the WARNING level, and the cited passage supports this by stating that the warning method logs a message with level WARNING."
+      "reason": "The answer 'logging.warning' is correct and faithful to the reference passage, which states that the warning method logs a message at the WARNING level. The citation supports this claim."
     },
     {
       "id": "q077",
@@ -1247,50 +1247,50 @@
     {
       "id": "q078",
       "answerable": true,
-      "baseline_score": 1,
-      "cached_score": 1,
+      "baseline_score": 0,
+      "cached_score": 0,
       "grade_reused": true,
-      "cached_answer": "Yes [1]",
+      "cached_answer": "I don't know based on these documents.",
       "verdict": {
-        "grade": "good",
-        "correct": true,
-        "faithful": true,
-        "citation_supports_claim": true,
-        "reason": "The answer correctly states that Logger.exception includes exception information, which is directly supported by the reference passage."
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that no relevant quotes were provided. However, the abstention does not cite the passage that mentions exception info, so faithful and citation_supports_claim cannot be true."
       },
-      "reason": "The answer correctly states that Logger.exception includes exception information, which is directly supported by the reference passage."
+      "reason": "The answer is a refusal, which is appropriate given that no relevant quotes were provided. However, the abstention does not cite the passage that mentions exception info, so faithful and citation_supports_claim cannot be true."
     },
     {
       "id": "q079",
       "answerable": true,
       "baseline_score": 1,
       "cached_score": 1,
-      "grade_reused": false,
-      "cached_answer": "assertEqual(first, second, msg=None) [1]",
+      "grade_reused": true,
+      "cached_answer": "assertEqual [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer 'assertEqual(first, second, msg=None)' is correct and faithful to the reference passage, which states 'Test that first and second are equal. If the values do not compare equal, the test will fail.' The citation supports the claim by providing the function signature and additional details about its behavior."
+        "reason": "The answer 'assertEqual' is correct and directly corresponds to the question. The cited passage supports this claim."
       },
-      "reason": "The answer 'assertEqual(first, second, msg=None)' is correct and faithful to the reference passage, which states 'Test that first and second are equal. If the values do not compare equal, the test will fail.' The citation supports the claim by providing the function signature and additional details about its behavior."
+      "reason": "The answer 'assertEqual' is correct and directly corresponds to the question. The cited passage supports this claim."
     },
     {
       "id": "q080",
       "answerable": true,
       "baseline_score": 1,
       "cached_score": 1,
-      "grade_reused": false,
+      "grade_reused": true,
       "cached_answer": "Test that expr is true (or false). [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that assertTrue tests whether an expression is true (or false), which aligns with the reference passage and the cited quote."
+        "reason": "The actual answer accurately describes what assertTrue tests, and this is directly supported by the cited passage."
       },
-      "reason": "The answer correctly states that assertTrue tests whether an expression is true (or false), which aligns with the reference passage and the cited quote."
+      "reason": "The actual answer accurately describes what assertTrue tests, and this is directly supported by the cited passage."
     },
     {
       "id": "q081",
@@ -1304,9 +1304,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer 'use assertRaises' is correct and directly addresses the question. The reference passage supports this by explaining the usage of assertRaises in testing exceptions."
+        "reason": "The answer 'use assertRaises' is correct and directly answers the question. The reference passage supports this by explaining how to use assertRaises to test for exceptions."
       },
-      "reason": "The answer 'use assertRaises' is correct and directly addresses the question. The reference passage supports this by explaining the usage of assertRaises in testing exceptions."
+      "reason": "The answer 'use assertRaises' is correct and directly answers the question. The reference passage supports this by explaining how to use assertRaises to test for exceptions."
     },
     {
       "id": "q082",
@@ -1330,15 +1330,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "A special type indicating an unconstrained type. [1]",
+      "cached_answer": "Special type [1]",
       "verdict": {
-        "grade": "good",
+        "grade": "bad",
         "correct": true,
-        "faithful": true,
-        "citation_supports_claim": true,
-        "reason": "The answer matches the expected answer and the reference passage. The cited passage supports the claim that `typing.Any` is a special type indicating an unconstrained type."
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer 'Special type' is too brief and does not fully capture the meaning of `typing.Any` as described in the reference passage. The passage provides more context about the compatibility of `Any` with other types and its usage in type checking."
       },
-      "reason": "The answer matches the expected answer and the reference passage. The cited passage supports the claim that `typing.Any` is a special type indicating an unconstrained type."
+      "reason": "The answer 'Special type' is too brief and does not fully capture the meaning of `typing.Any` as described in the reference passage. The passage provides more context about the compatibility of `Any` with other types and its usage in type checking."
     },
     {
       "id": "q084",
@@ -1352,9 +1352,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The actual answer correctly states that Optional[X] is equivalent to X | None, which is directly supported by the cited passage. The answer is faithful to the reference passage and does not include unsupported details."
+        "reason": "The actual answer correctly states that Optional[X] is equivalent to X | None, which is directly supported by the cited passage. The additional context about optional arguments is not necessary for the answer to the question."
       },
-      "reason": "The actual answer correctly states that Optional[X] is equivalent to X | None, which is directly supported by the cited passage. The answer is faithful to the reference passage and does not include unsupported details."
+      "reason": "The actual answer correctly states that Optional[X] is equivalent to X | None, which is directly supported by the cited passage. The additional context about optional arguments is not necessary for the answer to the question."
     },
     {
       "id": "q085",
@@ -1362,15 +1362,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "a value to one of the provided literals [1]",
+      "cached_answer": "a specific value or set of values [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that a Literal annotation constrains a value to one of the provided literals, which is consistent with the reference passage."
+        "reason": "The answer correctly states that a Literal annotation constrains a value to specific literal values, which is supported by the reference passage."
       },
-      "reason": "The answer correctly states that a Literal annotation constrains a value to one of the provided literals, which is consistent with the reference passage."
+      "reason": "The answer correctly states that a Literal annotation constrains a value to specific literal values, which is supported by the reference passage."
     },
     {
       "id": "q086",
@@ -1400,9 +1400,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that `dataclasses.asdict` returns a dictionary of the dataclass fields as name: value pairs, which is directly supported by the reference passage."
+        "reason": "The answer correctly states that `dataclasses.asdict` returns a dictionary of the dataclass fields as name: value pairs, which is consistent with the provided reference passage."
       },
-      "reason": "The answer correctly states that `dataclasses.asdict` returns a dictionary of the dataclass fields as name: value pairs, which is directly supported by the reference passage."
+      "reason": "The answer correctly states that `dataclasses.asdict` returns a dictionary of the dataclass fields as name: value pairs, which is consistent with the provided reference passage."
     },
     {
       "id": "q088",
@@ -1410,31 +1410,31 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "Converts the dataclass obj to a tuple of its field values. [1]",
+      "cached_answer": "Converts the dataclass obj to a tuple (by using the factory function tuple_factory). Each dataclass is converted to a tuple of its field values. [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that dataclasses.astuple returns a tuple of a dataclass instance's field values, which is directly supported by the reference passage."
+        "reason": "The actual answer accurately states that `dataclasses.astuple` returns a tuple of a dataclass instance's fields, which is directly supported by the reference passage."
       },
-      "reason": "The answer correctly states that dataclasses.astuple returns a tuple of a dataclass instance's field values, which is directly supported by the reference passage."
+      "reason": "The actual answer accurately states that `dataclasses.astuple` returns a tuple of a dataclass instance's fields, which is directly supported by the reference passage."
     },
     {
       "id": "q089",
       "answerable": true,
-      "baseline_score": 0,
-      "cached_score": 0,
+      "baseline_score": 1,
+      "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "use dataclasses.is_dataclass(obj) or is_dataclass_instance(obj) [1]",
+      "cached_answer": "dataclasses.is_dataclass(obj) [1]",
       "verdict": {
-        "grade": "bad",
-        "correct": false,
+        "grade": "good",
+        "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer provided two functions, `is_dataclass` and `is_dataclass_instance`, but the question only asked for one. The reference passage only mentions `is_dataclass` for checking if an object is a dataclass or dataclass instance."
+        "reason": "The answer correctly uses the `dataclasses.is_dataclass` function to check if an object is a dataclass or dataclass instance. The reference passage supports this claim."
       },
-      "reason": "The answer provided two functions, `is_dataclass` and `is_dataclass_instance`, but the question only asked for one. The reference passage only mentions `is_dataclass` for checking if an object is a dataclass or dataclass instance."
+      "reason": "The answer correctly uses the `dataclasses.is_dataclass` function to check if an object is a dataclass or dataclass instance. The reference passage supports this claim."
     },
     {
       "id": "q090",
@@ -1442,15 +1442,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "Creates a new object [1]",
+      "cached_answer": "Creates a new object of the same type as obj [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The actual answer correctly states that dataclasses.replace creates a new object, which is supported by the reference passage."
+        "reason": "The answer correctly states that dataclasses.replace creates a new object, which is supported by the reference passage. The additional details about the creation process and error conditions are not necessary for the answer to be correct."
       },
-      "reason": "The actual answer correctly states that dataclasses.replace creates a new object, which is supported by the reference passage."
+      "reason": "The answer correctly states that dataclasses.replace creates a new object, which is supported by the reference passage. The additional details about the creation process and error conditions are not necessary for the answer to be correct."
     },
     {
       "id": "q091",
@@ -1522,15 +1522,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "Use heapq.heappush(heap, item) for min-heaps or heapq.heappush_max(heap, item) for max-heaps. [1]",
+      "cached_answer": "heapq.heappush(heap, item) [1]",
       "verdict": {
-        "grade": "bad",
+        "grade": "good",
         "correct": true,
-        "faithful": false,
-        "citation_supports_claim": false,
-        "reason": "The answer mentions `heapq.heappush_max` for max-heaps, but the reference passage discusses `max-heap` and `min-heap` in different contexts. The passage does not mention `heapq.heappush_max` and instead focuses on `heapq.heappush` for min-heaps. The citation does not support the claim about `heapq.heappush_max`."
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly uses the `heapq.heappush` method to add an item while preserving the heap invariant, and the cited passage supports this claim."
       },
-      "reason": "The answer mentions `heapq.heappush_max` for max-heaps, but the reference passage discusses `max-heap` and `min-heap` in different contexts. The passage does not mention `heapq.heappush_max` and instead focuses on `heapq.heappush` for min-heaps. The citation does not support the claim about `heapq.heappush_max`."
+      "reason": "The answer correctly uses the `heapq.heappush` method to add an item while preserving the heap invariant, and the cited passage supports this claim."
     },
     {
       "id": "q096",
@@ -1544,9 +1544,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states that heappop removes the smallest item from a min-heap, which is consistent with the reference passage."
+        "reason": "The answer correctly states that heappop removes the smallest item from the min-heap, which is directly supported by the reference passage."
       },
-      "reason": "The answer correctly states that heappop removes the smallest item from a min-heap, which is consistent with the reference passage."
+      "reason": "The answer correctly states that heappop removes the smallest item from the min-heap, which is directly supported by the reference passage."
     },
     {
       "id": "q097",
@@ -1560,9 +1560,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer 'in linear time' is correct and faithful to the reference passage, which states that the transformation is done in linear time. The actual answer includes the citation, which supports the claim."
+        "reason": "The answer 'in linear time [1]' is correct and faithful to the reference passage, which states that the transformation is done in linear time. The actual answer matches the expected answer 'Linear time.'"
       },
-      "reason": "The answer 'in linear time' is correct and faithful to the reference passage, which states that the transformation is done in linear time. The actual answer includes the citation, which supports the claim."
+      "reason": "The answer 'in linear time [1]' is correct and faithful to the reference passage, which states that the transformation is done in linear time. The actual answer matches the expected answer 'Linear time.'"
     },
     {
       "id": "q098",
@@ -1570,15 +1570,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "heapq.nlargest(n, iterable, key=None) [1]",
+      "cached_answer": "heapq.nlargest [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly states the function to use (heapq.nlargest) and includes the parameters (n, iterable, key). The cited passage supports this claim."
+        "reason": "The answer 'heapq.nlargest' is correct and directly corresponds to the expected answer. The cited passage supports this claim by describing the functionality of the function."
       },
-      "reason": "The answer correctly states the function to use (heapq.nlargest) and includes the parameters (n, iterable, key). The cited passage supports this claim."
+      "reason": "The answer 'heapq.nlargest' is correct and directly corresponds to the expected answer. The cited passage supports this claim by describing the functionality of the function."
     },
     {
       "id": "q099",
@@ -1608,9 +1608,9 @@
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer 'Yes' is correct and faithful to the reference passage, which states that bisect_right returns a position after existing entries of x in a."
+        "reason": "The answer 'Yes' correctly reflects the information provided in the reference passage, which states that bisect_right returns a position after existing entries of x in a. The actual answer is concise and directly addresses the question without unnecessary details."
       },
-      "reason": "The answer 'Yes' is correct and faithful to the reference passage, which states that bisect_right returns a position after existing entries of x in a."
+      "reason": "The answer 'Yes' correctly reflects the information provided in the reference passage, which states that bisect_right returns a position after existing entries of x in a. The actual answer is concise and directly addresses the question without unnecessary details."
     },
     {
       "id": "q101",
@@ -1618,15 +1618,15 @@
       "baseline_score": 1,
       "cached_score": 1,
       "grade_reused": true,
-      "cached_answer": "Use bisect_left to find the insertion point and then use list.insert() [1]",
+      "cached_answer": "bisect_left [1]",
       "verdict": {
         "grade": "good",
         "correct": true,
         "faithful": true,
         "citation_supports_claim": true,
-        "reason": "The answer correctly suggests using bisect_left to find the insertion point and then using list.insert(), which is consistent with the reference passage. The passage supports the claim that bisect_left will place the item before equal entries."
+        "reason": "The answer 'bisect.insort_left' is correct and the reference passage supports this by explaining the behavior of the function when the element is already present in the list, which is to insert before any existing entries."
       },
-      "reason": "The answer correctly suggests using bisect_left to find the insertion point and then using list.insert(), which is consistent with the reference passage. The passage supports the claim that bisect_left will place the item before equal entries."
+      "reason": "The answer 'bisect.insort_left' is correct and the reference passage supports this by explaining the behavior of the function when the element is already present in the list, which is to insert before any existing entries."
     },
     {
       "id": "q102",
@@ -1634,15 +1634,15 @@
       "baseline_score": 0,
       "cached_score": 0,
       "grade_reused": true,
-      "cached_answer": "Use bisect_left to find the insertion point and then use list.insert() [1]",
+      "cached_answer": "bisect_left [1]",
       "verdict": {
         "grade": "bad",
         "correct": false,
         "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The actual answer suggests using `bisect_left` and `list.insert()`, but the reference passage and expected answer indicate that `bisect.insort_right` should be used. The passage also explains that `bisect.insort_right` is designed to handle insertion after equal entries, which `bisect_left` and `list.insert()` do not."
+        "reason": "The answer should be 'bisect.insort_right' as per the expected answer and the reference passage. The actual answer 'bisect_left' is incorrect. The citation does not support 'bisect_left' as the correct function for inserting an item into a sorted list after equal entries."
       },
-      "reason": "The actual answer suggests using `bisect_left` and `list.insert()`, but the reference passage and expected answer indicate that `bisect.insort_right` should be used. The passage also explains that `bisect.insort_right` is designed to handle insertion after equal entries, which `bisect_left` and `list.insert()` do not."
+      "reason": "The answer should be 'bisect.insort_right' as per the expected answer and the reference passage. The actual answer 'bisect_left' is incorrect. The citation does not support 'bisect_left' as the correct function for inserting an item into a sorted list after equal entries."
     },
     {
       "id": "u001",
@@ -1672,9 +1672,9 @@
         "correct": true,
         "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer directly states this, making it correct. However, since there are no cited quotes, citation_supports_claim cannot be true."
       },
-      "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+      "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer directly states this, making it correct. However, since there are no cited quotes, citation_supports_claim cannot be true."
     },
     {
       "id": "u003",
@@ -1704,9 +1704,9 @@
         "correct": true,
         "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The refusal is faithful and correctly cited."
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The refusal is faithful and the citation is not needed, so it is marked as false."
       },
-      "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The refusal is faithful and correctly cited."
+      "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The refusal is faithful and the citation is not needed, so it is marked as false."
     },
     {
       "id": "u005",
@@ -1720,9 +1720,9 @@
         "correct": true,
         "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage. The answer matches the expected answer exactly."
+        "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage. The refusal is faithful and correctly stated."
       },
-      "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage. The answer matches the expected answer exactly."
+      "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage. The refusal is faithful and correctly stated."
     },
     {
       "id": "u006",
@@ -1736,9 +1736,9 @@
         "correct": true,
         "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The refusal is faithful and correctly stated."
       },
-      "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+      "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The refusal is faithful and correctly stated."
     },
     {
       "id": "u007",
@@ -1800,9 +1800,9 @@
         "correct": true,
         "faithful": false,
         "citation_supports_claim": false,
-        "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage to draw from. The refusal is faithful and correctly stated."
+        "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage. The answer matches the expected answer exactly."
       },
-      "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage to draw from. The refusal is faithful and correctly stated."
+      "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage. The answer matches the expected answer exactly."
     }
   ]
 }
