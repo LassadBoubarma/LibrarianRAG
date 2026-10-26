@@ -40,7 +40,35 @@ The code is ordinary Python functions and two small classes. There is no LangCha
 
 ## Results
 
-The measured tables are added here after the complete evaluation run. Raw answers, source IDs and timing records are saved in [eval/results](eval/results).
+Measured locally on 26 October 2026: Ryzen 5 5600X, 16 GB RAM, RTX 3060. Search runs on CPU; Ollama uses the GPU. Model warmup is excluded. Timings measure the local pipeline, not public HTTP load. The dataset has 102 answerable questions and 10 out-of-scope questions.
+
+| Search | Recall@5 | Search p95 |
+| --- | --- | --- |
+| keyword | 73.5% | 11.9 ms |
+| vector | 63.7% | 17.2 ms |
+| hybrid | 84.3% | 25.6 ms |
+| rerank | 91.2% | 794.0 ms |
+
+| Measure | Result |
+| --- | --- |
+| Model-judged correctness (102 answerable) | 87.3% |
+| Model-judged correctness (all 112) | 88.4% |
+| Model-judged faithfulness (answered only) | 93.9% |
+| Model-judged citation support (answered only) | 92.9% |
+| Answer coverage (102 answerable) | 97.1% |
+| Correct refusal (10 out-of-scope) | 100.0% |
+| Gold-passage citation rate (102 answerable) | 79.4% |
+| Answer token F1 (word-overlap proxy) | 0.532 |
+
+The P1 adapter uses Qwen 2.5 7B as a judge. The generator and judge use the same model, which can bias these scores. These are model judgments, not human grades. Copied passages exist by construction; that alone is not proof of faithfulness. All 112 questions are included in the descriptive results, including the 20 development questions. Raw answers and individual judge reasons are in [eval/results](eval/results).
+
+| Workload | p50 ms | p95 ms | Cache hits / 112 | Model tokens |
+| --- | --- | --- | --- | --- |
+| No cache | 3317.391 | 3810.670 | 0 | 79272 |
+| Cache, first use | 3228.638 | 3676.689 | 0 | 79271 |
+| Cache, repeated | 0.023 | 0.038 | 112 | 0 |
+
+Repeated questions reduced p95 by 99.9990% in a 100% cache-hit workload. Answers matched the first-use responses 100.0% of the time and the separate no-cache run 94.6% of the time. On the 102 answerable questions, model-judged correctness was 87.3% before and 87.3% after caching (+0.00 percentage points). 7 changed outputs were regraded; 105 grades were reused because answer and evidence matched exactly. This does not promise the same speedup for new questions. See [optimisation.md](optimisation.md).
 
 ## Evaluation
 
@@ -51,6 +79,7 @@ python run.py -m eval.generation --split all
 python run.py -m eval.benchmark --split all --baseline eval/results/generation.json
 ollama pull qwen2.5:7b
 python run.py -m eval.p1_judge
+python run.py -m eval.cache_accuracy
 ```
 
 There are 102 drafted questions with answers and real source passages, plus 10 unanswerable questions. Twenty questions are marked for development. The final full-set results are descriptive; this is not a sealed, independently collected benchmark.

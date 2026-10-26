@@ -85,10 +85,12 @@ if __name__ == "__main__":
             file.flush()
             print(f"{row['id']}: {result.get('reason', result.get('error'))}", flush=True)
     ordered = [completed[r["id"]] for r in rows]
+    answerable = [completed[r["id"]] for r in rows if r["answerable"]]
     answered = [completed[r["id"]] for r in rows if not r["result"]["abstained"]]
     summary = {"questions": len(rows), "judge_model": args.judge_model, "p1_commit": P1_COMMIT,
                "errors": sum(r.get("error") is not None for r in ordered),
                "model_judged_correctness": sum(r["score"] for r in ordered) / len(rows),
+               "model_judged_correctness_answerable": sum(r["score"] for r in answerable) / len(answerable) if answerable else None,
                "model_judged_faithfulness_answered": sum(r.get("verdict", {}).get("faithful", False) for r in answered) / len(answered) if answered else None,
                "model_judged_citation_support_answered": sum(r.get("verdict", {}).get("citation_supports_claim", False) for r in answered) / len(answered) if answered else None,
                "note": "Model judgments, not human labels. Review the individual reasons and quotes."}

@@ -39,6 +39,7 @@ An in-memory LRU cache stores up to 128 answers. The key includes the exact trim
 - Flattened tables lose some relationships between columns.
 - Code may be split in the middle of a block.
 - Cross-references are not followed automatically.
+- A helper function shown in a documentation example can be mistaken for a built-in API.
 - The small model sometimes refuses a question that has an answer.
 - A real quote can be paired with a wrong interpretation.
 - The corpus is a fixed release, not the latest online Python docs.

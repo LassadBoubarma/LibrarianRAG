@@ -1,0 +1,3263 @@
+{
+  "summary": {
+    "questions": 112,
+    "judge_model": "qwen2.5:7b",
+    "p1_commit": "23473e6998e69718b32ec7c8963d0cfa86a23fdb",
+    "errors": 0,
+    "model_judged_correctness": 0.8839285714285714,
+    "model_judged_correctness_answerable": 0.8725490196078431,
+    "model_judged_faithfulness_answered": 0.9393939393939394,
+    "model_judged_citation_support_answered": 0.9292929292929293,
+    "note": "Model judgments, not human labels. Review the individual reasons and quotes."
+  },
+  "rows": [
+    {
+      "id": "q001",
+      "input": "What does abs return for a number?",
+      "output": "the absolute value of a number [1]",
+      "score": 1,
+      "reason": "The answer correctly states that the absolute value of a number is returned, and this is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that the absolute value of a number is returned, and this is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that the absolute value of a number is returned, and this is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 3.35,
+        "usd": 0.0,
+        "in_tok": 503,
+        "out_tok": 61
+      },
+      "error": null
+    },
+    {
+      "id": "q002",
+      "input": "What does all return for an empty iterable?",
+      "output": "True [1]",
+      "score": 1,
+      "reason": "The answer 'True' is correct and directly follows from the reference passage, which states that all() returns True for an empty iterable.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'True' is correct and directly follows from the reference passage, which states that all() returns True for an empty iterable."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'True' is correct and directly follows from the reference passage, which states that all() returns True for an empty iterable."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.21,
+        "usd": 0.0,
+        "in_tok": 490,
+        "out_tok": 64
+      },
+      "error": null
+    },
+    {
+      "id": "q003",
+      "input": "What does any return for an empty iterable?",
+      "output": "False [1]",
+      "score": 1,
+      "reason": "The answer 'False' is correct and directly follows from the reference passage, which states that any() returns False if the iterable is empty. The actual answer matches the expected answer and the cited passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'False' is correct and directly follows from the reference passage, which states that any() returns False if the iterable is empty. The actual answer matches the expected answer and the cited passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'False' is correct and directly follows from the reference passage, which states that any() returns False if the iterable is empty. The actual answer matches the expected answer and the cited passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.46,
+        "usd": 0.0,
+        "in_tok": 494,
+        "out_tok": 77
+      },
+      "error": null
+    },
+    {
+      "id": "q004",
+      "input": "What is the default starting count for enumerate?",
+      "output": "0 [1]",
+      "score": 1,
+      "reason": "The answer '0' correctly states the default starting count for enumerate, which is supported by the reference passage and cited quotes.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer '0' correctly states the default starting count for enumerate, which is supported by the reference passage and cited quotes."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer '0' correctly states the default starting count for enumerate, which is supported by the reference passage and cited quotes."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.32,
+        "usd": 0.0,
+        "in_tok": 710,
+        "out_tok": 62
+      },
+      "error": null
+    },
+    {
+      "id": "q005",
+      "input": "How do I get the number of items in a Python object?",
+      "output": "Use the len(object) function. [1]",
+      "score": 1,
+      "reason": "The answer correctly states that the len() function is used to get the number of items in a Python object, and this is supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that the len() function is used to get the number of items in a Python object, and this is supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that the len() function is used to get the number of items in a Python object, and this is supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.41,
+        "usd": 0.0,
+        "in_tok": 592,
+        "out_tok": 68
+      },
+      "error": null
+    },
+    {
+      "id": "q006",
+      "input": "Does sorted return a new list?",
+      "output": "Yes [1]",
+      "score": 1,
+      "reason": "The answer 'Yes' is correct and directly supported by the reference passage which states 'Return a new sorted list from the items in iterable.'",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'Yes' is correct and directly supported by the reference passage which states 'Return a new sorted list from the items in iterable.'"
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'Yes' is correct and directly supported by the reference passage which states 'Return a new sorted list from the items in iterable.'"
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.46,
+        "usd": 0.0,
+        "in_tok": 734,
+        "out_tok": 66
+      },
+      "error": null
+    },
+    {
+      "id": "q007",
+      "input": "How can I make a copy of a string with lowercase letters?",
+      "output": "str.lower() [1]",
+      "score": 1,
+      "reason": "The answer correctly states that `str.lower()` is used to convert a string to lowercase, and the reference passage supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that `str.lower()` is used to convert a string to lowercase, and the reference passage supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that `str.lower()` is used to convert a string to lowercase, and the reference passage supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.31,
+        "usd": 0.0,
+        "in_tok": 511,
+        "out_tok": 63
+      },
+      "error": null
+    },
+    {
+      "id": "q008",
+      "input": "What does str.strip remove when chars is omitted?",
+      "output": "whitespace [1]",
+      "score": 1,
+      "reason": "The answer correctly states that str.strip removes whitespace when chars is omitted, which is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that str.strip removes whitespace when chars is omitted, which is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that str.strip removes whitespace when chars is omitted, which is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.33,
+        "usd": 0.0,
+        "in_tok": 768,
+        "out_tok": 60
+      },
+      "error": null
+    },
+    {
+      "id": "q009",
+      "input": "Does str.replace change the original string?",
+      "output": "No [1]",
+      "score": 0,
+      "reason": "The answer is incomplete. While it correctly states that the original string is not changed, it does not mention that it returns a copy, which is a key detail from the reference passage.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer is incomplete. While it correctly states that the original string is not changed, it does not mention that it returns a copy, which is a key detail from the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer is incomplete. While it correctly states that the original string is not changed, it does not mention that it returns a copy, which is a key detail from the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.56,
+        "usd": 0.0,
+        "in_tok": 549,
+        "out_tok": 74
+      },
+      "error": null
+    },
+    {
+      "id": "q010",
+      "input": "Does dict.get raise KeyError for a missing key?",
+      "output": "No [1]",
+      "score": 1,
+      "reason": "The answer correctly states that dict.get does not raise KeyError for a missing key, and this is supported by the reference passage which states that get() returns None as a default rather than raising KeyError.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that dict.get does not raise KeyError for a missing key, and this is supported by the reference passage which states that get() returns None as a default rather than raising KeyError."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that dict.get does not raise KeyError for a missing key, and this is supported by the reference passage which states that get() returns None as a default rather than raising KeyError."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.64,
+        "usd": 0.0,
+        "in_tok": 718,
+        "out_tok": 76
+      },
+      "error": null
+    },
+    {
+      "id": "q011",
+      "input": "Does list.copy make a shallow or deep copy?",
+      "output": "shallow [1]",
+      "score": 1,
+      "reason": "The answer correctly states that list.copy() makes a shallow copy, which is consistent with the provided citation.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that list.copy() makes a shallow copy, which is consistent with the provided citation."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that list.copy() makes a shallow copy, which is consistent with the provided citation."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.25,
+        "usd": 0.0,
+        "in_tok": 497,
+        "out_tok": 58
+      },
+      "error": null
+    },
+    {
+      "id": "q012",
+      "input": "How do I add one element to a set?",
+      "output": "Use the add function. [1]",
+      "score": 0,
+      "reason": "The actual answer uses 'the add function' instead of the correct method name 'set.add'.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer uses 'the add function' instead of the correct method name 'set.add'."
+      },
+      "raw_verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer uses 'the add function' instead of the correct method name 'set.add'."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.08,
+        "usd": 0.0,
+        "in_tok": 399,
+        "out_tok": 57
+      },
+      "error": null
+    },
+    {
+      "id": "q013",
+      "input": "What does Path.read_text return?",
+      "output": "Return the decoded contents of the pointed-to file as a string [1]",
+      "score": 1,
+      "reason": "The actual answer matches the expected answer and the reference passage. The citation directly supports the claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer matches the expected answer and the reference passage. The citation directly supports the claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer matches the expected answer and the reference passage. The citation directly supports the claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.17,
+        "usd": 0.0,
+        "in_tok": 605,
+        "out_tok": 56
+      },
+      "error": null
+    },
+    {
+      "id": "q014",
+      "input": "Does Path.write_text overwrite an existing file?",
+      "output": "Yes [1]",
+      "score": 1,
+      "reason": "The answer 'Yes' is correct and directly supported by the cited passage which states 'An existing file of the same name is overwritten.'",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'Yes' is correct and directly supported by the cited passage which states 'An existing file of the same name is overwritten.'"
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'Yes' is correct and directly supported by the cited passage which states 'An existing file of the same name is overwritten.'"
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.36,
+        "usd": 0.0,
+        "in_tok": 620,
+        "out_tok": 65
+      },
+      "error": null
+    },
+    {
+      "id": "q015",
+      "input": "How do I check whether a path points to an existing file or directory?",
+      "output": "Path.exists() [1]",
+      "score": 1,
+      "reason": "The answer correctly states that Path.exists() is used to check if a path points to an existing file or directory, and this is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that Path.exists() is used to check if a path points to an existing file or directory, and this is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that Path.exists() is used to check if a path points to an existing file or directory, and this is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.47,
+        "usd": 0.0,
+        "in_tok": 674,
+        "out_tok": 70
+      },
+      "error": null
+    },
+    {
+      "id": "q016",
+      "input": "What does parents=True do in Path.mkdir?",
+      "output": "If parents is true, any missing parents of this path are created as needed; they are created with the default permissions without taking mode into account (mimicking the POSIX mkdir -p command). [1]",
+      "score": 1,
+      "reason": "The answer accurately reflects the reference passage and the cited quotes, and there are no unsupported claims or missing details.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer accurately reflects the reference passage and the cited quotes, and there are no unsupported claims or missing details."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer accurately reflects the reference passage and the cited quotes, and there are no unsupported claims or missing details."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.33,
+        "usd": 0.0,
+        "in_tok": 793,
+        "out_tok": 59
+      },
+      "error": null
+    },
+    {
+      "id": "q017",
+      "input": "How do I get the file extension from a pathlib path?",
+      "output": "Use PurePath.suffixes [1]",
+      "score": 0,
+      "reason": "The answer suggests using `suffixes` instead of `suffix`, which is incorrect. The reference passage and the cited quote both indicate that `suffix` is the correct property to use for getting the file extension. Additionally, the answer introduces `PurePath.suffixes` which is not mentioned in the reference passage and is not the correct property to use.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer suggests using `suffixes` instead of `suffix`, which is incorrect. The reference passage and the cited quote both indicate that `suffix` is the correct property to use for getting the file extension. Additionally, the answer introduces `PurePath.suffixes` which is not mentioned in the reference passage and is not the correct property to use."
+      },
+      "raw_verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer suggests using `suffixes` instead of `suffix`, which is incorrect. The reference passage and the cited quote both indicate that `suffix` is the correct property to use for getting the file extension. Additionally, the answer introduces `PurePath.suffixes` which is not mentioned in the reference passage and is not the correct property to use."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 2.16,
+        "usd": 0.0,
+        "in_tok": 624,
+        "out_tok": 108
+      },
+      "error": null
+    },
+    {
+      "id": "q018",
+      "input": "What does PurePath.name represent?",
+      "output": "A string representing the final path component, excluding the drive and root, if any: [1]",
+      "score": 1,
+      "reason": "The answer accurately describes what PurePath.name represents, and this is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer accurately describes what PurePath.name represents, and this is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer accurately describes what PurePath.name represents, and this is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.17,
+        "usd": 0.0,
+        "in_tok": 567,
+        "out_tok": 57
+      },
+      "error": null
+    },
+    {
+      "id": "q019",
+      "input": "What is collections.Counter used for?",
+      "output": "collections.Counter is used for counting hashable objects. [1]",
+      "score": 1,
+      "reason": "The answer correctly states the purpose of collections.Counter as counting hashable objects, which is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the purpose of collections.Counter as counting hashable objects, which is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the purpose of collections.Counter as counting hashable objects, which is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.34,
+        "usd": 0.0,
+        "in_tok": 780,
+        "out_tok": 61
+      },
+      "error": null
+    },
+    {
+      "id": "q020",
+      "input": "What is a deque?",
+      "output": "A deque, or double-ended queue, is a generalization of stacks and queues that supports thread-safe, memory efficient appends and pops from either side with approximately O(1) performance. [1]",
+      "score": 1,
+      "reason": "The actual answer accurately describes a deque as a double-ended queue that supports fast appends and pops from either end, which is consistent with the reference passage. The quote from the reference passage directly supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer accurately describes a deque as a double-ended queue that supports fast appends and pops from either end, which is consistent with the reference passage. The quote from the reference passage directly supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer accurately describes a deque as a double-ended queue that supports fast appends and pops from either end, which is consistent with the reference passage. The quote from the reference passage directly supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.72,
+        "usd": 0.0,
+        "in_tok": 857,
+        "out_tok": 79
+      },
+      "error": null
+    },
+    {
+      "id": "q021",
+      "input": "What makes defaultdict different from dict?",
+      "output": "defaultdict overrides one method and adds one writable instance variable, providing a default value for missing keys. [1]",
+      "score": 0,
+      "reason": "The answer does not directly address the question about the differences between defaultdict and dict. While it provides accurate information about defaultdict, it does not explain the key difference that defaultdict calls a factory function to supply missing values, which is the core distinction from a regular dict.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer does not directly address the question about the differences between defaultdict and dict. While it provides accurate information about defaultdict, it does not explain the key difference that defaultdict calls a factory function to supply missing values, which is the core distinction from a regular dict."
+      },
+      "raw_verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer does not directly address the question about the differences between defaultdict and dict. While it provides accurate information about defaultdict, it does not explain the key difference that defaultdict calls a factory function to supply missing values, which is the core distinction from a regular dict."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.87,
+        "usd": 0.0,
+        "in_tok": 731,
+        "out_tok": 89
+      },
+      "error": null
+    },
+    {
+      "id": "q022",
+      "input": "How can I get the most common elements from a Counter?",
+      "output": "use the most_common() method [1]",
+      "score": 1,
+      "reason": "The answer correctly states that the `most_common()` method should be used to get the most common elements from a Counter. The cited passage supports this claim and provides an example.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that the `most_common()` method should be used to get the most common elements from a Counter. The cited passage supports this claim and provides an example."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that the `most_common()` method should be used to get the most common elements from a Counter. The cited passage supports this claim and provides an example."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.54,
+        "usd": 0.0,
+        "in_tok": 598,
+        "out_tok": 72
+      },
+      "error": null
+    },
+    {
+      "id": "q023",
+      "input": "What does json.dumps return?",
+      "output": "a JSON formatted str [1]",
+      "score": 1,
+      "reason": "The answer 'a JSON formatted str' accurately reflects the reference passage and is faithful to the cited evidence.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'a JSON formatted str' accurately reflects the reference passage and is faithful to the cited evidence."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'a JSON formatted str' accurately reflects the reference passage and is faithful to the cited evidence."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.25,
+        "usd": 0.0,
+        "in_tok": 616,
+        "out_tok": 58
+      },
+      "error": null
+    },
+    {
+      "id": "q024",
+      "input": "What does json.loads do?",
+      "output": "deserialize s (a str, bytes or bytearray instance containing a JSON document) to a Python object [1]",
+      "score": 1,
+      "reason": "The actual answer correctly states the function's purpose, and the cited passage supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer correctly states the function's purpose, and the cited passage supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer correctly states the function's purpose, and the cited passage supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.16,
+        "usd": 0.0,
+        "in_tok": 627,
+        "out_tok": 55
+      },
+      "error": null
+    },
+    {
+      "id": "q025",
+      "input": "How can I write a Python object as JSON into a file-like object?",
+      "output": "json.dump(obj, fp, *args, **kwargs) [1]",
+      "score": 1,
+      "reason": "The answer 'json.dump(obj, fp, *args, **kwargs)' correctly identifies the method to write a Python object as JSON to a file-like object, and this is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'json.dump(obj, fp, *args, **kwargs)' correctly identifies the method to write a Python object as JSON to a file-like object, and this is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'json.dump(obj, fp, *args, **kwargs)' correctly identifies the method to write a Python object as JSON to a file-like object, and this is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.65,
+        "usd": 0.0,
+        "in_tok": 689,
+        "out_tok": 79
+      },
+      "error": null
+    },
+    {
+      "id": "q026",
+      "input": "Which exception reports an invalid JSON document?",
+      "output": "JSONDecodeError [1]",
+      "score": 1,
+      "reason": "The answer correctly identifies JSONDecodeError as the exception for invalid JSON documents, and this is directly supported by the cited passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly identifies JSONDecodeError as the exception for invalid JSON documents, and this is directly supported by the cited passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly identifies JSONDecodeError as the exception for invalid JSON documents, and this is directly supported by the cited passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.38,
+        "usd": 0.0,
+        "in_tok": 750,
+        "out_tok": 62
+      },
+      "error": null
+    },
+    {
+      "id": "q027",
+      "input": "What does each row returned by csv.reader contain?",
+      "output": "a list of strings [1]",
+      "score": 1,
+      "reason": "The answer 'a list of strings' is correct and directly supported by the reference passage. The additional details about data type conversion are not necessary for the answer to the question.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'a list of strings' is correct and directly supported by the reference passage. The additional details about data type conversion are not necessary for the answer to the question."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'a list of strings' is correct and directly supported by the reference passage. The additional details about data type conversion are not necessary for the answer to the question."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.57,
+        "usd": 0.0,
+        "in_tok": 686,
+        "out_tok": 72
+      },
+      "error": null
+    },
+    {
+      "id": "q028",
+      "input": "Which function creates an object for writing CSV rows?",
+      "output": "csv.writer [1]",
+      "score": 1,
+      "reason": "The answer correctly identifies `csv.writer` as the function that creates an object for writing CSV rows, and this is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly identifies `csv.writer` as the function that creates an object for writing CSV rows, and this is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly identifies `csv.writer` as the function that creates an object for writing CSV rows, and this is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.61,
+        "usd": 0.0,
+        "in_tok": 939,
+        "out_tok": 67
+      },
+      "error": null
+    },
+    {
+      "id": "q029",
+      "input": "What does csv.DictReader map row values into?",
+      "output": "csv.DictReader maps row values into a dict [1]",
+      "score": 1,
+      "reason": "The answer correctly states that csv.DictReader maps row values into a dict, which is consistent with the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that csv.DictReader maps row values into a dict, which is consistent with the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that csv.DictReader maps row values into a dict, which is consistent with the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.38,
+        "usd": 0.0,
+        "in_tok": 753,
+        "out_tok": 60
+      },
+      "error": null
+    },
+    {
+      "id": "q030",
+      "input": "What does csv.DictWriter map dictionaries into?",
+      "output": "output rows [1]",
+      "score": 1,
+      "reason": "The answer 'output rows' is correct and directly supported by the reference passage, which states that the DictWriter maps dictionaries onto output rows.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'output rows' is correct and directly supported by the reference passage, which states that the DictWriter maps dictionaries onto output rows."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'output rows' is correct and directly supported by the reference passage, which states that the DictWriter maps dictionaries onto output rows."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.51,
+        "usd": 0.0,
+        "in_tok": 856,
+        "out_tok": 65
+      },
+      "error": null
+    },
+    {
+      "id": "q031",
+      "input": "What does a timedelta represent?",
+      "output": "A duration, the difference between two datetime or date instances. [1]",
+      "score": 1,
+      "reason": "The actual answer accurately describes what a timedelta represents, and this is directly supported by the reference passage. The additional details provided in the cited quotes are not necessary to answer the question and do not affect the correctness of the answer.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer accurately describes what a timedelta represents, and this is directly supported by the reference passage. The additional details provided in the cited quotes are not necessary to answer the question and do not affect the correctness of the answer."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer accurately describes what a timedelta represents, and this is directly supported by the reference passage. The additional details provided in the cited quotes are not necessary to answer the question and do not affect the correctness of the answer."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.75,
+        "usd": 0.0,
+        "in_tok": 755,
+        "out_tok": 82
+      },
+      "error": null
+    },
+    {
+      "id": "q032",
+      "input": "How do I get the current local date?",
+      "output": "date.today() [1]",
+      "score": 1,
+      "reason": "The answer 'date.today()' correctly provides the method to get the current local date, and the cited passage supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'date.today()' correctly provides the method to get the current local date, and the cited passage supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'date.today()' correctly provides the method to get the current local date, and the cited passage supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.21,
+        "usd": 0.0,
+        "in_tok": 419,
+        "out_tok": 62
+      },
+      "error": null
+    },
+    {
+      "id": "q033",
+      "input": "What format does date.isoformat use?",
+      "output": "YYYY-MM-DD [1]",
+      "score": 1,
+      "reason": "The answer directly matches the format specified in the reference passage and citation, and the answer is faithful to the provided information.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer directly matches the format specified in the reference passage and citation, and the answer is faithful to the provided information."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer directly matches the format specified in the reference passage and citation, and the answer is faithful to the provided information."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.22,
+        "usd": 0.0,
+        "in_tok": 509,
+        "out_tok": 61
+      },
+      "error": null
+    },
+    {
+      "id": "q034",
+      "input": "How can I parse a date string using a specified format?",
+      "output": "Use date.strptime(date_string, format) or datetime.strptime(date_string, format). [1]",
+      "score": 1,
+      "reason": "The answer correctly states that `datetime.strptime` can be used to parse a date string using a specified format, and the provided citation supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that `datetime.strptime` can be used to parse a date string using a specified format, and the provided citation supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that `datetime.strptime` can be used to parse a date string using a specified format, and the provided citation supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.41,
+        "usd": 0.0,
+        "in_tok": 747,
+        "out_tok": 67
+      },
+      "error": null
+    },
+    {
+      "id": "q035",
+      "input": "Does re.search look through the whole string for a match?",
+      "output": "Yes [1]",
+      "score": 1,
+      "reason": "The answer 'Yes' accurately reflects the reference passage, which states that re.search scans through the string for the first matching location. The actual answer is concise and directly addresses the question without unnecessary details.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'Yes' accurately reflects the reference passage, which states that re.search scans through the string for the first matching location. The actual answer is concise and directly addresses the question without unnecessary details."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'Yes' accurately reflects the reference passage, which states that re.search scans through the string for the first matching location. The actual answer is concise and directly addresses the question without unnecessary details."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.55,
+        "usd": 0.0,
+        "in_tok": 617,
+        "out_tok": 77
+      },
+      "error": null
+    },
+    {
+      "id": "q036",
+      "input": "Does re.match start at the beginning of the string?",
+      "output": "Yes [1]",
+      "score": 1,
+      "reason": "The answer correctly states 'Yes' and is faithful to the reference passage, which states that re.match() matches at the beginning of the string.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states 'Yes' and is faithful to the reference passage, which states that re.match() matches at the beginning of the string."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states 'Yes' and is faithful to the reference passage, which states that re.match() matches at the beginning of the string."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.42,
+        "usd": 0.0,
+        "in_tok": 702,
+        "out_tok": 66
+      },
+      "error": null
+    },
+    {
+      "id": "q037",
+      "input": "How do I require a regex to match the entire string?",
+      "output": "use re.fullmatch() [1]",
+      "score": 1,
+      "reason": "The answer correctly states that `re.fullmatch()` should be used to require a regex to match the entire string. The provided citation supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that `re.fullmatch()` should be used to require a regex to match the entire string. The provided citation supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that `re.fullmatch()` should be used to require a regex to match the entire string. The provided citation supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.47,
+        "usd": 0.0,
+        "in_tok": 726,
+        "out_tok": 67
+      },
+      "error": null
+    },
+    {
+      "id": "q038",
+      "input": "What does re.findall return?",
+      "output": "all non-overlapping matches of pattern in string, as a list of strings or tuples. [1]",
+      "score": 1,
+      "reason": "The actual answer accurately states that re.findall returns all non-overlapping matches as a list of strings or tuples, which is consistent with the reference passage. The additional detail about empty matches is not necessary but does not affect the correctness.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer accurately states that re.findall returns all non-overlapping matches as a list of strings or tuples, which is consistent with the reference passage. The additional detail about empty matches is not necessary but does not affect the correctness."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer accurately states that re.findall returns all non-overlapping matches as a list of strings or tuples, which is consistent with the reference passage. The additional detail about empty matches is not necessary but does not affect the correctness."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.76,
+        "usd": 0.0,
+        "in_tok": 766,
+        "out_tok": 83
+      },
+      "error": null
+    },
+    {
+      "id": "q039",
+      "input": "How can I replace regex matches in a string?",
+      "output": "I don't know based on these documents.",
+      "score": 0,
+      "reason": "The answer is a refusal, which is appropriate given that the question is answerable and the passage provides the correct information. However, the refusal does not cite any evidence from the passage, hence faithful and citation_supports_claim are false.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is answerable and the passage provides the correct information. However, the refusal does not cite any evidence from the passage, hence faithful and citation_supports_claim are false."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is answerable and the passage provides the correct information. However, the refusal does not cite any evidence from the passage, hence faithful and citation_supports_claim are false."
+      },
+      "refusal_rule_applied": true,
+      "judge_cost": {
+        "latency": 1.67,
+        "usd": 0.0,
+        "in_tok": 518,
+        "out_tok": 84
+      },
+      "error": null
+    },
+    {
+      "id": "q040",
+      "input": "How do I escape special characters for a literal regex pattern?",
+      "output": "use re.escape(pattern) [1]",
+      "score": 1,
+      "reason": "The answer correctly states the method to escape special characters, and the citation supports this claim with examples.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the method to escape special characters, and the citation supports this claim with examples."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the method to escape special characters, and the citation supports this claim with examples."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.24,
+        "usd": 0.0,
+        "in_tok": 695,
+        "out_tok": 57
+      },
+      "error": null
+    },
+    {
+      "id": "q041",
+      "input": "How can I iterate over several iterables as one sequence?",
+      "output": "use zip [1]",
+      "score": 0,
+      "reason": "The actual answer suggests using `zip`, which does not directly answer the question of how to iterate over several iterables as one sequence. The reference passage discusses `zip` but does not support the claim that it is the correct solution for the given question.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The actual answer suggests using `zip`, which does not directly answer the question of how to iterate over several iterables as one sequence. The reference passage discusses `zip` but does not support the claim that it is the correct solution for the given question."
+      },
+      "raw_verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The actual answer suggests using `zip`, which does not directly answer the question of how to iterate over several iterables as one sequence. The reference passage discusses `zip` but does not support the claim that it is the correct solution for the given question."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.83,
+        "usd": 0.0,
+        "in_tok": 783,
+        "out_tok": 88
+      },
+      "error": null
+    },
+    {
+      "id": "q042",
+      "input": "How can I repeat the elements of an iterable indefinitely?",
+      "output": "itertools.cycle(iterable) [1]",
+      "score": 1,
+      "reason": "The answer correctly states the function to use (itertools.cycle) and is faithful to the reference passage, which describes the functionality of itertools.cycle.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the function to use (itertools.cycle) and is faithful to the reference passage, which describes the functionality of itertools.cycle."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the function to use (itertools.cycle) and is faithful to the reference passage, which describes the functionality of itertools.cycle."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.38,
+        "usd": 0.0,
+        "in_tok": 683,
+        "out_tok": 66
+      },
+      "error": null
+    },
+    {
+      "id": "q043",
+      "input": "What does itertools.product compute?",
+      "output": "Cartesian product of the input iterables. [1]",
+      "score": 1,
+      "reason": "The answer correctly states that itertools.product computes the Cartesian product of the input iterables, which is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that itertools.product computes the Cartesian product of the input iterables, which is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that itertools.product computes the Cartesian product of the input iterables, which is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.41,
+        "usd": 0.0,
+        "in_tok": 758,
+        "out_tok": 63
+      },
+      "error": null
+    },
+    {
+      "id": "q044",
+      "input": "How do I take a slice from an iterator?",
+      "output": "use itertools.islice() [1]",
+      "score": 1,
+      "reason": "The answer correctly suggests using `itertools.islice` to take a slice from an iterator, and this is supported by the provided reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly suggests using `itertools.islice` to take a slice from an iterator, and this is supported by the provided reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly suggests using `itertools.islice` to take a slice from an iterator, and this is supported by the provided reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.48,
+        "usd": 0.0,
+        "in_tok": 801,
+        "out_tok": 66
+      },
+      "error": null
+    },
+    {
+      "id": "q045",
+      "input": "What does lru_cache save?",
+      "output": "up to the maxsize most recent calls [1]",
+      "score": 1,
+      "reason": "The answer correctly states that lru_cache saves up to the maxsize most recent calls, which is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that lru_cache saves up to the maxsize most recent calls, which is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that lru_cache saves up to the maxsize most recent calls, which is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.49,
+        "usd": 0.0,
+        "in_tok": 778,
+        "out_tok": 64
+      },
+      "error": null
+    },
+    {
+      "id": "q046",
+      "input": "Is functools.cache bounded in size?",
+      "output": "No [1]",
+      "score": 1,
+      "reason": "The answer correctly states that functools.cache is unbounded, which is supported by the reference passage stating it is an 'unbounded function cache'.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that functools.cache is unbounded, which is supported by the reference passage stating it is an 'unbounded function cache'."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that functools.cache is unbounded, which is supported by the reference passage stating it is an 'unbounded function cache'."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.46,
+        "usd": 0.0,
+        "in_tok": 793,
+        "out_tok": 66
+      },
+      "error": null
+    },
+    {
+      "id": "q047",
+      "input": "What does functools.partial do with arguments?",
+      "output": "functools.partial returns a new partial object which when called will behave like func called with the positional arguments args and keyword arguments keywords. [1]",
+      "score": 0,
+      "reason": "The actual answer does not directly address the question about what functools.partial does with arguments. Instead, it provides a detailed definition of how functools.partial works. The reference passage and cited quotes mention that functools.partial 'freezes' some portion of a function's arguments, but the answer does not explicitly state this. Additionally, the answer is not faithful to the reference passage as it does not mention the freezing of arguments.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The actual answer does not directly address the question about what functools.partial does with arguments. Instead, it provides a detailed definition of how functools.partial works. The reference passage and cited quotes mention that functools.partial 'freezes' some portion of a function's arguments, but the answer does not explicitly state this. Additionally, the answer is not faithful to the reference passage as it does not mention the freezing of arguments."
+      },
+      "raw_verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The actual answer does not directly address the question about what functools.partial does with arguments. Instead, it provides a detailed definition of how functools.partial works. The reference passage and cited quotes mention that functools.partial 'freezes' some portion of a function's arguments, but the answer does not explicitly state this. Additionally, the answer is not faithful to the reference passage as it does not mention the freezing of arguments."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 2.42,
+        "usd": 0.0,
+        "in_tok": 799,
+        "out_tok": 119
+      },
+      "error": null
+    },
+    {
+      "id": "q048",
+      "input": "What is functools.wraps used for?",
+      "output": "This is a convenience function for invoking update_wrapper() as a function decorator when defining a wrapper function. [1]",
+      "score": 1,
+      "reason": "The answer accurately describes the purpose of functools.wraps and is faithful to the cited passage. The citation supports the claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer accurately describes the purpose of functools.wraps and is faithful to the cited passage. The citation supports the claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer accurately describes the purpose of functools.wraps and is faithful to the cited passage. The citation supports the claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.33,
+        "usd": 0.0,
+        "in_tok": 728,
+        "out_tok": 61
+      },
+      "error": null
+    },
+    {
+      "id": "q049",
+      "input": "How do I get the current working directory as a string?",
+      "output": "os.getcwd() [1]",
+      "score": 1,
+      "reason": "The answer 'os.getcwd()' correctly provides the method to get the current working directory as a string, and the cited passage supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'os.getcwd()' correctly provides the method to get the current working directory as a string, and the cited passage supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'os.getcwd()' correctly provides the method to get the current working directory as a string, and the cited passage supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.24,
+        "usd": 0.0,
+        "in_tok": 405,
+        "out_tok": 65
+      },
+      "error": null
+    },
+    {
+      "id": "q050",
+      "input": "Does os.listdir include the special entries dot and double-dot?",
+      "output": "No [1]",
+      "score": 1,
+      "reason": "The answer correctly states that os.listdir excludes the special entries '.' and '..' as per the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that os.listdir excludes the special entries '.' and '..' as per the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that os.listdir excludes the special entries '.' and '..' as per the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.32,
+        "usd": 0.0,
+        "in_tok": 795,
+        "out_tok": 58
+      },
+      "error": null
+    },
+    {
+      "id": "q051",
+      "input": "What happens if os.remove is called on a directory?",
+      "output": "an OSError is raised [1]",
+      "score": 1,
+      "reason": "The answer correctly states that an OSError is raised when os.remove is called on a directory, which is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that an OSError is raised when os.remove is called on a directory, which is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that an OSError is raised when os.remove is called on a directory, which is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.41,
+        "usd": 0.0,
+        "in_tok": 745,
+        "out_tok": 64
+      },
+      "error": null
+    },
+    {
+      "id": "q052",
+      "input": "How can I read an environment variable with a default value?",
+      "output": "os.getenv(key, default=None) [1]",
+      "score": 1,
+      "reason": "The answer correctly uses the os.getenv function and is faithful to the reference passage, which states that it returns the value of the environment variable key as a string if it exists, or default if it doesn't.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly uses the os.getenv function and is faithful to the reference passage, which states that it returns the value of the environment variable key as a string if it exists, or default if it doesn't."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly uses the os.getenv function and is faithful to the reference passage, which states that it returns the value of the environment variable key as a string if it exists, or default if it doesn't."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.61,
+        "usd": 0.0,
+        "in_tok": 667,
+        "out_tok": 79
+      },
+      "error": null
+    },
+    {
+      "id": "q053",
+      "input": "Does shutil.copyfile copy metadata?",
+      "output": "No [1]",
+      "score": 1,
+      "reason": "The answer correctly states that shutil.copyfile does not copy metadata, which is supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that shutil.copyfile does not copy metadata, which is supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that shutil.copyfile does not copy metadata, which is supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.25,
+        "usd": 0.0,
+        "in_tok": 750,
+        "out_tok": 58
+      },
+      "error": null
+    },
+    {
+      "id": "q054",
+      "input": "Which shutil copy function attempts to preserve metadata?",
+      "output": "copy2 [1]",
+      "score": 1,
+      "reason": "The answer 'copy2' is correct and directly corresponds to the reference passage which states that 'copy2() also attempts to preserve file metadata'. The answer is faithful to the reference passage and the citation supports the claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'copy2' is correct and directly corresponds to the reference passage which states that 'copy2() also attempts to preserve file metadata'. The answer is faithful to the reference passage and the citation supports the claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'copy2' is correct and directly corresponds to the reference passage which states that 'copy2() also attempts to preserve file metadata'. The answer is faithful to the reference passage and the citation supports the claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.63,
+        "usd": 0.0,
+        "in_tok": 730,
+        "out_tok": 81
+      },
+      "error": null
+    },
+    {
+      "id": "q055",
+      "input": "How can I delete an entire directory tree?",
+      "output": "use shutil.rmtree() [1]",
+      "score": 1,
+      "reason": "The answer correctly states that `shutil.rmtree()` is used to delete an entire directory tree, which is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that `shutil.rmtree()` is used to delete an entire directory tree, which is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that `shutil.rmtree()` is used to delete an entire directory tree, which is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.42,
+        "usd": 0.0,
+        "in_tok": 788,
+        "out_tok": 65
+      },
+      "error": null
+    },
+    {
+      "id": "q056",
+      "input": "How do I find the path to an executable command?",
+      "output": "use shutil.which(cmd, mode=os.F_OK | os.X_OK, path=None) [1]",
+      "score": 1,
+      "reason": "The answer correctly states the function to use (shutil.which) and includes the required syntax. The citation supports the claim by providing the full function call with parameters.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the function to use (shutil.which) and includes the required syntax. The citation supports the claim by providing the full function call with parameters."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the function to use (shutil.which) and includes the required syntax. The citation supports the claim by providing the full function call with parameters."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.47,
+        "usd": 0.0,
+        "in_tok": 779,
+        "out_tok": 70
+      },
+      "error": null
+    },
+    {
+      "id": "q057",
+      "input": "What does math.ceil return?",
+      "output": "the smallest integer greater than or equal to x [1]",
+      "score": 1,
+      "reason": "The answer correctly states the meaning of math.ceil and is faithful to the reference passage. The citation supports the claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the meaning of math.ceil and is faithful to the reference passage. The citation supports the claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the meaning of math.ceil and is faithful to the reference passage. The citation supports the claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.17,
+        "usd": 0.0,
+        "in_tok": 495,
+        "out_tok": 60
+      },
+      "error": null
+    },
+    {
+      "id": "q058",
+      "input": "What does math.floor return?",
+      "output": "the largest integer less than or equal to x [1]",
+      "score": 1,
+      "reason": "The answer directly states the correct definition of what `math.floor` returns, which is supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer directly states the correct definition of what `math.floor` returns, which is supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer directly states the correct definition of what `math.floor` returns, which is supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.13,
+        "usd": 0.0,
+        "in_tok": 495,
+        "out_tok": 60
+      },
+      "error": null
+    },
+    {
+      "id": "q059",
+      "input": "How do I calculate a square root with math?",
+      "output": "Use math.sqrt(x) [1]",
+      "score": 1,
+      "reason": "The answer correctly states how to calculate a square root using the math.sqrt function, and the cited passage supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states how to calculate a square root using the math.sqrt function, and the cited passage supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states how to calculate a square root using the math.sqrt function, and the cited passage supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.09,
+        "usd": 0.0,
+        "in_tok": 400,
+        "out_tok": 61
+      },
+      "error": null
+    },
+    {
+      "id": "q060",
+      "input": "Does math.factorial accept negative integers?",
+      "output": "I don't know based on these documents.",
+      "score": 0,
+      "reason": "The answer is a refusal, which is appropriate given that no relevant information was provided in the reference passage. However, the refusal does not cite any evidence, so faithful and citation_supports_claim are false.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that no relevant information was provided in the reference passage. However, the refusal does not cite any evidence, so faithful and citation_supports_claim are false."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that no relevant information was provided in the reference passage. However, the refusal does not cite any evidence, so faithful and citation_supports_claim are false."
+      },
+      "refusal_rule_applied": true,
+      "judge_cost": {
+        "latency": 1.39,
+        "usd": 0.0,
+        "in_tok": 393,
+        "out_tok": 78
+      },
+      "error": null
+    },
+    {
+      "id": "q061",
+      "input": "What does statistics.mean calculate?",
+      "output": "statistics.mean calculates the sample arithmetic mean of data. [1]",
+      "score": 1,
+      "reason": "The answer correctly states that statistics.mean calculates the sample arithmetic mean of the data, which is consistent with the reference passage. The citation supports this claim with the definition provided.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that statistics.mean calculates the sample arithmetic mean of the data, which is consistent with the reference passage. The citation supports this claim with the definition provided."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that statistics.mean calculates the sample arithmetic mean of the data, which is consistent with the reference passage. The citation supports this claim with the definition provided."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.45,
+        "usd": 0.0,
+        "in_tok": 803,
+        "out_tok": 71
+      },
+      "error": null
+    },
+    {
+      "id": "q062",
+      "input": "How does median handle an even number of data points?",
+      "output": "When the number of data points is even, the median is interpolated by taking the average of the two middle values. [1]",
+      "score": 1,
+      "reason": "The answer correctly states that the median is interpolated by taking the average of the two middle values when the number of data points is even, which is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that the median is interpolated by taking the average of the two middle values when the number of data points is even, which is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that the median is interpolated by taking the average of the two middle values when the number of data points is even, which is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.55,
+        "usd": 0.0,
+        "in_tok": 819,
+        "out_tok": 73
+      },
+      "error": null
+    },
+    {
+      "id": "q063",
+      "input": "What does statistics.mode return?",
+      "output": "the single most common data point from discrete or nominal data [1]",
+      "score": 1,
+      "reason": "The actual answer accurately states that the mode returns the single most common data point from discrete or nominal data, which is consistent with the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer accurately states that the mode returns the single most common data point from discrete or nominal data, which is consistent with the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer accurately states that the mode returns the single most common data point from discrete or nominal data, which is consistent with the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.45,
+        "usd": 0.0,
+        "in_tok": 788,
+        "out_tok": 66
+      },
+      "error": null
+    },
+    {
+      "id": "q064",
+      "input": "Does statistics.stdev calculate sample or population standard deviation?",
+      "output": "sample [1]",
+      "score": 1,
+      "reason": "The answer correctly states that statistics.stdev calculates the sample standard deviation, which is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that statistics.stdev calculates the sample standard deviation, which is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that statistics.stdev calculates the sample standard deviation, which is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.18,
+        "usd": 0.0,
+        "in_tok": 560,
+        "out_tok": 60
+      },
+      "error": null
+    },
+    {
+      "id": "q065",
+      "input": "What happens if random.choice receives an empty sequence?",
+      "output": "raises IndexError [1]",
+      "score": 1,
+      "reason": "The answer correctly states that it raises IndexError, which is consistent with the provided reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that it raises IndexError, which is consistent with the provided reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that it raises IndexError, which is consistent with the provided reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.03,
+        "usd": 0.0,
+        "in_tok": 433,
+        "out_tok": 55
+      },
+      "error": null
+    },
+    {
+      "id": "q066",
+      "input": "Does random.sample sample with replacement?",
+      "output": "No [1]",
+      "score": 1,
+      "reason": "The answer correctly states that random.sample does not sample with replacement, which is consistent with the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that random.sample does not sample with replacement, which is consistent with the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that random.sample does not sample with replacement, which is consistent with the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.24,
+        "usd": 0.0,
+        "in_tok": 737,
+        "out_tok": 58
+      },
+      "error": null
+    },
+    {
+      "id": "q067",
+      "input": "Are both endpoints included in random.randint(a, b)?",
+      "output": "a <= N <= b [1]",
+      "score": 1,
+      "reason": "The answer correctly states that both endpoints are included, and this is supported by the reference passage which states 'a <= N <= b'. The cited quote also supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that both endpoints are included, and this is supported by the reference passage which states 'a <= N <= b'. The cited quote also supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that both endpoints are included, and this is supported by the reference passage which states 'a <= N <= b'. The cited quote also supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.4,
+        "usd": 0.0,
+        "in_tok": 440,
+        "out_tok": 72
+      },
+      "error": null
+    },
+    {
+      "id": "q068",
+      "input": "Does random.shuffle modify the original sequence?",
+      "output": "Yes [1]",
+      "score": 1,
+      "reason": "The answer correctly states that random.shuffle modifies the original sequence, which is consistent with the reference passage stating 'Shuffle the sequence x in place.'",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that random.shuffle modifies the original sequence, which is consistent with the reference passage stating 'Shuffle the sequence x in place.'"
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that random.shuffle modifies the original sequence, which is consistent with the reference passage stating 'Shuffle the sequence x in place.'"
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.31,
+        "usd": 0.0,
+        "in_tok": 638,
+        "out_tok": 67
+      },
+      "error": null
+    },
+    {
+      "id": "q069",
+      "input": "What characters are in string.ascii_lowercase?",
+      "output": "The lowercase letters 'abcdefghijklmnopqrstuvwxyz' [1]",
+      "score": 1,
+      "reason": "The answer correctly states the characters in string.ascii_lowercase and is faithful to the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the characters in string.ascii_lowercase and is faithful to the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the characters in string.ascii_lowercase and is faithful to the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 0.98,
+        "usd": 0.0,
+        "in_tok": 435,
+        "out_tok": 55
+      },
+      "error": null
+    },
+    {
+      "id": "q070",
+      "input": "What characters are in string.digits?",
+      "output": "I don't know based on these documents.",
+      "score": 0,
+      "reason": "The answer is a refusal, which is appropriate given that the passage does not explicitly state the characters in string.digits. However, faithful and citation_supports_claim are false because the answer does not cite any evidence and the cited passage does not provide the necessary information.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the passage does not explicitly state the characters in string.digits. However, faithful and citation_supports_claim are false because the answer does not cite any evidence and the cited passage does not provide the necessary information."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the passage does not explicitly state the characters in string.digits. However, faithful and citation_supports_claim are false because the answer does not cite any evidence and the cited passage does not provide the necessary information."
+      },
+      "refusal_rule_applied": true,
+      "judge_cost": {
+        "latency": 1.59,
+        "usd": 0.0,
+        "in_tok": 396,
+        "out_tok": 90
+      },
+      "error": null
+    },
+    {
+      "id": "q071",
+      "input": "What does string.ascii_letters combine?",
+      "output": "string.ascii_letters combines string.ascii_lowercase and string.ascii_uppercase. [1]",
+      "score": 0,
+      "reason": "The actual answer incorrectly states that string.ascii_letters combines string.ascii_lowercase and string.ascii_uppercase, which is not the case according to the reference passage. The reference passage states that string.ascii_letters is the concatenation of ascii_lowercase and ascii_uppercase, not a combination with string.printable.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": true,
+        "citation_supports_claim": false,
+        "reason": "The actual answer incorrectly states that string.ascii_letters combines string.ascii_lowercase and string.ascii_uppercase, which is not the case according to the reference passage. The reference passage states that string.ascii_letters is the concatenation of ascii_lowercase and ascii_uppercase, not a combination with string.printable."
+      },
+      "raw_verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": true,
+        "citation_supports_claim": false,
+        "reason": "The actual answer incorrectly states that string.ascii_letters combines string.ascii_lowercase and string.ascii_uppercase, which is not the case according to the reference passage. The reference passage states that string.ascii_letters is the concatenation of ascii_lowercase and ascii_uppercase, not a combination with string.printable."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.8,
+        "usd": 0.0,
+        "in_tok": 535,
+        "out_tok": 95
+      },
+      "error": null
+    },
+    {
+      "id": "q072",
+      "input": "What characters are in string.hexdigits?",
+      "output": "The string '0123456789abcdefABCDEF'. [1]",
+      "score": 1,
+      "reason": "The answer correctly states the characters in string.hexdigits, and the cited passage directly supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the characters in string.hexdigits, and the cited passage directly supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the characters in string.hexdigits, and the cited passage directly supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.05,
+        "usd": 0.0,
+        "in_tok": 457,
+        "out_tok": 57
+      },
+      "error": null
+    },
+    {
+      "id": "q073",
+      "input": "What does ArgumentParser.parse_args return?",
+      "output": "Namespace object [1]",
+      "score": 1,
+      "reason": "The actual answer 'Namespace object' is correct and faithful to the reference passage, which states that the function returns a populated namespace. The citation supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer 'Namespace object' is correct and faithful to the reference passage, which states that the function returns a populated namespace. The citation supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer 'Namespace object' is correct and faithful to the reference passage, which states that the function returns a populated namespace. The citation supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.32,
+        "usd": 0.0,
+        "in_tok": 570,
+        "out_tok": 69
+      },
+      "error": null
+    },
+    {
+      "id": "q074",
+      "input": "How do I define a command-line argument with argparse?",
+      "output": "parser.add_argument('filename') [1]",
+      "score": 1,
+      "reason": "The answer correctly states that `parser.add_argument('filename')` is used to define a command-line argument, which is accurate according to the reference passage. The faithful and citation_supports_claim flags are true because the answer is directly supported by the cited passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that `parser.add_argument('filename')` is used to define a command-line argument, which is accurate according to the reference passage. The faithful and citation_supports_claim flags are true because the answer is directly supported by the cited passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that `parser.add_argument('filename')` is used to define a command-line argument, which is accurate according to the reference passage. The faithful and citation_supports_claim flags are true because the answer is directly supported by the cited passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.62,
+        "usd": 0.0,
+        "in_tok": 683,
+        "out_tok": 89
+      },
+      "error": null
+    },
+    {
+      "id": "q075",
+      "input": "Which logger method logs a message at DEBUG level?",
+      "output": "log [1]",
+      "score": 0,
+      "reason": "The answer 'log' is incorrect and does not match the expected answer 'Logger.debug'. The cited quote does not support the claim that 'log' is the method for logging a message at DEBUG level.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer 'log' is incorrect and does not match the expected answer 'Logger.debug'. The cited quote does not support the claim that 'log' is the method for logging a message at DEBUG level."
+      },
+      "raw_verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer 'log' is incorrect and does not match the expected answer 'Logger.debug'. The cited quote does not support the claim that 'log' is the method for logging a message at DEBUG level."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.36,
+        "usd": 0.0,
+        "in_tok": 487,
+        "out_tok": 78
+      },
+      "error": null
+    },
+    {
+      "id": "q076",
+      "input": "Which logger method logs a message at WARNING level?",
+      "output": "logging.warning [1]",
+      "score": 1,
+      "reason": "The answer 'logging.warning' correctly identifies the method for logging a message at the WARNING level, and the cited passage supports this by stating that the warning method logs a message with level WARNING.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'logging.warning' correctly identifies the method for logging a message at the WARNING level, and the cited passage supports this by stating that the warning method logs a message with level WARNING."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'logging.warning' correctly identifies the method for logging a message at the WARNING level, and the cited passage supports this by stating that the warning method logs a message with level WARNING."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.38,
+        "usd": 0.0,
+        "in_tok": 513,
+        "out_tok": 75
+      },
+      "error": null
+    },
+    {
+      "id": "q077",
+      "input": "Which logger method logs a message at ERROR level?",
+      "output": "logging.error [1]",
+      "score": 1,
+      "reason": "The answer correctly states the method to log a message at the ERROR level, and the cited passage supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the method to log a message at the ERROR level, and the cited passage supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the method to log a message at the ERROR level, and the cited passage supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.07,
+        "usd": 0.0,
+        "in_tok": 443,
+        "out_tok": 60
+      },
+      "error": null
+    },
+    {
+      "id": "q078",
+      "input": "Does Logger.exception include exception information?",
+      "output": "Yes [1]",
+      "score": 1,
+      "reason": "The answer correctly states that Logger.exception includes exception information, which is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that Logger.exception includes exception information, which is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that Logger.exception includes exception information, which is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.11,
+        "usd": 0.0,
+        "in_tok": 494,
+        "out_tok": 57
+      },
+      "error": null
+    },
+    {
+      "id": "q079",
+      "input": "How can I check that two values are equal in unittest?",
+      "output": "use assertEqual() [1]",
+      "score": 1,
+      "reason": "The answer 'use assertEqual()' is correct and faithful to the reference passage, which states 'Test that first and second are equal. If the values do not compare equal, the test will fail.' The citation supports the claim as it provides additional context about the function's behavior.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'use assertEqual()' is correct and faithful to the reference passage, which states 'Test that first and second are equal. If the values do not compare equal, the test will fail.' The citation supports the claim as it provides additional context about the function's behavior."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'use assertEqual()' is correct and faithful to the reference passage, which states 'Test that first and second are equal. If the values do not compare equal, the test will fail.' The citation supports the claim as it provides additional context about the function's behavior."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.87,
+        "usd": 0.0,
+        "in_tok": 678,
+        "out_tok": 93
+      },
+      "error": null
+    },
+    {
+      "id": "q080",
+      "input": "What does assertTrue test?",
+      "output": "assertTrue tests that expr is true (or false). [1]",
+      "score": 1,
+      "reason": "The answer correctly states that assertTrue tests whether an expression is true (or false), which aligns with the reference passage. The citation supports this claim and does not contradict it.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that assertTrue tests whether an expression is true (or false), which aligns with the reference passage. The citation supports this claim and does not contradict it."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that assertTrue tests whether an expression is true (or false), which aligns with the reference passage. The citation supports this claim and does not contradict it."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.46,
+        "usd": 0.0,
+        "in_tok": 554,
+        "out_tok": 72
+      },
+      "error": null
+    },
+    {
+      "id": "q081",
+      "input": "How do I test that code raises an expected exception?",
+      "output": "use assertRaises [1]",
+      "score": 1,
+      "reason": "The answer 'use assertRaises' is correct and directly addresses the question. The reference passage supports this by explaining the usage of assertRaises in testing exceptions.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'use assertRaises' is correct and directly addresses the question. The reference passage supports this by explaining the usage of assertRaises in testing exceptions."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'use assertRaises' is correct and directly addresses the question. The reference passage supports this by explaining the usage of assertRaises in testing exceptions."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.51,
+        "usd": 0.0,
+        "in_tok": 803,
+        "out_tok": 68
+      },
+      "error": null
+    },
+    {
+      "id": "q082",
+      "input": "When does unittest call setUp?",
+      "output": "unittest calls setUp() immediately before calling the test method. [1]",
+      "score": 1,
+      "reason": "The answer correctly states that unittest calls setUp() immediately before calling the test method, which is supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that unittest calls setUp() immediately before calling the test method, which is supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that unittest calls setUp() immediately before calling the test method, which is supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.4,
+        "usd": 0.0,
+        "in_tok": 781,
+        "out_tok": 61
+      },
+      "error": null
+    },
+    {
+      "id": "q083",
+      "input": "What kind of type is typing.Any?",
+      "output": "A special type indicating an unconstrained type. [1]",
+      "score": 1,
+      "reason": "The answer matches the expected answer and the reference passage. The cited passage supports the claim that `typing.Any` is a special type indicating an unconstrained type.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer matches the expected answer and the reference passage. The cited passage supports the claim that `typing.Any` is a special type indicating an unconstrained type."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer matches the expected answer and the reference passage. The cited passage supports the claim that `typing.Any` is a special type indicating an unconstrained type."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.38,
+        "usd": 0.0,
+        "in_tok": 531,
+        "out_tok": 69
+      },
+      "error": null
+    },
+    {
+      "id": "q084",
+      "input": "What does Optional[X] mean?",
+      "output": "Optional[X] is equivalent to X | None (or Union[X, None] ). [1]",
+      "score": 1,
+      "reason": "The actual answer correctly states that Optional[X] is equivalent to X | None, which is directly supported by the cited passage. The answer is faithful to the reference passage and does not include unsupported details.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer correctly states that Optional[X] is equivalent to X | None, which is directly supported by the cited passage. The answer is faithful to the reference passage and does not include unsupported details."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer correctly states that Optional[X] is equivalent to X | None, which is directly supported by the cited passage. The answer is faithful to the reference passage and does not include unsupported details."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.6,
+        "usd": 0.0,
+        "in_tok": 731,
+        "out_tok": 77
+      },
+      "error": null
+    },
+    {
+      "id": "q085",
+      "input": "What does a Literal annotation constrain?",
+      "output": "a value to one of the provided literals [1]",
+      "score": 1,
+      "reason": "The answer correctly states that a Literal annotation constrains a value to one of the provided literals, which is consistent with the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that a Literal annotation constrains a value to one of the provided literals, which is consistent with the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that a Literal annotation constrains a value to one of the provided literals, which is consistent with the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.39,
+        "usd": 0.0,
+        "in_tok": 741,
+        "out_tok": 64
+      },
+      "error": null
+    },
+    {
+      "id": "q086",
+      "input": "What does Final indicate about reassignment?",
+      "output": "Final names cannot be reassigned in any scope. [1]",
+      "score": 1,
+      "reason": "The answer correctly states that final names cannot be reassigned in any scope, which is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that final names cannot be reassigned in any scope, which is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that final names cannot be reassigned in any scope, which is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.32,
+        "usd": 0.0,
+        "in_tok": 726,
+        "out_tok": 61
+      },
+      "error": null
+    },
+    {
+      "id": "q087",
+      "input": "What does dataclasses.asdict return?",
+      "output": "a dict of the dataclass fields as name: value pairs [1]",
+      "score": 1,
+      "reason": "The answer correctly states that `dataclasses.asdict` returns a dictionary of the dataclass fields as name: value pairs, which is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that `dataclasses.asdict` returns a dictionary of the dataclass fields as name: value pairs, which is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that `dataclasses.asdict` returns a dictionary of the dataclass fields as name: value pairs, which is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.62,
+        "usd": 0.0,
+        "in_tok": 813,
+        "out_tok": 71
+      },
+      "error": null
+    },
+    {
+      "id": "q088",
+      "input": "What does dataclasses.astuple return?",
+      "output": "Converts the dataclass obj to a tuple of its field values. [1]",
+      "score": 1,
+      "reason": "The answer correctly states that dataclasses.astuple returns a tuple of a dataclass instance's field values, which is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that dataclasses.astuple returns a tuple of a dataclass instance's field values, which is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that dataclasses.astuple returns a tuple of a dataclass instance's field values, which is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.44,
+        "usd": 0.0,
+        "in_tok": 756,
+        "out_tok": 67
+      },
+      "error": null
+    },
+    {
+      "id": "q089",
+      "input": "How do I check if an object is a dataclass or dataclass instance?",
+      "output": "use dataclasses.is_dataclass(obj) or is_dataclass_instance(obj) [1]",
+      "score": 0,
+      "reason": "The answer provided two functions, `is_dataclass` and `is_dataclass_instance`, but the question only asked for one. The reference passage only mentions `is_dataclass` for checking if an object is a dataclass or dataclass instance.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer provided two functions, `is_dataclass` and `is_dataclass_instance`, but the question only asked for one. The reference passage only mentions `is_dataclass` for checking if an object is a dataclass or dataclass instance."
+      },
+      "raw_verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer provided two functions, `is_dataclass` and `is_dataclass_instance`, but the question only asked for one. The reference passage only mentions `is_dataclass` for checking if an object is a dataclass or dataclass instance."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.67,
+        "usd": 0.0,
+        "in_tok": 603,
+        "out_tok": 87
+      },
+      "error": null
+    },
+    {
+      "id": "q090",
+      "input": "Does dataclasses.replace create a new object?",
+      "output": "Creates a new object [1]",
+      "score": 1,
+      "reason": "The actual answer correctly states that dataclasses.replace creates a new object, which is supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer correctly states that dataclasses.replace creates a new object, which is supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The actual answer correctly states that dataclasses.replace creates a new object, which is supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.3,
+        "usd": 0.0,
+        "in_tok": 741,
+        "out_tok": 59
+      },
+      "error": null
+    },
+    {
+      "id": "q091",
+      "input": "Which function opens a connection to a SQLite database?",
+      "output": "sqlite3.connect [1]",
+      "score": 1,
+      "reason": "The answer 'sqlite3.connect' is correct and directly corresponds to the reference passage. The cited passage supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'sqlite3.connect' is correct and directly corresponds to the reference passage. The cited passage supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'sqlite3.connect' is correct and directly corresponds to the reference passage. The cited passage supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.3,
+        "usd": 0.0,
+        "in_tok": 729,
+        "out_tok": 61
+      },
+      "error": null
+    },
+    {
+      "id": "q092",
+      "input": "What does fetchone return when no rows remain?",
+      "output": "None [1]",
+      "score": 1,
+      "reason": "The answer 'None' is correct and directly supported by the cited passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'None' is correct and directly supported by the cited passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'None' is correct and directly supported by the cited passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.06,
+        "usd": 0.0,
+        "in_tok": 489,
+        "out_tok": 52
+      },
+      "error": null
+    },
+    {
+      "id": "q093",
+      "input": "What does fetchall return when no rows remain?",
+      "output": "an empty list [1]",
+      "score": 1,
+      "reason": "The answer 'an empty list' is correct and directly supported by the cited passage, which states 'Return an empty list if no rows are available.'",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'an empty list' is correct and directly supported by the cited passage, which states 'Return an empty list if no rows are available.'"
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'an empty list' is correct and directly supported by the cited passage, which states 'Return an empty list if no rows are available.'"
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.31,
+        "usd": 0.0,
+        "in_tok": 490,
+        "out_tok": 68
+      },
+      "error": null
+    },
+    {
+      "id": "q094",
+      "input": "How do I commit a pending SQLite transaction?",
+      "output": "commit() [1]",
+      "score": 1,
+      "reason": "The answer 'commit()' correctly identifies the method to commit a pending transaction, and the cited passage supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'commit()' correctly identifies the method to commit a pending transaction, and the cited passage supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'commit()' correctly identifies the method to commit a pending transaction, and the cited passage supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.16,
+        "usd": 0.0,
+        "in_tok": 524,
+        "out_tok": 60
+      },
+      "error": null
+    },
+    {
+      "id": "q095",
+      "input": "How do I add an item while preserving the heap invariant?",
+      "output": "Use heapq.heappush(heap, item) for min-heaps or heapq.heappush_max(heap, item) for max-heaps. [1]",
+      "score": 1,
+      "reason": "The answer mentions `heapq.heappush_max` for max-heaps, but the reference passage discusses `max-heap` and `min-heap` in different contexts. The passage does not mention `heapq.heappush_max` and instead focuses on `heapq.heappush` for min-heaps. The citation does not support the claim about `heapq.heappush_max`.",
+      "verdict": {
+        "grade": "bad",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer mentions `heapq.heappush_max` for max-heaps, but the reference passage discusses `max-heap` and `min-heap` in different contexts. The passage does not mention `heapq.heappush_max` and instead focuses on `heapq.heappush` for min-heaps. The citation does not support the claim about `heapq.heappush_max`."
+      },
+      "raw_verdict": {
+        "grade": "bad",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer mentions `heapq.heappush_max` for max-heaps, but the reference passage discusses `max-heap` and `min-heap` in different contexts. The passage does not mention `heapq.heappush_max` and instead focuses on `heapq.heappush` for min-heaps. The citation does not support the claim about `heapq.heappush_max`."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 2.11,
+        "usd": 0.0,
+        "in_tok": 478,
+        "out_tok": 119
+      },
+      "error": null
+    },
+    {
+      "id": "q096",
+      "input": "What does heappop remove from a min-heap?",
+      "output": "the smallest item [1]",
+      "score": 1,
+      "reason": "The answer correctly states that heappop removes the smallest item from a min-heap, which is consistent with the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that heappop removes the smallest item from a min-heap, which is consistent with the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that heappop removes the smallest item from a min-heap, which is consistent with the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.2,
+        "usd": 0.0,
+        "in_tok": 505,
+        "out_tok": 63
+      },
+      "error": null
+    },
+    {
+      "id": "q097",
+      "input": "How fast does heapify transform a list into a heap?",
+      "output": "in linear time [1]",
+      "score": 1,
+      "reason": "The answer 'in linear time' is correct and faithful to the reference passage, which states that the transformation is done in linear time. The actual answer includes the citation, which supports the claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'in linear time' is correct and faithful to the reference passage, which states that the transformation is done in linear time. The actual answer includes the citation, which supports the claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'in linear time' is correct and faithful to the reference passage, which states that the transformation is done in linear time. The actual answer includes the citation, which supports the claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.37,
+        "usd": 0.0,
+        "in_tok": 447,
+        "out_tok": 76
+      },
+      "error": null
+    },
+    {
+      "id": "q098",
+      "input": "How can I get the n largest elements from an iterable?",
+      "output": "heapq.nlargest(n, iterable, key=None) [1]",
+      "score": 1,
+      "reason": "The answer correctly states the function to use (heapq.nlargest) and includes the parameters (n, iterable, key). The cited passage supports this claim.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the function to use (heapq.nlargest) and includes the parameters (n, iterable, key). The cited passage supports this claim."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states the function to use (heapq.nlargest) and includes the parameters (n, iterable, key). The cited passage supports this claim."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.37,
+        "usd": 0.0,
+        "in_tok": 579,
+        "out_tok": 70
+      },
+      "error": null
+    },
+    {
+      "id": "q099",
+      "input": "Does bisect_left insert before or after equal entries?",
+      "output": "before (to the left of) [1]",
+      "score": 1,
+      "reason": "The answer correctly states that bisect_left inserts before existing equal entries, which is directly supported by the reference passage.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that bisect_left inserts before existing equal entries, which is directly supported by the reference passage."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly states that bisect_left inserts before existing equal entries, which is directly supported by the reference passage."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.31,
+        "usd": 0.0,
+        "in_tok": 814,
+        "out_tok": 60
+      },
+      "error": null
+    },
+    {
+      "id": "q100",
+      "input": "Does bisect_right return a position after equal entries?",
+      "output": "Yes [1]",
+      "score": 1,
+      "reason": "The answer 'Yes' is correct and faithful to the reference passage, which states that bisect_right returns a position after existing entries of x in a.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'Yes' is correct and faithful to the reference passage, which states that bisect_right returns a position after existing entries of x in a."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer 'Yes' is correct and faithful to the reference passage, which states that bisect_right returns a position after existing entries of x in a."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.35,
+        "usd": 0.0,
+        "in_tok": 614,
+        "out_tok": 68
+      },
+      "error": null
+    },
+    {
+      "id": "q101",
+      "input": "How can I insert an item into a sorted list before equal entries?",
+      "output": "Use bisect_left to find the insertion point and then use list.insert() [1]",
+      "score": 1,
+      "reason": "The answer correctly suggests using bisect_left to find the insertion point and then using list.insert(), which is consistent with the reference passage. The passage supports the claim that bisect_left will place the item before equal entries.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly suggests using bisect_left to find the insertion point and then using list.insert(), which is consistent with the reference passage. The passage supports the claim that bisect_left will place the item before equal entries."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": true,
+        "reason": "The answer correctly suggests using bisect_left to find the insertion point and then using list.insert(), which is consistent with the reference passage. The passage supports the claim that bisect_left will place the item before equal entries."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 1.67,
+        "usd": 0.0,
+        "in_tok": 747,
+        "out_tok": 81
+      },
+      "error": null
+    },
+    {
+      "id": "q102",
+      "input": "How can I insert an item into a sorted list after equal entries?",
+      "output": "Use bisect_left to find the insertion point and then use list.insert() [1]",
+      "score": 0,
+      "reason": "The actual answer suggests using `bisect_left` and `list.insert()`, but the reference passage and expected answer indicate that `bisect.insort_right` should be used. The passage also explains that `bisect.insort_right` is designed to handle insertion after equal entries, which `bisect_left` and `list.insert()` do not.",
+      "verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The actual answer suggests using `bisect_left` and `list.insert()`, but the reference passage and expected answer indicate that `bisect.insort_right` should be used. The passage also explains that `bisect.insort_right` is designed to handle insertion after equal entries, which `bisect_left` and `list.insert()` do not."
+      },
+      "raw_verdict": {
+        "grade": "bad",
+        "correct": false,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The actual answer suggests using `bisect_left` and `list.insert()`, but the reference passage and expected answer indicate that `bisect.insort_right` should be used. The passage also explains that `bisect.insort_right` is designed to handle insertion after equal entries, which `bisect_left` and `list.insert()` do not."
+      },
+      "refusal_rule_applied": false,
+      "judge_cost": {
+        "latency": 2.11,
+        "usd": 0.0,
+        "in_tok": 775,
+        "out_tok": 108
+      },
+      "error": null
+    },
+    {
+      "id": "u001",
+      "input": "What is the weather in Tunis tomorrow?",
+      "output": "I don't know based on these documents.",
+      "score": 1,
+      "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+      },
+      "refusal_rule_applied": true,
+      "judge_cost": {
+        "latency": 1.28,
+        "usd": 0.0,
+        "in_tok": 382,
+        "out_tok": 69
+      },
+      "error": null
+    },
+    {
+      "id": "u002",
+      "input": "What is my university Wi-Fi password?",
+      "output": "I don't know based on these documents.",
+      "score": 1,
+      "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+      },
+      "refusal_rule_applied": true,
+      "judge_cost": {
+        "latency": 1.23,
+        "usd": 0.0,
+        "in_tok": 382,
+        "out_tok": 69
+      },
+      "error": null
+    },
+    {
+      "id": "u003",
+      "input": "Who won the football match last night?",
+      "output": "I don't know based on these documents.",
+      "score": 1,
+      "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+      },
+      "refusal_rule_applied": true,
+      "judge_cost": {
+        "latency": 1.24,
+        "usd": 0.0,
+        "in_tok": 382,
+        "out_tok": 69
+      },
+      "error": null
+    },
+    {
+      "id": "u004",
+      "input": "What are my grades this semester?",
+      "output": "I don't know based on these documents.",
+      "score": 1,
+      "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The refusal is faithful and correctly cited.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The refusal is faithful and correctly cited."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The refusal is faithful and correctly cited."
+      },
+      "refusal_rule_applied": true,
+      "judge_cost": {
+        "latency": 1.24,
+        "usd": 0.0,
+        "in_tok": 381,
+        "out_tok": 69
+      },
+      "error": null
+    },
+    {
+      "id": "u005",
+      "input": "How do I make a pizza?",
+      "output": "I don't know based on these documents.",
+      "score": 1,
+      "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage. The answer matches the expected answer exactly.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage. The answer matches the expected answer exactly."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage. The answer matches the expected answer exactly."
+      },
+      "refusal_rule_applied": true,
+      "judge_cost": {
+        "latency": 1.24,
+        "usd": 0.0,
+        "in_tok": 381,
+        "out_tok": 69
+      },
+      "error": null
+    },
+    {
+      "id": "u006",
+      "input": "What is the price of Bitcoin right now?",
+      "output": "I don't know based on these documents.",
+      "score": 1,
+      "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+      },
+      "refusal_rule_applied": true,
+      "judge_cost": {
+        "latency": 1.29,
+        "usd": 0.0,
+        "in_tok": 383,
+        "out_tok": 69
+      },
+      "error": null
+    },
+    {
+      "id": "u007",
+      "input": "What is the deadline for my CS496 homework?",
+      "output": "I don't know based on these documents.",
+      "score": 1,
+      "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and there is no reference passage. The answer matches the expected answer exactly."
+      },
+      "refusal_rule_applied": true,
+      "judge_cost": {
+        "latency": 1.22,
+        "usd": 0.0,
+        "in_tok": 386,
+        "out_tok": 69
+      },
+      "error": null
+    },
+    {
+      "id": "u008",
+      "input": "What is my student ID?",
+      "output": "I don't know based on these documents.",
+      "score": 1,
+      "reason": "The answer is a refusal, which is appropriate for an unanswerable question. The refusal is faithful and correctly cited.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate for an unanswerable question. The refusal is faithful and correctly cited."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate for an unanswerable question. The refusal is faithful and correctly cited."
+      },
+      "refusal_rule_applied": true,
+      "judge_cost": {
+        "latency": 1.12,
+        "usd": 0.0,
+        "in_tok": 380,
+        "out_tok": 61
+      },
+      "error": null
+    },
+    {
+      "id": "u009",
+      "input": "Who is teaching my class next week?",
+      "output": "I don't know based on these documents.",
+      "score": 1,
+      "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and the reference passage is null. The answer exactly matches the expected answer.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and the reference passage is null. The answer exactly matches the expected answer."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is unanswerable and the reference passage is null. The answer exactly matches the expected answer."
+      },
+      "refusal_rule_applied": true,
+      "judge_cost": {
+        "latency": 1.25,
+        "usd": 0.0,
+        "in_tok": 382,
+        "out_tok": 69
+      },
+      "error": null
+    },
+    {
+      "id": "u010",
+      "input": "Which bus should I take home today?",
+      "output": "I don't know based on these documents.",
+      "score": 1,
+      "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage to draw from. The refusal is faithful and correctly stated.",
+      "verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": false,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage to draw from. The refusal is faithful and correctly stated."
+      },
+      "raw_verdict": {
+        "grade": "good",
+        "correct": true,
+        "faithful": true,
+        "citation_supports_claim": false,
+        "reason": "The answer is a refusal, which is appropriate given that the question is not answerable and there is no reference passage to draw from. The refusal is faithful and correctly stated."
+      },
+      "refusal_rule_applied": true,
+      "judge_cost": {
+        "latency": 1.31,
+        "usd": 0.0,
+        "in_tok": 382,
+        "out_tok": 72
+      },
+      "error": null
+    }
+  ]
+}

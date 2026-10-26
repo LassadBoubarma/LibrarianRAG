@@ -24,4 +24,6 @@ The default generator and judge both use Qwen 2.5 7B. Shared model biases can in
 
 `benchmark.py` reports three workloads separately: no cache, empty cache, and repeated questions already in the cache. The repeat test is a deliberate 100% hit scenario, not an estimate of real traffic. It also compares answer text. It does not claim a measured human accuracy change.
 
+After the benchmark and full P1 grading, run `python run.py -m eval.cache_accuracy`. It reuses grades when the answer and cited evidence are identical, and calls the P1 judge for changed outputs. This measures the model-judged accuracy change between the independent no-cache and cached runs.
+
 `chunking.py` tests size and overlap on the development split. It stores temporary indexes under ignored `work/`.

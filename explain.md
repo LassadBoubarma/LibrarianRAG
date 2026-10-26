@@ -18,6 +18,8 @@ An embedding is a list of numbers representing text. Similar text tends to have 
 
 RAG means retrieval-augmented generation. We do not train the answer model on the docs. We search the docs and put useful text in its prompt.
 
+The service runs with Python 3.11 or 3.12, while its document collection describes Python 3.14.0. These are separate choices. Some examples in the documents require Python 3.14 to run.
+
 ## A simple demo
 
 1. Ask “How do I read a file as text with pathlib?”

@@ -1,4 +1,4 @@
-"""Attach real source passages to the hand-written question seeds."""
+"""Attach real source passages to the drafted question seeds."""
 import csv
 import json
 

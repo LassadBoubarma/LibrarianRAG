@@ -1,0 +1,704 @@
+[
+  {
+    "size": 120,
+    "overlap": 24,
+    "chunks": 4582,
+    "split": "dev",
+    "mode": "rerank",
+    "questions": 20,
+    "k": 5,
+    "recall_at_k": 0.85,
+    "p50_ms": 472.224,
+    "p95_ms": 590.511,
+    "details": [
+      {
+        "id": "q005",
+        "hit": true,
+        "chunks": [
+          "stdtypes#iterator.__next__:0",
+          "sqlite3#sqlite3.register_converter:0",
+          "functions#len:0",
+          "heapq#theory:288",
+          "os#os.fstat:0"
+        ]
+      },
+      {
+        "id": "q010",
+        "hit": true,
+        "chunks": [
+          "collections#collections.defaultdict.__missing__:0",
+          "stdtypes#mapping-types-dict:192",
+          "stdtypes#mapping-types-dict:384",
+          "stdtypes#mapping-types-dict:96",
+          "stdtypes#dict.get:0"
+        ]
+      },
+      {
+        "id": "q015",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.exists:0",
+          "pathlib#pathlib.Path.replace:0",
+          "pathlib#pathlib.Path.move_into:0",
+          "pathlib#pathlib.Path.copy_into:0",
+          "pathlib#pathlib.types.PathInfo.exists:0"
+        ]
+      },
+      {
+        "id": "q020",
+        "hit": true,
+        "chunks": [
+          "collections#collections.deque:96",
+          "collections#collections.deque:0",
+          "collections#collections.deque:192",
+          "typing#typing.Deque:0",
+          "collections#deque-recipes:0"
+        ]
+      },
+      {
+        "id": "q025",
+        "hit": true,
+        "chunks": [
+          "json#json.loads:0",
+          "json#basic-usage:0",
+          "json#json.dump:0",
+          "json#module-json.tool:0",
+          "json#module-json:96"
+        ]
+      },
+      {
+        "id": "q030",
+        "hit": true,
+        "chunks": [
+          "csv#csv.DictWriter:0",
+          "csv#csv.DictWriter:192",
+          "csv#csv.DictWriter:96",
+          "csv#csv.DictWriter:288",
+          "csv#writer-objects:0"
+        ]
+      },
+      {
+        "id": "q035",
+        "hit": false,
+        "chunks": [
+          "re#search-vs-match:0",
+          "re#re.Pattern.search:0",
+          "re#re.match:0",
+          "re#re.Pattern.fullmatch:0",
+          "re#re.Match.pos:0"
+        ]
+      },
+      {
+        "id": "q040",
+        "hit": true,
+        "chunks": [
+          "re#re.escape:0",
+          "re#regular-expression-syntax:1536",
+          "re#regular-expression-syntax:1824",
+          "re#re.escape:384",
+          "re#re.escape:288"
+        ]
+      },
+      {
+        "id": "q045",
+        "hit": true,
+        "chunks": [
+          "functools#functools.lru_cache:0",
+          "functools#functools.lru_cache:576",
+          "functools#functools.lru_cache:672",
+          "functools#functools.lru_cache:480",
+          "functools#functools.lru_cache:192"
+        ]
+      },
+      {
+        "id": "q050",
+        "hit": true,
+        "chunks": [
+          "os#os.listdir:0",
+          "os#os.scandir:0",
+          "os#os.listdir:96",
+          "exceptions#NotADirectoryError:0",
+          "os#os.walk:1056"
+        ]
+      },
+      {
+        "id": "q055",
+        "hit": true,
+        "chunks": [
+          "shutil#shutil.rmtree:0",
+          "os#os.rmdir:0",
+          "shutil#rmtree-example:0",
+          "os#os.walk:864",
+          "pathlib#pathlib.Path.walk:864"
+        ]
+      },
+      {
+        "id": "q060",
+        "hit": true,
+        "chunks": [
+          "math#math.factorial:0",
+          "math#math.trunc:0",
+          "math#math.isinf:0",
+          "math#math.perm:0",
+          "math#math.comb:0"
+        ]
+      },
+      {
+        "id": "q065",
+        "hit": true,
+        "chunks": [
+          "random#random.choice:0",
+          "statistics#statistics.kde_random:0",
+          "random#random.choices:192",
+          "random#random.choices:288",
+          "random#command-line-usage:0"
+        ]
+      },
+      {
+        "id": "q070",
+        "hit": false,
+        "chunks": [
+          "stdtypes#str.isdigit:0",
+          "stdtypes#str.isnumeric:0",
+          "stdtypes#str.isdecimal:0",
+          "string#string.printable:0",
+          "string#string.punctuation:0"
+        ]
+      },
+      {
+        "id": "q075",
+        "hit": false,
+        "chunks": [
+          "logging#logging.log:0",
+          "logging#logging.Logger.exception:0",
+          "logging#logging.Logger.log:0",
+          "logging#logging.Logger.critical:0",
+          "logging#logging.critical:0"
+        ]
+      },
+      {
+        "id": "q080",
+        "hit": true,
+        "chunks": [
+          "unittest#unittest.TestCase.assertTrue:0",
+          "unittest#basic-example:288",
+          "unittest#unittest.TestCase.assertRaises:0",
+          "unittest#unittest.TestCase:192",
+          "unittest#basic-example:192"
+        ]
+      },
+      {
+        "id": "q085",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Literal:0",
+          "typing#annotating-tuples:384",
+          "typing#typing.Annotated:0",
+          "typing#typing.Annotated:96",
+          "typing#typing.get_type_hints:192"
+        ]
+      },
+      {
+        "id": "q090",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.replace:0",
+          "dataclasses#dataclasses.replace:192",
+          "stdtypes#bytes.replace:0",
+          "dataclasses#dataclasses.dataclass:96",
+          "dataclasses#dataclasses.astuple:0"
+        ]
+      },
+      {
+        "id": "q095",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heappop_max:0",
+          "heapq#heapq.heappop:0",
+          "heapq#heapq.heappush_max:0",
+          "heapq#heapq.heappush:0",
+          "heapq#heapq.heapreplace:96"
+        ]
+      },
+      {
+        "id": "q100",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.bisect_right:0",
+          "bisect#bisect.insort_right:0",
+          "bisect#searching-sorted-lists:96",
+          "bisect#searching-sorted-lists:192",
+          "bisect#searching-sorted-lists:0"
+        ]
+      }
+    ]
+  },
+  {
+    "size": 180,
+    "overlap": 0,
+    "chunks": 3297,
+    "split": "dev",
+    "mode": "rerank",
+    "questions": 20,
+    "k": 5,
+    "recall_at_k": 0.9,
+    "p50_ms": 675.296,
+    "p95_ms": 836.784,
+    "details": [
+      {
+        "id": "q005",
+        "hit": true,
+        "chunks": [
+          "stdtypes#printf-style-string-formatting:180",
+          "stdtypes#iterator.__next__:0",
+          "sqlite3#sqlite3.register_converter:0",
+          "functions#len:0",
+          "stdtypes#dictionary-view-objects:0"
+        ]
+      },
+      {
+        "id": "q010",
+        "hit": true,
+        "chunks": [
+          "collections#collections.defaultdict.__missing__:0",
+          "stdtypes#mapping-types-dict:180",
+          "stdtypes#mapping-types-dict:360",
+          "collections#collections.Counter:180",
+          "stdtypes#dict.get:0"
+        ]
+      },
+      {
+        "id": "q015",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.exists:0",
+          "pathlib#pathlib.Path.replace:0",
+          "pathlib#pathlib.Path.move_into:0",
+          "pathlib#pathlib.Path.copy_into:0",
+          "pathlib#pathlib.types.PathInfo.exists:0"
+        ]
+      },
+      {
+        "id": "q020",
+        "hit": true,
+        "chunks": [
+          "collections#collections.deque:0",
+          "collections#collections.deque:180",
+          "typing#typing.Deque:0",
+          "collections#deque-objects:720",
+          "collections#deque-recipes:0"
+        ]
+      },
+      {
+        "id": "q025",
+        "hit": true,
+        "chunks": [
+          "json#json.loads:0",
+          "json#basic-usage:0",
+          "json#json.dump:0",
+          "json#module-json.tool:0",
+          "json#basic-usage:540"
+        ]
+      },
+      {
+        "id": "q030",
+        "hit": true,
+        "chunks": [
+          "csv#csv.DictWriter:0",
+          "csv#csv.DictWriter:360",
+          "csv#csv.DictWriter:180",
+          "csv#writer-objects:0",
+          "csv#csv.DictReader:180"
+        ]
+      },
+      {
+        "id": "q035",
+        "hit": true,
+        "chunks": [
+          "re#re.search:0",
+          "re#search-vs-match:0",
+          "re#re.Pattern.search:0",
+          "re#re.match:0",
+          "re#re.Pattern.fullmatch:0"
+        ]
+      },
+      {
+        "id": "q040",
+        "hit": true,
+        "chunks": [
+          "re#re.escape:0",
+          "re#regular-expression-syntax:1440",
+          "re#regular-expression-syntax:1800",
+          "re#regular-expression-syntax:1980",
+          "re#re.escape:360"
+        ]
+      },
+      {
+        "id": "q045",
+        "hit": true,
+        "chunks": [
+          "functools#functools.lru_cache:0",
+          "functools#functools.lru_cache:540",
+          "functools#functools.lru_cache:720",
+          "functools#functools.lru_cache:180",
+          "functools#functools.cache:0"
+        ]
+      },
+      {
+        "id": "q050",
+        "hit": true,
+        "chunks": [
+          "os#os.listdir:0",
+          "os#os.scandir:0",
+          "os#os.listdir:180",
+          "exceptions#NotADirectoryError:0",
+          "os#os.pardir:0"
+        ]
+      },
+      {
+        "id": "q055",
+        "hit": true,
+        "chunks": [
+          "shutil#shutil.rmtree:0",
+          "os#os.rmdir:0",
+          "shutil#rmtree-example:0",
+          "os#os.fwalk:360",
+          "pathlib#pathlib.Path.walk:900"
+        ]
+      },
+      {
+        "id": "q060",
+        "hit": true,
+        "chunks": [
+          "math#math.factorial:0",
+          "math#math.trunc:0",
+          "math#math.isinf:0",
+          "math#math.perm:0",
+          "math#math.comb:0"
+        ]
+      },
+      {
+        "id": "q065",
+        "hit": true,
+        "chunks": [
+          "random#random.choice:0",
+          "statistics#statistics.kde_random:0",
+          "random#random.choices:180",
+          "random#command-line-usage:0",
+          "random#random.randrange:0"
+        ]
+      },
+      {
+        "id": "q070",
+        "hit": false,
+        "chunks": [
+          "stdtypes#str.isdigit:0",
+          "stdtypes#str.isnumeric:0",
+          "stdtypes#str.isdecimal:0",
+          "string#string.printable:0",
+          "string#string.punctuation:0"
+        ]
+      },
+      {
+        "id": "q075",
+        "hit": false,
+        "chunks": [
+          "logging#logging.log:0",
+          "logging#logging.Logger.exception:0",
+          "logging#logging.Logger.log:0",
+          "logging#logging.Logger.critical:0",
+          "logging#logging.critical:0"
+        ]
+      },
+      {
+        "id": "q080",
+        "hit": true,
+        "chunks": [
+          "unittest#unittest.TestCase.assertTrue:0",
+          "unittest#basic-example:180",
+          "unittest#unittest.TestCase:180",
+          "unittest#basic-example:0",
+          "unittest#unittest.TestCase.assertSequenceEqual:0"
+        ]
+      },
+      {
+        "id": "q085",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Literal:0",
+          "typing#annotating-tuples:360",
+          "typing#typing.Annotated:0",
+          "typing#typing.Annotated:180",
+          "typing#typing.Annotated:540"
+        ]
+      },
+      {
+        "id": "q090",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.replace:0",
+          "dataclasses#dataclasses.replace:180",
+          "dataclasses#dataclasses.make_dataclass:180",
+          "stdtypes#bytes.replace:0",
+          "dataclasses#mutable-default-values:180"
+        ]
+      },
+      {
+        "id": "q095",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heappop_max:0",
+          "heapq#heapq.heappop:0",
+          "heapq#heapq.heappush_max:0",
+          "heapq#heapq.heappush:0",
+          "heapq#module-heapq:360"
+        ]
+      },
+      {
+        "id": "q100",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.bisect_right:0",
+          "bisect#bisect.insort_right:0",
+          "bisect#bisect.bisect_left:0",
+          "bisect#searching-sorted-lists:0",
+          "bisect#searching-sorted-lists:180"
+        ]
+      }
+    ]
+  },
+  {
+    "size": 180,
+    "overlap": 36,
+    "chunks": 3505,
+    "split": "dev",
+    "mode": "rerank",
+    "questions": 20,
+    "k": 5,
+    "recall_at_k": 0.9,
+    "p50_ms": 687.565,
+    "p95_ms": 964.694,
+    "details": [
+      {
+        "id": "q005",
+        "hit": true,
+        "chunks": [
+          "stdtypes#iterator.__next__:0",
+          "stdtypes#printf-style-string-formatting:144",
+          "sqlite3#sqlite3.register_converter:0",
+          "functions#len:0",
+          "collections#chainmap-examples-and-recipes:288"
+        ]
+      },
+      {
+        "id": "q010",
+        "hit": true,
+        "chunks": [
+          "stdtypes#mapping-types-dict:144",
+          "collections#collections.defaultdict.__missing__:0",
+          "stdtypes#mapping-types-dict:288",
+          "stdtypes#dict.get:0",
+          "collections#collections.Counter:144"
+        ]
+      },
+      {
+        "id": "q015",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.exists:0",
+          "pathlib#pathlib.Path.replace:0",
+          "pathlib#pathlib.Path.move_into:0",
+          "pathlib#pathlib.Path.copy_into:0",
+          "pathlib#pathlib.types.PathInfo.exists:0"
+        ]
+      },
+      {
+        "id": "q020",
+        "hit": true,
+        "chunks": [
+          "collections#collections.deque:144",
+          "collections#collections.deque:0",
+          "typing#typing.Deque:0",
+          "collections#deque-recipes:0",
+          "collections#deque-objects:144"
+        ]
+      },
+      {
+        "id": "q025",
+        "hit": true,
+        "chunks": [
+          "json#json.loads:0",
+          "json#basic-usage:0",
+          "json#json.dump:0",
+          "json#module-json.tool:0",
+          "json#module-json:0"
+        ]
+      },
+      {
+        "id": "q030",
+        "hit": true,
+        "chunks": [
+          "csv#csv.DictWriter:0",
+          "csv#csv.DictWriter:144",
+          "csv#csv.DictWriter:288",
+          "csv#writer-objects:0",
+          "csv#module-csv:144"
+        ]
+      },
+      {
+        "id": "q035",
+        "hit": true,
+        "chunks": [
+          "re#re.search:0",
+          "re#search-vs-match:0",
+          "re#re.Pattern.search:0",
+          "re#re.match:0",
+          "re#re.Pattern.fullmatch:0"
+        ]
+      },
+      {
+        "id": "q040",
+        "hit": true,
+        "chunks": [
+          "re#re.escape:0",
+          "re#regular-expression-syntax:1440",
+          "re#regular-expression-syntax:1872",
+          "re#regular-expression-syntax:1584",
+          "re#module-re:144"
+        ]
+      },
+      {
+        "id": "q045",
+        "hit": true,
+        "chunks": [
+          "functools#functools.lru_cache:0",
+          "functools#functools.lru_cache:576",
+          "functools#functools.lru_cache:432",
+          "functools#functools.lru_cache:720",
+          "functools#functools.lru_cache:144"
+        ]
+      },
+      {
+        "id": "q050",
+        "hit": true,
+        "chunks": [
+          "os#os.listdir:0",
+          "os#os.scandir:0",
+          "pathlib#pathlib.Path.iterdir:144",
+          "os#os.listdir:144",
+          "exceptions#NotADirectoryError:0"
+        ]
+      },
+      {
+        "id": "q055",
+        "hit": true,
+        "chunks": [
+          "shutil#shutil.rmtree:0",
+          "os#os.rmdir:0",
+          "shutil#rmtree-example:0",
+          "os#os.walk:864",
+          "pathlib#pathlib.Path.walk:864"
+        ]
+      },
+      {
+        "id": "q060",
+        "hit": true,
+        "chunks": [
+          "math#math.factorial:0",
+          "math#math.trunc:0",
+          "math#math.isinf:0",
+          "math#module-math:144",
+          "collections#counter-objects:1008"
+        ]
+      },
+      {
+        "id": "q065",
+        "hit": true,
+        "chunks": [
+          "random#random.choice:0",
+          "random#random.choices:144",
+          "statistics#statistics.kde_random:0",
+          "random#random.choices:288",
+          "random#command-line-usage:0"
+        ]
+      },
+      {
+        "id": "q070",
+        "hit": false,
+        "chunks": [
+          "stdtypes#str.isdigit:0",
+          "stdtypes#str.isnumeric:0",
+          "stdtypes#str.isdecimal:0",
+          "string#string.printable:0",
+          "string#string.punctuation:0"
+        ]
+      },
+      {
+        "id": "q075",
+        "hit": false,
+        "chunks": [
+          "logging#logging.log:0",
+          "logging#logging.Logger.exception:0",
+          "logging#logging.Logger.log:0",
+          "logging#logging.Logger.critical:0",
+          "logging#logging.critical:0"
+        ]
+      },
+      {
+        "id": "q080",
+        "hit": true,
+        "chunks": [
+          "unittest#unittest.TestCase.assertTrue:0",
+          "unittest#basic-example:288",
+          "unittest#basic-example:144",
+          "unittest#basic-example:0",
+          "unittest#unittest.TestCase:144"
+        ]
+      },
+      {
+        "id": "q085",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Literal:0",
+          "typing#typing.Annotated:144",
+          "typing#annotating-tuples:288",
+          "typing#typing.Annotated:0",
+          "typing#other-special-directives:0"
+        ]
+      },
+      {
+        "id": "q090",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.replace:0",
+          "dataclasses#dataclasses.replace:144",
+          "dataclasses#dataclasses.make_dataclass:144",
+          "stdtypes#bytes.replace:0",
+          "dataclasses#dataclasses.make_dataclass:0"
+        ]
+      },
+      {
+        "id": "q095",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heappop_max:0",
+          "heapq#heapq.heappop:0",
+          "heapq#heapq.heappush_max:0",
+          "heapq#heapq.heappush:0",
+          "heapq#heapq.heapreplace:0"
+        ]
+      },
+      {
+        "id": "q100",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.bisect_right:0",
+          "bisect#bisect.insort_right:0",
+          "bisect#searching-sorted-lists:144",
+          "bisect#bisect.bisect_left:0",
+          "bisect#searching-sorted-lists:0"
+        ]
+      }
+    ]
+  }
+]

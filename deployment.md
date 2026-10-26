@@ -4,7 +4,7 @@ The app is a Python server with local models. GitHub Pages cannot run it. A publ
 
 ## On a server
 
-Use a machine with Python 3.11 or 3.12, Git, and Ollama. Allow several GB of disk space for Python packages and models. 8 GB RAM is a starting point; test memory use on the target server. A GPU helps generation, but is not required.
+Use a machine with Python 3.11 or 3.12, Git, and Ollama. Allow several GB of disk space for Python packages and models. The measured setup has 16 GB RAM and an RTX 3060. Test memory use and latency on your target server; CPU inference is supported but will be slower.
 
 Clone this repository and run:
 

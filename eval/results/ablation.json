@@ -1,0 +1,4534 @@
+[
+  {
+    "mode": "keyword",
+    "questions": 102,
+    "k": 5,
+    "recall_at_k": 0.7352941176470589,
+    "p50_ms": 5.484,
+    "p95_ms": 11.892,
+    "details": [
+      {
+        "id": "q001",
+        "hit": true,
+        "chunks": [
+          "functions#abs:0",
+          "stdtypes#int.bit_length:0",
+          "math#math.isclose:0",
+          "functions#divmod:0",
+          "argparse#argparse.ArgumentParser.add_argument:180"
+        ]
+      },
+      {
+        "id": "q002",
+        "hit": true,
+        "chunks": [
+          "functions#all:0",
+          "functions#any:0",
+          "math#math.prod:0",
+          "functions#min:0",
+          "functions#max:0"
+        ]
+      },
+      {
+        "id": "q003",
+        "hit": true,
+        "chunks": [
+          "functions#any:0",
+          "functions#all:0",
+          "functions#min:0",
+          "functions#max:0",
+          "stdtypes#common-sequence-operations:540"
+        ]
+      },
+      {
+        "id": "q004",
+        "hit": true,
+        "chunks": [
+          "functions#enumerate:0",
+          "os#os.splice:0",
+          "os#os.copy_file_range:0",
+          "os#os.sendfile:0",
+          "stdtypes#str.replace:0"
+        ]
+      },
+      {
+        "id": "q005",
+        "hit": false,
+        "chunks": [
+          "stdtypes#common-sequence-operations:720",
+          "heapq#priority-queue-implementation-notes:0",
+          "heapq#theory:360",
+          "stdtypes#tuple:0",
+          "stdtypes#printf-style-string-formatting:180"
+        ]
+      },
+      {
+        "id": "q006",
+        "hit": true,
+        "chunks": [
+          "stdtypes#list.sort:180",
+          "functions#sorted:0",
+          "stdtypes#list:180",
+          "collections#userlist-objects:0",
+          "functions#built-in-functions:180"
+        ]
+      },
+      {
+        "id": "q007",
+        "hit": true,
+        "chunks": [
+          "re#re.I:0",
+          "stdtypes#str.swapcase:0",
+          "stdtypes#str.lower:0",
+          "stdtypes#str.zfill:0",
+          "stdtypes#str.casefold:0"
+        ]
+      },
+      {
+        "id": "q008",
+        "hit": true,
+        "chunks": [
+          "stdtypes#str.strip:0",
+          "stdtypes#str.strip:180",
+          "stdtypes#str.rstrip:0",
+          "stdtypes#str.lstrip:0",
+          "stdtypes#bytes.strip:0"
+        ]
+      },
+      {
+        "id": "q009",
+        "hit": false,
+        "chunks": [
+          "stdtypes#str.removeprefix:0",
+          "stdtypes#text-and-binary-sequence-type-methods-summary:0",
+          "stdtypes#str.removesuffix:0",
+          "stdtypes#str.ljust:0",
+          "stdtypes#str.rjust:0"
+        ]
+      },
+      {
+        "id": "q010",
+        "hit": true,
+        "chunks": [
+          "collections#chainmap-examples-and-recipes:540",
+          "stdtypes#dict.get:0",
+          "stdtypes#mapping-types-dict:180",
+          "collections#collections.defaultdict.__missing__:0",
+          "collections#collections.Counter:180"
+        ]
+      },
+      {
+        "id": "q011",
+        "hit": true,
+        "chunks": [
+          "stdtypes#frozenset.copy:0",
+          "stdtypes#dict.copy:0",
+          "collections#collections.deque.copy:0",
+          "stdtypes#sequence.copy:0",
+          "dataclasses#dataclasses.asdict:180"
+        ]
+      },
+      {
+        "id": "q012",
+        "hit": true,
+        "chunks": [
+          "stdtypes#frozenset.add:0",
+          "heapq#priority-queue-implementation-notes:0",
+          "itertools#itertools-recipes:1260",
+          "bisect#searching-sorted-lists:0",
+          "re#regular-expression-syntax:2520"
+        ]
+      },
+      {
+        "id": "q013",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.read_text:0",
+          "pathlib#pathlib.Path.write_text:0",
+          "shutil#shutil.which:0",
+          "string#template-strings-strings:360",
+          "pathlib#pathlib.Path.open:0"
+        ]
+      },
+      {
+        "id": "q014",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.write_text:0",
+          "pathlib#pathlib.Path.read_text:0",
+          "pathlib#pathlib.Path.write_bytes:0",
+          "pathlib#pathlib.Path.move_into:0",
+          "pathlib#pathlib.Path.touch:0"
+        ]
+      },
+      {
+        "id": "q015",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.replace:0",
+          "pathlib#pathlib.Path.exists:0",
+          "pathlib#pathlib.Path.is_mount:0",
+          "pathlib#pathlib.Path.move_into:0",
+          "pathlib#pathlib.types.PathInfo.is_file:0"
+        ]
+      },
+      {
+        "id": "q016",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.mkdir:0",
+          "pathlib#pathlib.Path.mkdir:180",
+          "os#os.mkdir:180",
+          "pathlib#pathlib.PurePath.parents:0",
+          "pathlib#corresponding-tools:180"
+        ]
+      },
+      {
+        "id": "q017",
+        "hit": false,
+        "chunks": [
+          "pathlib#comparison-to-the-glob-module:0",
+          "pathlib#comparison-to-the-os-and-os-path-modules:180",
+          "heapq#priority-queue-implementation-notes:0",
+          "pathlib#pathlib.Path.resolve:0",
+          "pathlib#comparison-to-the-glob-module:180"
+        ]
+      },
+      {
+        "id": "q018",
+        "hit": true,
+        "chunks": [
+          "argparse#argparse.ArgumentParser.add_argument:180",
+          "pathlib#pathlib.PurePath.with_name:180",
+          "pathlib#corresponding-tools:0",
+          "pathlib#pathlib.PurePath.name:0",
+          "pathlib#pathlib.Path.as_uri:0"
+        ]
+      },
+      {
+        "id": "q019",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Counter:0",
+          "collections#collections.Counter:0",
+          "collections#collections.Counter:360",
+          "stdtypes#standard-generic-classes:0",
+          "collections#collections.Counter:180"
+        ]
+      },
+      {
+        "id": "q020",
+        "hit": true,
+        "chunks": [
+          "collections#collections.deque:180",
+          "collections#collections.deque.insert:0",
+          "collections#collections.deque:0",
+          "collections#deque-objects:540",
+          "string#template-strings-strings:360"
+        ]
+      },
+      {
+        "id": "q021",
+        "hit": true,
+        "chunks": [
+          "collections#collections.defaultdict:0",
+          "collections#defaultdict-examples:540",
+          "string#template-strings-strings:360",
+          "collections#defaultdict-examples:180",
+          "typing#typing.DefaultDict:0"
+        ]
+      },
+      {
+        "id": "q022",
+        "hit": true,
+        "chunks": [
+          "collections#collections.Counter.most_common:0",
+          "collections#counter-objects:360",
+          "collections#counter-objects:0",
+          "collections#collections.Counter:0",
+          "bisect#searching-sorted-lists:0"
+        ]
+      },
+      {
+        "id": "q023",
+        "hit": false,
+        "chunks": [
+          "json#module-json:180",
+          "json#module-json:540",
+          "json#infinite-and-nan-number-values:0",
+          "json#module-json:1080",
+          "json#module-json:360"
+        ]
+      },
+      {
+        "id": "q024",
+        "hit": false,
+        "chunks": [
+          "json#module-json:720",
+          "json#module-json:900",
+          "json#infinite-and-nan-number-values:0",
+          "json#repeated-names-within-an-object:0",
+          "json#json.dumps:0"
+        ]
+      },
+      {
+        "id": "q025",
+        "hit": true,
+        "chunks": [
+          "json#json.dump:0",
+          "json#basic-usage:0",
+          "json#basic-usage:540",
+          "json#json.loads:0",
+          "json#module-json:0"
+        ]
+      },
+      {
+        "id": "q026",
+        "hit": false,
+        "chunks": [
+          "json#json.JSONDecoder.raw_decode:0",
+          "json#basic-usage:900",
+          "json#json.JSONDecoder.decode:0",
+          "json#json.JSONDecodeError.doc:0",
+          "json#json.JSONDecoder:360"
+        ]
+      },
+      {
+        "id": "q027",
+        "hit": true,
+        "chunks": [
+          "csv#examples:0",
+          "csv#csv.DictReader:180",
+          "csv#examples:360",
+          "csv#examples:180",
+          "csv#csv.reader:180"
+        ]
+      },
+      {
+        "id": "q028",
+        "hit": false,
+        "chunks": [
+          "csv#module-csv:180",
+          "csv#csv.DictReader:180",
+          "csv#examples:0",
+          "csv#module-csv:0",
+          "csv#examples:180"
+        ]
+      },
+      {
+        "id": "q029",
+        "hit": false,
+        "chunks": [
+          "csv#csv.DictReader:180",
+          "csv#csv.reader:180",
+          "csv#examples:0",
+          "sqlite3#sqlite3.Cursor.row_factory:0",
+          "csv#examples:180"
+        ]
+      },
+      {
+        "id": "q030",
+        "hit": true,
+        "chunks": [
+          "csv#csv.DictWriter:180",
+          "csv#csv.DictWriter:360",
+          "csv#csv.DictWriter:0",
+          "csv#module-csv:180",
+          "csv#writer-objects:0"
+        ]
+      },
+      {
+        "id": "q031",
+        "hit": false,
+        "chunks": [
+          "datetime#date-objects:180",
+          "datetime#datetime.tzinfo.utcoffset:0",
+          "datetime#examples-of-usage-datetime:900",
+          "datetime#timedelta-objects:720",
+          "datetime#timedelta-objects:540"
+        ]
+      },
+      {
+        "id": "q032",
+        "hit": true,
+        "chunks": [
+          "datetime#datetime.date.today:0",
+          "datetime#datetime.datetime.today:0",
+          "datetime#datetime.datetime.utcnow:0",
+          "datetime#tzinfo-objects:2520",
+          "heapq#priority-queue-implementation-notes:0"
+        ]
+      },
+      {
+        "id": "q033",
+        "hit": true,
+        "chunks": [
+          "datetime#datetime.date.isoformat:0",
+          "datetime#datetime.date.__format__:0",
+          "datetime#datetime.date.strftime:0",
+          "datetime#datetime.datetime.strftime:0",
+          "datetime#datetime.date.__str__:0"
+        ]
+      },
+      {
+        "id": "q034",
+        "hit": false,
+        "chunks": [
+          "logging#formatter-objects:0",
+          "datetime#strftime-and-strptime-behavior:0",
+          "datetime#datetime.date.__format__:0",
+          "logging#logging.basicConfig:180",
+          "datetime#datetime.date.strptime:0"
+        ]
+      },
+      {
+        "id": "q035",
+        "hit": false,
+        "chunks": [
+          "re#search-vs-match:0",
+          "re#search-vs-match:180",
+          "re#re.Pattern.fullmatch:0",
+          "re#re.Pattern.match:0",
+          "re#re.match:0"
+        ]
+      },
+      {
+        "id": "q036",
+        "hit": true,
+        "chunks": [
+          "re#search-vs-match:180",
+          "re#re.match:0",
+          "re#re.Pattern.match:0",
+          "re#search-vs-match:0",
+          "re#re.M:0"
+        ]
+      },
+      {
+        "id": "q037",
+        "hit": false,
+        "chunks": [
+          "re#re.Match.pos:0",
+          "re#re.Match.endpos:0",
+          "re#regular-expression-syntax:2520",
+          "unittest#unittest.TestCase.assertRegex:0",
+          "re#search-vs-match:0"
+        ]
+      },
+      {
+        "id": "q038",
+        "hit": true,
+        "chunks": [
+          "re#finding-all-adverbs:0",
+          "re#re.findall:0",
+          "re#search-vs-match:0",
+          "re#re.Pattern.findall:0",
+          "collections#counter-objects:0"
+        ]
+      },
+      {
+        "id": "q039",
+        "hit": false,
+        "chunks": [
+          "unittest#unittest.TestCase.assertRaisesRegex:0",
+          "unittest#unittest.TestCase.assertRegex:0",
+          "unittest#unittest.TestCase.assertWarnsRegex:0",
+          "re#re.finditer:0",
+          "re#regular-expression-syntax:360"
+        ]
+      },
+      {
+        "id": "q040",
+        "hit": true,
+        "chunks": [
+          "re#re.escape:0",
+          "re#regular-expression-syntax:1440",
+          "re#re.escape:360",
+          "re#regular-expression-syntax:1800",
+          "re#module-re:180"
+        ]
+      },
+      {
+        "id": "q041",
+        "hit": false,
+        "chunks": [
+          "functions#zip:0",
+          "sqlite3#cursor-objects:0",
+          "itertools#itertools.zip_longest:180",
+          "stdtypes#common-sequence-operations:720",
+          "sqlite3#how-to-use-connection-shortcut-methods:0"
+        ]
+      },
+      {
+        "id": "q042",
+        "hit": true,
+        "chunks": [
+          "itertools#itertools.cycle:0",
+          "itertools#itertools.repeat:0",
+          "itertools#itertools-recipes:540",
+          "random#recipes:180",
+          "collections#collections.deque.extendleft:0"
+        ]
+      },
+      {
+        "id": "q043",
+        "hit": true,
+        "chunks": [
+          "itertools#itertools.product:0",
+          "itertools#itertools.product:180",
+          "itertools#itertools.accumulate:180",
+          "random#recipes:0",
+          "itertools#module-itertools:900"
+        ]
+      },
+      {
+        "id": "q044",
+        "hit": false,
+        "chunks": [
+          "stdtypes#common-sequence-operations:720",
+          "functions#slice:0",
+          "itertools#itertools.islice:180",
+          "itertools#itertools-recipes:1980",
+          "heapq#priority-queue-implementation-notes:0"
+        ]
+      },
+      {
+        "id": "q045",
+        "hit": true,
+        "chunks": [
+          "string#template-strings-strings:360",
+          "functools#functools.lru_cache:0",
+          "bisect#performance-notes:180",
+          "functools#functools.lru_cache:180",
+          "functools#functools.lru_cache:900"
+        ]
+      },
+      {
+        "id": "q046",
+        "hit": true,
+        "chunks": [
+          "functools#functools.lru_cache:540",
+          "functools#functools.cache:0",
+          "collections#collections.deque:180",
+          "functools#functools.cache:180",
+          "functools#functools.lru_cache:180"
+        ]
+      },
+      {
+        "id": "q047",
+        "hit": true,
+        "chunks": [
+          "functools#functools.partial:360",
+          "functools#functools.partial:0",
+          "functools#functools.partial:540",
+          "functools#functools.Placeholder:0",
+          "functools#functools.partial:180"
+        ]
+      },
+      {
+        "id": "q048",
+        "hit": true,
+        "chunks": [
+          "functools#functools.wraps:0",
+          "functools#functools.wraps:180",
+          "typing#typing.no_type_check_decorator:0",
+          "logging#logging.raiseExceptions:0",
+          "functools#module-functools:0"
+        ]
+      },
+      {
+        "id": "q049",
+        "hit": true,
+        "chunks": [
+          "os#os.getcwd:0",
+          "os#os.walk:0",
+          "heapq#priority-queue-implementation-notes:0",
+          "os#os.getcwdb:0",
+          "os#os.fchdir:0"
+        ]
+      },
+      {
+        "id": "q050",
+        "hit": true,
+        "chunks": [
+          "os#os.listdir:0",
+          "os#os.scandir:0",
+          "pathlib#pathlib.PurePath.suffix:0",
+          "pathlib#pathlib.PurePath.with_suffix:180",
+          "pathlib#comparison-to-the-glob-module:0"
+        ]
+      },
+      {
+        "id": "q051",
+        "hit": true,
+        "chunks": [
+          "os#os.remove:0",
+          "exceptions#IsADirectoryError:0",
+          "os#os.removedirs:0",
+          "os#os.rmdir:0",
+          "exceptions#NotADirectoryError:0"
+        ]
+      },
+      {
+        "id": "q052",
+        "hit": true,
+        "chunks": [
+          "os#os.getenv:0",
+          "bisect#searching-sorted-lists:0",
+          "functions#import__:540",
+          "os#os.get_exec_path:0",
+          "dataclasses#descriptor-typed-fields:360"
+        ]
+      },
+      {
+        "id": "q053",
+        "hit": false,
+        "chunks": [
+          "shutil#shutil.copy2:0",
+          "shutil#shutil.copy:180",
+          "shutil#platform-dependent-efficient-copy-operations:0",
+          "shutil#shutil.SpecialFileError:0",
+          "shutil#shutil.copyfile:180"
+        ]
+      },
+      {
+        "id": "q054",
+        "hit": true,
+        "chunks": [
+          "shutil#shutil.copy2:0",
+          "shutil#shutil.copy:180",
+          "shutil#shutil.copytree:540",
+          "shutil#shutil.move:180",
+          "shutil#module-shutil:0"
+        ]
+      },
+      {
+        "id": "q055",
+        "hit": true,
+        "chunks": [
+          "shutil#shutil.rmtree:0",
+          "shutil#shutil.copytree:0",
+          "os#os.fwalk:360",
+          "pathlib#pathlib.Path.walk:900",
+          "os#os.rmdir:0"
+        ]
+      },
+      {
+        "id": "q056",
+        "hit": true,
+        "chunks": [
+          "bisect#searching-sorted-lists:0",
+          "os#os.execl:0",
+          "heapq#priority-queue-implementation-notes:0",
+          "pathlib#comparison-to-the-os-and-os-path-modules:180",
+          "shutil#shutil.which:0"
+        ]
+      },
+      {
+        "id": "q057",
+        "hit": true,
+        "chunks": [
+          "math#math.ceil:0",
+          "math#math.trunc:0",
+          "stdtypes#numeric-types-int-float-complex:900",
+          "stdtypes#numeric-types-int-float-complex:720",
+          "math#math.nextafter:0"
+        ]
+      },
+      {
+        "id": "q058",
+        "hit": true,
+        "chunks": [
+          "math#math.floor:0",
+          "math#math.trunc:0",
+          "stdtypes#numeric-types-int-float-complex:900",
+          "math#math.isqrt:0",
+          "math#module-math:180"
+        ]
+      },
+      {
+        "id": "q059",
+        "hit": true,
+        "chunks": [
+          "math#math.sqrt:0",
+          "math#math.isqrt:0",
+          "stdtypes#common-sequence-operations:720",
+          "heapq#priority-queue-implementation-notes:0",
+          "statistics#measures-of-spread:0"
+        ]
+      },
+      {
+        "id": "q060",
+        "hit": true,
+        "chunks": [
+          "math#math.factorial:0",
+          "functools#functools.cache:0",
+          "math#math.inf:0",
+          "math#math.isinf:0",
+          "math#math.perm:0"
+        ]
+      },
+      {
+        "id": "q061",
+        "hit": false,
+        "chunks": [
+          "statistics#statistics-for-relations-between-two-inputs:0",
+          "statistics#statistics.pvariance:0",
+          "statistics#statistics.variance:0",
+          "statistics#statistics.pvariance:360",
+          "statistics#statistics.harmonic_mean:0"
+        ]
+      },
+      {
+        "id": "q062",
+        "hit": true,
+        "chunks": [
+          "statistics#statistics.median:0",
+          "statistics#statistics.median_high:0",
+          "statistics#statistics.median_low:0",
+          "statistics#statistics.median_grouped:180",
+          "statistics#averages-and-measures-of-central-location:0"
+        ]
+      },
+      {
+        "id": "q063",
+        "hit": true,
+        "chunks": [
+          "statistics#module-statistics:180",
+          "statistics#statistics.mode:0",
+          "shutil#shutil.which:0",
+          "statistics#statistics.mode:180",
+          "string#template-strings-strings:360"
+        ]
+      },
+      {
+        "id": "q064",
+        "hit": true,
+        "chunks": [
+          "statistics#measures-of-spread:0",
+          "statistics#statistics.stdev:0",
+          "statistics#statistics.pvariance:360",
+          "statistics#statistics.pstdev:0",
+          "statistics#statistics.NormalDist.stdev:0"
+        ]
+      },
+      {
+        "id": "q065",
+        "hit": true,
+        "chunks": [
+          "random#random.choice:0",
+          "random#cmdoption-random-c:0",
+          "random#command-line-usage:0",
+          "random#examples:0",
+          "random#random.choices:180"
+        ]
+      },
+      {
+        "id": "q066",
+        "hit": true,
+        "chunks": [
+          "random#random.sample:0",
+          "random#examples:540",
+          "statistics#statistics.pvariance:360",
+          "random#recipes:180",
+          "random#random.sample:180"
+        ]
+      },
+      {
+        "id": "q067",
+        "hit": true,
+        "chunks": [
+          "random#random.randint:0",
+          "random#random.uniform:0",
+          "random#cmdoption-random-i:0",
+          "dataclasses#dataclasses.dataclass:1800",
+          "datetime#datetime-objects:360"
+        ]
+      },
+      {
+        "id": "q068",
+        "hit": true,
+        "chunks": [
+          "random#random.shuffle:0",
+          "logging#logging.Filter.filter:0",
+          "random#random.choice:0",
+          "stdtypes#bytes.center:0",
+          "random#examples:720"
+        ]
+      },
+      {
+        "id": "q069",
+        "hit": true,
+        "chunks": [
+          "re#re.escape:0",
+          "string#string.punctuation:0",
+          "string#string.ascii_lowercase:0",
+          "string#template-strings-strings:360",
+          "string#string.ascii_letters:0"
+        ]
+      },
+      {
+        "id": "q070",
+        "hit": false,
+        "chunks": [
+          "stdtypes#str.isdigit:0",
+          "string#string.printable:0",
+          "stdtypes#bytes.isalnum:0",
+          "re#re.escape:0",
+          "string#string.punctuation:0"
+        ]
+      },
+      {
+        "id": "q071",
+        "hit": true,
+        "chunks": [
+          "string#string.ascii_letters:0",
+          "string#string.printable:0",
+          "string#template-strings-strings:360",
+          "re#search-vs-match:0",
+          "argparse#description:0"
+        ]
+      },
+      {
+        "id": "q072",
+        "hit": true,
+        "chunks": [
+          "string#string.hexdigits:0",
+          "string#string.punctuation:0",
+          "string#template-strings-strings:360",
+          "stdtypes#str.isascii:0",
+          "stdtypes#str.isdecimal:0"
+        ]
+      },
+      {
+        "id": "q073",
+        "hit": true,
+        "chunks": [
+          "argparse#argparse.ArgumentParser.add_argument:180",
+          "argparse#argparse.ArgumentParser.parse_args:0",
+          "argparse#module-argparse:180",
+          "argparse#default:0",
+          "argparse#allow-abbrev:0"
+        ]
+      },
+      {
+        "id": "q074",
+        "hit": true,
+        "chunks": [
+          "argparse#module-argparse:0",
+          "argparse#action:0",
+          "argparse#argparse.ArgumentParser.add_argument:0",
+          "argparse#nargs:0",
+          "argparse#module-argparse:180"
+        ]
+      },
+      {
+        "id": "q075",
+        "hit": false,
+        "chunks": [
+          "logging#logging.Logger.log:0",
+          "logging#logging.Logger.info:0",
+          "logging#logging.Logger.error:0",
+          "logging#logging.Logger.critical:0",
+          "logging#logging.log:0"
+        ]
+      },
+      {
+        "id": "q076",
+        "hit": true,
+        "chunks": [
+          "logging#logging.Logger.warning:0",
+          "logging#logging.warning:0",
+          "logging#logging.Logger.log:0",
+          "logging#logging.log:0",
+          "logging#logging.Logger.info:0"
+        ]
+      },
+      {
+        "id": "q077",
+        "hit": true,
+        "chunks": [
+          "logging#logging.Logger.error:0",
+          "logging#logging.error:0",
+          "logging#logging.Logger.exception:0",
+          "logging#logging.Logger.log:0",
+          "unittest#unittest.TestCase.assertLogs:0"
+        ]
+      },
+      {
+        "id": "q078",
+        "hit": true,
+        "chunks": [
+          "exceptions#exception-context:0",
+          "logging#logging.Logger.exception:0",
+          "logging#logging.Logger.debug:0",
+          "logging#logging.exception:0",
+          "stdtypes#contextmanager.__exit__:0"
+        ]
+      },
+      {
+        "id": "q079",
+        "hit": false,
+        "chunks": [
+          "heapq#priority-queue-implementation-notes:0",
+          "unittest#distinguishing-test-iterations-using-subtests:0",
+          "bisect#searching-sorted-lists:0",
+          "unittest#unittest.TestCase.addTypeEqualityFunc:0",
+          "sqlite3#sqlite3.Row:0"
+        ]
+      },
+      {
+        "id": "q080",
+        "hit": true,
+        "chunks": [
+          "unittest#unittest.TestCase.assertTrue:0",
+          "unittest#unittest.TestResult.addSuccess:0",
+          "unittest#basic-example:180",
+          "unittest#unittest.TestCase.setUp:0",
+          "unittest#unittest.FunctionTestCase:0"
+        ]
+      },
+      {
+        "id": "q081",
+        "hit": false,
+        "chunks": [
+          "exceptions#built-in-exceptions:180",
+          "unittest#signal-handling:0",
+          "unittest#organizing-test-code:360",
+          "exceptions#TypeError:0",
+          "unittest#organizing-test-code:720"
+        ]
+      },
+      {
+        "id": "q082",
+        "hit": false,
+        "chunks": [
+          "unittest#unittest.FunctionTestCase:0",
+          "unittest#organizing-test-code:180",
+          "unittest#unittest.IsolatedAsyncioTestCase:0",
+          "unittest#unittest.IsolatedAsyncioTestCase:180",
+          "unittest#skipping-tests-and-expected-failures:540"
+        ]
+      },
+      {
+        "id": "q083",
+        "hit": false,
+        "chunks": [
+          "typing#the-any-type:0",
+          "pathlib#pathlib.types.PathInfo.is_dir:0",
+          "pathlib#pathlib.types.PathInfo.is_symlink:0",
+          "exceptions#RuntimeError:0",
+          "pathlib#pathlib.types.PathInfo.exists:0"
+        ]
+      },
+      {
+        "id": "q084",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Optional:0",
+          "statistics#statistics.NormalDist.zscore:0",
+          "os#os.RTLD_LAZY:0",
+          "statistics#statistics.variance:180",
+          "statistics#averages-and-measures-of-central-location:0"
+        ]
+      },
+      {
+        "id": "q085",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Literal:180",
+          "typing#typing.Literal:360",
+          "typing#typing.Annotated:0",
+          "typing#annotating-tuples:360",
+          "typing#typing.Literal:0"
+        ]
+      },
+      {
+        "id": "q086",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Final:0",
+          "typing#typing.final:0",
+          "typing#typing.final:180",
+          "logging#logging.raiseExceptions:0",
+          "typing#annotating-tuples:540"
+        ]
+      },
+      {
+        "id": "q087",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.asdict:0",
+          "dataclasses#dataclasses.asdict:180",
+          "dataclasses#dataclasses.fields:0",
+          "string#template-strings-strings:360",
+          "argparse#argparse.ArgumentParser.add_argument:180"
+        ]
+      },
+      {
+        "id": "q088",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.astuple:0",
+          "dataclasses#dataclasses.fields:0",
+          "string#template-strings-strings:360",
+          "argparse#argparse.ArgumentParser.add_argument:180",
+          "dataclasses#module-dataclasses:0"
+        ]
+      },
+      {
+        "id": "q089",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.is_dataclass:0",
+          "dataclasses#dataclasses.fields:0",
+          "dataclasses#dataclasses.dataclass:720",
+          "dataclasses#dataclasses.make_dataclass:180",
+          "dataclasses#dataclasses.make_dataclass:0"
+        ]
+      },
+      {
+        "id": "q090",
+        "hit": false,
+        "chunks": [
+          "stdtypes#bytes.replace:0",
+          "dataclasses#dataclasses.replace:180",
+          "sqlite3#sqlite3.Connection.executescript:0",
+          "datetime#datetime.datetime.replace:0",
+          "sqlite3#sqlite3.Connection.execute:0"
+        ]
+      },
+      {
+        "id": "q091",
+        "hit": false,
+        "chunks": [
+          "sqlite3#sqlite3.Connection:0",
+          "sqlite3#module-functions:0",
+          "sqlite3#connection-objects:720",
+          "sqlite3#sqlite3.Cursor.connection:0",
+          "sqlite3#sqlite3.Connection.deserialize:0"
+        ]
+      },
+      {
+        "id": "q092",
+        "hit": true,
+        "chunks": [
+          "sqlite3#tutorial:360",
+          "sqlite3#sqlite3.Cursor.fetchall:0",
+          "sqlite3#sqlite3.Cursor.description:0",
+          "sqlite3#sqlite3.Cursor.fetchone:0",
+          "sqlite3#sqlite3.Cursor.fetchmany:0"
+        ]
+      },
+      {
+        "id": "q093",
+        "hit": true,
+        "chunks": [
+          "sqlite3#sqlite3.Cursor.fetchall:0",
+          "sqlite3#tutorial:540",
+          "sqlite3#sqlite3.Cursor.description:0",
+          "sqlite3#sqlite3.Cursor.fetchmany:0",
+          "sqlite3#sqlite3.Connection.create_window_function:180"
+        ]
+      },
+      {
+        "id": "q094",
+        "hit": true,
+        "chunks": [
+          "sqlite3#sqlite3.Connection.commit:0",
+          "sqlite3#sqlite3.Connection.autocommit:0",
+          "sqlite3#transaction-control-via-the-autocommit-attribute:0",
+          "sqlite3#sqlite3.Connection.close:0",
+          "sqlite3#sqlite3.Cursor.executescript:0"
+        ]
+      },
+      {
+        "id": "q095",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heappush:0",
+          "heapq#heapq.heappush_max:0",
+          "heapq#heapq.heappop:0",
+          "heapq#heapq.heappop_max:0",
+          "heapq#heapq.heapreplace_max:0"
+        ]
+      },
+      {
+        "id": "q096",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heappop:0",
+          "heapq#heapq.heappushpop:0",
+          "heapq#module-heapq:360",
+          "heapq#module-heapq:0",
+          "heapq#heapq.heapreplace:0"
+        ]
+      },
+      {
+        "id": "q097",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heapify:0",
+          "heapq#module-heapq:360",
+          "heapq#heapq.heapify_max:0",
+          "stdtypes#bytearray:180",
+          "heapq#priority-queue-implementation-notes:0"
+        ]
+      },
+      {
+        "id": "q098",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.nlargest:0",
+          "random#recipes:180",
+          "stdtypes#common-sequence-operations:180",
+          "itertools#itertools.combinations_with_replacement:0",
+          "heapq#heapq.nsmallest:0"
+        ]
+      },
+      {
+        "id": "q099",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.bisect_right:0",
+          "bisect#searching-sorted-lists:0",
+          "bisect#examples:720",
+          "bisect#bisect.insort_left:0",
+          "bisect#bisect.bisect_left:0"
+        ]
+      },
+      {
+        "id": "q100",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.insort_right:0",
+          "bisect#searching-sorted-lists:180",
+          "bisect#bisect.bisect_right:0",
+          "bisect#searching-sorted-lists:0",
+          "re#making-a-phonebook:360"
+        ]
+      },
+      {
+        "id": "q101",
+        "hit": false,
+        "chunks": [
+          "bisect#searching-sorted-lists:0",
+          "bisect#searching-sorted-lists:180",
+          "collections#collections.deque.insert:0",
+          "bisect#bisect.bisect_left:0",
+          "collections#deque-objects:180"
+        ]
+      },
+      {
+        "id": "q102",
+        "hit": false,
+        "chunks": [
+          "bisect#searching-sorted-lists:0",
+          "bisect#searching-sorted-lists:180",
+          "collections#collections.deque.insert:0",
+          "bisect#bisect.bisect_left:0",
+          "collections#deque-objects:180"
+        ]
+      }
+    ],
+    "split": "all"
+  },
+  {
+    "mode": "vector",
+    "questions": 102,
+    "k": 5,
+    "recall_at_k": 0.6372549019607843,
+    "p50_ms": 12.026,
+    "p95_ms": 17.151,
+    "details": [
+      {
+        "id": "q001",
+        "hit": true,
+        "chunks": [
+          "functions#abs:0",
+          "math#math.fabs:0",
+          "functions#divmod:0",
+          "stdtypes#numeric-types-int-float-complex:0",
+          "math#math.isclose:0"
+        ]
+      },
+      {
+        "id": "q002",
+        "hit": true,
+        "chunks": [
+          "functions#all:0",
+          "functions#any:0",
+          "itertools#itertool-functions:0",
+          "math#math.prod:0",
+          "stdtypes#container.__iter__:0"
+        ]
+      },
+      {
+        "id": "q003",
+        "hit": true,
+        "chunks": [
+          "functions#any:0",
+          "functions#all:0",
+          "itertools#itertool-functions:0",
+          "stdtypes#container.__iter__:0",
+          "math#math.prod:0"
+        ]
+      },
+      {
+        "id": "q004",
+        "hit": false,
+        "chunks": [
+          "functions#enumerate:180",
+          "math#math.prod:0",
+          "datetime#datetime.date.month:0",
+          "datetime#datetime.datetime.month:0",
+          "itertools#itertools.count:0"
+        ]
+      },
+      {
+        "id": "q005",
+        "hit": true,
+        "chunks": [
+          "functions#len:0",
+          "stdtypes#str.count:0",
+          "stdtypes#iterator.__next__:0",
+          "collections#collections.Counter.update:0",
+          "collections#collections.Counter:180"
+        ]
+      },
+      {
+        "id": "q006",
+        "hit": true,
+        "chunks": [
+          "stdtypes#list.sort:180",
+          "stdtypes#list:180",
+          "functions#max:0",
+          "functions#sorted:0",
+          "functions#min:0"
+        ]
+      },
+      {
+        "id": "q007",
+        "hit": true,
+        "chunks": [
+          "stdtypes#str.lower:0",
+          "stdtypes#str.upper:0",
+          "stdtypes#str.casefold:0",
+          "stdtypes#str.swapcase:0",
+          "stdtypes#str.isupper:0"
+        ]
+      },
+      {
+        "id": "q008",
+        "hit": true,
+        "chunks": [
+          "stdtypes#str.rstrip:0",
+          "stdtypes#str.strip:0",
+          "stdtypes#str.lstrip:0",
+          "stdtypes#bytes.strip:0",
+          "stdtypes#bytes.lstrip:0"
+        ]
+      },
+      {
+        "id": "q009",
+        "hit": true,
+        "chunks": [
+          "stdtypes#str.replace:0",
+          "stdtypes#str.removeprefix:0",
+          "stdtypes#str.lstrip:0",
+          "stdtypes#str.rstrip:0",
+          "stdtypes#string-methods:0"
+        ]
+      },
+      {
+        "id": "q010",
+        "hit": true,
+        "chunks": [
+          "stdtypes#mapping-types-dict:180",
+          "stdtypes#dict.get:0",
+          "stdtypes#dict.pop:0",
+          "collections#collections.defaultdict.__missing__:0",
+          "exceptions#KeyError:0"
+        ]
+      },
+      {
+        "id": "q011",
+        "hit": false,
+        "chunks": [
+          "dataclasses#dataclasses.astuple:0",
+          "stdtypes#frozenset.copy:0",
+          "stdtypes#lists:0",
+          "re#regular-expression-objects:0",
+          "collections#collections.UserList:0"
+        ]
+      },
+      {
+        "id": "q012",
+        "hit": true,
+        "chunks": [
+          "stdtypes#frozenset.add:0",
+          "stdtypes#frozenset.update:0",
+          "stdtypes#frozenset.union:0",
+          "stdtypes#frozenset.symmetric_difference:0",
+          "stdtypes#frozenset.intersection:0"
+        ]
+      },
+      {
+        "id": "q013",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.read_text:0",
+          "pathlib#pathlib.Path.write_text:0",
+          "pathlib#pathlib.Path.rename:0",
+          "pathlib#pathlib.PurePath.with_suffix:180",
+          "os#os.fspath:0"
+        ]
+      },
+      {
+        "id": "q014",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.write_text:0",
+          "pathlib#pathlib.Path.rename:0",
+          "pathlib#pathlib.Path.read_text:0",
+          "pathlib#pathlib.Path.write_bytes:0",
+          "os#os.RWF_APPEND:0"
+        ]
+      },
+      {
+        "id": "q015",
+        "hit": false,
+        "chunks": [
+          "pathlib#pathlib.types.PathInfo.is_symlink:0",
+          "pathlib#pathlib.types.PathInfo.is_dir:0",
+          "pathlib#pathlib.types.PathInfo.exists:0",
+          "pathlib#pathlib.Path.is_junction:0",
+          "pathlib#pathlib.types.PathInfo.is_file:0"
+        ]
+      },
+      {
+        "id": "q016",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.mkdir:0",
+          "pathlib#pathlib.Path.iterdir:0",
+          "os#os.makedirs:0",
+          "pathlib#pathlib.PurePath.parent:0",
+          "pathlib#comparison-to-the-os-and-os-path-modules:180"
+        ]
+      },
+      {
+        "id": "q017",
+        "hit": false,
+        "chunks": [
+          "os#os.extsep:0",
+          "pathlib#comparison-to-the-os-and-os-path-modules:360",
+          "pathlib#pathlib.Path.cwd:0",
+          "os#os.PathLike:0",
+          "shutil#shutil.unpack_archive:360"
+        ]
+      },
+      {
+        "id": "q018",
+        "hit": false,
+        "chunks": [
+          "pathlib#pathlib.PurePosixPath:0",
+          "pathlib#pathlib.Path:0",
+          "pathlib#pathlib.PureWindowsPath:0",
+          "pathlib#pathlib.PurePath:0",
+          "os#os.altsep:0"
+        ]
+      },
+      {
+        "id": "q019",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Counter:0",
+          "collections#collections.Counter:360",
+          "collections#collections.Counter:0",
+          "bisect#performance-notes:180",
+          "collections#counter-objects:900"
+        ]
+      },
+      {
+        "id": "q020",
+        "hit": true,
+        "chunks": [
+          "collections#collections.deque.copy:0",
+          "collections#collections.deque:0",
+          "collections#collections.deque:180",
+          "collections#collections.deque.reverse:0",
+          "collections#collections.deque.extend:0"
+        ]
+      },
+      {
+        "id": "q021",
+        "hit": true,
+        "chunks": [
+          "collections#collections.defaultdict:0",
+          "collections#userdict-objects:0",
+          "stdtypes#dict.values:0",
+          "stdtypes#dict.setdefault:0",
+          "collections#collections.defaultdict.__missing__:0"
+        ]
+      },
+      {
+        "id": "q022",
+        "hit": true,
+        "chunks": [
+          "collections#collections.Counter.most_common:0",
+          "collections#counter-objects:360",
+          "collections#counter-objects:540",
+          "stdtypes#frozenset.intersection:0",
+          "collections#collections.Counter.elements:0"
+        ]
+      },
+      {
+        "id": "q023",
+        "hit": true,
+        "chunks": [
+          "json#cmdoption-json-no-ensure-ascii:0",
+          "json#json.JSONDecodeError.doc:0",
+          "json#json.dumps:0",
+          "json#module-json:0",
+          "json#json.JSONDecoder:0"
+        ]
+      },
+      {
+        "id": "q024",
+        "hit": false,
+        "chunks": [
+          "json#json.JSONDecodeError.doc:0",
+          "json#module-json:0",
+          "json#basic-usage:540",
+          "json#json.dumps:0",
+          "json#json.JSONDecoder:0"
+        ]
+      },
+      {
+        "id": "q025",
+        "hit": true,
+        "chunks": [
+          "json#json.JSONEncoder.encode:0",
+          "json#basic-usage:0",
+          "json#json.dump:0",
+          "json#module-json:720",
+          "json#module-json:0"
+        ]
+      },
+      {
+        "id": "q026",
+        "hit": false,
+        "chunks": [
+          "json#json.JSONDecodeError.doc:0",
+          "json#json.JSONDecoder.decode:0",
+          "json#json.JSONDecoder:360",
+          "exceptions#ImportError.path:0",
+          "json#cmdoption-json-no-ensure-ascii:0"
+        ]
+      },
+      {
+        "id": "q027",
+        "hit": false,
+        "chunks": [
+          "csv#csv.DictReader:180",
+          "csv#examples:0",
+          "csv#module-csv:180",
+          "csv#module-csv:0",
+          "csv#csv.reader:0"
+        ]
+      },
+      {
+        "id": "q028",
+        "hit": false,
+        "chunks": [
+          "csv#writer-objects:0",
+          "csv#module-csv:180",
+          "csv#module-csv:0",
+          "csv#csv.DictWriter.writeheader:0",
+          "csv#csv.excel:0"
+        ]
+      },
+      {
+        "id": "q029",
+        "hit": false,
+        "chunks": [
+          "csv#csv.DictReader:180",
+          "csv#writer-objects:0",
+          "csv#module-csv:180",
+          "csv#examples:0",
+          "csv#module-csv:0"
+        ]
+      },
+      {
+        "id": "q030",
+        "hit": true,
+        "chunks": [
+          "csv#writer-objects:0",
+          "csv#module-csv:180",
+          "csv#csv.DictWriter:0",
+          "csv#module-csv:0",
+          "csv#csv.DictReader:180"
+        ]
+      },
+      {
+        "id": "q031",
+        "hit": true,
+        "chunks": [
+          "datetime#datetime.timedelta.resolution:0",
+          "datetime#datetime.timedelta.max:0",
+          "datetime#timedelta-objects:0",
+          "datetime#datetime.timedelta:540",
+          "datetime#datetime.timedelta.seconds:0"
+        ]
+      },
+      {
+        "id": "q032",
+        "hit": true,
+        "chunks": [
+          "datetime#datetime.date.today:0",
+          "datetime#datetime.datetime.now:0",
+          "datetime#datetime.datetime.utcnow:0",
+          "datetime#datetime.datetime.today:0",
+          "datetime#datetime.datetime.timestamp:180"
+        ]
+      },
+      {
+        "id": "q033",
+        "hit": false,
+        "chunks": [
+          "datetime#datetime.date.__str__:0",
+          "datetime#datetime.date.__format__:0",
+          "datetime#datetime.datetime.__str__:0",
+          "datetime#datetime.time.fromisoformat:360",
+          "datetime#examples-of-usage-datetime:360"
+        ]
+      },
+      {
+        "id": "q034",
+        "hit": false,
+        "chunks": [
+          "datetime#examples-of-usage-date:180",
+          "datetime#datetime.datetime.strftime:0",
+          "datetime#datetime.date.isoformat:0",
+          "datetime#datetime.date.__format__:0",
+          "datetime#strftime-and-strptime-format-codes:0"
+        ]
+      },
+      {
+        "id": "q035",
+        "hit": false,
+        "chunks": [
+          "re#re.Match.endpos:0",
+          "re#re.Match.pos:0",
+          "re#re.Match.string:0",
+          "re#re.match:0",
+          "re#re.finditer:0"
+        ]
+      },
+      {
+        "id": "q036",
+        "hit": true,
+        "chunks": [
+          "re#re.finditer:0",
+          "re#re.Match.endpos:0",
+          "re#re.match:0",
+          "re#re.Match.pos:0",
+          "re#search-vs-match:0"
+        ]
+      },
+      {
+        "id": "q037",
+        "hit": true,
+        "chunks": [
+          "re#re.match:0",
+          "re#re.fullmatch:0",
+          "re#re.Pattern.fullmatch:0",
+          "re#re.search:0",
+          "re#re.PatternError.pattern:0"
+        ]
+      },
+      {
+        "id": "q038",
+        "hit": false,
+        "chunks": [
+          "re#re.Match.endpos:0",
+          "re#re.Match.pos:0",
+          "re#finding-all-adverbs:0",
+          "re#re.finditer:0",
+          "unittest#unittest.TestCase.assertRegex:0"
+        ]
+      },
+      {
+        "id": "q039",
+        "hit": false,
+        "chunks": [
+          "re#re.PatternError.pattern:0",
+          "re#re.Pattern.fullmatch:0",
+          "re#re.match:0",
+          "re#re.Match.string:0",
+          "re#search-vs-match:360"
+        ]
+      },
+      {
+        "id": "q040",
+        "hit": true,
+        "chunks": [
+          "re#re.escape:0",
+          "re#raw-string-notation:0",
+          "re#regular-expression-syntax:2520",
+          "string#template-strings-strings:900",
+          "re#regular-expression-syntax:1620"
+        ]
+      },
+      {
+        "id": "q041",
+        "hit": true,
+        "chunks": [
+          "itertools#itertools.chain:0",
+          "itertools#itertools-recipes:540",
+          "stdtypes#sequence.extend:0",
+          "functions#enumerate:0",
+          "functions#map:0"
+        ]
+      },
+      {
+        "id": "q042",
+        "hit": true,
+        "chunks": [
+          "itertools#itertools.cycle:0",
+          "itertools#itertools.repeat:0",
+          "itertools#itertools-recipes:540",
+          "stdtypes#sequence.extend:0",
+          "itertools#itertools.chain:0"
+        ]
+      },
+      {
+        "id": "q043",
+        "hit": true,
+        "chunks": [
+          "itertools#itertools.product:0",
+          "itertools#itertools-recipes:0",
+          "math#math.prod:0",
+          "itertools#module-itertools:0",
+          "itertools#itertools.product:180"
+        ]
+      },
+      {
+        "id": "q044",
+        "hit": true,
+        "chunks": [
+          "functions#slice:0",
+          "stdtypes#container.__iter__:0",
+          "stdtypes#generator-types:0",
+          "functions#next:0",
+          "itertools#itertools.islice:0"
+        ]
+      },
+      {
+        "id": "q045",
+        "hit": false,
+        "chunks": [
+          "functools#functools.lru_cache:540",
+          "collections#ordereddict-examples-and-recipes:360",
+          "functools#functools.lru_cache:720",
+          "functools#functools.lru_cache:180",
+          "functools#functools.cache:0"
+        ]
+      },
+      {
+        "id": "q046",
+        "hit": true,
+        "chunks": [
+          "functools#functools.cache:0",
+          "functools#functools.lru_cache:720",
+          "collections#ordereddict-examples-and-recipes:360",
+          "functools#functools.lru_cache:540",
+          "collections#ordereddict-examples-and-recipes:540"
+        ]
+      },
+      {
+        "id": "q047",
+        "hit": true,
+        "chunks": [
+          "functools#functools.partial:0",
+          "functools#functools.partial.keywords:0",
+          "functools#functools.partial.func:0",
+          "functools#functools.partialmethod:0",
+          "functools#functools.partial.args:0"
+        ]
+      },
+      {
+        "id": "q048",
+        "hit": true,
+        "chunks": [
+          "functools#functools.wraps:0",
+          "functools#module-functools:0",
+          "functools#functools.cache:180",
+          "functools#functools.update_wrapper:180",
+          "functools#functools.lru_cache:0"
+        ]
+      },
+      {
+        "id": "q049",
+        "hit": true,
+        "chunks": [
+          "os#os.getcwd:0",
+          "pathlib#pathlib.Path.cwd:0",
+          "os#os.getcwdb:0",
+          "os#os.curdir:0",
+          "os#os.pardir:0"
+        ]
+      },
+      {
+        "id": "q050",
+        "hit": false,
+        "chunks": [
+          "exceptions#NotADirectoryError:0",
+          "os#os.scandir:0",
+          "os#os.curdir:0",
+          "os#os.pardir:0",
+          "os#os.scandir:180"
+        ]
+      },
+      {
+        "id": "q051",
+        "hit": true,
+        "chunks": [
+          "os#os.removedirs:0",
+          "exceptions#IsADirectoryError:0",
+          "os#os.remove:0",
+          "os#os.unlink:0",
+          "os#os.rmdir:0"
+        ]
+      },
+      {
+        "id": "q052",
+        "hit": true,
+        "chunks": [
+          "os#os.getenv:0",
+          "os#os.getenvb:0",
+          "os#os.environ:0",
+          "argparse#argparse.ArgumentParser.get_default:0",
+          "typing#typing.ParamSpec.has_default:0"
+        ]
+      },
+      {
+        "id": "q053",
+        "hit": false,
+        "chunks": [
+          "shutil#module-shutil:0",
+          "shutil#shutil.copy2:0",
+          "shutil#shutil.copy:180",
+          "pathlib#pathlib.Path.copy:0",
+          "shutil#platform-dependent-efficient-copy-operations:0"
+        ]
+      },
+      {
+        "id": "q054",
+        "hit": true,
+        "chunks": [
+          "shutil#shutil.copy2:0",
+          "shutil#module-shutil:0",
+          "pathlib#pathlib.Path.copy:180",
+          "shutil#platform-dependent-efficient-copy-operations:180",
+          "shutil#shutil.copy:180"
+        ]
+      },
+      {
+        "id": "q055",
+        "hit": false,
+        "chunks": [
+          "os#os.rmdir:0",
+          "pathlib#pathlib.Path.walk:900",
+          "os#os.removedirs:0",
+          "os#os.fwalk:360",
+          "os#os.walk:720"
+        ]
+      },
+      {
+        "id": "q056",
+        "hit": false,
+        "chunks": [
+          "os#os.get_exec_path:0",
+          "os#os.execl:360",
+          "os#os.defpath:0",
+          "os#os.execl:180",
+          "shutil#shutil.which:180"
+        ]
+      },
+      {
+        "id": "q057",
+        "hit": false,
+        "chunks": [
+          "string#format-specification-mini-language:1620",
+          "math#floating-point-arithmetic:0",
+          "stdtypes#numeric-types-int-float-complex:900",
+          "math#math.expm1:0",
+          "math#module-math:0"
+        ]
+      },
+      {
+        "id": "q058",
+        "hit": true,
+        "chunks": [
+          "math#math.floor:0",
+          "stdtypes#numeric-types-int-float-complex:900",
+          "stdtypes#numeric-types-int-float-complex:720",
+          "math#floating-point-arithmetic:0",
+          "math#math.isqrt:0"
+        ]
+      },
+      {
+        "id": "q059",
+        "hit": true,
+        "chunks": [
+          "math#math.sqrt:0",
+          "math#math.isqrt:0",
+          "stdtypes#formatted-string-literals-f-strings:360",
+          "math#math.degrees:0",
+          "math#math.radians:0"
+        ]
+      },
+      {
+        "id": "q060",
+        "hit": true,
+        "chunks": [
+          "math#math.factorial:0",
+          "datetime#datetime.timedelta.min:0",
+          "unittest#distinguishing-test-iterations-using-subtests:360",
+          "argparse#arguments-containing:540",
+          "functions#float:0"
+        ]
+      },
+      {
+        "id": "q061",
+        "hit": true,
+        "chunks": [
+          "statistics#averages-and-measures-of-central-location:0",
+          "statistics#statistics.mean:180",
+          "statistics#statistics.mean:0",
+          "statistics#statistics-for-relations-between-two-inputs:0",
+          "statistics#statistics.pvariance:0"
+        ]
+      },
+      {
+        "id": "q062",
+        "hit": true,
+        "chunks": [
+          "statistics#statistics.median:0",
+          "statistics#statistics.median_high:0",
+          "statistics#statistics.median_low:0",
+          "statistics#statistics.median_grouped:180",
+          "statistics#statistics.quantiles:180"
+        ]
+      },
+      {
+        "id": "q063",
+        "hit": true,
+        "chunks": [
+          "statistics#statistics.mode:0",
+          "statistics#averages-and-measures-of-central-location:0",
+          "statistics#statistics.NormalDist.mode:0",
+          "statistics#measures-of-spread:0",
+          "random#random.normalvariate:0"
+        ]
+      },
+      {
+        "id": "q064",
+        "hit": true,
+        "chunks": [
+          "statistics#statistics.stdev:0",
+          "statistics#measures-of-spread:0",
+          "statistics#statistics.pstdev:0",
+          "statistics#statistics.NormalDist.zscore:0",
+          "statistics#statistics.pvariance:360"
+        ]
+      },
+      {
+        "id": "q065",
+        "hit": true,
+        "chunks": [
+          "random#cmdoption-random-c:0",
+          "random#random.choice:0",
+          "random#command-line-usage:0",
+          "random#random.SystemRandom:0",
+          "random#recipes:0"
+        ]
+      },
+      {
+        "id": "q066",
+        "hit": true,
+        "chunks": [
+          "random#random.sample:0",
+          "random#recipes:180",
+          "random#random.sample:180",
+          "random#notes-on-reproducibility:0",
+          "random#examples:540"
+        ]
+      },
+      {
+        "id": "q067",
+        "hit": true,
+        "chunks": [
+          "random#random.uniform:0",
+          "random#random.randint:0",
+          "random#random.randrange:0",
+          "random#command-line-example:0",
+          "random#cmdoption-random-i:0"
+        ]
+      },
+      {
+        "id": "q068",
+        "hit": true,
+        "chunks": [
+          "random#random.shuffle:0",
+          "random#notes-on-reproducibility:0",
+          "random#random.SystemRandom:0",
+          "random#random.Random.randbytes:0",
+          "random#random.Random.random:0"
+        ]
+      },
+      {
+        "id": "q069",
+        "hit": false,
+        "chunks": [
+          "stdtypes#str.lower:0",
+          "string#string.ascii_letters:0",
+          "re#regular-expression-syntax:5040",
+          "stdtypes#str.upper:0",
+          "stdtypes#bytes.islower:0"
+        ]
+      },
+      {
+        "id": "q070",
+        "hit": true,
+        "chunks": [
+          "stdtypes#str.isdigit:0",
+          "string#string.digits:0",
+          "string#string.octdigits:0",
+          "stdtypes#str.isdecimal:0",
+          "functions#int:180"
+        ]
+      },
+      {
+        "id": "q071",
+        "hit": true,
+        "chunks": [
+          "string#string.whitespace:0",
+          "string#string.printable:0",
+          "re#regular-expression-syntax:4500",
+          "string#string.ascii_letters:0",
+          "stdtypes#text-sequence-type-str:0"
+        ]
+      },
+      {
+        "id": "q072",
+        "hit": false,
+        "chunks": [
+          "functions#int:180",
+          "string#string.whitespace:0",
+          "re#regular-expression-syntax:5400",
+          "unittest#unittest.TestCase.assertNotEndsWith:0",
+          "unittest#unittest.TestCase.assertNotStartsWith:0"
+        ]
+      },
+      {
+        "id": "q073",
+        "hit": false,
+        "chunks": [
+          "argparse#metavar:0",
+          "argparse#dest:0",
+          "argparse#arguments-containing:0",
+          "argparse#usage:0",
+          "argparse#parents:0"
+        ]
+      },
+      {
+        "id": "q074",
+        "hit": false,
+        "chunks": [
+          "argparse#argparse.ArgumentParser.parse_known_args:0",
+          "argparse#module-argparse:0",
+          "argparse#required:0",
+          "argparse#fromfile-prefix-chars:0",
+          "argparse#module-argparse:180"
+        ]
+      },
+      {
+        "id": "q075",
+        "hit": false,
+        "chunks": [
+          "logging#logging.Logger.info:0",
+          "logging#logging.info:0",
+          "logging#logging.log:0",
+          "logging#logging.Logger.log:0",
+          "logging#logging.error:0"
+        ]
+      },
+      {
+        "id": "q076",
+        "hit": true,
+        "chunks": [
+          "logging#logging.Logger.warning:0",
+          "logging#logging.warning:0",
+          "logging#logging.Logger.info:0",
+          "logging#logging.Logger.exception:0",
+          "logging#logging.Logger.log:0"
+        ]
+      },
+      {
+        "id": "q077",
+        "hit": true,
+        "chunks": [
+          "logging#logging.Logger.exception:0",
+          "logging#logging.Logger.error:0",
+          "logging#logging.Logger.warning:0",
+          "logging#logging.exception:0",
+          "logging#logging.Logger.info:0"
+        ]
+      },
+      {
+        "id": "q078",
+        "hit": true,
+        "chunks": [
+          "logging#logging.Logger.exception:0",
+          "logging#logrecord-objects:180",
+          "logging#logging.exception:0",
+          "logging#logging.raiseExceptions:0",
+          "logging#logging.Logger.debug:180"
+        ]
+      },
+      {
+        "id": "q079",
+        "hit": true,
+        "chunks": [
+          "unittest#unittest.TestCase.assertNotEqual:0",
+          "unittest#unittest.TestCase.assertTrue:0",
+          "unittest#unittest.TestCase.assertEqual:0",
+          "unittest#unittest.TestCase.assertDictEqual:0",
+          "unittest#unittest.TestCase.assertSetEqual:0"
+        ]
+      },
+      {
+        "id": "q080",
+        "hit": false,
+        "chunks": [
+          "unittest#unittest.TestCase:180",
+          "exceptions#AssertionError:0",
+          "unittest#unittest.TestResult.failures:0",
+          "unittest#unittest.TestCase:360",
+          "unittest#unittest.TestCase.longMessage:0"
+        ]
+      },
+      {
+        "id": "q081",
+        "hit": true,
+        "chunks": [
+          "unittest#unittest.SkipTest:0",
+          "unittest#unittest.TestCase.debug:0",
+          "exceptions#built-in-exceptions:180",
+          "unittest#unittest.TestCase.assertRaises:0",
+          "unittest#cmdoption-unittest-f:0"
+        ]
+      },
+      {
+        "id": "q082",
+        "hit": false,
+        "chunks": [
+          "unittest#classes-and-functions:0",
+          "unittest#unittest.TestResult.startTestRun:0",
+          "unittest#unittest.TestResult.stopTestRun:0",
+          "unittest#basic-example:360",
+          "unittest#unittest.IsolatedAsyncioTestCase.asyncSetUp:0"
+        ]
+      },
+      {
+        "id": "q083",
+        "hit": false,
+        "chunks": [
+          "typing#typing.NewType.__supertype__:0",
+          "typing#module-contents:0",
+          "typing#deprecation-timeline-of-major-features:0",
+          "typing#typing.NewType.__name__:0",
+          "typing#typing.TypeVar.__name__:0"
+        ]
+      },
+      {
+        "id": "q084",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Optional:0",
+          "argparse#argparse.ArgumentParser.add_argument:180",
+          "collections#collections.defaultdict.default_factory:0",
+          "typing#typing.TypedDict.__total__:180",
+          "dataclasses#dataclasses.field:0"
+        ]
+      },
+      {
+        "id": "q085",
+        "hit": false,
+        "chunks": [
+          "typing#typing.TypeVar.evaluate_constraints:0",
+          "typing#other-special-directives:0",
+          "typing#typing.TypeVar.evaluate_bound:0",
+          "typing#typing.get_type_hints:360",
+          "typing#typing.Annotated:180"
+        ]
+      },
+      {
+        "id": "q086",
+        "hit": false,
+        "chunks": [
+          "re#re.Match.endpos:0",
+          "stdtypes#recommended-configuration:360",
+          "stdtypes#bytes.swapcase:180",
+          "functools#functools.partial.args:0",
+          "os#os.posix_fallocate:0"
+        ]
+      },
+      {
+        "id": "q087",
+        "hit": false,
+        "chunks": [
+          "dataclasses#dataclasses.fields:0",
+          "collections#userdict-objects:0",
+          "functions#type:0",
+          "collections#collections.UserDict:0",
+          "collections#collections.UserDict.data:0"
+        ]
+      },
+      {
+        "id": "q088",
+        "hit": false,
+        "chunks": [
+          "dataclasses#dataclasses.fields:0",
+          "dataclasses#dataclasses.dataclass:0",
+          "dataclasses#class-variables:0",
+          "collections#namedtuple-factory-function-for-tuples-with-named-fields:1080",
+          "dataclasses#dataclasses.dataclass:180"
+        ]
+      },
+      {
+        "id": "q089",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.is_dataclass:0",
+          "unittest#unittest.TestCase.assertIsInstance:0",
+          "dataclasses#class-variables:0",
+          "dataclasses#dataclasses.fields:0",
+          "typing#typing.dataclass_transform:180"
+        ]
+      },
+      {
+        "id": "q090",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.replace:180",
+          "dataclasses#dataclasses.replace:0",
+          "dataclasses#dataclasses.field:720",
+          "dataclasses#dataclasses.dataclass:0",
+          "dataclasses#post-init-processing:180"
+        ]
+      },
+      {
+        "id": "q091",
+        "hit": false,
+        "chunks": [
+          "sqlite3#sqlite3.Connection:0",
+          "sqlite3#sqlite3.Cursor.connection:0",
+          "sqlite3#module-constants:0",
+          "sqlite3#sqlite3.Connection.deserialize:0",
+          "sqlite3#how-to-work-with-sqlite-uris:0"
+        ]
+      },
+      {
+        "id": "q092",
+        "hit": true,
+        "chunks": [
+          "sqlite3#sqlite3.Cursor.fetchmany:0",
+          "sqlite3#sqlite3.Cursor.arraysize:0",
+          "sqlite3#sqlite3.Cursor.fetchone:0",
+          "sqlite3#sqlite3.Cursor.fetchall:0",
+          "datetime#datetime.timezone.dst:0"
+        ]
+      },
+      {
+        "id": "q093",
+        "hit": true,
+        "chunks": [
+          "sqlite3#sqlite3.Cursor.fetchmany:0",
+          "sqlite3#sqlite3.Cursor.arraysize:0",
+          "sqlite3#sqlite3.Cursor.fetchall:0",
+          "sqlite3#sqlite3.Cursor.fetchone:0",
+          "datetime#datetime.timezone.dst:0"
+        ]
+      },
+      {
+        "id": "q094",
+        "hit": false,
+        "chunks": [
+          "sqlite3#transaction-control-via-the-autocommit-attribute:0",
+          "sqlite3#sqlite3.Cursor.executescript:0",
+          "sqlite3#transaction-control-via-the-isolation-level-attribute:0",
+          "sqlite3#sqlite3.Connection.close:0",
+          "sqlite3#transaction-control-via-the-isolation-level-attribute:180"
+        ]
+      },
+      {
+        "id": "q095",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heappush:0",
+          "heapq#heapq.heappush_max:0",
+          "heapq#heapq.heapreplace:0",
+          "heapq#heapq.heapreplace_max:0",
+          "heapq#heapq.heappushpop:0"
+        ]
+      },
+      {
+        "id": "q096",
+        "hit": false,
+        "chunks": [
+          "heapq#heapq.heappushpop:0",
+          "heapq#module-heapq:0",
+          "heapq#heapq.heapreplace:0",
+          "heapq#theory:720",
+          "heapq#heapq.heappushpop_max:0"
+        ]
+      },
+      {
+        "id": "q097",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heapify_max:0",
+          "heapq#heapq.heapify:0",
+          "heapq#heapq.heappushpop:0",
+          "heapq#module-heapq:360",
+          "heapq#basic-examples:0"
+        ]
+      },
+      {
+        "id": "q098",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.nlargest:0",
+          "functions#max:0",
+          "heapq#heapq.merge:180",
+          "heapq#module-heapq:540",
+          "heapq#heapq.nsmallest:0"
+        ]
+      },
+      {
+        "id": "q099",
+        "hit": false,
+        "chunks": [
+          "bisect#bisect.bisect_right:0",
+          "bisect#bisect.insort_right:0",
+          "bisect#module-bisect:0",
+          "bisect#module-bisect:180",
+          "bisect#bisect.insort_left:0"
+        ]
+      },
+      {
+        "id": "q100",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.bisect_right:0",
+          "bisect#module-bisect:0",
+          "bisect#module-bisect:180",
+          "bisect#searching-sorted-lists:0",
+          "bisect#searching-sorted-lists:180"
+        ]
+      },
+      {
+        "id": "q101",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.insort_right:0",
+          "bisect#bisect.insort_left:0",
+          "bisect#bisect.bisect_left:0",
+          "functions#sorted:0",
+          "stdtypes#sequence.insert:0"
+        ]
+      },
+      {
+        "id": "q102",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.insort_left:0",
+          "bisect#bisect.insort_right:0",
+          "bisect#bisect.bisect_left:0",
+          "functions#sorted:0",
+          "stdtypes#sequence.insert:0"
+        ]
+      }
+    ],
+    "split": "all"
+  },
+  {
+    "mode": "hybrid",
+    "questions": 102,
+    "k": 5,
+    "recall_at_k": 0.8431372549019608,
+    "p50_ms": 19.942,
+    "p95_ms": 25.629,
+    "details": [
+      {
+        "id": "q001",
+        "hit": true,
+        "chunks": [
+          "functions#abs:0",
+          "functions#divmod:0",
+          "math#math.isclose:0",
+          "math#math.frexp:0",
+          "functions#float:0"
+        ]
+      },
+      {
+        "id": "q002",
+        "hit": true,
+        "chunks": [
+          "functions#all:0",
+          "functions#any:0",
+          "math#math.prod:0",
+          "stdtypes#dict.fromkeys:0",
+          "functions#filter:0"
+        ]
+      },
+      {
+        "id": "q003",
+        "hit": true,
+        "chunks": [
+          "functions#any:0",
+          "functions#all:0",
+          "math#math.prod:0",
+          "stdtypes#str.join:0",
+          "functions#min:0"
+        ]
+      },
+      {
+        "id": "q004",
+        "hit": true,
+        "chunks": [
+          "functions#enumerate:0",
+          "collections#defaultdict-examples:360",
+          "stdtypes#str.count:0",
+          "stdtypes#memoryview.count:0",
+          "functions#enumerate:180"
+        ]
+      },
+      {
+        "id": "q005",
+        "hit": true,
+        "chunks": [
+          "functions#len:0",
+          "stdtypes#dictionary-view-objects:0",
+          "stdtypes#common-sequence-operations:720",
+          "heapq#priority-queue-implementation-notes:0",
+          "stdtypes#str.count:0"
+        ]
+      },
+      {
+        "id": "q006",
+        "hit": true,
+        "chunks": [
+          "stdtypes#list.sort:180",
+          "stdtypes#list:180",
+          "functions#sorted:0",
+          "heapq#heapq.merge:0",
+          "bisect#bisect.bisect_left:0"
+        ]
+      },
+      {
+        "id": "q007",
+        "hit": true,
+        "chunks": [
+          "stdtypes#str.lower:0",
+          "stdtypes#str.swapcase:0",
+          "stdtypes#str.casefold:0",
+          "re#re.I:0",
+          "stdtypes#str.title:0"
+        ]
+      },
+      {
+        "id": "q008",
+        "hit": true,
+        "chunks": [
+          "stdtypes#str.strip:0",
+          "stdtypes#str.rstrip:0",
+          "stdtypes#str.lstrip:0",
+          "stdtypes#bytes.strip:0",
+          "stdtypes#str.strip:180"
+        ]
+      },
+      {
+        "id": "q009",
+        "hit": true,
+        "chunks": [
+          "stdtypes#str.removeprefix:0",
+          "stdtypes#str.replace:0",
+          "stdtypes#str.removesuffix:0",
+          "stdtypes#str:0",
+          "stdtypes#bytes.removeprefix:0"
+        ]
+      },
+      {
+        "id": "q010",
+        "hit": true,
+        "chunks": [
+          "stdtypes#mapping-types-dict:180",
+          "stdtypes#dict.get:0",
+          "collections#collections.defaultdict.__missing__:0",
+          "stdtypes#dict.pop:0",
+          "exceptions#KeyError:0"
+        ]
+      },
+      {
+        "id": "q011",
+        "hit": false,
+        "chunks": [
+          "stdtypes#frozenset.copy:0",
+          "dataclasses#dataclasses.astuple:0",
+          "stdtypes#dict.copy:0",
+          "dataclasses#dataclasses.asdict:180",
+          "collections#collections.UserList:0"
+        ]
+      },
+      {
+        "id": "q012",
+        "hit": true,
+        "chunks": [
+          "stdtypes#frozenset.add:0",
+          "stdtypes#set-types-set-frozenset:0",
+          "collections#deque-objects:180",
+          "stdtypes#set-types-set-frozenset:180",
+          "heapq#priority-queue-implementation-notes:0"
+        ]
+      },
+      {
+        "id": "q013",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.read_text:0",
+          "pathlib#pathlib.Path.write_text:0",
+          "shutil#shutil.which:0",
+          "pathlib#pathlib.Path.rename:0",
+          "string#template-strings-strings:360"
+        ]
+      },
+      {
+        "id": "q014",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.write_text:0",
+          "pathlib#pathlib.Path.read_text:0",
+          "pathlib#pathlib.Path.write_bytes:0",
+          "pathlib#pathlib.Path.touch:0",
+          "pathlib#pathlib.Path.copy_into:0"
+        ]
+      },
+      {
+        "id": "q015",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.exists:0",
+          "pathlib#pathlib.types.PathInfo.is_file:0",
+          "pathlib#pathlib.types.PathInfo.is_dir:0",
+          "pathlib#pathlib.Path.is_mount:0",
+          "pathlib#pathlib.Path.replace:0"
+        ]
+      },
+      {
+        "id": "q016",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.mkdir:0",
+          "os#os.makedirs:0",
+          "pathlib#pathlib.PurePath.parents:0",
+          "pathlib#pathlib.PurePath.is_relative_to:0",
+          "pathlib#comparison-to-the-glob-module:0"
+        ]
+      },
+      {
+        "id": "q017",
+        "hit": false,
+        "chunks": [
+          "pathlib#comparison-to-the-os-and-os-path-modules:180",
+          "os#os.extsep:0",
+          "pathlib#comparison-to-the-glob-module:180",
+          "pathlib#comparison-to-the-os-and-os-path-modules:360",
+          "pathlib#pathlib.Path.cwd:0"
+        ]
+      },
+      {
+        "id": "q018",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.PurePosixPath:0",
+          "pathlib#pathlib.PurePath:0",
+          "pathlib#pathlib.PurePath.name:0",
+          "pathlib#pathlib.Path:0",
+          "pathlib#pathlib.PureWindowsPath:0"
+        ]
+      },
+      {
+        "id": "q019",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Counter:0",
+          "collections#collections.Counter:0",
+          "collections#collections.Counter:360",
+          "collections#collections.Counter.fromkeys:0",
+          "stdtypes#tuples:0"
+        ]
+      },
+      {
+        "id": "q020",
+        "hit": true,
+        "chunks": [
+          "collections#collections.deque:180",
+          "collections#collections.deque:0",
+          "collections#collections.deque.copy:0",
+          "collections#collections.deque.insert:0",
+          "collections#deque-objects:0"
+        ]
+      },
+      {
+        "id": "q021",
+        "hit": true,
+        "chunks": [
+          "collections#collections.defaultdict:0",
+          "typing#typing.DefaultDict:0",
+          "collections#ordereddict-objects:0",
+          "typing#typing.Dict:0",
+          "stdtypes#mapping-types-dict:360"
+        ]
+      },
+      {
+        "id": "q022",
+        "hit": true,
+        "chunks": [
+          "collections#collections.Counter.most_common:0",
+          "collections#counter-objects:360",
+          "collections#counter-objects:540",
+          "collections#counter-objects:0",
+          "collections#collections.Counter.elements:0"
+        ]
+      },
+      {
+        "id": "q023",
+        "hit": true,
+        "chunks": [
+          "json#cmdoption-json-no-ensure-ascii:0",
+          "json#module-json:180",
+          "json#json.dumps:0",
+          "json#module-json:540",
+          "json#json.JSONDecoder:0"
+        ]
+      },
+      {
+        "id": "q024",
+        "hit": true,
+        "chunks": [
+          "json#module-json:720",
+          "json#json.dumps:0",
+          "json#repeated-names-within-an-object:0",
+          "json#json.loads:0",
+          "json#module-json:900"
+        ]
+      },
+      {
+        "id": "q025",
+        "hit": true,
+        "chunks": [
+          "json#json.dump:0",
+          "json#basic-usage:0",
+          "json#module-json:0",
+          "json#basic-usage:540",
+          "json#json.JSONEncoder.encode:0"
+        ]
+      },
+      {
+        "id": "q026",
+        "hit": false,
+        "chunks": [
+          "json#json.JSONDecodeError.doc:0",
+          "json#json.JSONDecoder.decode:0",
+          "json#json.JSONDecoder:360",
+          "json#repeated-names-within-an-object:0",
+          "json#basic-usage:900"
+        ]
+      },
+      {
+        "id": "q027",
+        "hit": true,
+        "chunks": [
+          "csv#examples:0",
+          "csv#csv.DictReader:180",
+          "csv#examples:360",
+          "csv#csv.reader:0",
+          "csv#csv.reader:180"
+        ]
+      },
+      {
+        "id": "q028",
+        "hit": false,
+        "chunks": [
+          "csv#module-csv:180",
+          "csv#module-csv:0",
+          "csv#examples:0",
+          "csv#csv.csvwriter.writerows:0",
+          "csv#csv.reader:0"
+        ]
+      },
+      {
+        "id": "q029",
+        "hit": true,
+        "chunks": [
+          "csv#csv.DictReader:180",
+          "csv#examples:0",
+          "csv#csv.reader:180",
+          "csv#module-csv:180",
+          "csv#csv.DictReader:0"
+        ]
+      },
+      {
+        "id": "q030",
+        "hit": true,
+        "chunks": [
+          "csv#writer-objects:0",
+          "csv#module-csv:180",
+          "csv#csv.DictWriter:0",
+          "csv#csv.DictWriter:180",
+          "csv#examples:0"
+        ]
+      },
+      {
+        "id": "q031",
+        "hit": true,
+        "chunks": [
+          "datetime#timedelta-objects:0",
+          "datetime#timedelta-objects:720",
+          "datetime#datetime.timedelta.seconds:0",
+          "datetime#timedelta-objects:540",
+          "datetime#datetime.timedelta.resolution:0"
+        ]
+      },
+      {
+        "id": "q032",
+        "hit": true,
+        "chunks": [
+          "datetime#datetime.date.today:0",
+          "datetime#datetime.datetime.today:0",
+          "datetime#datetime.datetime.utcnow:0",
+          "datetime#datetime.datetime.now:0",
+          "datetime#datetime.datetime.astimezone:0"
+        ]
+      },
+      {
+        "id": "q033",
+        "hit": true,
+        "chunks": [
+          "datetime#datetime.date.__format__:0",
+          "datetime#datetime.date.__str__:0",
+          "datetime#datetime.date.isoformat:0",
+          "datetime#datetime.datetime.strftime:0",
+          "datetime#datetime.date.strftime:0"
+        ]
+      },
+      {
+        "id": "q034",
+        "hit": false,
+        "chunks": [
+          "datetime#datetime.date.__format__:0",
+          "datetime#datetime.date.isoformat:0",
+          "datetime#datetime.datetime.strftime:0",
+          "datetime#datetime.date.strptime:0",
+          "datetime#strftime-and-strptime-format-codes:0"
+        ]
+      },
+      {
+        "id": "q035",
+        "hit": false,
+        "chunks": [
+          "re#search-vs-match:0",
+          "re#re.match:0",
+          "re#re.Match.pos:0",
+          "re#re.Match.endpos:0",
+          "re#re.Pattern.search:180"
+        ]
+      },
+      {
+        "id": "q036",
+        "hit": true,
+        "chunks": [
+          "re#re.match:0",
+          "re#search-vs-match:0",
+          "re#re.Pattern.match:0",
+          "re#search-vs-match:180",
+          "re#re.Match.pos:0"
+        ]
+      },
+      {
+        "id": "q037",
+        "hit": false,
+        "chunks": [
+          "re#regular-expression-syntax:2520",
+          "re#search-vs-match:0",
+          "re#re.Pattern.search:0",
+          "re#module-re:360",
+          "re#re.match:0"
+        ]
+      },
+      {
+        "id": "q038",
+        "hit": true,
+        "chunks": [
+          "re#finding-all-adverbs:0",
+          "re#re.findall:0",
+          "re#re.Pattern.findall:0",
+          "re#search-vs-match:0",
+          "re#re.Pattern.fullmatch:0"
+        ]
+      },
+      {
+        "id": "q039",
+        "hit": false,
+        "chunks": [
+          "re#re.Pattern.fullmatch:0",
+          "re#re.fullmatch:0",
+          "re#re.search:0",
+          "re#regular-expression-syntax:2700",
+          "unittest#unittest.TestCase.assertRaisesRegex:0"
+        ]
+      },
+      {
+        "id": "q040",
+        "hit": true,
+        "chunks": [
+          "re#re.escape:0",
+          "re#re.escape:360",
+          "re#regular-expression-syntax:1800",
+          "string#template-strings-strings:540",
+          "re#module-re:0"
+        ]
+      },
+      {
+        "id": "q041",
+        "hit": true,
+        "chunks": [
+          "functions#zip:0",
+          "functions#map:0",
+          "itertools#itertools.chain:0",
+          "stdtypes#iterator-types:0",
+          "itertools#itertools.zip_longest:180"
+        ]
+      },
+      {
+        "id": "q042",
+        "hit": true,
+        "chunks": [
+          "itertools#itertools.cycle:0",
+          "itertools#itertools.repeat:0",
+          "itertools#itertools-recipes:540",
+          "itertools#itertools.product:0",
+          "itertools#itertools.chain:0"
+        ]
+      },
+      {
+        "id": "q043",
+        "hit": true,
+        "chunks": [
+          "itertools#itertools.product:0",
+          "itertools#itertools.product:180",
+          "math#math.prod:0",
+          "random#recipes:0",
+          "itertools#itertools-recipes:0"
+        ]
+      },
+      {
+        "id": "q044",
+        "hit": false,
+        "chunks": [
+          "functions#slice:0",
+          "itertools#itertools.islice:180",
+          "itertools#itertools.tee:360",
+          "itertools#itertools-recipes:1980",
+          "functions#map:0"
+        ]
+      },
+      {
+        "id": "q045",
+        "hit": true,
+        "chunks": [
+          "functools#functools.lru_cache:180",
+          "functools#functools.lru_cache:720",
+          "functools#functools.lru_cache:0",
+          "functools#functools.cache:0",
+          "functools#functools.lru_cache:540"
+        ]
+      },
+      {
+        "id": "q046",
+        "hit": true,
+        "chunks": [
+          "functools#functools.cache:0",
+          "functools#functools.lru_cache:540",
+          "functools#functools.lru_cache:180",
+          "functools#functools.cached_property:540",
+          "functools#functools.lru_cache:0"
+        ]
+      },
+      {
+        "id": "q047",
+        "hit": true,
+        "chunks": [
+          "functools#functools.partial:0",
+          "functools#functools.partial.func:0",
+          "functools#functools.partial.keywords:0",
+          "functools#functools.Placeholder:0",
+          "functools#functools.partial.args:0"
+        ]
+      },
+      {
+        "id": "q048",
+        "hit": true,
+        "chunks": [
+          "functools#functools.wraps:0",
+          "functools#module-functools:0",
+          "functools#functools.wraps:180",
+          "functools#functools.cache:180",
+          "typing#typing.no_type_check_decorator:0"
+        ]
+      },
+      {
+        "id": "q049",
+        "hit": true,
+        "chunks": [
+          "os#os.getcwd:0",
+          "os#os.getcwdb:0",
+          "os#os.fchdir:0",
+          "os#os.walk:0",
+          "pathlib#pathlib.Path.cwd:0"
+        ]
+      },
+      {
+        "id": "q050",
+        "hit": true,
+        "chunks": [
+          "os#os.scandir:0",
+          "os#os.listdir:0",
+          "os#os.listdir:180",
+          "pathlib#pathlib.PurePath.suffixes:0",
+          "pathlib#pathlib.PurePath:360"
+        ]
+      },
+      {
+        "id": "q051",
+        "hit": true,
+        "chunks": [
+          "os#os.remove:0",
+          "os#os.removedirs:0",
+          "exceptions#IsADirectoryError:0",
+          "os#os.rmdir:0",
+          "shutil#shutil.move:0"
+        ]
+      },
+      {
+        "id": "q052",
+        "hit": true,
+        "chunks": [
+          "os#os.getenv:0",
+          "os#os.getenvb:0",
+          "os#os.get_exec_path:0",
+          "typing#typing.TypeVar.has_default:0",
+          "bisect#searching-sorted-lists:0"
+        ]
+      },
+      {
+        "id": "q053",
+        "hit": true,
+        "chunks": [
+          "shutil#shutil.copy2:0",
+          "shutil#shutil.copy:180",
+          "shutil#module-shutil:0",
+          "shutil#platform-dependent-efficient-copy-operations:0",
+          "shutil#shutil.copyfile:0"
+        ]
+      },
+      {
+        "id": "q054",
+        "hit": true,
+        "chunks": [
+          "shutil#shutil.copy2:0",
+          "shutil#shutil.copy:180",
+          "shutil#module-shutil:0",
+          "shutil#shutil.move:180",
+          "shutil#shutil.copytree:540"
+        ]
+      },
+      {
+        "id": "q055",
+        "hit": true,
+        "chunks": [
+          "os#os.rmdir:0",
+          "pathlib#pathlib.Path.walk:900",
+          "os#os.fwalk:360",
+          "shutil#shutil.rmtree:0",
+          "os#os.remove:0"
+        ]
+      },
+      {
+        "id": "q056",
+        "hit": true,
+        "chunks": [
+          "shutil#shutil.which:0",
+          "os#os.get_exec_path:0",
+          "os#os.execl:360",
+          "pathlib#comparison-to-the-os-and-os-path-modules:180",
+          "os#os.spawnl:360"
+        ]
+      },
+      {
+        "id": "q057",
+        "hit": true,
+        "chunks": [
+          "stdtypes#numeric-types-int-float-complex:900",
+          "math#math.ceil:0",
+          "math#math.exp:0",
+          "math#math.nextafter:0",
+          "string#format-specification-mini-language:1620"
+        ]
+      },
+      {
+        "id": "q058",
+        "hit": true,
+        "chunks": [
+          "math#math.floor:0",
+          "stdtypes#numeric-types-int-float-complex:900",
+          "math#math.trunc:0",
+          "math#math.isqrt:0",
+          "stdtypes#numeric-types-int-float-complex:720"
+        ]
+      },
+      {
+        "id": "q059",
+        "hit": true,
+        "chunks": [
+          "math#math.sqrt:0",
+          "math#math.isqrt:0",
+          "math#math.cbrt:0",
+          "statistics#statistics.stdev:0",
+          "statistics#statistics.pstdev:0"
+        ]
+      },
+      {
+        "id": "q060",
+        "hit": true,
+        "chunks": [
+          "math#math.factorial:0",
+          "math#math.inf:0",
+          "math#math.perm:0",
+          "stdtypes#numeric-types-int-float-complex:720",
+          "datetime#datetime.timedelta.min:0"
+        ]
+      },
+      {
+        "id": "q061",
+        "hit": false,
+        "chunks": [
+          "statistics#statistics-for-relations-between-two-inputs:0",
+          "statistics#averages-and-measures-of-central-location:0",
+          "statistics#statistics.pvariance:0",
+          "statistics#statistics.mean:180",
+          "statistics#statistics.pvariance:360"
+        ]
+      },
+      {
+        "id": "q062",
+        "hit": true,
+        "chunks": [
+          "statistics#statistics.median:0",
+          "statistics#statistics.median_high:0",
+          "statistics#statistics.median_low:0",
+          "statistics#statistics.median_grouped:180",
+          "statistics#averages-and-measures-of-central-location:0"
+        ]
+      },
+      {
+        "id": "q063",
+        "hit": true,
+        "chunks": [
+          "statistics#statistics.mode:0",
+          "statistics#statistics-for-relations-between-two-inputs:0",
+          "random#random.triangular:0",
+          "statistics#statistics.NormalDist.mode:0",
+          "statistics#module-statistics:0"
+        ]
+      },
+      {
+        "id": "q064",
+        "hit": true,
+        "chunks": [
+          "statistics#measures-of-spread:0",
+          "statistics#statistics.stdev:0",
+          "statistics#statistics.pstdev:0",
+          "statistics#statistics.pvariance:360",
+          "statistics#statistics.variance:0"
+        ]
+      },
+      {
+        "id": "q065",
+        "hit": true,
+        "chunks": [
+          "random#random.choice:0",
+          "random#cmdoption-random-c:0",
+          "random#command-line-usage:0",
+          "random#recipes:0",
+          "random#examples:0"
+        ]
+      },
+      {
+        "id": "q066",
+        "hit": true,
+        "chunks": [
+          "random#random.sample:0",
+          "random#recipes:180",
+          "random#examples:540",
+          "random#random.sample:180",
+          "random#random.shuffle:0"
+        ]
+      },
+      {
+        "id": "q067",
+        "hit": true,
+        "chunks": [
+          "random#random.randint:0",
+          "random#random.uniform:0",
+          "random#cmdoption-random-i:0",
+          "random#module-random:0",
+          "random#module-random:180"
+        ]
+      },
+      {
+        "id": "q068",
+        "hit": true,
+        "chunks": [
+          "random#random.shuffle:0",
+          "random#notes-on-reproducibility:0",
+          "random#random.choice:0",
+          "random#random.SystemRandom:0",
+          "random#random.Random.random:0"
+        ]
+      },
+      {
+        "id": "q069",
+        "hit": true,
+        "chunks": [
+          "string#string.ascii_letters:0",
+          "string#string.punctuation:0",
+          "stdtypes#str.islower:0",
+          "string#string.ascii_lowercase:0",
+          "stdtypes#bytes.islower:0"
+        ]
+      },
+      {
+        "id": "q070",
+        "hit": true,
+        "chunks": [
+          "stdtypes#str.isdigit:0",
+          "stdtypes#str.isdecimal:0",
+          "string#string.digits:0",
+          "string#string.printable:0",
+          "stdtypes#str.isnumeric:0"
+        ]
+      },
+      {
+        "id": "q071",
+        "hit": true,
+        "chunks": [
+          "string#string.printable:0",
+          "string#string.ascii_letters:0",
+          "unittest#unittest.TestCase.assertNotEndsWith:0",
+          "string#string.whitespace:0",
+          "string#template-strings-strings:360"
+        ]
+      },
+      {
+        "id": "q072",
+        "hit": true,
+        "chunks": [
+          "string#string.whitespace:0",
+          "string#string.hexdigits:0",
+          "stdtypes#str.isascii:0",
+          "stdtypes#str.isprintable:0",
+          "stdtypes#str.isalnum:0"
+        ]
+      },
+      {
+        "id": "q073",
+        "hit": false,
+        "chunks": [
+          "argparse#module-argparse:180",
+          "argparse#default:0",
+          "argparse#dest:0",
+          "argparse#argparse.ArgumentParser.parse_known_args:0",
+          "argparse#argparse.ArgumentParser.set_defaults:0"
+        ]
+      },
+      {
+        "id": "q074",
+        "hit": false,
+        "chunks": [
+          "argparse#module-argparse:0",
+          "argparse#module-argparse:180",
+          "argparse#nargs:900",
+          "argparse#action:0",
+          "argparse#nargs:0"
+        ]
+      },
+      {
+        "id": "q075",
+        "hit": false,
+        "chunks": [
+          "logging#logging.Logger.info:0",
+          "logging#logging.Logger.log:0",
+          "logging#logging.log:0",
+          "logging#logging.info:0",
+          "logging#logging.Logger.error:0"
+        ]
+      },
+      {
+        "id": "q076",
+        "hit": true,
+        "chunks": [
+          "logging#logging.Logger.warning:0",
+          "logging#logging.warning:0",
+          "logging#logging.Logger.log:0",
+          "logging#logging.Logger.info:0",
+          "logging#logging.Logger.exception:0"
+        ]
+      },
+      {
+        "id": "q077",
+        "hit": true,
+        "chunks": [
+          "logging#logging.Logger.error:0",
+          "logging#logging.Logger.exception:0",
+          "logging#logging.error:0",
+          "logging#logging.Logger.log:0",
+          "logging#logging.Logger.info:0"
+        ]
+      },
+      {
+        "id": "q078",
+        "hit": true,
+        "chunks": [
+          "logging#logging.Logger.exception:0",
+          "logging#logging.exception:0",
+          "exceptions#exception-context:0",
+          "logging#logging.Formatter.formatException:0",
+          "logging#logrecord-objects:180"
+        ]
+      },
+      {
+        "id": "q079",
+        "hit": false,
+        "chunks": [
+          "unittest#distinguishing-test-iterations-using-subtests:0",
+          "unittest#unittest.TestCase.assertDictEqual:0",
+          "unittest#unittest.TestCase.assertAlmostEqual:0",
+          "unittest#unittest.TestCase.addTypeEqualityFunc:0",
+          "unittest#unittest.TestCase.assertNotEqual:0"
+        ]
+      },
+      {
+        "id": "q080",
+        "hit": true,
+        "chunks": [
+          "unittest#unittest.TestCase:180",
+          "unittest#unittest.TestCase.setUp:0",
+          "unittest#unittest.TestCase.assertTrue:0",
+          "unittest#unittest.IsolatedAsyncioTestCase.asyncSetUp:0",
+          "unittest#unittest.TestResult.addSuccess:0"
+        ]
+      },
+      {
+        "id": "q081",
+        "hit": true,
+        "chunks": [
+          "exceptions#built-in-exceptions:180",
+          "unittest#unittest.TestCase.assertRaises:0",
+          "unittest#unittest.expectedFailure:0",
+          "unittest#skipping-tests-and-expected-failures:720",
+          "unittest#organizing-test-code:360"
+        ]
+      },
+      {
+        "id": "q082",
+        "hit": true,
+        "chunks": [
+          "unittest#unittest.IsolatedAsyncioTestCase.asyncSetUp:0",
+          "unittest#module-unittest:0",
+          "unittest#organizing-test-code:540",
+          "unittest#unittest.TestResult.addSuccess:0",
+          "unittest#unittest.TestCase.setUp:0"
+        ]
+      },
+      {
+        "id": "q083",
+        "hit": true,
+        "chunks": [
+          "typing#the-any-type:0",
+          "typing#typing.Any:0",
+          "typing#typing-support-for-type-hints:180",
+          "typing#the-any-type:180",
+          "stdtypes#genericalias.__parameters__:0"
+        ]
+      },
+      {
+        "id": "q084",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Optional:0",
+          "argparse#argparse.ArgumentParser.add_argument:180",
+          "argparse#default:0",
+          "statistics#statistics.NormalDist.zscore:0",
+          "os#os.RTLD_LAZY:0"
+        ]
+      },
+      {
+        "id": "q085",
+        "hit": false,
+        "chunks": [
+          "typing#typing.Annotated:0",
+          "typing#typing.Annotated:540",
+          "dataclasses#init-only-variables:0",
+          "typing#typing.Literal:180",
+          "typing#typing.TypeVar.evaluate_constraints:0"
+        ]
+      },
+      {
+        "id": "q086",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Final:0",
+          "typing#typing.final:0",
+          "typing#typing.final:180",
+          "re#re.Match.endpos:0",
+          "stdtypes#recommended-configuration:360"
+        ]
+      },
+      {
+        "id": "q087",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.fields:0",
+          "dataclasses#dataclasses.asdict:0",
+          "dataclasses#dataclasses.asdict:180",
+          "dataclasses#dataclasses.is_dataclass:0",
+          "collections#namedtuple-factory-function-for-tuples-with-named-fields:1080"
+        ]
+      },
+      {
+        "id": "q088",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.fields:0",
+          "dataclasses#dataclasses.astuple:0",
+          "dataclasses#dataclasses.is_dataclass:0",
+          "collections#namedtuple-factory-function-for-tuples-with-named-fields:1080",
+          "typing#functions-and-decorators:180"
+        ]
+      },
+      {
+        "id": "q089",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.is_dataclass:0",
+          "dataclasses#dataclasses.fields:0",
+          "dataclasses#init-only-variables:0",
+          "dataclasses#class-variables:0",
+          "dataclasses#dataclasses.make_dataclass:0"
+        ]
+      },
+      {
+        "id": "q090",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.replace:180",
+          "dataclasses#dataclasses.replace:0",
+          "dataclasses#mutable-default-values:180",
+          "stdtypes#bytes.title:360",
+          "dataclasses#dataclasses.fields:0"
+        ]
+      },
+      {
+        "id": "q091",
+        "hit": false,
+        "chunks": [
+          "sqlite3#sqlite3.Connection:0",
+          "sqlite3#sqlite3.Cursor.connection:0",
+          "sqlite3#module-functions:0",
+          "sqlite3#sqlite3.Connection.deserialize:0",
+          "sqlite3#module-functions:360"
+        ]
+      },
+      {
+        "id": "q092",
+        "hit": true,
+        "chunks": [
+          "sqlite3#sqlite3.Cursor.fetchmany:0",
+          "sqlite3#sqlite3.Cursor.fetchall:0",
+          "sqlite3#sqlite3.Cursor.fetchone:0",
+          "sqlite3#sqlite3.Cursor.description:0",
+          "sqlite3#tutorial:360"
+        ]
+      },
+      {
+        "id": "q093",
+        "hit": true,
+        "chunks": [
+          "sqlite3#sqlite3.Cursor.fetchall:0",
+          "sqlite3#sqlite3.Cursor.fetchmany:0",
+          "sqlite3#sqlite3.Cursor.description:0",
+          "sqlite3#sqlite3.Cursor.arraysize:0",
+          "sqlite3#sqlite3.Cursor.rowcount:0"
+        ]
+      },
+      {
+        "id": "q094",
+        "hit": true,
+        "chunks": [
+          "sqlite3#transaction-control-via-the-autocommit-attribute:0",
+          "sqlite3#sqlite3.Connection.commit:0",
+          "sqlite3#sqlite3.Cursor.executescript:0",
+          "sqlite3#sqlite3.Connection.close:0",
+          "sqlite3#sqlite3.Connection.autocommit:0"
+        ]
+      },
+      {
+        "id": "q095",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heappush:0",
+          "heapq#heapq.heappush_max:0",
+          "heapq#heapq.heapreplace:0",
+          "heapq#heapq.heapreplace_max:0",
+          "heapq#heapq.heappop:0"
+        ]
+      },
+      {
+        "id": "q096",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heappushpop:0",
+          "heapq#module-heapq:0",
+          "heapq#heapq.heapreplace:0",
+          "heapq#heapq.heappop:0",
+          "heapq#heapq.heappush:0"
+        ]
+      },
+      {
+        "id": "q097",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heapify:0",
+          "heapq#heapq.heapify_max:0",
+          "heapq#module-heapq:360",
+          "heapq#heapq.heappushpop:0",
+          "heapq#module-heapq:0"
+        ]
+      },
+      {
+        "id": "q098",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.nlargest:0",
+          "heapq#heapq.nsmallest:0",
+          "functions#max:0",
+          "collections#collections.deque.extendleft:0",
+          "collections#collections.Counter.most_common:0"
+        ]
+      },
+      {
+        "id": "q099",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.bisect_right:0",
+          "bisect#searching-sorted-lists:0",
+          "bisect#bisect.insort_right:0",
+          "bisect#bisect.insort_left:0",
+          "bisect#bisect.bisect_left:0"
+        ]
+      },
+      {
+        "id": "q100",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.bisect_right:0",
+          "bisect#searching-sorted-lists:180",
+          "bisect#searching-sorted-lists:0",
+          "bisect#bisect.insort_right:0",
+          "collections#collections.deque.index:0"
+        ]
+      },
+      {
+        "id": "q101",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.bisect_left:0",
+          "stdtypes#list.sort:180",
+          "functions#sorted:0",
+          "bisect#bisect.insort_left:0",
+          "heapq#heapq.merge:0"
+        ]
+      },
+      {
+        "id": "q102",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.bisect_left:0",
+          "bisect#bisect.insort_right:0",
+          "functions#sorted:0",
+          "bisect#bisect.insort_left:0",
+          "stdtypes#list.sort:180"
+        ]
+      }
+    ],
+    "split": "all"
+  },
+  {
+    "mode": "rerank",
+    "questions": 102,
+    "k": 5,
+    "recall_at_k": 0.9117647058823529,
+    "p50_ms": 632.141,
+    "p95_ms": 793.969,
+    "details": [
+      {
+        "id": "q001",
+        "hit": true,
+        "chunks": [
+          "functions#abs:0",
+          "functions#divmod:0",
+          "math#math.remainder:0",
+          "stdtypes#int.bit_length:0",
+          "math#math.isclose:0"
+        ]
+      },
+      {
+        "id": "q002",
+        "hit": true,
+        "chunks": [
+          "functions#all:0",
+          "math#math.prod:0",
+          "functions#max:0",
+          "functions#any:0",
+          "functions#min:0"
+        ]
+      },
+      {
+        "id": "q003",
+        "hit": true,
+        "chunks": [
+          "functions#any:0",
+          "functions#max:0",
+          "functions#min:0",
+          "math#math.prod:0",
+          "functions#all:0"
+        ]
+      },
+      {
+        "id": "q004",
+        "hit": true,
+        "chunks": [
+          "functions#enumerate:0",
+          "functions#enumerate:180",
+          "math#math.prod:0",
+          "collections#defaultdict-examples:360",
+          "itertools#itertools.count:0"
+        ]
+      },
+      {
+        "id": "q005",
+        "hit": true,
+        "chunks": [
+          "stdtypes#printf-style-string-formatting:180",
+          "stdtypes#iterator.__next__:0",
+          "sqlite3#sqlite3.register_converter:0",
+          "functions#len:0",
+          "stdtypes#dictionary-view-objects:0"
+        ]
+      },
+      {
+        "id": "q006",
+        "hit": true,
+        "chunks": [
+          "functions#sorted:0",
+          "stdtypes#list.sort:180",
+          "collections#defaultdict-examples:180",
+          "heapq#heapq.nsmallest:0",
+          "heapq#heapq.nlargest:0"
+        ]
+      },
+      {
+        "id": "q007",
+        "hit": true,
+        "chunks": [
+          "stdtypes#str.capitalize:0",
+          "stdtypes#str.lower:0",
+          "stdtypes#str.swapcase:0",
+          "stdtypes#str.casefold:0",
+          "stdtypes#str.upper:0"
+        ]
+      },
+      {
+        "id": "q008",
+        "hit": true,
+        "chunks": [
+          "stdtypes#str.strip:0",
+          "stdtypes#str.lstrip:0",
+          "stdtypes#str.rstrip:0",
+          "stdtypes#bytes.strip:0",
+          "stdtypes#str.strip:180"
+        ]
+      },
+      {
+        "id": "q009",
+        "hit": true,
+        "chunks": [
+          "stdtypes#str.replace:0",
+          "stdtypes#str.removesuffix:0",
+          "stdtypes#str.removeprefix:0",
+          "stdtypes#str.rjust:0",
+          "stdtypes#str.ljust:0"
+        ]
+      },
+      {
+        "id": "q010",
+        "hit": true,
+        "chunks": [
+          "collections#collections.defaultdict.__missing__:0",
+          "stdtypes#mapping-types-dict:180",
+          "stdtypes#mapping-types-dict:360",
+          "collections#collections.Counter:180",
+          "stdtypes#dict.get:0"
+        ]
+      },
+      {
+        "id": "q011",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.astuple:0",
+          "stdtypes#sequence.copy:0",
+          "collections#collections.deque.copy:0",
+          "stdtypes#frozenset.copy:0",
+          "stdtypes#dict.copy:0"
+        ]
+      },
+      {
+        "id": "q012",
+        "hit": true,
+        "chunks": [
+          "stdtypes#frozenset.add:0",
+          "stdtypes#frozenset.update:0",
+          "stdtypes#set-types-set-frozenset:180",
+          "itertools#itertools-recipes:1260",
+          "stdtypes#set-types-set-frozenset:0"
+        ]
+      },
+      {
+        "id": "q013",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.read_text:0",
+          "pathlib#pathlib.Path.write_text:0",
+          "os#os.fspath:0",
+          "shutil#shutil.which:0",
+          "pathlib#pathlib.Path.rename:0"
+        ]
+      },
+      {
+        "id": "q014",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.write_text:0",
+          "pathlib#pathlib.Path.write_bytes:0",
+          "pathlib#pathlib.Path.move:0",
+          "pathlib#pathlib.Path.read_text:0",
+          "pathlib#pathlib.Path.touch:0"
+        ]
+      },
+      {
+        "id": "q015",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.exists:0",
+          "pathlib#pathlib.Path.replace:0",
+          "pathlib#pathlib.Path.move_into:0",
+          "pathlib#pathlib.Path.copy_into:0",
+          "pathlib#pathlib.types.PathInfo.exists:0"
+        ]
+      },
+      {
+        "id": "q016",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.Path.mkdir:0",
+          "pathlib#pathlib.Path.mkdir:180",
+          "os#os.makedirs:0",
+          "pathlib#pathlib.Path.walk:540",
+          "pathlib#pathlib.PurePath.parents:0"
+        ]
+      },
+      {
+        "id": "q017",
+        "hit": false,
+        "chunks": [
+          "pathlib#comparison-to-the-os-and-os-path-modules:180",
+          "pathlib#module-pathlib:0",
+          "pathlib#pathlib.Path.walk:0",
+          "pathlib#pathlib.PurePath.suffixes:0",
+          "pathlib#pathlib.Path.resolve:0"
+        ]
+      },
+      {
+        "id": "q018",
+        "hit": true,
+        "chunks": [
+          "pathlib#pathlib.PurePath.name:0",
+          "pathlib#pathlib.PurePath.drive:0",
+          "pathlib#pathlib.PurePath:0",
+          "pathlib#pathlib.PurePath.with_name:180",
+          "pathlib#pathlib.PureWindowsPath:0"
+        ]
+      },
+      {
+        "id": "q019",
+        "hit": true,
+        "chunks": [
+          "collections#collections.Counter:0",
+          "collections#collections.Counter:360",
+          "collections#collections.Counter:180",
+          "typing#typing.Counter:0",
+          "stdtypes#mapping-types-dict:360"
+        ]
+      },
+      {
+        "id": "q020",
+        "hit": true,
+        "chunks": [
+          "collections#collections.deque:0",
+          "collections#collections.deque:180",
+          "typing#typing.Deque:0",
+          "collections#deque-objects:720",
+          "collections#deque-recipes:0"
+        ]
+      },
+      {
+        "id": "q021",
+        "hit": true,
+        "chunks": [
+          "collections#collections.defaultdict:0",
+          "collections#ordereddict-objects:0",
+          "collections#defaultdict-examples:180",
+          "stdtypes#mapping-types-dict:360",
+          "collections#userdict-objects:0"
+        ]
+      },
+      {
+        "id": "q022",
+        "hit": true,
+        "chunks": [
+          "collections#collections.Counter.most_common:0",
+          "collections#counter-objects:360",
+          "collections#counter-objects:0",
+          "collections#counter-objects:900",
+          "collections#counter-objects:540"
+        ]
+      },
+      {
+        "id": "q023",
+        "hit": true,
+        "chunks": [
+          "json#module-json:1080",
+          "json#module-json:540",
+          "json#json.JSONDecoder.raw_decode:0",
+          "json#json.dumps:0",
+          "json#json.JSONDecoder.decode:0"
+        ]
+      },
+      {
+        "id": "q024",
+        "hit": true,
+        "chunks": [
+          "json#json.loads:0",
+          "json#module-json:720",
+          "json#json.dumps:0",
+          "json#module-json:900",
+          "json#repeated-names-within-an-object:0"
+        ]
+      },
+      {
+        "id": "q025",
+        "hit": true,
+        "chunks": [
+          "json#json.loads:0",
+          "json#basic-usage:0",
+          "json#json.dump:0",
+          "json#module-json.tool:0",
+          "json#basic-usage:540"
+        ]
+      },
+      {
+        "id": "q026",
+        "hit": false,
+        "chunks": [
+          "json#json.JSONDecoder:360",
+          "json#basic-usage:900",
+          "json#json.dump:0",
+          "json#infinite-and-nan-number-values:0",
+          "json#json.JSONDecoder.decode:0"
+        ]
+      },
+      {
+        "id": "q027",
+        "hit": true,
+        "chunks": [
+          "csv#csv.reader:180",
+          "csv#csv.DictReader:180",
+          "csv#csv.Sniffer.has_header:0",
+          "csv#csv.reader:0",
+          "csv#csv.csvreader.__next__:0"
+        ]
+      },
+      {
+        "id": "q028",
+        "hit": true,
+        "chunks": [
+          "csv#writer-objects:0",
+          "csv#csv.DictWriter:0",
+          "csv#csv.csvwriter.writerows:0",
+          "csv#csv.writer:0",
+          "csv#csv.DictWriter.writeheader:0"
+        ]
+      },
+      {
+        "id": "q029",
+        "hit": true,
+        "chunks": [
+          "csv#csv.DictReader:0",
+          "csv#csv.DictWriter:0",
+          "csv#csv.DictReader:180",
+          "csv#csv.DictReader:360",
+          "csv#writer-objects:0"
+        ]
+      },
+      {
+        "id": "q030",
+        "hit": true,
+        "chunks": [
+          "csv#csv.DictWriter:0",
+          "csv#csv.DictWriter:360",
+          "csv#csv.DictWriter:180",
+          "csv#writer-objects:0",
+          "csv#csv.DictReader:180"
+        ]
+      },
+      {
+        "id": "q031",
+        "hit": true,
+        "chunks": [
+          "datetime#timedelta-objects:0",
+          "datetime#timedelta-objects:540",
+          "datetime#datetime.timedelta.resolution:0",
+          "datetime#datetime.tzinfo.utcoffset:0",
+          "datetime#timedelta-objects:900"
+        ]
+      },
+      {
+        "id": "q032",
+        "hit": true,
+        "chunks": [
+          "datetime#datetime.datetime.now:0",
+          "datetime#datetime.date.today:0",
+          "datetime#datetime.datetime.today:0",
+          "datetime#datetime.datetime.utcnow:0",
+          "datetime#datetime.datetime.fromtimestamp:0"
+        ]
+      },
+      {
+        "id": "q033",
+        "hit": true,
+        "chunks": [
+          "datetime#datetime.date.isoformat:0",
+          "datetime#datetime.time.fromisoformat:360",
+          "datetime#datetime.datetime.isoformat:0",
+          "datetime#datetime.date.fromisoformat:0",
+          "datetime#datetime.date.fromisoformat:180"
+        ]
+      },
+      {
+        "id": "q034",
+        "hit": true,
+        "chunks": [
+          "datetime#datetime.date.strptime:0",
+          "datetime#datetime.datetime.strptime:0",
+          "datetime#datetime.date.__format__:0",
+          "datetime#datetime.date.strptime:180",
+          "logging#logging.Formatter.formatTime:0"
+        ]
+      },
+      {
+        "id": "q035",
+        "hit": true,
+        "chunks": [
+          "re#re.search:0",
+          "re#search-vs-match:0",
+          "re#re.Pattern.search:0",
+          "re#re.match:0",
+          "re#re.Pattern.fullmatch:0"
+        ]
+      },
+      {
+        "id": "q036",
+        "hit": true,
+        "chunks": [
+          "re#re.match:0",
+          "re#re.M:0",
+          "re#search-vs-match:180",
+          "re#search-vs-match:0",
+          "re#re.Pattern.match:0"
+        ]
+      },
+      {
+        "id": "q037",
+        "hit": false,
+        "chunks": [
+          "re#re.Match.pos:0",
+          "unittest#unittest.TestCase.assertRegex:0",
+          "re#re.Match.endpos:0",
+          "re#search-vs-match:0",
+          "re#re.Match.group:0"
+        ]
+      },
+      {
+        "id": "q038",
+        "hit": true,
+        "chunks": [
+          "re#re.findall:0",
+          "re#re.finditer:0",
+          "re#finding-all-adverbs:0",
+          "re#re.findall:180",
+          "re#re.match:0"
+        ]
+      },
+      {
+        "id": "q039",
+        "hit": false,
+        "chunks": [
+          "unittest#unittest.TestCase.assertRaisesRegex:0",
+          "unittest#unittest.TestCase.assertRegex:0",
+          "unittest#unittest.TestCase.assertWarnsRegex:0",
+          "re#re.Pattern.flags:0",
+          "re#re.match:0"
+        ]
+      },
+      {
+        "id": "q040",
+        "hit": true,
+        "chunks": [
+          "re#re.escape:0",
+          "re#regular-expression-syntax:1440",
+          "re#regular-expression-syntax:1800",
+          "re#regular-expression-syntax:1980",
+          "re#re.escape:360"
+        ]
+      },
+      {
+        "id": "q041",
+        "hit": true,
+        "chunks": [
+          "functions#zip:0",
+          "heapq#heapq.merge:0",
+          "itertools#itertools.chain:0",
+          "stdtypes#iterator-types:0",
+          "functions#map:0"
+        ]
+      },
+      {
+        "id": "q042",
+        "hit": true,
+        "chunks": [
+          "itertools#itertools.cycle:0",
+          "itertools#itertools.repeat:0",
+          "itertools#itertools.combinations_with_replacement:0",
+          "itertools#itertools.product:0",
+          "itertools#itertools-recipes:540"
+        ]
+      },
+      {
+        "id": "q043",
+        "hit": true,
+        "chunks": [
+          "itertools#itertools.product:0",
+          "itertools#itertools.combinations:0",
+          "itertools#itertools.permutations:0",
+          "itertools#itertools.product:180",
+          "itertools#itertools-recipes:3060"
+        ]
+      },
+      {
+        "id": "q044",
+        "hit": true,
+        "chunks": [
+          "functions#slice:0",
+          "itertools#itertools.islice:180",
+          "itertools#itertools.islice:0",
+          "collections#deque-recipes:360",
+          "functions#next:0"
+        ]
+      },
+      {
+        "id": "q045",
+        "hit": true,
+        "chunks": [
+          "functools#functools.lru_cache:0",
+          "functools#functools.lru_cache:540",
+          "functools#functools.lru_cache:720",
+          "functools#functools.lru_cache:180",
+          "functools#functools.cache:0"
+        ]
+      },
+      {
+        "id": "q046",
+        "hit": true,
+        "chunks": [
+          "functools#functools.cache:0",
+          "functools#functools.lru_cache:540",
+          "functools#functools.cached_property:360",
+          "functools#functools.cache:180",
+          "functools#functools.cached_property:540"
+        ]
+      },
+      {
+        "id": "q047",
+        "hit": true,
+        "chunks": [
+          "functools#functools.partial:0",
+          "functools#functools.partial:180",
+          "functools#functools.Placeholder:0",
+          "functools#functools.partial:360",
+          "functools#functools.partial:540"
+        ]
+      },
+      {
+        "id": "q048",
+        "hit": true,
+        "chunks": [
+          "functools#functools.update_wrapper:180",
+          "functools#functools.cache:180",
+          "functools#functools.wraps:0",
+          "functools#functools.lru_cache:0",
+          "functools#functools.wraps:180"
+        ]
+      },
+      {
+        "id": "q049",
+        "hit": true,
+        "chunks": [
+          "os#os.getcwd:0",
+          "os#os.curdir:0",
+          "os#os.getcwdb:0",
+          "os#os.listxattr:0",
+          "os#os.fchdir:0"
+        ]
+      },
+      {
+        "id": "q050",
+        "hit": true,
+        "chunks": [
+          "os#os.listdir:0",
+          "os#os.scandir:0",
+          "os#os.listdir:180",
+          "exceptions#NotADirectoryError:0",
+          "os#os.pardir:0"
+        ]
+      },
+      {
+        "id": "q051",
+        "hit": true,
+        "chunks": [
+          "os#os.remove:0",
+          "os#os.removedirs:0",
+          "os#os.rmdir:0",
+          "exceptions#IsADirectoryError:0",
+          "os#os.scandir:0"
+        ]
+      },
+      {
+        "id": "q052",
+        "hit": true,
+        "chunks": [
+          "os#os.getenv:0",
+          "os#os.getenvb:0",
+          "functions#import__:540",
+          "os#python-utf-8-mode:360",
+          "os#os.get_exec_path:0"
+        ]
+      },
+      {
+        "id": "q053",
+        "hit": true,
+        "chunks": [
+          "shutil#shutil.copy:180",
+          "shutil#shutil.copy2:0",
+          "shutil#shutil.copyfile:0",
+          "shutil#module-shutil:0",
+          "shutil#shutil.move:180"
+        ]
+      },
+      {
+        "id": "q054",
+        "hit": true,
+        "chunks": [
+          "shutil#shutil.copy2:0",
+          "shutil#shutil.move:180",
+          "shutil#module-shutil:0",
+          "shutil#shutil.copytree:540",
+          "shutil#shutil.copyfile:0"
+        ]
+      },
+      {
+        "id": "q055",
+        "hit": true,
+        "chunks": [
+          "shutil#shutil.rmtree:0",
+          "os#os.rmdir:0",
+          "shutil#rmtree-example:0",
+          "os#os.fwalk:360",
+          "pathlib#pathlib.Path.walk:900"
+        ]
+      },
+      {
+        "id": "q056",
+        "hit": true,
+        "chunks": [
+          "shutil#shutil.which:0",
+          "os#os.get_exec_path:0",
+          "os#os.execl:360",
+          "shutil#shutil.which:180",
+          "os#os.spawnl:360"
+        ]
+      },
+      {
+        "id": "q057",
+        "hit": true,
+        "chunks": [
+          "math#math.ceil:0",
+          "math#math.trunc:0",
+          "math#math.cos:0",
+          "math#math.fabs:0",
+          "math#math.sqrt:0"
+        ]
+      },
+      {
+        "id": "q058",
+        "hit": true,
+        "chunks": [
+          "math#math.floor:0",
+          "math#math.isqrt:0",
+          "math#math.trunc:0",
+          "math#math.ceil:0",
+          "functions#divmod:0"
+        ]
+      },
+      {
+        "id": "q059",
+        "hit": true,
+        "chunks": [
+          "math#math.isqrt:0",
+          "math#math.sqrt:0",
+          "math#module-math:540",
+          "math#math.hypot:0",
+          "statistics#statistics.stdev:0"
+        ]
+      },
+      {
+        "id": "q060",
+        "hit": true,
+        "chunks": [
+          "math#math.factorial:0",
+          "math#math.trunc:0",
+          "math#math.isinf:0",
+          "math#math.perm:0",
+          "math#math.comb:0"
+        ]
+      },
+      {
+        "id": "q061",
+        "hit": true,
+        "chunks": [
+          "statistics#statistics.mean:0",
+          "statistics#statistics.mean:180",
+          "statistics#statistics.variance:0",
+          "statistics#statistics.geometric_mean:0",
+          "statistics#statistics.pvariance:0"
+        ]
+      },
+      {
+        "id": "q062",
+        "hit": true,
+        "chunks": [
+          "statistics#statistics.median:0",
+          "statistics#statistics.median_high:0",
+          "statistics#statistics.median_low:0",
+          "statistics#statistics.median_grouped:0",
+          "statistics#statistics.median_grouped:180"
+        ]
+      },
+      {
+        "id": "q063",
+        "hit": true,
+        "chunks": [
+          "statistics#statistics.mode:0",
+          "statistics#statistics.mode:180",
+          "random#random.triangular:0",
+          "shutil#shutil.which:0",
+          "statistics#module-statistics:180"
+        ]
+      },
+      {
+        "id": "q064",
+        "hit": true,
+        "chunks": [
+          "statistics#statistics.stdev:0",
+          "statistics#measures-of-spread:0",
+          "statistics#statistics.pstdev:0",
+          "statistics#statistics.NormalDist.stdev:0",
+          "statistics#statistics.NormalDist.zscore:0"
+        ]
+      },
+      {
+        "id": "q065",
+        "hit": true,
+        "chunks": [
+          "random#random.choice:0",
+          "statistics#statistics.kde_random:0",
+          "random#random.choices:180",
+          "random#command-line-usage:0",
+          "random#random.randrange:0"
+        ]
+      },
+      {
+        "id": "q066",
+        "hit": true,
+        "chunks": [
+          "random#random.sample:0",
+          "random#recipes:180",
+          "random#module-random:0",
+          "random#examples:540",
+          "random#random.choices:0"
+        ]
+      },
+      {
+        "id": "q067",
+        "hit": true,
+        "chunks": [
+          "random#random.uniform:0",
+          "random#random.randint:0",
+          "random#cmdoption-random-i:0",
+          "random#random.randrange:0",
+          "random#random.getrandbits:0"
+        ]
+      },
+      {
+        "id": "q068",
+        "hit": true,
+        "chunks": [
+          "random#random.shuffle:0",
+          "random#random.choice:0",
+          "random#random.sample:0",
+          "random#notes-on-reproducibility:0",
+          "random#random.seed:0"
+        ]
+      },
+      {
+        "id": "q069",
+        "hit": true,
+        "chunks": [
+          "string#string.ascii_lowercase:0",
+          "stdtypes#bytes.lower:0",
+          "string#string.punctuation:0",
+          "string#string.whitespace:0",
+          "stdtypes#bytes.islower:0"
+        ]
+      },
+      {
+        "id": "q070",
+        "hit": false,
+        "chunks": [
+          "stdtypes#str.isdigit:0",
+          "stdtypes#str.isnumeric:0",
+          "stdtypes#str.isdecimal:0",
+          "string#string.printable:0",
+          "string#string.punctuation:0"
+        ]
+      },
+      {
+        "id": "q071",
+        "hit": true,
+        "chunks": [
+          "string#string.printable:0",
+          "string#string.ascii_letters:0",
+          "string#string.whitespace:0",
+          "re#regular-expression-syntax:4500",
+          "stdtypes#bytes.isalnum:0"
+        ]
+      },
+      {
+        "id": "q072",
+        "hit": true,
+        "chunks": [
+          "string#string.hexdigits:0",
+          "stdtypes#str.isalnum:0",
+          "string#string.whitespace:0",
+          "string#string.punctuation:0",
+          "stdtypes#str.isalpha:0"
+        ]
+      },
+      {
+        "id": "q073",
+        "hit": true,
+        "chunks": [
+          "argparse#argparse.ArgumentParser.parse_args:0",
+          "argparse#argparse.ArgumentParser.parse_known_args:0",
+          "argparse#argparse.ArgumentParser.set_defaults:0",
+          "argparse#dest:0",
+          "argparse#default:180"
+        ]
+      },
+      {
+        "id": "q074",
+        "hit": false,
+        "chunks": [
+          "argparse#module-argparse:180",
+          "argparse#argparse.FileType:0",
+          "argparse#module-argparse:360",
+          "argparse#required:0",
+          "argparse#action:0"
+        ]
+      },
+      {
+        "id": "q075",
+        "hit": false,
+        "chunks": [
+          "logging#logging.log:0",
+          "logging#logging.Logger.exception:0",
+          "logging#logging.Logger.log:0",
+          "logging#logging.Logger.critical:0",
+          "logging#logging.critical:0"
+        ]
+      },
+      {
+        "id": "q076",
+        "hit": true,
+        "chunks": [
+          "logging#logging.Logger.warning:0",
+          "logging#logging.warning:0",
+          "logging#logging.Logger.exception:0",
+          "logging#logging.Logger.isEnabledFor:0",
+          "logging#logging.log:0"
+        ]
+      },
+      {
+        "id": "q077",
+        "hit": true,
+        "chunks": [
+          "logging#logging.Logger.exception:0",
+          "logging#logging.error:0",
+          "logging#logging.Logger.error:0",
+          "logging#logging.exception:0",
+          "logging#logging.Logger.isEnabledFor:0"
+        ]
+      },
+      {
+        "id": "q078",
+        "hit": true,
+        "chunks": [
+          "logging#logging.exception:0",
+          "logging#logging.Logger.exception:0",
+          "logging#logging.Logger.debug:180",
+          "logging#logging.Logger.debug:900",
+          "logging#logging.Logger.debug:0"
+        ]
+      },
+      {
+        "id": "q079",
+        "hit": true,
+        "chunks": [
+          "unittest#distinguishing-test-iterations-using-subtests:0",
+          "unittest#unittest.TestCase.assertNotEqual:0",
+          "stdtypes#ranges:180",
+          "unittest#unittest.TestCase.assertSetEqual:0",
+          "unittest#unittest.TestCase.assertEqual:0"
+        ]
+      },
+      {
+        "id": "q080",
+        "hit": true,
+        "chunks": [
+          "unittest#unittest.TestCase.assertTrue:0",
+          "unittest#basic-example:180",
+          "unittest#unittest.TestCase:180",
+          "unittest#basic-example:0",
+          "unittest#unittest.TestCase.assertSequenceEqual:0"
+        ]
+      },
+      {
+        "id": "q081",
+        "hit": true,
+        "chunks": [
+          "unittest#unittest.TestCase.assertRaises:0",
+          "exceptions#TypeError:0",
+          "exceptions#built-in-exceptions:180",
+          "unittest#unittest.TestResult.addError:0",
+          "unittest#unittest.SkipTest:0"
+        ]
+      },
+      {
+        "id": "q082",
+        "hit": true,
+        "chunks": [
+          "unittest#organizing-test-code:180",
+          "unittest#organizing-test-code:540",
+          "unittest#unittest.FunctionTestCase:0",
+          "unittest#module-unittest:0",
+          "unittest#unittest.TestCase.setUp:0"
+        ]
+      },
+      {
+        "id": "q083",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Any:0",
+          "typing#the-any-type:0",
+          "typing#typing.Type:0",
+          "typing#typing.TypeIs:0",
+          "typing#typing-support-for-type-hints:180"
+        ]
+      },
+      {
+        "id": "q084",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Optional:0",
+          "statistics#statistics.variance:0",
+          "statistics#statistics.variance:180",
+          "typing#typing.get_type_hints:360",
+          "argparse#argparse.ArgumentError:0"
+        ]
+      },
+      {
+        "id": "q085",
+        "hit": true,
+        "chunks": [
+          "typing#typing.Literal:0",
+          "typing#annotating-tuples:360",
+          "typing#typing.Annotated:0",
+          "typing#typing.Annotated:180",
+          "typing#typing.Annotated:540"
+        ]
+      },
+      {
+        "id": "q086",
+        "hit": true,
+        "chunks": [
+          "typing#annotating-tuples:540",
+          "typing#typing.final:0",
+          "typing#typing.Final:0",
+          "typing#typing.final:180",
+          "typing#the-any-type:360"
+        ]
+      },
+      {
+        "id": "q087",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.asdict:0",
+          "dataclasses#dataclasses.asdict:180",
+          "dataclasses#dataclasses.fields:0",
+          "dataclasses#dataclasses.is_dataclass:0",
+          "collections#collections.UserDict:0"
+        ]
+      },
+      {
+        "id": "q088",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.fields:0",
+          "dataclasses#dataclasses.astuple:0",
+          "dataclasses#dataclasses.is_dataclass:0",
+          "dataclasses#dataclasses.asdict:0",
+          "collections#namedtuple-factory-function-for-tuples-with-named-fields:1080"
+        ]
+      },
+      {
+        "id": "q089",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.is_dataclass:0",
+          "dataclasses#dataclasses.fields:0",
+          "dataclasses#class-variables:0",
+          "functions#isinstance:0",
+          "dataclasses#dataclasses.make_dataclass:180"
+        ]
+      },
+      {
+        "id": "q090",
+        "hit": true,
+        "chunks": [
+          "dataclasses#dataclasses.replace:0",
+          "dataclasses#dataclasses.replace:180",
+          "dataclasses#dataclasses.make_dataclass:180",
+          "stdtypes#bytes.replace:0",
+          "dataclasses#mutable-default-values:180"
+        ]
+      },
+      {
+        "id": "q091",
+        "hit": true,
+        "chunks": [
+          "sqlite3#sqlite3.Connection:0",
+          "sqlite3#sqlite3.connect:0",
+          "sqlite3#module-functions:0",
+          "sqlite3#tutorial:0",
+          "sqlite3#sqlite3.Cursor.connection:0"
+        ]
+      },
+      {
+        "id": "q092",
+        "hit": true,
+        "chunks": [
+          "sqlite3#sqlite3.Cursor.fetchone:0",
+          "sqlite3#sqlite3.Cursor.fetchall:0",
+          "sqlite3#sqlite3.Cursor.fetchmany:0",
+          "sqlite3#tutorial:360",
+          "sqlite3#sqlite3.Cursor.arraysize:0"
+        ]
+      },
+      {
+        "id": "q093",
+        "hit": true,
+        "chunks": [
+          "sqlite3#sqlite3.Cursor.fetchall:0",
+          "sqlite3#sqlite3.Cursor.fetchmany:0",
+          "sqlite3#sqlite3.Cursor.fetchone:0",
+          "sqlite3#sqlite3.Cursor.arraysize:0",
+          "sqlite3#tutorial:540"
+        ]
+      },
+      {
+        "id": "q094",
+        "hit": true,
+        "chunks": [
+          "sqlite3#sqlite3.Cursor.executescript:0",
+          "sqlite3#sqlite3.Connection.commit:0",
+          "sqlite3#transaction-control-via-the-autocommit-attribute:0",
+          "sqlite3#transaction-control-via-the-isolation-level-attribute:180",
+          "sqlite3#sqlite3.Connection.autocommit:0"
+        ]
+      },
+      {
+        "id": "q095",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heappop_max:0",
+          "heapq#heapq.heappop:0",
+          "heapq#heapq.heappush_max:0",
+          "heapq#heapq.heappush:0",
+          "heapq#module-heapq:360"
+        ]
+      },
+      {
+        "id": "q096",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heappop:0",
+          "heapq#heapq.heappushpop:0",
+          "heapq#heapq.heapreplace:0",
+          "heapq#heapq.heappop_max:0",
+          "heapq#priority-queue-implementation-notes:540"
+        ]
+      },
+      {
+        "id": "q097",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.heapify_max:0",
+          "heapq#heapq.heapify:0",
+          "heapq#module-heapq:360",
+          "heapq#heapq.heapreplace:0",
+          "heapq#theory:360"
+        ]
+      },
+      {
+        "id": "q098",
+        "hit": true,
+        "chunks": [
+          "heapq#heapq.nlargest:0",
+          "heapq#heapq.nsmallest:0",
+          "functions#max:0",
+          "itertools#itertools.permutations:0",
+          "itertools#itertools.combinations:0"
+        ]
+      },
+      {
+        "id": "q099",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.insort_right:0",
+          "bisect#bisect.bisect_left:0",
+          "bisect#bisect.bisect_right:0",
+          "bisect#bisect.insort_left:0",
+          "bisect#searching-sorted-lists:0"
+        ]
+      },
+      {
+        "id": "q100",
+        "hit": true,
+        "chunks": [
+          "bisect#bisect.bisect_right:0",
+          "bisect#bisect.insort_right:0",
+          "bisect#bisect.bisect_left:0",
+          "bisect#searching-sorted-lists:0",
+          "bisect#searching-sorted-lists:180"
+        ]
+      },
+      {
+        "id": "q101",
+        "hit": false,
+        "chunks": [
+          "bisect#bisect.bisect_left:0",
+          "functions#sorted:0",
+          "stdtypes#list.sort:0",
+          "bisect#searching-sorted-lists:0",
+          "stdtypes#list.sort:180"
+        ]
+      },
+      {
+        "id": "q102",
+        "hit": false,
+        "chunks": [
+          "bisect#bisect.bisect_left:0",
+          "functions#sorted:0",
+          "stdtypes#list.sort:0",
+          "bisect#searching-sorted-lists:0",
+          "stdtypes#list.sort:180"
+        ]
+      }
+    ],
+    "split": "all"
+  }
+]

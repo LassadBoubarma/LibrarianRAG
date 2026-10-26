@@ -1,0 +1,797 @@
+id,question,expected,actual,quote,correct_0_or_1,faithful_0_or_1,citation_supports_claim_0_or_1,notes
+q001,What does abs return for a number?,The absolute value of the number.,the absolute value of a number [1],"Return the absolute value of a number. The argument may be an integer, a floating-point number, or an object implementing __abs__() . If the argument is a complex number, its magnitude is returned.",,,,
+q002,What does all return for an empty iterable?,True.,True [1],"Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to:
+
+def all(iterable):
+    for element in iterable:
+        if not element:
+            return False
+    return True",,,,
+q003,What does any return for an empty iterable?,False.,False [1],"Return True if any element of the iterable is true. If the iterable is empty, return False . Equivalent to:
+
+def any(iterable):
+    for element in iterable:
+        if element:
+            return True
+    return False",,,,
+q004,What is the default starting count for enumerate?,Zero.,0 [1],"Return an enumerate object. iterable must be a sequence, an iterator , or some other object which supports iteration. The __next__() method of the iterator returned by enumerate() returns a tuple containing a count (from start which defaults to 0) and the values obtained from iterating over iterable .
+
+>>> seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+>>> list(enumerate(seasons))
+[(0, 'Spring'), (1, 'Summer'), (2, 'Fall'), (3, 'Winter')]
+>>> list(enumerate(seasons, start=1))
+[(1, 'Spring'), (2, 'Summer'), (3",,,,
+q005,How do I get the number of items in a Python object?,Use len.,Use the len(object) function. [1],"Return the length (the number of items) of an object. The argument may be a sequence (such as a string, bytes, tuple, list, or range) or a collection (such as a dictionary, set, or frozen set).
+
+CPython implementation detail: len raises OverflowError on lengths larger than sys.maxsize , such as range(2 ** 100) .",,,,
+q006,Does sorted return a new list?,"Yes, it returns a new sorted list.",Yes [1],"Return a new sorted list from the items in iterable .
+
+Has two optional arguments which must be specified as keyword arguments.
+
+key specifies a function of one argument that is used to extract a comparison key from each element in iterable (for example, key=str.lower ). The default value is None (compare the elements directly).
+
+reverse is a boolean value. If set to True , then the list elements are sorted as if each comparison were reversed.
+
+Use functools.cmp_to_key() to convert an old-style cmp function to a key function.
+
+The built-in sorted() function is guaranteed to be stable. A sort is stable if it guarantees not to change the relative order of elements that compare equal — this is helpful for sorting in multiple passes (for example, sort by department, then by salary grade).",,,,
+q007,How can I make a copy of a string with lowercase letters?,Use str.lower.,str.lower() [1],"Return a copy of the string with all the cased characters [ 4 ] converted to lowercase.
+
+The lowercasing algorithm used is described in section 3.13 ‘Default Case Folding’ of the Unicode Standard .",,,,
+q008,What does str.strip remove when chars is omitted?,Leading and trailing whitespace.,whitespace [1],"Return a copy of the string with the leading and trailing characters removed. The chars argument is a string specifying the set of characters to be removed. If omitted or None , the chars argument defaults to removing whitespace. The chars argument is not a prefix or suffix; rather, all combinations of its values are stripped:
+
+>>> '   spacious   '.strip()
+'spacious'
+>>> 'www.example.com'.strip('cmowz.')
+'example'
+
+
+The outermost leading and trailing chars argument values are stripped from the string. Characters are removed from the leading end until reaching a string character that is not contained in the set of characters in chars . A similar action takes place on the trailing end. For example:
+
+>>> comment_string = '#....... Section 3.2.1",,,,
+q009,Does str.replace change the original string?,"No, it returns a copy with replacements.",No [1],"Return a copy of the string with all occurrences of substring old replaced by new . If count is given, only the first count occurrences are replaced. If count is not specified or -1 , then all occurrences are replaced.
+
+Changed in version 3.13: count is now supported as a keyword argument.",,,,
+q010,Does dict.get raise KeyError for a missing key?,"No, it returns the default value.",No [1],"If the default_factory attribute is None , this raises a KeyError exception with the key as argument.
+
+If default_factory is not None , it is called without arguments to provide a default value for the given key , this value is inserted in the dictionary for the key , and returned.
+
+If calling default_factory raises an exception this exception is propagated unchanged.
+
+This method is called by the __getitem__() method of the dict class when the requested key is not found; whatever it returns or raises is then returned or raised by __getitem__() .
+
+Note that __missing__() is not called for any operations besides __getitem__() . This means that get() will, like normal dictionaries, return None as a default rather than using default_factory .",,,,
+q011,Does list.copy make a shallow or deep copy?,A shallow copy.,shallow [1],"Added in version 3.3.
+
+Create a shallow copy of sequence . This is equivalent to writing sequence[:] .
+
+Hint
+
+The copy() method is not part of the MutableSequence ABC , but most concrete mutable sequence types provide it.",,,,
+q012,How do I add one element to a set?,Use set.add.,Use the add function. [1],Add element elem to the set.,,,,
+q013,What does Path.read_text return?,The decoded contents of the file as a string.,Return the decoded contents of the pointed-to file as a string [1],"Return the decoded contents of the pointed-to file as a string:
+
+>>> p = Path('my_text_file')
+>>> p.write_text('Text file contents')
+18
+>>> p.read_text()
+'Text file contents'
+
+
+The file is opened and then closed. The optional parameters have the same meaning as in open() .
+
+Added in version 3.5.
+
+Changed in version 3.13: The newline parameter was added.",,,,
+q014,Does Path.write_text overwrite an existing file?,"Yes, an existing file is overwritten.",Yes [1],"Open the file pointed to in text mode, write data to it, and close the file:
+
+>>> p = Path('my_text_file')
+>>> p.write_text('Text file contents')
+18
+>>> p.read_text()
+'Text file contents'
+
+
+An existing file of the same name is overwritten. The optional parameters have the same meaning as in open() .
+
+Added in version 3.5.
+
+Changed in version 3.10: The newline parameter was added.",,,,
+q015,How do I check whether a path points to an existing file or directory?,Use Path.exists.,Path.exists() [1],"Return True if the path points to an existing file or directory. False will be returned if the path is invalid, inaccessible or missing. Use Path.stat() to distinguish between these cases.
+
+This method normally follows symlinks; to check if a symlink exists, add the argument follow_symlinks=False .
+
+>>> Path('.').exists()
+True
+>>> Path('setup.py').exists()
+True
+>>> Path('/etc').exists()
+True
+>>> Path('nonexistentfile').exists()
+False
+
+
+Changed in version 3.12: The follow_symlinks parameter was added.",,,,
+q016,What does parents=True do in Path.mkdir?,It creates missing parent directories.,"If parents is true, any missing parents of this path are created as needed; they are created with the default permissions without taking mode into account (mimicking the POSIX mkdir -p command). [1]","Create a new directory at this given path. If mode is given, it is combined with the process’s umask value to determine the file mode and access flags. If the path already exists, FileExistsError is raised.
+
+If parents is true, any missing parents of this path are created as needed; they are created with the default permissions without taking mode into account (mimicking the POSIX mkdir -p command).
+
+If parents is false (the default), a missing parent raises FileNotFoundError .
+
+If exist_ok is false (the default), FileExistsError is raised if the target directory already exists.
+
+If exist_ok is true, FileExistsError will not be raised unless the given path already exists in the file system and is not a directory (same behavior as the POSIX mkdir -p",,,,
+q017,How do I get the file extension from a pathlib path?,Use the suffix property.,Use PurePath.suffixes [1],"A list of the path’s suffixes, often called file extensions:
+
+>>> PurePosixPath('my/library.tar.gar').suffixes
+['.tar', '.gar']
+>>> PurePosixPath('my/library.tar.gz').suffixes
+['.tar', '.gz']
+>>> PurePosixPath('my/library').suffixes
+[]
+
+
+Changed in version 3.14: A single dot (” . ”) is considered a valid suffix.",,,,
+q018,What does PurePath.name represent?,"The final path component, excluding the drive and root.","A string representing the final path component, excluding the drive and root, if any: [1]","A string representing the final path component, excluding the drive and root, if any:
+
+>>> PurePosixPath('my/library/setup.py').name
+'setup.py'
+
+
+UNC drive names are not considered:
+
+>>> PureWindowsPath('//some/share/setup.py').name
+'setup.py'
+>>> PureWindowsPath('//some/share').name
+''",,,,
+q019,What is collections.Counter used for?,Counting hashable objects.,collections.Counter is used for counting hashable objects. [1],"A Counter is a dict subclass for counting hashable objects. It is a collection where elements are stored as dictionary keys and their counts are stored as dictionary values. Counts are allowed to be any integer value including zero or negative counts. The Counter class is similar to bags or multisets in other languages.
+
+Elements are counted from an iterable or initialized from another mapping (or counter):
+
+>>> c = Counter()                           # a new, empty counter
+>>> c = Counter('gallahad')                 # a new counter from an iterable
+>>> c = Counter({'red': 4, 'blue': 2})      # a new counter from a mapping
+>>> c = Counter(cats=4, dogs=8)             # a new counter from keyword args
+
+
+Counter objects have a dictionary interface except that they return",,,,
+q020,What is a deque?,A list-like container with fast appends and pops on either end.,"A deque, or double-ended queue, is a generalization of stacks and queues that supports thread-safe, memory efficient appends and pops from either side with approximately O(1) performance. [1]","Returns a new deque object initialized left-to-right (using append() ) with data from iterable . If iterable is not specified, the new deque is empty.
+
+Deques are a generalization of stacks and queues (the name is pronounced “deck” and is short for “double-ended queue”). Deques support thread-safe, memory efficient appends and pops from either side of the deque with approximately the same O (1) performance in either direction.
+
+Though list objects support similar operations, they are optimized for fast fixed-length operations and incur O ( n ) memory movement costs for pop(0) and insert(0, v) operations which change both the size and position of the underlying data representation.
+
+If maxlen is not specified or is None , deques may grow to an arbitrary length.",,,,
+q021,What makes defaultdict different from dict?,It calls a factory function to supply missing values.,"defaultdict overrides one method and adds one writable instance variable, providing a default value for missing keys. [1]","Return a new dictionary-like object. defaultdict is a subclass of the built-in dict class. It overrides one method and adds one writable instance variable. The remaining functionality is the same as for the dict class and is not documented here.
+
+The first argument provides the initial value for the default_factory attribute; it defaults to None . All remaining arguments are treated the same as if they were passed to the dict constructor, including keyword arguments.
+
+defaultdict objects support the following method in addition to the standard dict operations:
+
+defaultdict objects support the following instance variable:
+
+Changed in version 3.9: Added merge ( | ) and update ( |= ) operators, specified in PEP 584 .",,,,
+q022,How can I get the most common elements from a Counter?,Use most_common.,use the most_common() method [1],"Return a list of the n most common elements and their counts from the most common to the least. If n is omitted or None , most_common() returns all elements in the counter. Elements with equal counts are ordered in the order first encountered:
+
+>>> Counter('abracadabra').most_common(3)
+[('a', 5), ('b', 2), ('r', 2)]",,,,
+q023,What does json.dumps return?,A JSON formatted string.,a JSON formatted str [1],"Serialize obj to a JSON formatted str using this conversion table . The arguments have the same meaning as in dump() .
+
+Note
+
+Keys in key/value pairs of JSON are always of the type str . When a dictionary is converted into JSON, all the keys of the dictionary are coerced to strings. As a result of this, if a dictionary is converted into JSON and then back into a dictionary, the dictionary may not equal the original one. That is, loads(dumps(x)) != x if x has non-string keys.",,,,
+q024,What does json.loads do?,It deserializes a JSON document to a Python object.,"deserialize s (a str, bytes or bytearray instance containing a JSON document) to a Python object [1]","Identical to load() , but instead of a file-like object, deserialize s (a str , bytes or bytearray instance containing a JSON document) to a Python object using this conversion table .
+
+Changed in version 3.6: s can now be of type bytes or bytearray . The input encoding should be UTF-8, UTF-16 or UTF-32.
+
+Changed in version 3.9: The keyword argument encoding has been removed.",,,,
+q025,How can I write a Python object as JSON into a file-like object?,Use json.dump.,"json.dump(obj, fp, *args, **kwargs) [1]","Serialize obj as a JSON formatted stream to fp (a .write() -supporting file-like object ) using this Python-to-JSON conversion table .
+
+Note
+
+Unlike pickle and marshal , JSON is not a framed protocol, so trying to serialize multiple objects with repeated calls to dump() using the same fp will result in an invalid JSON file.
+
+Changed in version 3.2: Allow strings for indent in addition to integers.
+
+Changed in version 3.4: Use (',', ': ') as default if indent is not None .
+
+Changed in version 3.6: All optional parameters are now keyword-only .",,,,
+q026,Which exception reports an invalid JSON document?,JSONDecodeError.,JSONDecodeError [1],"JSON floats into custom datatypes, for example decimal.Decimal .
+
+parse_int ( callable | None) – If set, a function that is called with the string of every JSON int to be decoded. If None (the default), it is equivalent to int(num_str) . This can be used to parse JSON integers into custom datatypes, for example float .
+
+parse_constant ( callable | None) – If set, a function that is called with one of the following strings: '-Infinity' , 'Infinity' , or 'NaN' . This can be used to raise an exception if invalid JSON numbers are encountered. Default None .
+
+JSONDecodeError – When the data being deserialized is not a valid JSON document.
+
+UnicodeDecodeError – When the data being deseria",,,,
+q027,What does each row returned by csv.reader contain?,A list of strings.,a list of strings [1],"from the csv file is returned as a list of strings. No automatic data type conversion is performed unless the QUOTE_NONNUMERIC format option is specified (in which case unquoted fields are transformed into floats).
+
+A short usage example:
+
+>>> import csv
+>>> with open('eggs.csv', newline='') as csvfile:
+...     spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+...     for row in spamreader:
+...         print(', '.join(row))
+Spam, Spam, Spam, Spam, Spam, Baked Beans
+Spam, Lovely Spam, Wonderful Spam",,,,
+q028,Which function creates an object for writing CSV rows?,Use csv.writer.,csv.writer [1],"Return a writer object responsible for converting the user’s data into delimited strings on the given file-like object. csvfile can be any object with a write() method. If csvfile is a file object, it should be opened with newline='' [ 1 ] . An optional dialect parameter can be given which is used to define a set of parameters specific to a particular CSV dialect. It may be an instance of a subclass of the Dialect class or one of the strings returned by the list_dialects() function. The other optional fmtparams keyword arguments can be given to override individual formatting parameters in the current dialect. For full details about dialects and formatting parameters, see the Dialects and Formatting Parameters section. To make it as easy as possible to interface with modules which implement the DB API, the value None",,,,
+q029,What does csv.DictReader map row values into?,A dictionary.,csv.DictReader maps row values into a dict [1],"Create an object that operates like a regular reader but maps the information in each row to a dict whose keys are given by the optional fieldnames parameter.
+
+The fieldnames parameter is a sequence . If fieldnames is omitted, the values in the first row of file f will be used as the fieldnames and will be omitted from the results. If fieldnames is provided, they will be used and the first row will be included in the results. Regardless of how the fieldnames are determined, the dictionary preserves their original ordering.
+
+If a row has more fields than fieldnames, the remaining data is put in a list and stored with the fieldname specified by restkey (which defaults to None ). If a non-blank row has fewer fields than fieldnames, the missing values are filled-in with the value of restval (which defaults",,,,
+q030,What does csv.DictWriter map dictionaries into?,Output rows.,output rows [1],"Create an object which operates like a regular writer but maps dictionaries onto output rows. The fieldnames parameter is a sequence of keys that identify the order in which values in the dictionary passed to the writerow() method are written to file f . The optional restval parameter specifies the value to be written if the dictionary is missing a key in fieldnames . If the dictionary passed to the writerow() method contains a key not found in fieldnames , the optional extrasaction parameter indicates what action to take. If it is set to 'raise' , the default value, a ValueError is raised. If it is set to 'ignore' , extra values in the dictionary are ignored. Any other optional or keyword arguments are passed to the underlying writer instance.
+
+Note that unlike the DictReader class, the fieldnames parameter of the DictWriter",,,,
+q031,What does a timedelta represent?,A duration or difference between two dates or times.,"A duration, the difference between two datetime or date instances. [1]","A timedelta object represents a duration, the difference between two datetime or date instances.
+
+Class attributes:
+
+Note that, because of normalization, timedelta.max is greater than -timedelta.min . -timedelta.max is not representable as a timedelta object.
+
+Instance attributes (read-only):
+
+Supported operations:
+
+Operation Result
+
+t1 = t2 + t3 Sum of t2 and t3 . Afterwards t1 - t2 == t3 and t1 - t3 == t2 are true. (1)
+
+t1 = t2 - t3 Difference of t2 and t3 . Afterwards t1 == t2 - t3 and t2 == t1 + t3 are true. (1)(6)
+
+t1 = t2 * i or t1 = i * t2 Delta multiplied by",,,,
+q032,How do I get the current local date?,Use date.today.,date.today() [1],"Return the current local date.
+
+This is equivalent to date.fromtimestamp(time.time()) .",,,,
+q033,What format does date.isoformat use?,YYYY-MM-DD.,YYYY-MM-DD [1],"Return a string representing the date in ISO 8601 format, YYYY-MM-DD :
+
+>>> from datetime import date
+>>> date(2002, 12, 4).isoformat()
+'2002-12-04'",,,,
+q034,How can I parse a date string using a specified format?,Use datetime.strptime.,"Use date.strptime(date_string, format) or datetime.strptime(date_string, format). [1]","Return a date corresponding to date_string , parsed according to format . This is equivalent to:
+
+date(*(time.strptime(date_string, format)[0:3]))
+
+
+ValueError is raised if the date_string and format can’t be parsed by time.strptime() or if it returns a value which isn’t a time tuple. See also strftime() and strptime() Behavior and date.fromisoformat() .
+
+Note
+
+If format specifies a day of month without a year a DeprecationWarning is emitted. This is to avoid a quadrennial leap year bug in code seeking to parse only a month and day as the default year used in absence of one in the format is not a leap year. Such format values may raise an error as of Python 3",,,,
+q035,Does re.search look through the whole string for a match?,"Yes, it scans for the first matching location.",Yes [1],"Scan through string looking for the first location where the regular expression pattern produces a match, and return a corresponding Match . Return None if no position in the string matches the pattern; note that this is different from finding a zero-length match at some point in the string.
+
+The expression’s behaviour can be modified by specifying a flags value. Values can be any of the flags variables, combined using bitwise OR (the | operator).",,,,
+q036,Does re.match start at the beginning of the string?,"Yes, it matches at the beginning.",Yes [1],"If zero or more characters at the beginning of string match the regular expression pattern , return a corresponding Match . Return None if the string does not match the pattern; note that this is different from a zero-length match.
+
+Note that even in MULTILINE mode, re.match() will only match at the beginning of the string and not at the beginning of each line.
+
+If you want to locate a match anywhere in string , use search() instead (see also search() vs. match() ).
+
+The expression’s behaviour can be modified by specifying a flags value. Values can be any of the flags variables, combined using bitwise OR (the | operator).",,,,
+q037,How do I require a regex to match the entire string?,Use re.fullmatch.,use re.fullmatch() [1],"Python offers different primitive operations based on regular expressions:
+
+re.match() checks for a match only at the beginning of the string
+
+re.search() checks for a match anywhere in the string (this is what Perl does by default)
+
+re.fullmatch() checks for entire string to be a match
+
+For example:
+
+>>> re.match(""c"", ""abcdef"")    # No match
+>>> re.search(""c"", ""abcdef"")   # Match
+<re.Match object; span=(2, 3), match='c'>
+>>> re.fullmatch(""p.*n"", ""python"") # Match
+<re.Match object; span=(0, 6), match='python'>
+>>> re.fullmatch(""r.",,,,
+q038,What does re.findall return?,All non-overlapping matches as a list.,"all non-overlapping matches of pattern in string, as a list of strings or tuples. [1]","Return all non-overlapping matches of pattern in string , as a list of strings or tuples. The string is scanned left-to-right, and matches are returned in the order found. Empty matches are included in the result.
+
+The result depends on the number of capturing groups in the pattern. If there are no groups, return a list of strings matching the whole pattern. If there is exactly one group, return a list of strings matching that group. If multiple groups are present, return a list of tuples of strings matching the groups. Non-capturing groups do not affect the form of the result.
+
+>>> re.findall(r'\bf[a-z]*', 'which foot or hand fell fastest')
+['foot', 'fell', 'fastest']
+>>> re.findall(r'(\w+)",,,,
+q039,How can I replace regex matches in a string?,Use re.sub.,I don't know based on these documents.,,,,,
+q040,How do I escape special characters for a literal regex pattern?,Use re.escape.,use re.escape(pattern) [1],"Escape special characters in pattern . This is useful if you want to match an arbitrary literal string that may have regular expression metacharacters in it. For example:
+
+>>> print(re.escape('https://www.python.org'))
+https://www\.python\.org
+
+>>> legal_chars = string.ascii_lowercase + string.digits + ""!#$%&'*+-.^_`|~:""
+>>> print('[%s]+' % re.escape(legal_chars))
+[abcdefghijklmnopqrstuvwxyz0123456789!\#\$%\&'\*\+\-\.\^_`\|\~:]+
+
+>",,,,
+q041,How can I iterate over several iterables as one sequence?,Use itertools.chain.,use zip [1],"Iterate over several iterables in parallel, producing tuples with an item from each one.
+
+Example:
+
+>>> for item in zip([1, 2, 3], ['sugar', 'spice', 'everything nice']):
+...     print(item)
+...
+(1, 'sugar')
+(2, 'spice')
+(3, 'everything nice')
+
+
+More formally: zip() returns an iterator of tuples, where the i -th tuple contains the i -th element from each of the argument iterables.
+
+Another way to think of zip() is that it turns rows into columns, and columns into rows. This is similar to transposing a matrix .
+
+zip() is lazy: The elements won’t be processed until the iterable is iterated on, e.g",,,,
+q042,How can I repeat the elements of an iterable indefinitely?,Use itertools.cycle.,itertools.cycle(iterable) [1],"Make an iterator returning elements from the iterable and saving a copy of each. When the iterable is exhausted, return elements from the saved copy. Repeats indefinitely. Roughly equivalent to:
+
+def cycle(iterable):
+    # cycle('ABCD') → A B C D A B C D A B C D ...
+
+    saved = []
+    for element in iterable:
+        yield element
+        saved.append(element)
+
+    while saved:
+        for element in saved:
+            yield element
+
+
+This itertool may require significant auxiliary storage (depending on the length of the iterable).",,,,
+q043,What does itertools.product compute?,The Cartesian product of the input iterables.,Cartesian product of the input iterables. [1],"Cartesian product of the input iterables.
+
+Roughly equivalent to nested for-loops in a generator expression. For example, product(A, B) returns the same as ((x,y) for x in A for y in B) .
+
+The nested loops cycle like an odometer with the rightmost element advancing on every iteration. This pattern creates a lexicographic ordering so that if the input’s iterables are sorted, the product tuples are emitted in sorted order.
+
+To compute the product of an iterable with itself, specify the number of repetitions with the optional repeat keyword argument. For example, product(A, repeat=4) means the same as product(A, A, A, A) .
+
+This function is roughly equivalent to the following code, except that the actual implementation does not build up intermediate results in memory:
+
+def",,,,
+q044,How do I take a slice from an iterator?,Use itertools.islice.,use itertools.islice() [1],", None) → C D E F G
+    # islice('ABCDEFG', 0, None, 2) → A C E G
+
+    s = slice(*args)
+    start = 0 if s.start is None else s.start
+    stop = s.stop
+    step = 1 if s.step is None else s.step
+    if start < 0 or (stop is not None and stop < 0) or step <= 0:
+        raise ValueError
+
+    indices = count() if stop is None else range(max(start, stop))
+    next_i = start
+    for i, element in zip(indices, iterable):
+        if i == next_i:
+            yield element
+            next_i += step
+
+
+If the input is an iterator, then fully consuming the islice advances the input iterator by max(start, stop) steps regardless of",,,,
+q045,What does lru_cache save?,Recent function calls and their results.,up to the maxsize most recent calls [1],"Decorator to wrap a function with a memoizing callable that saves up to the maxsize most recent calls. It can save time when an expensive or I/O bound function is periodically called with the same arguments.
+
+The cache is threadsafe so that the wrapped function can be used in multiple threads. This means that the underlying data structure will remain coherent during concurrent updates.
+
+It is possible for the wrapped function to be called more than once if another thread makes an additional call before the initial call has been completed and cached.
+
+Since a dictionary is used to cache results, the positional and keyword arguments to the function must be hashable .
+
+Distinct argument patterns may be considered to be distinct calls with separate cache entries. For example, f(a=1, b=2) and f(b=2, a=1) differ in their keyword argument order and may",,,,
+q046,Is functools.cache bounded in size?,"No, it is an unbounded function cache.",No [1],"Simple lightweight unbounded function cache. Sometimes called “memoize” .
+
+Returns the same as lru_cache(maxsize=None) , creating a thin wrapper around a dictionary lookup for the function arguments. Because it never needs to evict old values, this is smaller and faster than lru_cache() with a size limit.
+
+For example:
+
+@cache
+def factorial(n):
+    return n * factorial(n-1) if n else 1
+
+>>> factorial(10)      # no previously cached result, makes 11 recursive calls
+3628800
+>>> factorial(5)       # just looks up cached value result
+120
+>>> factorial(12)      # makes two new recursive calls, the other 10 are cached
+479001600
+
+
+The cache is threadsafe so that the wrapped",,,,
+q047,What does functools.partial do with arguments?,It freezes some arguments of a function.,functools.partial returns a new partial object which when called will behave like func called with the positional arguments args and keyword arguments keywords. [1],"Return a new partial object which when called will behave like func called with the positional arguments args and keyword arguments keywords . If more arguments are supplied to the call, they are appended to args . If additional keyword arguments are supplied, they extend and override keywords . Roughly equivalent to:
+
+def partial(func, /, *args, **keywords):
+    def newfunc(*more_args, **more_keywords):
+        return func(*args, *more_args, **(keywords | more_keywords))
+    newfunc.func = func
+    newfunc.args = args
+    newfunc.keywords = keywords
+    return newfunc
+
+
+The partial() function is used for partial function application which “freezes” some portion of a function",,,,
+q048,What is functools.wraps used for?,Updating a wrapper function to look like the wrapped function.,This is a convenience function for invoking update_wrapper() as a function decorator when defining a wrapper function. [1],"This is a convenience function for invoking update_wrapper() as a function decorator when defining a wrapper function. It is equivalent to partial(update_wrapper, wrapped=wrapped, assigned=assigned, updated=updated) . For example:
+
+>>> from functools import wraps
+>>> def my_decorator(f):
+...     @wraps(f)
+...     def wrapper(*args, **kwds):
+...         print('Calling decorated function')
+...         return f(*args, **kwds)
+...     return wrapper
+...
+>>> @my_decorator
+... def example():
+...     """"""Docstring""""""
+...     print('Called example function')
+...
+>>>",,,,
+q049,How do I get the current working directory as a string?,Use os.getcwd.,os.getcwd() [1],Return a string representing the current working directory.,,,,
+q050,Does os.listdir include the special entries dot and double-dot?,"No, it excludes dot and double-dot.",No [1],"Return a list containing the names of the entries in the directory given by path . The list is in arbitrary order, and does not include the special entries '.' and '..' even if they are present in the directory. If a file is removed from or added to the directory during the call of this function, whether a name for that file be included is unspecified.
+
+path may be a path-like object . If path is of type bytes (directly or indirectly through the PathLike interface), the filenames returned will also be of type bytes ; in all other circumstances, they will be of type str .
+
+This function can also support specifying a file descriptor ; the file descriptor must refer to a directory.
+
+Raises an auditing event os.listdir with argument path .
+
+Note
+
+To encode str filenames to bytes , use fsen",,,,
+q051,What happens if os.remove is called on a directory?,It raises OSError.,an OSError is raised [1],"Remove (delete) the file path . If path is a directory, an OSError is raised. Use rmdir() to remove directories. If the file does not exist, a FileNotFoundError is raised.
+
+This function can support paths relative to directory descriptors .
+
+On Windows, attempting to remove a file that is in use causes an exception to be raised; on Unix, the directory entry is removed but the storage allocated to the file is not made available until the original file is no longer in use.
+
+This function is semantically identical to unlink() .
+
+Raises an auditing event os.remove with arguments path , dir_fd .
+
+Changed in version 3.3: Added the dir_fd parameter.
+
+Changed in version 3.6: Accepts a path-like object .",,,,
+q052,How can I read an environment variable with a default value?,Use os.getenv.,"os.getenv(key, default=None) [1]","Return the value of the environment variable key as a string if it exists, or default if it doesn’t. key is a string. Note that since getenv() uses os.environ , the mapping of getenv() is similarly also captured on import, and the function may not reflect future environment changes.
+
+On Unix, keys and values are decoded with sys.getfilesystemencoding() and 'surrogateescape' error handler. Use os.getenvb() if you would like to use a different encoding.
+
+Availability : Unix, Windows.",,,,
+q053,Does shutil.copyfile copy metadata?,"No, it copies contents without metadata.",No [1],"Copy the contents (no metadata) of the file named src to a file named dst and return dst in the most efficient way possible. src and dst are path-like objects or path names given as strings.
+
+dst must be the complete target file name; look at copy() for a copy that accepts a target directory path. If src and dst specify the same file, SameFileError is raised.
+
+The destination location must be writable; otherwise, an OSError exception will be raised. If dst already exists, it will be replaced. Special files such as character or block devices and pipes cannot be copied with this function.
+
+If follow_symlinks is false and src is a symbolic link, a new symbolic link will be created instead of copying the file src points to.
+
+Raises an auditing event shutil.",,,,
+q054,Which shutil copy function attempts to preserve metadata?,Use shutil.copy2.,copy2 [1],"Identical to copy() except that copy2() also attempts to preserve file metadata.
+
+When follow_symlinks is false, and src is a symbolic link, copy2() attempts to copy all metadata from the src symbolic link to the newly created dst symbolic link. However, this functionality is not available on all platforms. On platforms where some or all of this functionality is unavailable, copy2() will preserve all the metadata it can; copy2() never raises an exception because it cannot preserve file metadata.
+
+copy2() uses copystat() to copy the file metadata. Please see copystat() for more information about platform support for modifying symbolic link metadata.
+
+Raises an auditing event shutil.copyfile with arguments src , dst .
+
+Raises an auditing event shutil.copystat with arguments src ,",,,,
+q055,How can I delete an entire directory tree?,Use shutil.rmtree.,use shutil.rmtree() [1],"Delete an entire directory tree; path must point to a directory (but not a symbolic link to a directory). If ignore_errors is true, errors resulting from failed removals will be ignored; if false or omitted, such errors are handled by calling a handler specified by onexc or onerror or, if both are omitted, exceptions are propagated to the caller.
+
+This function can support paths relative to directory descriptors .
+
+Note
+
+On platforms that support the necessary fd-based functions a symlink attack resistant version of rmtree() is used by default. On other platforms, the rmtree() implementation is susceptible to a symlink attack: given proper timing and circumstances, attackers can manipulate symlinks on the filesystem to delete files they wouldn’t be able to access otherwise. Applications can use the rmtree.avoids_",,,,
+q056,How do I find the path to an executable command?,Use shutil.which.,"use shutil.which(cmd, mode=os.F_OK | os.X_OK, path=None) [1]","Return the path to an executable which would be run if the given cmd was called. If no cmd would be called, return None .
+
+mode is a permission mask passed to os.access() , by default determining if the file exists and is executable.
+
+path is a “ PATH string” specifying the directories to look in, delimited by os.pathsep . When no path is specified, the PATH environment variable is read from os.environ , falling back to os.defpath if it is not set.
+
+If cmd contains a directory component, which() only checks the specified path directly and does not search the directories listed in path or in the system’s PATH environment variable.
+
+On Windows, the current directory is prepended to the path if mode does not include os.X_OK . When the mode does include os",,,,
+q057,What does math.ceil return?,The smallest integer greater than or equal to x.,the smallest integer greater than or equal to x [1],"Return the ceiling of x , the smallest integer greater than or equal to x . If x is not a float, delegates to x.__ceil__ , which should return an Integral value.",,,,
+q058,What does math.floor return?,The largest integer less than or equal to x.,the largest integer less than or equal to x [1],"Return the floor of x , the largest integer less than or equal to x . If x is not a float, delegates to x.__floor__ , which should return an Integral value.",,,,
+q059,How do I calculate a square root with math?,Use math.sqrt.,Use math.sqrt(x) [1],Return the square root of x .,,,,
+q060,Does math.factorial accept negative integers?,"No, its argument must be a nonnegative integer.",I don't know based on these documents.,,,,,
+q061,What does statistics.mean calculate?,The arithmetic mean of the data.,statistics.mean calculates the sample arithmetic mean of data. [1],"Return the sample arithmetic mean of data which can be a sequence or iterable.
+
+The arithmetic mean is the sum of the data divided by the number of data points. It is commonly called “the average”, although it is only one of many different mathematical averages. It is a measure of the central location of the data.
+
+If data is empty, StatisticsError will be raised.
+
+Some examples of use:
+
+>>> mean([1, 2, 3, 4, 4])
+2.8
+>>> mean([-1.0, 2.5, 3.25, 5.75])
+2.625
+
+>>> from fractions import Fraction as F
+>>> mean([F(3, 7), F(1, 21), F(5, 3), F(1, 3)])
+Fraction(13, 21",,,,
+q062,How does median handle an even number of data points?,It averages the two middle values.,"When the number of data points is even, the median is interpolated by taking the average of the two middle values. [1]","Return the median (middle value) of numeric data, using the common “mean of middle two” method. If data is empty, StatisticsError is raised. data can be a sequence or iterable.
+
+The median is a robust measure of central location and is less affected by the presence of outliers. When the number of data points is odd, the middle data point is returned:
+
+>>> median([1, 3, 5])
+3
+
+
+When the number of data points is even, the median is interpolated by taking the average of the two middle values:
+
+>>> median([1, 3, 5, 7])
+4.0
+
+
+This is suited for when your data is discrete, and you don’t mind that the median may not be an actual data point.
+
+If the data is ordinal (supports order operations) but not nu",,,,
+q063,What does statistics.mode return?,The most common data point.,the single most common data point from discrete or nominal data [1],"Return the single most common data point from discrete or nominal data . The mode (when it exists) is the most typical value and serves as a measure of central location.
+
+If there are multiple modes with the same frequency, returns the first one encountered in the data . If the smallest or largest of those is desired instead, use min(multimode(data)) or max(multimode(data)) . If the input data is empty, StatisticsError is raised.
+
+mode assumes discrete data and returns a single value. This is the standard treatment of the mode as commonly taught in schools:
+
+>>> mode([1, 1, 2, 3, 3, 3, 3, 4])
+3
+
+
+The mode is unique in that it is the only statistic in this package that also applies to nominal (non-numeric) data:
+
+>>> mode([",,,,
+q064,Does statistics.stdev calculate sample or population standard deviation?,Sample standard deviation.,sample [1],"Return the sample standard deviation (the square root of the sample variance). See variance() for arguments and other details.
+
+>>> stdev([1.5, 2.5, 2.5, 2.75, 3.25, 4.75])
+1.0810874155219827",,,,
+q065,What happens if random.choice receives an empty sequence?,It raises IndexError.,raises IndexError [1],"Return a random element from the non-empty sequence seq . If seq is empty, raises IndexError .",,,,
+q066,Does random.sample sample with replacement?,"No, it samples without replacement.",No [1],"Return a k length list of unique elements chosen from the population sequence. Used for random sampling without replacement.
+
+Returns a new list containing elements from the population while leaving the original population unchanged. The resulting list is in selection order so that all sub-slices will also be valid random samples. This allows raffle winners (the sample) to be partitioned into grand prize and second place winners (the subslices).
+
+Members of the population need not be hashable or unique. If the population contains repeats, then each occurrence is a possible selection in the sample.
+
+Repeated elements can be specified one at a time or with the optional keyword-only counts parameter. For example, sample(['red', 'blue'], counts=[4, 2], k=5) is equivalent to sample(['red', 'red', 'red', 'red",,,,
+q067,"Are both endpoints included in random.randint(a, b)?","Yes, both a and b are included.",a <= N <= b [1],"Print a random integer between 1 and N inclusive, using randint() .",,,,
+q068,Does random.shuffle modify the original sequence?,"Yes, it shuffles the sequence in place.",Yes [1],"Shuffle the sequence x in place.
+
+To shuffle an immutable sequence and return a new shuffled list, use sample(x, k=len(x)) instead.
+
+Note that even for small len(x) , the total number of permutations of x can quickly grow larger than the period of most random number generators. This implies that most permutations of a long sequence can never be generated. For example, a sequence of length 2080 is the largest that can fit within the period of the Mersenne Twister random number generator.
+
+Changed in version 3.11: Removed the optional parameter random .",,,,
+q069,What characters are in string.ascii_lowercase?,The lowercase ASCII letters a through z.,The lowercase letters 'abcdefghijklmnopqrstuvwxyz' [1],The lowercase letters 'abcdefghijklmnopqrstuvwxyz' . This value is not locale-dependent and will not change.,,,,
+q070,What characters are in string.digits?,The digits 0 through 9.,I don't know based on these documents.,,,,,
+q071,What does string.ascii_letters combine?,ASCII lowercase and uppercase letters.,string.ascii_letters combines string.ascii_lowercase and string.ascii_uppercase. [1],"String of ASCII characters which are considered printable by Python. This is a combination of digits , ascii_letters , punctuation , and whitespace .
+
+Note
+
+By design, string.printable.isprintable() returns False . In particular, string.printable is not printable in the POSIX sense (see LC_CTYPE ).",,,,
+q072,What characters are in string.hexdigits?,The hexadecimal digits 0123456789abcdefABCDEF.,The string '0123456789abcdefABCDEF'. [1],The string '0123456789abcdefABCDEF' .,,,,
+q073,What does ArgumentParser.parse_args return?,A namespace containing parsed arguments.,Namespace object [1],"Convert argument strings to objects and assign them as attributes of the namespace. Return the populated namespace.
+
+Previous calls to add_argument() determine exactly what objects are created and how they are assigned. See the documentation for add_argument() for details.
+
+args - List of strings to parse. The default is taken from sys.argv .
+
+namespace - An object to take the attributes. The default is a new empty Namespace object.",,,,
+q074,How do I define a command-line argument with argparse?,Use ArgumentParser.add_argument.,parser.add_argument('filename') [1],"values, and on/off flags:
+
+parser.add_argument('filename')           # positional argument
+parser.add_argument('-c', '--count')      # option that takes a value
+parser.add_argument('-v', '--verbose',
+                    action='store_true')  # on/off flag
+
+
+The ArgumentParser.parse_args() method runs the parser and places the extracted data in a argparse.Namespace object:
+
+args = parser.parse_args()
+print(args.filename, args.count, args.verbose)
+
+
+Note
+
+If you’re looking for a guide about how to upgrade optparse code to argparse , see Upgrading Optparse Code .",,,,
+q075,Which logger method logs a message at DEBUG level?,Use Logger.debug.,log [1],Logs a message with integer level level on this logger. The other arguments are interpreted as for debug() .,,,,
+q076,Which logger method logs a message at WARNING level?,Use Logger.warning.,logging.warning [1],"Logs a message with level WARNING on the root logger. The arguments and behavior are otherwise the same as for debug() .
+
+Note
+
+There is an obsolete function warn which is functionally identical to warning . As warn is deprecated, please do not use it - use warning instead.",,,,
+q077,Which logger method logs a message at ERROR level?,Use Logger.error.,logging.error [1],Logs a message with level ERROR on the root logger. The arguments and behavior are otherwise the same as for debug() .,,,,
+q078,Does Logger.exception include exception information?,"Yes, exception information is added to the message.",Yes [1],Logs a message with level ERROR on this logger. The arguments are interpreted as for debug() . Exception info is added to the logging message. This method should only be called from an exception handler.,,,,
+q079,How can I check that two values are equal in unittest?,Use assertEqual.,use assertEqual() [1],"Test that first and second are equal. If the values do not compare equal, the test will fail.
+
+In addition, if first and second are the exact same type and one of list, tuple, dict, set, frozenset or str or any type that a subclass registers with addTypeEqualityFunc() the type-specific equality function will be called in order to generate a more useful default error message (see also the list of type-specific methods ).
+
+Changed in version 3.1: Added the automatic calling of type-specific equality function.
+
+Changed in version 3.2: assertMultiLineEqual() added as the default type equality function for comparing strings.",,,,
+q080,What does assertTrue test?,Whether an expression is true.,assertTrue tests that expr is true (or false). [1],"Test that expr is true (or false).
+
+Note that this is equivalent to bool(expr) is True and not to expr is True (use assertIs(expr, True) for the latter). This method should also be avoided when more specific methods are available (e.g. assertEqual(a, b) instead of assertTrue(a == b) ), because they provide a better error message in case of failure.",,,,
+q081,How do I test that code raises an expected exception?,Use assertRaises.,use assertRaises [1],"Test that an exception is raised when callable is called with any positional or keyword arguments that are also passed to assertRaises() . The test passes if exception is raised, is an error if another exception is raised, or fails if no exception is raised. To catch any of a group of exceptions, a tuple containing the exception classes may be passed as exception .
+
+If only the exception and possibly the msg arguments are given, return a context manager so that the code under test can be written inline rather than as a function:
+
+with self.assertRaises(SomeException):
+    do_something()
+
+
+When used as a context manager, assertRaises() accepts the additional keyword argument msg .
+
+The context manager will store the caught exception object in its exception attribute. This can be useful if the intention is to perform additional checks on the exception raised:
+
+with",,,,
+q082,When does unittest call setUp?,Before each test method.,unittest calls setUp() immediately before calling the test method. [1],"Source code: Lib/unittest/__init__.py
+
+(If you are already familiar with the basic concepts of testing, you might want to skip to the list of assert methods .)
+
+The unittest unit testing framework was originally inspired by JUnit and has a similar flavor as major unit testing frameworks in other languages. It supports test automation, sharing of setup and shutdown code for tests, aggregation of tests into collections, and independence of the tests from the reporting framework.
+
+To achieve this, unittest supports some important concepts in an object-oriented way:
+
+A test fixture represents the preparation needed to perform one or more tests, and any associated cleanup actions. This may involve, for example, creating temporary or proxy databases, directories, or starting a server process.
+
+A test case is the individual unit of testing. It checks for a specific response to a particular",,,,
+q083,What kind of type is typing.Any?,A special type indicating an unconstrained type.,A special type indicating an unconstrained type. [1],"Special type indicating an unconstrained type.
+
+Every type is compatible with Any .
+
+Any is compatible with every type.
+
+Changed in version 3.11: Any can now be used as a base class. This can be useful for avoiding type checker errors with classes that can duck type anywhere or are highly dynamic.",,,,
+q084,What does Optional[X] mean?,X or None.,"Optional[X] is equivalent to X | None (or Union[X, None] ). [1]","Optional[X] is equivalent to X | None (or Union[X, None] ).
+
+Note that this is not the same concept as an optional argument, which is one that has a default. An optional argument with a default does not require the Optional qualifier on its type annotation just because it is optional. For example:
+
+def foo(arg: int = 0) -> None:
+    ...
+
+
+On the other hand, if an explicit value of None is allowed, the use of Optional is appropriate, whether the argument is optional or not. For example:
+
+def foo(arg: Optional[int] = None) -> None:
+    ...
+
+
+Changed in version 3.10: Optional can now be written as X | None . See union type expressions .",,,,
+q085,What does a Literal annotation constrain?,A value to the provided literal values.,a value to one of the provided literals [1],"Special typing form to define “literal types”.
+
+Literal can be used to indicate to type checkers that the annotated object has a value equivalent to one of the provided literals.
+
+For example:
+
+def validate_simple(data: Any) -> Literal[True]:  # always returns True
+    ...
+
+type Mode = Literal['r', 'rb', 'w', 'wb']
+def open_helper(file: str, mode: Mode) -> str:
+    ...
+
+open_helper('/some/path', 'r')      # Passes type check
+open_helper('/other/path', 'typo')  # Error in type checker
+
+
+Literal[...] cannot be subclassed. At runtime, an arbitrary value is allowed as type argument to Literal[.",,,,
+q086,What does Final indicate about reassignment?,The name cannot be reassigned.,Final names cannot be reassigned in any scope. [1],"Special typing construct to indicate final names to type checkers.
+
+Final names cannot be reassigned in any scope. Final names declared in class scopes cannot be overridden in subclasses.
+
+For example:
+
+MAX_SIZE: Final = 9000
+MAX_SIZE += 1  # Error reported by type checker
+
+class Connection:
+    TIMEOUT: Final[int] = 10
+
+class FastConnector(Connection):
+    TIMEOUT = 1  # Error reported by type checker
+
+
+There is no runtime checking of these properties. See PEP 591 for more details.
+
+Added in version 3.8.
+
+Changed in version 3.13: Final can now be nested in ClassVar and vice versa.",,,,
+q087,What does dataclasses.asdict return?,A dictionary of a dataclass instance's fields.,a dict of the dataclass fields as name: value pairs [1],"Converts the dataclass obj to a dict (by using the factory function dict_factory ). Each dataclass is converted to a dict of its fields, as name: value pairs. dataclasses, dicts, lists, and tuples are recursed into. Other objects are copied with copy.deepcopy() .
+
+Example of using asdict() on nested dataclasses:
+
+@dataclass
+class Point:
+     x: int
+     y: int
+
+@dataclass
+class C:
+     mylist: list[Point]
+
+p = Point(10, 20)
+assert asdict(p) == {'x': 10, 'y': 20}
+
+c = C([Point(0, 0), Point(10, 4)])
+assert asdict(c) == {'mylist': [{'x':",,,,
+q088,What does dataclasses.astuple return?,A tuple of a dataclass instance's fields.,Converts the dataclass obj to a tuple of its field values. [1],"Converts the dataclass obj to a tuple (by using the factory function tuple_factory ). Each dataclass is converted to a tuple of its field values. dataclasses, dicts, lists, and tuples are recursed into. Other objects are copied with copy.deepcopy() .
+
+Continuing from the previous example:
+
+assert astuple(p) == (10, 20)
+assert astuple(c) == ([(0, 0), (10, 4)],)
+
+
+To create a shallow copy, the following workaround may be used:
+
+tuple(getattr(obj, field.name) for field in dataclasses.fields(obj))
+
+
+astuple() raises TypeError if obj is not a dataclass instance.",,,,
+q089,How do I check if an object is a dataclass or dataclass instance?,Use is_dataclass.,use dataclasses.is_dataclass(obj) or is_dataclass_instance(obj) [1],"Return True if its parameter is a dataclass (including subclasses of a dataclass) or an instance of one, otherwise return False .
+
+If you need to know if a class is an instance of a dataclass (and not a dataclass itself), then add a further check for not isinstance(obj, type) :
+
+def is_dataclass_instance(obj):
+    return is_dataclass(obj) and not isinstance(obj, type)",,,,
+q090,Does dataclasses.replace create a new object?,"Yes, it creates a new object with the changed fields.",Creates a new object [1],"Creates a new object of the same type as obj , replacing fields with values from changes . If obj is not a Data Class, raises TypeError . If keys in changes are not field names of the given dataclass, raises TypeError .
+
+The newly returned object is created by calling the __init__() method of the dataclass. This ensures that __post_init__() , if present, is also called.
+
+Init-only variables without default values, if any exist, must be specified on the call to replace() so that they can be passed to __init__() and __post_init__() .
+
+It is an error for changes to contain any fields that are defined as having init=False . A ValueError will be raised in this case.
+
+Be forewar",,,,
+q091,Which function opens a connection to a SQLite database?,Use sqlite3.connect.,sqlite3.connect [1],"Open a connection to an SQLite database.
+
+Raises an auditing event sqlite3.connect with argument database .
+
+Raises an auditing event sqlite3.connect/handle with argument connection_handle .
+
+Changed in version 3.4: Added the uri parameter.
+
+Changed in version 3.7: database can now also be a path-like object , not only a string.
+
+Changed in version 3.10: Added the sqlite3.connect/handle auditing event.
+
+Changed in version 3.12: Added the autocommit parameter.
+
+Changed in version 3.13: Positional use of the parameters timeout , detect_types , isolation_level , check_same_thread , factory , cached_statements , and uri is deprecated. They will become keyword-only parameters in Python 3.15.",,,,
+q092,What does fetchone return when no rows remain?,None.,None [1],"If row_factory is None , return the next row query result set as a tuple . Else, pass it to the row factory and return its result. Return None if no more data is available.",,,,
+q093,What does fetchall return when no rows remain?,An empty list.,an empty list [1],Return all (remaining) rows of a query result as a list . Return an empty list if no rows are available. Note that the arraysize attribute can affect the performance of this operation.,,,,
+q094,How do I commit a pending SQLite transaction?,Use Connection.commit.,commit() [1],"Commit any pending transaction to the database. If autocommit is True , or there is no open transaction, this method does nothing. If autocommit is False , a new transaction is implicitly opened if a pending transaction was committed by this method.",,,,
+q095,How do I add an item while preserving the heap invariant?,Use heapq.heappush.,"Use heapq.heappush(heap, item) for min-heaps or heapq.heappush_max(heap, item) for max-heaps. [1]","Push the value item onto the max-heap heap , maintaining the max-heap invariant.
+
+Added in version 3.14.",,,,
+q096,What does heappop remove from a min-heap?,The smallest item.,the smallest item [1],"Pop and return the smallest item from the heap , maintaining the min-heap invariant. If the heap is empty, IndexError is raised. To access the smallest item without popping it, use heap[0] .",,,,
+q097,How fast does heapify transform a list into a heap?,Linear time.,in linear time [1],"Transform list x into a max-heap, in-place, in linear time.
+
+Added in version 3.14.",,,,
+q098,How can I get the n largest elements from an iterable?,Use heapq.nlargest.,"heapq.nlargest(n, iterable, key=None) [1]","Return a list with the n largest elements from the dataset defined by iterable . key , if provided, specifies a function of one argument that is used to extract a comparison key from each element in iterable (for example, key=str.lower ). Equivalent to: sorted(iterable, key=key, reverse=True)[:n] .",,,,
+q099,Does bisect_left insert before or after equal entries?,Before existing equal entries.,before (to the left of) [1],"Locate the insertion point for x in a to maintain sorted order. The parameters lo and hi may be used to specify a subset of the list which should be considered; by default the entire list is used. If x is already present in a , the insertion point will be before (to the left of) any existing entries. The return value is suitable for use as the first parameter to list.insert() assuming that a is already sorted.
+
+The returned insertion point ip partitions the array a into two slices such that all(elem < x for elem in a[lo : ip]) is true for the left slice and all(elem >= x for elem in a[ip : hi]) is true for the right slice.
+
+key specifies a key function of one argument that is used to extract a comparison key from each element in the array. To support searching complex",,,,
+q100,Does bisect_right return a position after equal entries?,"Yes, it returns a position after existing equal entries.",Yes [1],"Similar to bisect_left() , but returns an insertion point which comes after (to the right of) any existing entries of x in a .
+
+The returned insertion point ip partitions the array a into two slices such that all(elem <= x for elem in a[lo : ip]) is true for the left slice and all(elem > x for elem in a[ip : hi]) is true for the right slice.
+
+Changed in version 3.10: Added the key parameter.",,,,
+q101,How can I insert an item into a sorted list before equal entries?,Use bisect.insort_left.,Use bisect_left to find the insertion point and then use list.insert() [1],"Locate the insertion point for x in a to maintain sorted order. The parameters lo and hi may be used to specify a subset of the list which should be considered; by default the entire list is used. If x is already present in a , the insertion point will be before (to the left of) any existing entries. The return value is suitable for use as the first parameter to list.insert() assuming that a is already sorted.
+
+The returned insertion point ip partitions the array a into two slices such that all(elem < x for elem in a[lo : ip]) is true for the left slice and all(elem >= x for elem in a[ip : hi]) is true for the right slice.
+
+key specifies a key function of one argument that is used to extract a comparison key from each element in the array. To support searching complex",,,,
+q102,How can I insert an item into a sorted list after equal entries?,Use bisect.insort_right.,Use bisect_left to find the insertion point and then use list.insert() [1],"Locate the insertion point for x in a to maintain sorted order. The parameters lo and hi may be used to specify a subset of the list which should be considered; by default the entire list is used. If x is already present in a , the insertion point will be before (to the left of) any existing entries. The return value is suitable for use as the first parameter to list.insert() assuming that a is already sorted.
+
+The returned insertion point ip partitions the array a into two slices such that all(elem < x for elem in a[lo : ip]) is true for the left slice and all(elem >= x for elem in a[ip : hi]) is true for the right slice.
+
+key specifies a key function of one argument that is used to extract a comparison key from each element in the array. To support searching complex",,,,
+u001,What is the weather in Tunis tomorrow?,I don't know based on these documents.,I don't know based on these documents.,,,,,
+u002,What is my university Wi-Fi password?,I don't know based on these documents.,I don't know based on these documents.,,,,,
+u003,Who won the football match last night?,I don't know based on these documents.,I don't know based on these documents.,,,,,
+u004,What are my grades this semester?,I don't know based on these documents.,I don't know based on these documents.,,,,,
+u005,How do I make a pizza?,I don't know based on these documents.,I don't know based on these documents.,,,,,
+u006,What is the price of Bitcoin right now?,I don't know based on these documents.,I don't know based on these documents.,,,,,
+u007,What is the deadline for my CS496 homework?,I don't know based on these documents.,I don't know based on these documents.,,,,,
+u008,What is my student ID?,I don't know based on these documents.,I don't know based on these documents.,,,,,
+u009,Who is teaching my class next week?,I don't know based on these documents.,I don't know based on these documents.,,,,,
+u010,Which bus should I take home today?,I don't know based on these documents.,I don't know based on these documents.,,,,,

@@ -18,6 +18,8 @@ Some simple questions retrieve a nearby API instead of the intended one. Even a 
 
 In the Project 1 integration trial, the judge described a refusal as appropriate even though the question was marked answerable. The adapter now applies the known refusal rule directly and preserves the raw judgment for inspection. Other semantic judgments still need review. Using an LLM as a judge does not replace reading a sample of its results.
 
+The full grading trial also penalized valid short answers such as `0` and `shallow` for being incomplete. The rubric was clarified to ignore citation markers and accept a short answer when it answers the actual question. The final grading run uses that clarified rubric.
+
 ## A warm cache is a special workload
 
 Repeated questions can avoid all model work. New questions cannot. The optimisation report separates those workloads and includes the first-use cost. A claim about the whole service needs a real distribution of student questions and a real cache hit rate.
