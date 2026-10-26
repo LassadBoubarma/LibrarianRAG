@@ -99,6 +99,8 @@ The last command reuses `call_json` from [our Project 1 grader](https://github.c
 | `optimisation.md` | Measured before/after comparison and cost model. |
 | `report.md`, `report.pdf` | Short project report. |
 | `postmortem.md` | Problems found during implementation. |
+| `quality_review.md` | Quality checks and the archived review of the earlier model. |
+| `verify_saved.py` | Integrity checks for saved questions, answers and search results. |
 
 ## Deployment and remaining work
 

@@ -65,7 +65,7 @@ def main():
         records.extend(extract(html, name))
         print(f"Read {name}", flush=True)
     output = DATA / "documents.jsonl"
-    output.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in records), encoding="utf-8")
+    output.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in records), encoding="utf-8", newline="\n")
     license_response = session.get(BASE + "license.html", timeout=60)
     license_response.raise_for_status()
     license_soup = BeautifulSoup(license_response.content, "html.parser")
@@ -75,7 +75,7 @@ def main():
                 "documents": len(MODULES), "sections": len(records), "words": words,
                 "estimated_pages_at_500_words": round(words / 500, 1),
                 "sha256": hashes, "corpus_sha256": hashlib.sha256(output.read_bytes()).hexdigest()}
-    (DATA / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    (DATA / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8", newline="\n")
     print(json.dumps({k: v for k, v in manifest.items() if k != "sha256"}, indent=2))
 
 
