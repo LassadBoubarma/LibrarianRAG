@@ -7,6 +7,7 @@
 body{font:17px/1.6 system-ui,sans-serif;background:#f5f5f0;color:#23322d;margin:0}
 main{max-width:780px;margin:60px auto;padding:24px}h1{font-size:42px;margin-bottom:0}
 small,.muted{color:#56665f}label{display:block;margin-top:18px}textarea,select,button{font:inherit;padding:12px;border:1px solid #a4b3aa;border-radius:6px}textarea{box-sizing:border-box;width:100%;resize:vertical}button{background:#245f49;color:white;cursor:pointer;margin-top:16px}button:disabled{opacity:.6}section{background:white;border:1px solid #d2dbd5;padding:24px;margin-top:24px;border-radius:8px}a{color:#245f49}blockquote{white-space:pre-wrap;border-left:3px solid #c4d6cb;margin-left:0;padding-left:16px}#answer{white-space:pre-wrap}#status{min-height:28px}
+.examples{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.examples button{background:transparent;color:#245f49;margin:0;padding:7px 10px;font-size:.9em}
 </style>
 <main>
 <small>CS496 · THE LIBRARIAN</small>
@@ -15,6 +16,12 @@ small,.muted{color:#56665f}label{display:block;margin-top:18px}textarea,select,b
 <form id="form">
 <label for="question">Your question</label>
 <textarea id="question" rows="3" minlength="3" maxlength="500" required placeholder="How do I read a file as text with pathlib?"></textarea>
+<div class="examples" aria-label="Example questions">
+<small class="muted">Try an example:</small>
+<button type="button" data-question="How do I read a file as text with pathlib?">Read a file</button>
+<button type="button" data-question="Does random.sample use replacement?">Use random.sample</button>
+<button type="button" data-question="What is my university Wi-Fi password?">Test an unknown question</button>
+</div>
 <label for="document">Search in</label>
 <select id="document"><option value="">All documents</option>{% for doc in documents %}<option>{{ doc }}</option>{% endfor %}</select><br>
 <button id="submit">Ask a question</button>
@@ -24,13 +31,16 @@ small,.muted{color:#56665f}label{display:block;margin-top:18px}textarea,select,b
 <p class="muted"><small>Check the quoted source before using the answer. The model can misunderstand a passage. Questions are kept only in a small memory cache until the app restarts.</small></p>
 </main>
 <script>
-const form=document.querySelector('#form'), button=document.querySelector('#submit');
+const form=document.querySelector('#form'), button=document.querySelector('#submit'), question=document.querySelector('#question');
+document.querySelectorAll('[data-question]').forEach(example=>{
+  example.addEventListener('click',()=>{question.value=example.dataset.question; question.focus();});
+});
 form.addEventListener('submit',async event=>{
   event.preventDefault(); button.disabled=true;
   document.querySelector('#status').textContent='Searching the docs and checking a source…';
   document.querySelector('#result').hidden=true;
   try {
-    const response=await fetch('/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:document.querySelector('#question').value,document:document.querySelector('#document').value})});
+    const response=await fetch('/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:question.value,document:document.querySelector('#document').value})});
     const data=await response.json(); if(!response.ok) throw new Error(data.error||'The request failed.');
     document.querySelector('#answer').textContent=data.answer;
     const sources=document.querySelector('#sources'); sources.replaceChildren();
